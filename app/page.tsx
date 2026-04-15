@@ -1,65 +1,268 @@
-import Image from "next/image";
+import Link from 'next/link'
+import DevelopmentCard from '@/components/DevelopmentCard'
+import ArticleCard from '@/components/ArticleCard'
+import { demoDevelopments, demoLocations, demoArticles } from '@/lib/demo-data'
 
-export default function Home() {
+export default function HomePage() {
+  const featured = demoDevelopments.filter(d => d.isFeatured).slice(0, 3)
+  const latestArticles = demoArticles.slice(0, 3)
+  const locations = demoLocations
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* Hero */}
+      <section style={{ borderBottom: '1px solid var(--border)', padding: '80px 0 72px' }}>
+        <div className="container-editorial">
+          <div style={{ maxWidth: '640px' }}>
+            <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '24px', margin: '0 0 24px' }}>
+              Portugal Developments Review
+            </p>
+            <h1 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 400, lineHeight: 1.15, margin: '0 0 24px', letterSpacing: '-0.02em' }}>
+              Curated new developments across Portugal.
+            </h1>
+            <p style={{ fontSize: '18px', color: 'var(--muted)', lineHeight: 1.6, margin: '0 0 36px', maxWidth: '520px' }}>
+              An editorial platform for exceptional new residential projects — curated through independent selection, location intelligence, and premium presentation.
+            </p>
+            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+              <Link
+                href="/developments"
+                style={{
+                  display: 'inline-block',
+                  background: 'var(--foreground)',
+                  color: 'var(--background)',
+                  padding: '14px 28px',
+                  fontSize: '13px',
+                  fontFamily: 'sans-serif',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  textDecoration: 'none',
+                }}
+              >
+                Explore Developments
+              </Link>
+              <Link
+                href="/developments"
+                style={{
+                  display: 'inline-block',
+                  border: '1px solid var(--border)',
+                  color: 'var(--foreground)',
+                  padding: '14px 28px',
+                  fontSize: '13px',
+                  fontFamily: 'sans-serif',
+                  letterSpacing: '0.06em',
+                  textTransform: 'uppercase',
+                  textDecoration: 'none',
+                }}
+              >
+                Browse by Location
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Location quick nav */}
+      <section style={{ borderBottom: '1px solid var(--border)', padding: '20px 0', background: 'var(--surface)' }}>
+        <div className="container-editorial">
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              Browse:
+            </span>
+            {[
+              { href: '/locations/lisbon', label: 'Lisbon' },
+              { href: '/locations/porto', label: 'Porto' },
+              { href: '/locations/cascais', label: 'Cascais' },
+              { href: '/locations/algarve', label: 'Algarve' },
+              { href: '/locations/comporta', label: 'Comporta' },
+              { href: '/locations/gaia', label: 'Gaia' },
+            ].map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                style={{
+                  fontSize: '12px',
+                  fontFamily: 'sans-serif',
+                  letterSpacing: '0.04em',
+                  border: '1px solid var(--border)',
+                  padding: '6px 14px',
+                  color: 'var(--foreground)',
+                  textDecoration: 'none',
+                  background: 'var(--background)',
+                }}
+              >
+                {label}
+              </Link>
+            ))}
+            <Link
+              href="/developments"
+              style={{
+                marginLeft: 'auto',
+                fontSize: '12px',
+                fontFamily: 'sans-serif',
+                letterSpacing: '0.06em',
+                textTransform: 'uppercase',
+                color: 'var(--muted)',
+                textDecoration: 'none',
+                borderBottom: '1px solid var(--border)',
+              }}
+            >
+              All Developments →
+            </Link>
+          </div>
         </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      {/* Featured Developments */}
+      <section style={{ padding: '64px 0', borderBottom: '1px solid var(--border)' }}>
+        <div className="container-editorial">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '40px', flexWrap: 'wrap', gap: '12px' }}>
+            <div>
+              <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 6px' }}>
+                Featured
+              </p>
+              <h2 style={{ fontSize: '28px', fontWeight: 400, margin: 0, letterSpacing: '-0.01em' }}>
+                Selected Developments
+              </h2>
+            </div>
+            <Link
+              href="/developments"
+              style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}
+            >
+              View All →
+            </Link>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
+            {featured.map(dev => (
+              <DevelopmentCard key={dev._id} development={dev} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Browse by Location */}
+      <section style={{ padding: '64px 0', borderBottom: '1px solid var(--border)', background: 'var(--surface)' }}>
+        <div className="container-editorial">
+          <div style={{ marginBottom: '40px' }}>
+            <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 6px' }}>
+              Location Intelligence
+            </p>
+            <h2 style={{ fontSize: '28px', fontWeight: 400, margin: 0, letterSpacing: '-0.01em' }}>
+              Browse by Location
+            </h2>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
+            {locations.map(loc => (
+              <Link key={loc._id} href={`/locations/${loc.slug.current}`} style={{ textDecoration: 'none', display: 'block', background: 'var(--background)', padding: '28px 24px' }}>
+                <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>
+                  {loc.region}
+                </div>
+                <div style={{ fontSize: '20px', fontWeight: 400, letterSpacing: '-0.01em', marginBottom: '8px' }}>
+                  {loc.name}
+                </div>
+                <div style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.5 }}>
+                  {loc.intro.slice(0, 80)}...
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Editorial Spotlight / Methodology teaser */}
+      <section style={{ padding: '64px 0', borderBottom: '1px solid var(--border)' }}>
+        <div className="container-editorial">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }}>
+            <div>
+              <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
+                Our Approach
+              </p>
+              <h2 style={{ fontSize: '28px', fontWeight: 400, margin: '0 0 20px', letterSpacing: '-0.01em', lineHeight: 1.25 }}>
+                How we select the developments on this platform.
+              </h2>
+              <p style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: 1.7, margin: '0 0 20px' }}>
+                Portugal Developments Review does not operate as a listings portal. Each development that appears on this platform has been considered through our curation methodology — assessed against criteria that include architectural quality, developer track record, location fundamentals, and the coherence of the project proposition.
+              </p>
+              <p style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: 1.7, margin: '0 0 28px' }}>
+                We are not a brokerage. We are a discovery platform with an editorial point of view.
+              </p>
+              <Link
+                href="/methodology"
+                style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}
+              >
+                Read Our Methodology →
+              </Link>
+            </div>
+            <div style={{ borderLeft: '1px solid var(--border)', paddingLeft: '60px' }}>
+              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+                Selection Criteria
+              </div>
+              {[
+                'Architectural quality and design coherence',
+                'Developer track record and credibility',
+                'Location fundamentals and demand drivers',
+                'Specification and delivery integrity',
+                'Authenticity of project proposition',
+              ].map((item, i) => (
+                <div key={i} style={{ display: 'flex', gap: '12px', marginBottom: '12px', alignItems: 'start' }}>
+                  <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', marginTop: '3px' }}>—</span>
+                  <p style={{ fontSize: '14px', color: 'var(--muted)', margin: 0, lineHeight: 1.5 }}>{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Journal */}
+      <section style={{ padding: '64px 0', borderBottom: '1px solid var(--border)' }}>
+        <div className="container-editorial">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '40px', flexWrap: 'wrap', gap: '12px' }}>
+            <div>
+              <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 6px' }}>
+                Insights
+              </p>
+              <h2 style={{ fontSize: '28px', fontWeight: 400, margin: 0, letterSpacing: '-0.01em' }}>
+                Journal
+              </h2>
+            </div>
+            <Link
+              href="/journal"
+              style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}
+            >
+              All Articles →
+            </Link>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
+            {latestArticles.map(article => (
+              <ArticleCard key={article._id} article={article} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Developer invitation */}
+      <section style={{ padding: '64px 0', background: 'var(--surface)' }}>
+        <div className="container-editorial">
+          <div style={{ maxWidth: '540px' }}>
+            <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
+              For Developers
+            </p>
+            <h2 style={{ fontSize: '24px', fontWeight: 400, margin: '0 0 16px', letterSpacing: '-0.01em', lineHeight: 1.3 }}>
+              Is your development exceptional enough to be considered?
+            </h2>
+            <p style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: 1.7, margin: '0 0 24px' }}>
+              We work with a small number of developers who meet our curation criteria. Viriato clients receive editorial placement as part of their service package. Selected non-clients may be considered through a separate route.
+            </p>
+            <Link
+              href="/for-developers"
+              style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}
+            >
+              Learn More →
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  )
 }

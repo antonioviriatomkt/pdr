@@ -1,0 +1,62 @@
+import { defineField, defineType } from 'sanity'
+
+export const development = defineType({
+  name: 'development',
+  title: 'Development',
+  type: 'document',
+  fields: [
+    defineField({ name: 'name', title: 'Project Name', type: 'string', validation: r => r.required() }),
+    defineField({ name: 'slug', title: 'Slug', type: 'slug', options: { source: 'name' }, validation: r => r.required() }),
+    defineField({ name: 'location', title: 'Location', type: 'reference', to: [{ type: 'location' }], validation: r => r.required() }),
+    defineField({ name: 'developer', title: 'Developer', type: 'reference', to: [{ type: 'developer' }], validation: r => r.required() }),
+    defineField({
+      name: 'status',
+      title: 'Status',
+      type: 'string',
+      options: { list: ['Off-plan', 'Under Construction', 'Completed', 'Selling Now'], layout: 'radio' },
+      validation: r => r.required(),
+    }),
+    defineField({
+      name: 'type',
+      title: 'Development Type',
+      type: 'string',
+      options: { list: ['Apartments', 'Villas', 'Townhouses', 'Penthouse', 'Mixed-use', 'Branded Residences'] },
+    }),
+    defineField({
+      name: 'priceDisplay',
+      title: 'Price Display',
+      type: 'string',
+      options: { list: ['Price on Request', 'From €500k', 'From €750k', 'From €1M', 'From €2M', 'From €3M+'] },
+    }),
+    defineField({ name: 'isFeatured', title: 'Featured', type: 'boolean', initialValue: false }),
+    defineField({
+      name: 'lifestyleTags',
+      title: 'Lifestyle Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: { list: ['Golf', 'Beachfront', 'Marina', 'City Centre', 'Countryside', 'Mountain', 'Historic Quarter', 'Spa & Wellness', 'Investment-grade'] },
+    }),
+    defineField({ name: 'heroImage', title: 'Hero Image', type: 'image', options: { hotspot: true }, validation: r => r.required() }),
+    defineField({ name: 'gallery', title: 'Gallery', type: 'array', of: [{ type: 'image', options: { hotspot: true } }] }),
+    defineField({ name: 'editorialThesis', title: 'Editorial Thesis', type: 'text', rows: 4, description: 'The editorial paragraph that frames why this project matters.' }),
+    defineField({ name: 'whyStandsOut', title: 'Why This Project Stands Out', type: 'array', of: [{ type: 'block' }] }),
+    defineField({ name: 'keyFacts', title: 'Key Facts', type: 'array', of: [{ type: 'object', fields: [{ name: 'label', type: 'string' }, { name: 'value', type: 'string' }] }] }),
+    defineField({ name: 'areaGuide', title: 'Area Guide / Location Context', type: 'array', of: [{ type: 'block' }] }),
+    defineField({ name: 'typologyNote', title: 'Availability / Typology Summary', type: 'text', rows: 3 }),
+    defineField({
+      name: 'primaryCta',
+      title: 'Primary CTA',
+      type: 'string',
+      options: { list: ['Request Brochure', 'Register Interest', 'Download Investment Pack', 'Schedule Consultation', 'Speak with an Advisor'] },
+      initialValue: 'Register Interest',
+    }),
+    defineField({ name: 'relatedDevelopments', title: 'Related Developments', type: 'array', of: [{ type: 'reference', to: [{ type: 'development' }] }] }),
+    defineField({ name: 'relatedArticles', title: 'Related Journal Stories', type: 'array', of: [{ type: 'reference', to: [{ type: 'journalArticle' }] }] }),
+    defineField({ name: 'publishedAt', title: 'Published At', type: 'datetime' }),
+    defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string' }),
+    defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2 }),
+  ],
+  preview: {
+    select: { title: 'name', subtitle: 'status', media: 'heroImage' },
+  },
+})
