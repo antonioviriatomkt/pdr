@@ -138,7 +138,7 @@ export default async function HomePage() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
-            {featured.map(dev => (
+            {featured.map((dev: any) => (
               <DevelopmentCard key={dev._id} development={dev} />
             ))}
           </div>
@@ -157,7 +157,7 @@ export default async function HomePage() {
             </h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
-            {locations.map(loc => (
+            {locations.map((loc: any) => (
               <Link key={loc._id} href={`/locations/${loc.slug.current}`} style={{ textDecoration: 'none', display: 'block', background: 'var(--background)', padding: '28px 24px' }}>
                 <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>
                   {loc.region}
@@ -269,7 +269,7 @@ export default async function HomePage() {
             </Link>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
-            {latestArticles.map(article => (
+            {latestArticles.map((article: any) => (
               <ArticleCard key={article._id} article={article} />
             ))}
           </div>

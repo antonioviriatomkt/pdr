@@ -80,7 +80,7 @@ export default async function LocationPage({ params }: PageProps) {
             </div>
           ) : (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '40px' }}>
-              {developments.map(dev => (
+              {developments.map((dev: any) => (
                 <DevelopmentCard key={dev._id} development={dev} />
               ))}
             </div>
@@ -96,7 +96,7 @@ export default async function LocationPage({ params }: PageProps) {
               Journal — {loc.name}
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '40px' }}>
-              {articles.map(a => (
+              {articles.map((a: any) => (
                 <ArticleCard key={a._id} article={a} />
               ))}
             </div>
@@ -131,7 +131,7 @@ export default async function LocationPage({ params }: PageProps) {
             Other Locations
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
-            {nearby.map(l => (
+            {nearby.map((l: any) => (
               <Link key={l._id} href={`/locations/${l.slug.current}`} style={{ display: 'block', background: 'var(--background)', padding: '20px', textDecoration: 'none' }}>
                 <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
                   {l.region}

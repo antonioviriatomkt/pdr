@@ -161,7 +161,7 @@ export default async function DevelopmentPage({ params }: PageProps) {
                   Lifestyle
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                  {dev.lifestyleTags.map(tag => (
+                  {dev.lifestyleTags.map((tag: string) => (
                     <span key={tag} style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '5px 12px' }}>
                       {tag}
                     </span>
@@ -186,7 +186,7 @@ export default async function DevelopmentPage({ params }: PageProps) {
               Other Developments in {dev.location.name}
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '40px' }}>
-              {related.map(r => (
+              {related.map((r: any) => (
                 <DevelopmentCard key={r._id} development={r} />
               ))}
             </div>
