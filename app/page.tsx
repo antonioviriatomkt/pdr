@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import ArticleCard from '@/components/ArticleCard'
+import NewsletterSignup from '@/components/NewsletterSignup'
 import { demoDevelopments, demoLocations, demoArticles } from '@/lib/demo-data'
 
 export default function HomePage() {
@@ -167,6 +168,36 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Newsletter / Shortlist signup */}
+      <section style={{ padding: '64px 0', borderBottom: '1px solid var(--border)' }}>
+        <div className="container-editorial">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '60px', alignItems: 'start' }}>
+            <div>
+              <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
+                The Shortlist
+              </p>
+              <h2 style={{ fontSize: '28px', fontWeight: 400, margin: '0 0 20px', letterSpacing: '-0.01em', lineHeight: 1.25 }}>
+                Be first to see what matters.
+              </h2>
+              <p style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>
+                Receive PDR&rsquo;s private monthly shortlist of exceptional new developments in Lisbon, Porto, Cascais, Algarve, Comporta, and beyond.
+              </p>
+            </div>
+            <div style={{ borderLeft: '1px solid var(--border)', paddingLeft: '60px' }} className="newsletter-form-col">
+              <NewsletterSignup />
+            </div>
+          </div>
+        </div>
+        <style>{`
+          @media (max-width: 768px) {
+            .newsletter-form-col {
+              border-left: none !important;
+              padding-left: 0 !important;
+            }
+          }
+        `}</style>
       </section>
 
       {/* Editorial Spotlight / Methodology teaser */}
