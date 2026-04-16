@@ -97,7 +97,7 @@ export default async function DevelopmentPage({ params }: PageProps) {
                   Key Facts
                 </h2>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
-                  {dev.keyFacts.map((fact, i) => (
+                  {dev.keyFacts.map((fact: { label: string; value: string }, i: number) => (
                     <div key={i} style={{ background: 'var(--background)', padding: '16px' }}>
                       <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '4px' }}>
                         {fact.label}
