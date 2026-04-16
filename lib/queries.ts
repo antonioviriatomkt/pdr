@@ -43,11 +43,13 @@ export async function getDevelopmentBySlug(slug: string) {
   return client.fetch(`
     *[_type == "development" && slug.current == $slug][0] {
       _id, name, slug, status, type, priceDisplay, isFeatured,
-      lifestyleTags, heroImage, gallery, editorialThesis,
+      lifestyleTags, heroImage,
+      "gallery": gallery[] { _key, _type, asset, hotspot, crop },
+      editorialThesis,
       whyStandsOut, keyFacts, areaGuide, typologyNote, primaryCta,
       publishedAt,
       location->{ name, slug, intro, region },
-      developer->{ name, description, website, isViriatoClient },
+      developer->{ name, logo, description, website, isViriatoClient },
       relatedDevelopments[]->{ name, slug, heroImage, status, type, priceDisplay, location->{ name } },
       relatedArticles[]->{ title, slug, heroImage, category, excerpt, publishedAt },
       seoTitle, seoDescription

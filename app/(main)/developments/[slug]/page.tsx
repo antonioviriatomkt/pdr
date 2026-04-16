@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { getDevelopmentBySlug, getAllDevelopments } from '@/lib/queries'
+import { urlFor } from '@/lib/sanity.image'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import ArticleCard from '@/components/ArticleCard'
 import InquiryPanel from './InquiryPanel'
@@ -54,10 +56,23 @@ export default async function DevelopmentPage({ params }: PageProps) {
 
       {/* Hero */}
       <section style={{ borderBottom: '1px solid var(--border)' }}>
-        <div style={{ aspectRatio: '16/7', background: 'var(--surface)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-            {dev.name} — {dev.location.name}
-          </span>
+        <div style={{ aspectRatio: '16/7', background: 'var(--surface)', position: 'relative', overflow: 'hidden' }}>
+          {dev.heroImage ? (
+            <Image
+              src={urlFor(dev.heroImage).width(1600).height(700).auto('format').url()}
+              alt={dev.name}
+              fill
+              priority
+              style={{ objectFit: 'cover' }}
+              sizes="100vw"
+            />
+          ) : (
+            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                {dev.name} — {dev.location.name}
+              </span>
+            </div>
+          )}
         </div>
       </section>
 
@@ -125,17 +140,39 @@ export default async function DevelopmentPage({ params }: PageProps) {
 
             {/* Developer */}
             <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', marginBottom: '40px' }}>
-              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>
+              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
                 Developer
               </div>
-              <div style={{ fontSize: '16px', fontWeight: 400 }}>
-                {dev.developer.name}
-              </div>
-              {dev.developer.isViriatoClient && (
-                <div style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginTop: '4px' }}>
-                  Viriato client
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px' }}>
+                <div>
+                  {dev.developer.website ? (
+                    <a
+                      href={dev.developer.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: '16px', fontWeight: 400, color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}
+                    >
+                      {dev.developer.name}
+                    </a>
+                  ) : (
+                    <div style={{ fontSize: '16px', fontWeight: 400 }}>{dev.developer.name}</div>
+                  )}
+                  {dev.developer.isViriatoClient && (
+                    <div style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginTop: '4px' }}>
+                      Viriato client
+                    </div>
+                  )}
                 </div>
-              )}
+                {dev.developer.logo && (
+                  <Image
+                    src={urlFor(dev.developer.logo).height(48).auto('format').url()}
+                    alt={dev.developer.name}
+                    width={96}
+                    height={48}
+                    style={{ objectFit: 'contain', objectPosition: 'right' }}
+                  />
+                )}
+              </div>
             </div>
 
             {/* Location context */}
@@ -180,7 +217,7 @@ export default async function DevelopmentPage({ params }: PageProps) {
 
       {/* Related developments */}
       {related.length > 0 && (
-        <section style={{ borderTop: '1px solid var(--border)', padding: '48px 0' }}>
+        <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '48px 0' }}>
           <div className="container-editorial">
             <h2 style={{ fontSize: '20px', fontWeight: 400, margin: '0 0 32px', letterSpacing: '-0.01em' }}>
               Other Developments in {dev.location.name}
@@ -188,6 +225,35 @@ export default async function DevelopmentPage({ params }: PageProps) {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '40px' }}>
               {related.map((r: any) => (
                 <DevelopmentCard key={r._id} development={r} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Gallery */}
+      {dev.gallery && dev.gallery.length > 0 && (
+        <section style={{ padding: '48px 0' }}>
+          <div className="container-editorial">
+            <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 24px' }}>
+              Gallery
+            </p>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',
+              gap: '1px',
+              background: 'var(--border)',
+            }}>
+              {dev.gallery.filter((img: any) => img?.asset).map((img: any, i: number) => (
+                <div key={img._key || i} style={{ aspectRatio: '4/3', position: 'relative', overflow: 'hidden', background: 'var(--surface)' }}>
+                  <Image
+                    src={urlFor(img).width(800).height(600).auto('format').url()}
+                    alt={`${dev.name} — ${i + 1}`}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
               ))}
             </div>
           </div>
