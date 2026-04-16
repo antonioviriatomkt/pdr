@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react'
 import DevelopmentCard from '@/components/DevelopmentCard'
-import { demoDevelopments, demoLocations } from '@/lib/demo-data'
 
 const TYPES = ['Apartments', 'Villas', 'Townhouses', 'Penthouse', 'Mixed-use', 'Branded Residences']
 const STATUSES = ['Off-plan', 'Under Construction', 'Completed', 'Selling Now']
@@ -11,14 +10,19 @@ const SORTS = [
   { value: 'newest', label: 'Newest' },
 ]
 
-export default function DevelopmentsIndex() {
+interface Props {
+  developments: any[]
+  locations: { _id: string; name: string; slug: { current: string } }[]
+}
+
+export default function DevelopmentsIndex({ developments, locations }: Props) {
   const [locationFilter, setLocationFilter] = useState('')
   const [typeFilter, setTypeFilter] = useState('')
   const [statusFilter, setStatusFilter] = useState('')
   const [sort, setSort] = useState('featured')
 
   const filtered = useMemo(() => {
-    let list = [...demoDevelopments]
+    let list = [...developments]
     if (locationFilter) list = list.filter(d => d.location.slug.current === locationFilter)
     if (typeFilter) list = list.filter(d => d.type === typeFilter)
     if (statusFilter) list = list.filter(d => d.status === statusFilter)
@@ -64,7 +68,7 @@ export default function DevelopmentsIndex() {
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
             <select value={locationFilter} onChange={e => setLocationFilter(e.target.value)} style={selectStyle}>
               <option value="">All Locations</option>
-              {demoLocations.map(loc => (
+              {locations.map(loc => (
                 <option key={loc._id} value={loc.slug.current}>{loc.name}</option>
               ))}
             </select>

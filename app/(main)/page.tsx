@@ -2,12 +2,16 @@ import Link from 'next/link'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import ArticleCard from '@/components/ArticleCard'
 import NewsletterSignup from '@/components/NewsletterSignup'
-import { demoDevelopments, demoLocations, demoArticles } from '@/lib/demo-data'
+import { getFeaturedDevelopments, getAllLocations, getLatestArticles } from '@/lib/queries'
 
-export default function HomePage() {
-  const featured = demoDevelopments.filter(d => d.isFeatured).slice(0, 3)
-  const latestArticles = demoArticles.slice(0, 3)
-  const locations = demoLocations
+export const revalidate = 60
+
+export default async function HomePage() {
+  const [featured, locations, latestArticles] = await Promise.all([
+    getFeaturedDevelopments(),
+    getAllLocations(),
+    getLatestArticles(3),
+  ])
 
   return (
     <>
@@ -162,7 +166,7 @@ export default function HomePage() {
                   {loc.name}
                 </div>
                 <div style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.5 }}>
-                  {loc.intro.slice(0, 80)}...
+                  {loc.intro?.slice(0, 80)}...
                 </div>
               </Link>
             ))}

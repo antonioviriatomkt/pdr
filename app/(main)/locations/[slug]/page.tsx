@@ -3,34 +3,40 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import ArticleCard from '@/components/ArticleCard'
-import { demoLocations, demoDevelopments, demoArticles } from '@/lib/demo-data'
+import { getLocationBySlug, getDevelopmentsByLocation, getArticlesByLocation, getAllLocations } from '@/lib/queries'
 
 interface PageProps {
   params: Promise<{ slug: string }>
 }
 
+export const revalidate = 60
+export const dynamicParams = true
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
-  const loc = demoLocations.find(l => l.slug.current === slug)
+  const loc = await getLocationBySlug(slug)
   if (!loc) return {}
   return {
     title: `New Developments in ${loc.name}, Portugal`,
-    description: `Discover curated new residential developments in ${loc.name}. ${loc.intro.slice(0, 120)}...`,
+    description: `Discover curated new residential developments in ${loc.name}. ${loc.intro?.slice(0, 120)}...`,
   }
 }
 
 export async function generateStaticParams() {
-  return demoLocations.map(l => ({ slug: l.slug.current }))
+  const locations = await getAllLocations()
+  return locations.map((l: any) => ({ slug: l.slug.current }))
 }
 
 export default async function LocationPage({ params }: PageProps) {
   const { slug } = await params
-  const loc = demoLocations.find(l => l.slug.current === slug)
+  const [loc, developments, articles] = await Promise.all([
+    getLocationBySlug(slug),
+    getDevelopmentsByLocation(slug),
+    getArticlesByLocation(slug),
+  ])
   if (!loc) notFound()
 
-  const developments = demoDevelopments.filter(d => d.location.slug.current === slug)
-  const articles = demoArticles.filter(a => a.linkedLocation?.slug.current === slug)
-  const nearby = demoLocations.filter(l => l._id !== loc._id).slice(0, 4)
+  const nearby = (loc.nearbyLocations ?? []).slice(0, 4)
 
   return (
     <>

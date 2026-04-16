@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { demoDevelopments } from '@/lib/demo-data'
+import { getDevelopmentBySlug, getAllDevelopments } from '@/lib/queries'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import ArticleCard from '@/components/ArticleCard'
 import InquiryPanel from './InquiryPanel'
@@ -10,9 +10,12 @@ interface PageProps {
   params: Promise<{ slug: string }>
 }
 
+export const revalidate = 60
+export const dynamicParams = true
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
-  const dev = demoDevelopments.find(d => d.slug.current === slug)
+  const dev = await getDevelopmentBySlug(slug)
   if (!dev) return {}
   return {
     title: `${dev.name} — ${dev.location.name}`,
@@ -21,15 +24,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export async function generateStaticParams() {
-  return demoDevelopments.map(d => ({ slug: d.slug.current }))
+  const developments = await getAllDevelopments()
+  return developments.map((d: any) => ({ slug: d.slug.current }))
 }
 
 export default async function DevelopmentPage({ params }: PageProps) {
   const { slug } = await params
-  const dev = demoDevelopments.find(d => d.slug.current === slug)
+  const dev = await getDevelopmentBySlug(slug)
   if (!dev) notFound()
 
-  const related = demoDevelopments.filter(d => d._id !== dev._id && d.location.slug.current === dev.location.slug.current).slice(0, 3)
+  const related = (dev.relatedDevelopments ?? []).slice(0, 3)
 
   return (
     <>
