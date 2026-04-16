@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import { urlFor } from '@/lib/sanity.image'
 import { categoryLabels } from '@/lib/demo-data'
 
 interface ArticleCardProps {
@@ -8,6 +10,7 @@ interface ArticleCardProps {
     category: string
     excerpt?: string
     publishedAt: string
+    heroImage?: unknown
     linkedLocation?: { name: string; slug: { current: string } }
   }
   variant?: 'default' | 'compact'
@@ -37,10 +40,22 @@ export default function ArticleCard({ article, variant = 'default' }: ArticleCar
   return (
     <Link href={href} style={{ display: 'block', textDecoration: 'none' }}>
       <article>
-        <div style={{ aspectRatio: '16/10', background: 'var(--surface)', marginBottom: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-            {label}
-          </span>
+        <div style={{ aspectRatio: '16/10', background: 'var(--surface)', marginBottom: '16px', position: 'relative', overflow: 'hidden' }}>
+          {article.heroImage ? (
+            <Image
+              src={urlFor(article.heroImage).width(600).height(375).auto('format').url()}
+              alt={article.title}
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 768px) 100vw, 400px"
+            />
+          ) : (
+            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                {label}
+              </span>
+            </div>
+          )}
         </div>
 
         <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>

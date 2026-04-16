@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import { urlFor } from '@/lib/sanity.image'
 
 interface DevelopmentCardProps {
   development: {
@@ -69,19 +71,29 @@ export default function DevelopmentCard({ development, variant = 'default' }: De
               Featured
             </div>
           )}
-          <div style={{
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'var(--muted)',
-            fontSize: '12px',
-            fontFamily: 'sans-serif',
-            letterSpacing: '0.04em',
-          }}>
-            {development.location?.name}
-          </div>
+          {development.heroImage ? (
+            <Image
+              src={urlFor(development.heroImage).width(600).height(450).auto('format').url()}
+              alt={development.name}
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 768px) 100vw, 400px"
+            />
+          ) : (
+            <div style={{
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'var(--muted)',
+              fontSize: '12px',
+              fontFamily: 'sans-serif',
+              letterSpacing: '0.04em',
+            }}>
+              {development.location?.name}
+            </div>
+          )}
         </div>
 
         {/* Meta */}
