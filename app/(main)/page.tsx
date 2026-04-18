@@ -16,62 +16,81 @@ export default async function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section style={{ borderBottom: '1px solid var(--border)', padding: '80px 0 72px' }}>
+      <section style={{ borderBottom: '1px solid var(--border)', padding: '88px 0 80px' }}>
         <div className="container-editorial">
-          <div style={{ maxWidth: '640px' }}>
-            <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '24px', margin: '0 0 24px' }}>
-              Portugal Developments Review
-            </p>
-            <h1 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 400, lineHeight: 1.15, margin: '0 0 24px', letterSpacing: '-0.02em' }}>
-              Curated new developments across Portugal.
-            </h1>
-            <p style={{ fontSize: '18px', color: 'var(--muted)', lineHeight: 1.6, margin: '0 0 36px', maxWidth: '520px' }}>
-              An editorial platform for exceptional new residential projects — curated through independent selection, location intelligence, and premium presentation.
-            </p>
-            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '80px', alignItems: 'end' }} className="hero-grid">
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '32px' }}>
+                <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', margin: 0, flexShrink: 0 }}>
+                  Portugal Developments Review
+                </p>
+                <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
+              </div>
+              <h1 style={{ fontSize: 'clamp(36px, 5.5vw, 58px)', fontWeight: 400, lineHeight: 1.1, margin: '0 0 40px', letterSpacing: '-0.02em' }}>
+                Curated new developments across Portugal.
+              </h1>
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                <Link
+                  href="/developments"
+                  style={{
+                    display: 'inline-block',
+                    background: 'var(--foreground)',
+                    color: 'var(--background)',
+                    padding: '14px 28px',
+                    fontSize: '13px',
+                    fontFamily: 'sans-serif',
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
+                    textDecoration: 'none',
+                  }}
+                >
+                  Explore Developments
+                </Link>
+                <Link
+                  href="/developments"
+                  style={{
+                    display: 'inline-block',
+                    border: '1px solid var(--border)',
+                    color: 'var(--foreground)',
+                    padding: '14px 28px',
+                    fontSize: '13px',
+                    fontFamily: 'sans-serif',
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
+                    textDecoration: 'none',
+                  }}
+                >
+                  Browse by Location
+                </Link>
+              </div>
+            </div>
+            <div style={{ borderLeft: '1px solid var(--border)', paddingLeft: '48px', paddingBottom: '4px' }} className="hero-aside">
+              <p style={{ fontSize: '16px', color: 'var(--muted)', lineHeight: 1.75, margin: '0 0 32px' }}>
+                An editorial platform for exceptional new residential projects — curated through independent selection, location intelligence, and premium presentation.
+              </p>
               <Link
-                href="/developments"
-                style={{
-                  display: 'inline-block',
-                  background: 'var(--foreground)',
-                  color: 'var(--background)',
-                  padding: '14px 28px',
-                  fontSize: '13px',
-                  fontFamily: 'sans-serif',
-                  letterSpacing: '0.06em',
-                  textTransform: 'uppercase',
-                  textDecoration: 'none',
-                }}
+                href="/methodology"
+                style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}
               >
-                Explore Developments
-              </Link>
-              <Link
-                href="/developments"
-                style={{
-                  display: 'inline-block',
-                  border: '1px solid var(--border)',
-                  color: 'var(--foreground)',
-                  padding: '14px 28px',
-                  fontSize: '13px',
-                  fontFamily: 'sans-serif',
-                  letterSpacing: '0.06em',
-                  textTransform: 'uppercase',
-                  textDecoration: 'none',
-                }}
-              >
-                Browse by Location
+                Read Our Methodology →
               </Link>
             </div>
           </div>
         </div>
+        <style>{`
+          @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+            .hero-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--border); padding-top: 28px !important; }
+          }
+        `}</style>
       </section>
 
       {/* Location quick nav */}
       <section style={{ borderBottom: '1px solid var(--border)', padding: '20px 0', background: 'var(--surface)' }}>
         <div className="container-editorial">
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-            <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-              Browse:
+          <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0' }}>
+            <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase', marginRight: '24px' }}>
+              Locations
             </span>
             {[
               { href: '/locations/lisbon', label: 'Lisbon' },
@@ -80,23 +99,24 @@ export default async function HomePage() {
               { href: '/locations/algarve', label: 'Algarve' },
               { href: '/locations/comporta', label: 'Comporta' },
               { href: '/locations/gaia', label: 'Gaia' },
-            ].map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                style={{
-                  fontSize: '12px',
-                  fontFamily: 'sans-serif',
-                  letterSpacing: '0.04em',
-                  border: '1px solid var(--border)',
-                  padding: '6px 14px',
-                  color: 'var(--foreground)',
-                  textDecoration: 'none',
-                  background: 'var(--background)',
-                }}
-              >
-                {label}
-              </Link>
+            ].map(({ href, label }, i, arr) => (
+              <span key={href} style={{ display: 'inline-flex', alignItems: 'center' }}>
+                <Link
+                  href={href}
+                  style={{
+                    fontSize: '13px',
+                    fontFamily: 'sans-serif',
+                    letterSpacing: '0.02em',
+                    color: 'var(--foreground)',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {label}
+                </Link>
+                {i < arr.length - 1 && (
+                  <span style={{ color: 'var(--border)', margin: '0 14px', fontSize: '13px', userSelect: 'none' }}>—</span>
+                )}
+              </span>
             ))}
             <Link
               href="/developments"

@@ -5,21 +5,24 @@ export default function Footer() {
 
   return (
     <footer style={{ borderTop: '1px solid var(--border)', background: 'var(--background)', marginTop: '80px' }}>
+      {/* Brand statement row */}
+      <div className="container-editorial">
+        <div style={{ padding: '40px 0 36px', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>
+            <span style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)' }}>
+              Portugal Developments Review
+            </span>
+            <span style={{ fontSize: '11px', color: 'var(--muted)', fontFamily: 'sans-serif', letterSpacing: '0.04em' }}>
+              by Viriato
+            </span>
+          </div>
+          <p style={{ fontSize: '13px', color: 'var(--muted)', fontFamily: 'sans-serif', margin: 0 }}>
+            Curated new developments across Portugal.
+          </p>
+        </div>
+      </div>
       <div className="container-editorial" style={{ padding: '48px 2rem 32px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '40px', marginBottom: '48px' }}>
-          {/* Brand */}
-          <div>
-            <div style={{ fontSize: '13px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '8px' }}>
-              Portugal Developments Review
-            </div>
-            <div style={{ fontSize: '12px', color: 'var(--muted)', fontFamily: 'sans-serif', marginBottom: '16px' }}>
-              by Viriato
-            </div>
-            <p style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.6, maxWidth: '220px' }}>
-              Curated new developments across Portugal.
-            </p>
-          </div>
-
           {/* Developments */}
           <div>
             <div style={{ fontSize: '11px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>

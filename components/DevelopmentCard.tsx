@@ -112,7 +112,7 @@ export default function DevelopmentCard({ development, variant = 'default' }: De
           </p>
         )}
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ borderTop: '1px solid var(--border)', marginTop: '14px', paddingTop: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <span style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>
             {development.priceDisplay || 'Price on Request'}
           </span>
