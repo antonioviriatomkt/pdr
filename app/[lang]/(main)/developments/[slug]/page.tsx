@@ -9,7 +9,7 @@ import InquiryPanel from './InquiryPanel'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates } from '@/lib/i18n/metadata'
 
-export const revalidate = 60
+export const revalidate = 3600
 export const dynamicParams = true
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {

@@ -11,7 +11,7 @@ export async function getFeaturedDevelopments(lang = 'en') {
       location->{ name, slug },
       developer->{ name }
     }
-  `, { lang })
+  `, { lang }, { next: { revalidate: 300 } })
 }
 
 export async function getAllDevelopments(lang = 'en', filters?: {
@@ -40,7 +40,7 @@ export async function getAllDevelopments(lang = 'en', filters?: {
       location->{ name, slug },
       developer->{ name }
     }
-  `, { lang })
+  `, { lang }, { next: { revalidate: 300 } })
 }
 
 export async function getDevelopmentBySlug(slug: string, lang = 'en') {
@@ -61,7 +61,7 @@ export async function getDevelopmentBySlug(slug: string, lang = 'en') {
       relatedArticles[]->{ "title": coalesce(title[$lang], title.en), slug, heroImage, category, "excerpt": coalesce(excerpt[$lang], excerpt.en), publishedAt },
       seoTitle, seoDescription, noindex
     }
-  `, { slug, lang })
+  `, { slug, lang }, { next: { revalidate: 3600 } })
 }
 
 // Locations
@@ -71,7 +71,7 @@ export async function getAllLocations(lang = 'en') {
       _id, name, slug, region, heroImage,
       "intro": coalesce(intro[$lang], intro.en)
     }
-  `, { lang })
+  `, { lang }, { next: { revalidate: 3600 } })
 }
 
 export async function getLocationBySlug(slug: string, lang = 'en') {
@@ -83,7 +83,7 @@ export async function getLocationBySlug(slug: string, lang = 'en') {
       nearbyLocations[]->{ name, slug, heroImage },
       seoTitle, seoDescription
     }
-  `, { slug, lang })
+  `, { slug, lang }, { next: { revalidate: 3600 } })
 }
 
 export async function getDevelopmentsByLocation(locationSlug: string, lang = 'en') {
@@ -95,7 +95,7 @@ export async function getDevelopmentsByLocation(locationSlug: string, lang = 'en
       primaryCta,
       location->{ name, slug }
     }
-  `, { locationSlug, lang })
+  `, { locationSlug, lang }, { next: { revalidate: 300 } })
 }
 
 // Journal
@@ -110,7 +110,7 @@ export async function getLatestArticles(limit = 6, lang = 'en') {
       linkedLocation->{ name, slug },
       linkedDevelopment->{ name, slug }
     }
-  `, { limit, lang })
+  `, { limit, lang }, { next: { revalidate: 300 } })
 }
 
 export async function getArticlesByCategory(category: string, lang = 'en') {
@@ -123,7 +123,7 @@ export async function getArticlesByCategory(category: string, lang = 'en') {
       publishedAt,
       linkedLocation->{ name, slug }
     }
-  `, { category, lang })
+  `, { category, lang }, { next: { revalidate: 300 } })
 }
 
 export async function getArticleBySlug(slug: string, lang = 'en') {
@@ -139,7 +139,7 @@ export async function getArticleBySlug(slug: string, lang = 'en') {
       linkedDevelopment->{ name, slug, heroImage, status, priceDisplay },
       seoTitle, seoDescription
     }
-  `, { slug, lang })
+  `, { slug, lang }, { next: { revalidate: 3600 } })
 }
 
 export async function getAllArticles(lang = 'en') {
@@ -149,7 +149,7 @@ export async function getAllArticles(lang = 'en') {
       "title": coalesce(title[$lang], title.en),
       slug, category, publishedAt
     }
-  `, { lang })
+  `, { lang }, { next: { revalidate: 3600 } })
 }
 
 export async function getArticlesByLocation(locationSlug: string, lang = 'en') {
@@ -161,5 +161,5 @@ export async function getArticlesByLocation(locationSlug: string, lang = 'en') {
       "excerpt": coalesce(excerpt[$lang], excerpt.en),
       publishedAt
     }
-  `, { locationSlug, lang })
+  `, { locationSlug, lang }, { next: { revalidate: 300 } })
 }
