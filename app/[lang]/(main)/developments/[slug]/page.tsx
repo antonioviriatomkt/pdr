@@ -80,13 +80,13 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '60px', padding: '48px 0', alignItems: 'start' }}>
           <div>
             <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
-              {dev.location.name} · {labels.statusLabels[dev.status] ?? dev.status}{dev.type ? ` · ${labels.typeLabels[dev.type] ?? dev.type}` : ''}
+              {dev.location.name} · {(labels.statusLabels as Record<string, string>)[dev.status] ?? dev.status}{dev.type ? ` · ${(labels.typeLabels as Record<string, string>)[dev.type] ?? dev.type}` : ''}
             </div>
             <h1 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 400, margin: '0 0 8px', letterSpacing: '-0.02em', lineHeight: 1.15 }}>
               {dev.name}
             </h1>
             {dev.priceDisplay && (
-              <p style={{ fontSize: '18px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: '0 0 32px' }}>{labels.priceLabels[dev.priceDisplay] ?? dev.priceDisplay}</p>
+              <p style={{ fontSize: '18px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: '0 0 32px' }}>{(labels.priceLabels as Record<string, string>)[dev.priceDisplay] ?? dev.priceDisplay}</p>
             )}
 
             {dev.editorialThesis && (
@@ -163,7 +163,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {dev.lifestyleTags.map((tag: string) => (
                     <span key={tag} style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '5px 12px' }}>
-                      {labels.lifestyleTagLabels[tag] ?? tag}
+                      {(labels.lifestyleTagLabels as Record<string, string>)[tag] ?? tag}
                     </span>
                   ))}
                 </div>
