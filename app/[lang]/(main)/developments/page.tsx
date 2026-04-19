@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: getAlternates('/developments'),
 }
 
-export default async function DevelopmentsPage({ params }: PageProps<'/[lang]/(main)/developments'>) {
+export default async function DevelopmentsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   if (!hasLocale(lang)) notFound()
 
