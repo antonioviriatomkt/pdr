@@ -1,0 +1,719 @@
+You are my technical product and implementation partner.
+
+I am building a website called Portugal Developments Review by Viriato.
+Your job is to create a working phase-one website with a simple but solid architecture, clean code, and an editorial feel.
+
+Do not overcomplicate anything.
+Do not add unnecessary abstractions.
+Do not build marketplace, payment, or enterprise features.
+Focus on getting a strong MVP working end-to-end.
+
+Product context
+Portugal Developments Review by Viriato is not a traditional real estate agency website.
+It is a standalone editorial discovery platform for curated new developments in Portugal.
+It should sit between developers and buyers as a premium discovery and inquiry layer.
+
+The platform should help:
+
+Build and own a buyer audience.
+
+Increase the value of Viriato's existing services.
+
+Give Viriato clients free placement.
+
+Allow selected non-clients to pay later for featured placement, but do not build payments now.
+
+Position the brand as a premium, curated, trustworthy source for discovering new developments in Portugal.
+
+The website should feel like:
+
+A curated editorial platform.
+
+Searchable and useful.
+
+Structured more like a development discovery platform than a brokerage site.
+
+Premium, restrained, and clear.
+
+The website should not feel like:
+
+A mass-market property portal.
+
+A traditional brokerage site.
+
+A luxury cliché website.
+
+A magazine with weak utility.
+
+Brand and positioning
+Brand name:
+Portugal Developments Review by Viriato
+
+Brand architecture:
+
+Public-facing brand: Portugal Developments Review
+
+Endorsement: by Viriato
+
+Internal shorthand: PDR
+
+Working tagline:
+Curated new developments across Portugal.
+
+Core positioning:
+Portugal Developments Review is a curated platform for discovering exceptional new developments across Portugal through editorial selection, location intelligence, and premium presentation.
+
+Audience
+Primary audiences:
+
+Portuguese HNWI
+
+International investors buying in Portugal
+
+Diaspora buyers
+
+Affluent second-home buyers
+
+Geographic scope
+Portugal only for phase one.
+
+Priority locations:
+
+Lisbon
+
+Porto
+
+Gaia
+
+Cascais
+
+Algarve
+
+Comporta
+
+Product principles
+The MVP should prioritize:
+
+Brand prestige over lead volume
+
+Strong UI/UX
+
+Strong SEO foundations
+
+Clean editorial presentation
+
+Simple inquiry flow
+
+Developments should feel curated, but the platform should still support a broader searchable inventory over time.
+Each development page should feel like a mini editorial story, not a raw listing.
+
+Conversion model
+The site does not need payments.
+The site does not need user accounts.
+The site does not need a dashboard.
+
+Phase-one conversions should be simple:
+
+Request brochure
+
+Register interest
+
+Download investment pack
+
+Schedule consultation
+
+Speak with an advisor
+
+Important:
+
+One primary CTA should be emphasized on each development page.
+
+Leads should enter through the platform first.
+
+Developer ultimately handles the buyer later.
+
+Required page types
+Build these phase-one pages:
+
+Homepage
+
+Developments index page
+
+Development detail page
+
+Location page
+
+Journal index page
+
+Journal article page
+
+Methodology page
+
+About page
+
+For Developers page
+
+Contact / Register Interest page
+
+Homepage structure
+The homepage should include:
+
+Hero section with clear positioning statement
+
+Primary CTA: Explore Developments
+
+Secondary CTA: Browse by Location
+
+Compact search entry
+
+Featured developments
+
+Browse by location
+
+Editorial spotlight section
+
+Methodology teaser
+
+Journal / insights section
+
+Quiet developer invitation section
+
+Developments index requirements
+The developments index should:
+
+Feel curated and premium
+
+Avoid dense portal aesthetics
+
+Use strong imagery with limited but meaningful metadata
+
+Support visible filters
+
+Prioritize location-first browsing
+
+Recommended filters:
+
+Location
+
+Development type
+
+Price band or price on request
+
+Completion status
+
+Lifestyle tags
+
+Recommended sort options:
+
+Featured
+
+Newest
+
+Curated relevance
+
+Development page requirements
+Each development page should include:
+
+Hero image or gallery
+
+Project name
+
+Location
+
+Status
+
+Editorial thesis paragraph
+
+Key facts
+
+Why this project stands out
+
+Area guide / location context
+
+Availability or typology summary
+
+Inquiry panel with CTA options
+
+Related developments
+
+Related journal stories
+
+Location page requirements
+Each location page should include:
+
+Editorial intro
+
+Market / lifestyle framing
+
+Featured developments in that area
+
+Related journal content
+
+Secondary filters
+
+Links to nearby or comparable locations
+
+Journal requirements
+The journal is part of the authority and SEO system.
+It is not optional filler content.
+
+Phase-one categories can include:
+
+Architecture
+
+Area Guides
+
+Branded Residences
+
+New Developments by Location
+
+Second-Home Narratives
+
+Investment Explainers
+
+Every journal article should link back into at least one location page or development page.
+
+Methodology page requirements
+This page is important.
+It must explain the curation logic.
+
+Include:
+
+Why curation matters
+
+Selection criteria
+
+What may limit inclusion
+
+Review/update process
+
+How developers can be considered
+
+For Developers page requirements
+This page should explain:
+
+The platform is a premium buyer-facing environment
+
+Developers get editorial presentation
+
+Internal linking and visibility across the site
+
+Viriato clients get inclusion as part of service packages
+
+Selected non-clients may later be included through a paid route
+
+Do not promise guaranteed leads.
+
+Design direction
+Keep the design simple and restrained.
+
+Visual rules:
+
+Background: off-white
+
+Primary color: dark grey
+
+Secondary color: light grey
+
+Straight corners everywhere
+
+No rounded corners
+
+No UI animations
+
+No motion design
+
+No decorative flourishes
+
+No glossy luxury clichés
+
+No dark luxury look
+
+No gradients unless extremely subtle and truly necessary
+
+Design tone:
+
+Editorial
+
+Refined
+
+Practical
+
+Premium through restraint
+
+Clear rather than poetic
+
+Elegant rather than flashy
+
+UI rules:
+
+Use a strong grid
+
+Use generous spacing
+
+Use good typography hierarchy
+
+Use straight lines and clean borders
+
+Avoid card clutter
+
+Avoid overdesigned buttons
+
+Avoid portal density
+
+Technical architecture
+Keep architecture simple.
+
+Stack
+Use:
+
+Next.js with App Router
+
+TypeScript
+
+Sanity as the CMS
+
+Tailwind CSS for styling if it helps speed, otherwise clean CSS modules is fine
+
+Vercel deployment target
+
+Data model
+Use these main content types:
+
+Development
+
+Location
+
+JournalArticle
+
+Developer
+
+HomePage
+
+MethodologyPage
+
+ForDevelopersPage
+
+AboutPage
+
+SiteSettings
+
+Routing
+Use these routes:
+
+/
+
+/developments
+
+/developments/[slug]
+
+/locations/[slug]
+
+/journal
+
+/journal/category/[category]
+
+/journal/article/[slug]
+
+/methodology
+
+/for-developers
+
+/about
+
+/contact
+
+Content relationships
+Every development must reference one location
+
+Every development must reference one developer
+
+Every development should link to related developments
+
+Every development should link to related journal stories
+
+Every journal article should link to at least one location or development
+
+Forms
+Phase one can use simple server actions or API routes.
+Store submissions in the simplest possible way.
+Options in order of preference:
+
+Send by email
+
+Save to Sanity or a simple database table
+
+Both if very easy
+
+Do not build auth.
+Do not build a CRM.
+Do not build a custom admin dashboard.
+
+SEO requirements
+SEO matters a lot.
+Implement at minimum:
+
+Clean semantic HTML
+
+Fast page loads
+
+Dynamic metadata per page
+
+Sitemap
+
+robots.txt
+
+Open Graph tags
+
+Canonical URLs where relevant
+
+Internal linking between developments, locations, and journal content
+
+Good heading structure
+
+Indexable location pages
+
+Indexable development pages
+
+Indexable journal articles
+
+Also:
+
+Make location pages real content hubs, not thin placeholder pages
+
+Make development pages content-rich enough to rank and convert
+
+Make journal content support discovery, not sit in isolation
+
+Development approach
+Build the smallest working system that feels premium and complete.
+Prefer shipping a polished MVP over building future complexity.
+
+That means:
+
+Create a clean content model
+
+Create reusable page templates
+
+Seed a small amount of realistic demo content
+
+Make the site fully navigable
+
+Make forms work
+
+Make SEO basics work
+
+Make the design coherent
+
+Primary tasks
+Create a file called TASKS.md at the start of the project.
+This file must contain a checklist of all tasks.
+You must keep it updated as you complete work.
+
+Create these primary tasks in TASKS.md:
+
+Project setup
+
+Initialize Next.js with TypeScript
+
+Configure linting and formatting
+
+Set up Tailwind or chosen styling system
+
+Set up environment variables
+
+CMS setup
+
+Configure Sanity
+
+Add all required schemas
+
+Add demo content for developments, locations, journal articles, developers, and singleton pages
+
+Core layout system
+
+Global layout
+
+Header
+
+Footer
+
+Navigation
+
+Typography system
+
+Color tokens
+
+Spacing system
+
+Homepage
+
+Build homepage sections
+
+Connect homepage content from CMS
+
+Make all CTA links functional
+
+Developments index
+
+Build listing page
+
+Add filters
+
+Add sorting
+
+Connect CMS data
+
+Development detail page
+
+Build editorial detail template
+
+Add key facts, CTA block, related content, and area context
+
+Connect CMS data
+
+Location pages
+
+Build location template
+
+Add intro, featured developments, related articles, and nearby locations
+
+Connect CMS data
+
+Journal
+
+Build journal index
+
+Build journal category page
+
+Build journal article page
+
+Connect related content links
+
+Static brand pages
+
+Methodology page
+
+About page
+
+For Developers page
+
+Contact page
+
+Lead capture
+
+Build working inquiry forms
+
+Validate submissions
+
+Send submissions somewhere usable
+
+Add success and error states
+
+SEO
+
+Metadata
+
+Open Graph
+
+Sitemap
+
+robots.txt
+
+Structured internal linking
+
+QA and polish
+
+Responsive checks
+
+Accessibility checks
+
+Empty states
+
+Error states
+
+Content cleanup
+
+Remove placeholder junk
+
+Secondary tasks
+After the primary tasks, add these secondary tasks in TASKS.md:
+
+Seed more realistic demo content
+
+Improve filter UX
+
+Add richer developer pages later if needed
+
+Add search improvements later if needed
+
+Add CMS previews if easy
+
+Add image optimization improvements
+
+Add analytics
+
+Add better form routing / CRM integration later
+
+Add multilingual support later if needed
+
+Refine design details without changing the restrained visual system
+
+Execution rules
+You must work in this order:
+
+Create TASKS.md
+
+Fill TASKS.md with primary and secondary tasks
+
+Start completing tasks one by one
+
+Update TASKS.md as each task is completed
+
+Keep the project runnable at all times
+
+Do not leave half-finished architecture behind
+
+Deliverable expectations
+By the end, I want:
+
+A working local website
+
+Clean project structure
+
+Working CMS-backed pages
+
+Working navigation
+
+Working forms
+
+Strong basic SEO setup
+
+Seeded sample content
+
+A restrained editorial design system
+
+A maintained TASKS.md file showing what was done
+
+Important constraints
+Keep it simple
+
+Avoid overengineering
+
+Do not invent extra features
+
+Do not turn this into a SaaS product
+
+Do not make it look like a generic real estate portal
+
+Do not make it look like a flashy luxury site
+
+Do not use rounded corners
+
+Do not use motion or animation
+
+Prefer clear decisions over too many options
+
+Final instruction
+Start by creating TASKS.md with the full primary and secondary checklist.
+Then complete the project task by task, updating TASKS.md as you go.
