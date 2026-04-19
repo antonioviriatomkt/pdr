@@ -4,6 +4,7 @@ import Link from 'next/link'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import ArticleCard from '@/components/ArticleCard'
 import { getLocationBySlug, getDevelopmentsByLocation, getArticlesByLocation, getAllLocations } from '@/lib/queries'
+import { urlFor } from '@/lib/sanity.image'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates } from '@/lib/i18n/metadata'
 
@@ -14,10 +15,27 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang, slug } = await params
   const loc = await getLocationBySlug(slug, hasLocale(lang) ? lang : 'en')
   if (!loc) return {}
+  const title = `New Developments in ${loc.name}, Portugal`
+  const description = `Discover curated new residential developments in ${loc.name}. ${loc.intro?.slice(0, 120)}...`
+  const ogImage = loc.heroImage
+    ? urlFor(loc.heroImage).width(1200).height(630).fit('crop').auto('format').url()
+    : undefined
   return {
-    title: `New Developments in ${loc.name}, Portugal`,
-    description: `Discover curated new residential developments in ${loc.name}. ${loc.intro?.slice(0, 120)}...`,
+    title,
+    description,
     alternates: getAlternates(`/locations/${slug}`),
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630, alt: loc.name }] }),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      ...(ogImage && { images: [ogImage] }),
+    },
   }
 }
 

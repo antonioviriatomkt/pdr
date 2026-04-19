@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { getArticleBySlug, getLatestArticles, getDevelopmentsByLocation } from '@/lib/queries'
+import { urlFor } from '@/lib/sanity.image'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates } from '@/lib/i18n/metadata'
 import DevelopmentCard from '@/components/DevelopmentCard'
@@ -13,10 +15,25 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang, slug } = await params
   const article = await getArticleBySlug(slug, hasLocale(lang) ? lang : 'en')
   if (!article) return {}
+  const ogImage = article.heroImage
+    ? urlFor(article.heroImage).width(1200).height(630).fit('crop').auto('format').url()
+    : undefined
   return {
     title: article.title,
     description: article.excerpt || `${article.title} — Portugal Developments Review Journal`,
     alternates: getAlternates(`/journal/article/${slug}`),
+    openGraph: {
+      title: article.title,
+      description: article.excerpt || `${article.title} — Portugal Developments Review Journal`,
+      type: 'article',
+      ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630, alt: article.title }] }),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.excerpt || `${article.title} — Portugal Developments Review Journal`,
+      ...(ogImage && { images: [ogImage] }),
+    },
   }
 }
 
@@ -80,8 +97,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
 
       {/* Hero image */}
       {article.heroImage ? (
-        <div style={{ aspectRatio: '16/7', background: 'var(--surface)', maxHeight: '420px', overflow: 'hidden' }}>
-          {/* Image rendered via next/image if available */}
+        <div style={{ aspectRatio: '16/7', background: 'var(--surface)', maxHeight: '420px', overflow: 'hidden', position: 'relative' }}>
+          <Image
+            src={urlFor(article.heroImage).width(1600).height(700).auto('format').url()}
+            alt={article.title}
+            fill
+            priority
+            style={{ objectFit: 'cover' }}
+            sizes="100vw"
+          />
         </div>
       ) : (
         <div style={{ aspectRatio: '16/7', background: 'var(--surface)', maxHeight: '420px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

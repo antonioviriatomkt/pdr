@@ -14,10 +14,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const dict = await getDictionary(hasLocale(lang) ? lang : 'en')
   const label = dict.journal.categories[category as keyof typeof dict.journal.categories]
   if (!label) return {}
+  const articles = await getArticlesByCategory(category, hasLocale(lang) ? lang : 'en')
   return {
     title: `${label} — Journal`,
     description: `Editorial articles about ${label.toLowerCase()} covering new developments across Portugal.`,
     alternates: getAlternates(`/journal/category/${category}`),
+    robots: (articles as any[]).length === 0 ? { index: false, follow: false } : { index: true, follow: true },
   }
 }
 
