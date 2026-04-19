@@ -38,11 +38,44 @@ export const development = defineType({
     }),
     defineField({ name: 'heroImage', title: 'Hero Image', type: 'image', options: { hotspot: true }, validation: r => r.required() }),
     defineField({ name: 'gallery', title: 'Gallery', type: 'array', of: [{ type: 'image', options: { hotspot: true } }] }),
-    defineField({ name: 'editorialThesis', title: 'Editorial Thesis', type: 'text', rows: 4, description: 'The editorial paragraph that frames why this project matters.' }),
-    defineField({ name: 'whyStandsOut', title: 'Why This Project Stands Out', type: 'array', of: [{ type: 'block' }] }),
+    defineField({
+      name: 'editorialThesis',
+      title: 'Editorial Thesis',
+      type: 'object',
+      description: 'The editorial paragraph that frames why this project matters.',
+      fields: [
+        defineField({ name: 'en', title: 'English', type: 'text', rows: 4 }),
+        defineField({ name: 'pt', title: 'Portuguese', type: 'text', rows: 4 }),
+      ],
+    }),
+    defineField({
+      name: 'whyStandsOut',
+      title: 'Why This Project Stands Out',
+      type: 'object',
+      fields: [
+        defineField({ name: 'en', title: 'English', type: 'array', of: [{ type: 'block' }] }),
+        defineField({ name: 'pt', title: 'Portuguese', type: 'array', of: [{ type: 'block' }] }),
+      ],
+    }),
     defineField({ name: 'keyFacts', title: 'Key Facts', type: 'array', of: [{ type: 'object', fields: [{ name: 'label', type: 'string' }, { name: 'value', type: 'string' }] }] }),
-    defineField({ name: 'areaGuide', title: 'Area Guide / Location Context', type: 'array', of: [{ type: 'block' }] }),
-    defineField({ name: 'typologyNote', title: 'Availability / Typology Summary', type: 'text', rows: 3 }),
+    defineField({
+      name: 'areaGuide',
+      title: 'Area Guide / Location Context',
+      type: 'object',
+      fields: [
+        defineField({ name: 'en', title: 'English', type: 'array', of: [{ type: 'block' }] }),
+        defineField({ name: 'pt', title: 'Portuguese', type: 'array', of: [{ type: 'block' }] }),
+      ],
+    }),
+    defineField({
+      name: 'typologyNote',
+      title: 'Availability / Typology Summary',
+      type: 'object',
+      fields: [
+        defineField({ name: 'en', title: 'English', type: 'text', rows: 3 }),
+        defineField({ name: 'pt', title: 'Portuguese', type: 'text', rows: 3 }),
+      ],
+    }),
     defineField({
       name: 'primaryCta',
       title: 'Primary CTA',

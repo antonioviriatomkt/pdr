@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"C:/Users/anton/Dropbox/PDR/.claude/worktrees/nostalgic-kalam\" rev-parse --git-common-dir)",
+      "Bash(node node_modules/next/dist/bin/next build)",
+      "Bash(node \"C:/Users/anton/Dropbox/PDR/node_modules/typescript/bin/tsc\" --noEmit)",
+      "Bash(node \"C:/Users/anton/Dropbox/PDR/node_modules/next/dist/bin/next\" build)",
+      "Bash(node \"C:/Users/anton/Dropbox/PDR/node_modules/next/dist/bin/next\" build --no-turbopack)",
+      "Bash(NEXT_TURBO=0 node \"C:/Users/anton/Dropbox/PDR/node_modules/next/dist/bin/next\" build)",
+      "Bash(grep \"\\\\.d\\\\.ts$\")"
+    ]
+  }
+}

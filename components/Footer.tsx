@@ -1,11 +1,16 @@
 import Link from 'next/link'
+import type { Dictionary } from '@/lib/i18n/types'
 
-export default function Footer() {
+interface FooterProps {
+  lang: string
+  footer: Dictionary['footer']
+}
+
+export default function Footer({ lang, footer }: FooterProps) {
   const year = new Date().getFullYear()
 
   return (
     <footer style={{ borderTop: '1px solid var(--border)', background: 'var(--background)', marginTop: '80px' }}>
-      {/* Brand statement row */}
       <div className="container-editorial">
         <div style={{ padding: '40px 0 36px', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '16px' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>
@@ -17,24 +22,25 @@ export default function Footer() {
             </span>
           </div>
           <p style={{ fontSize: '13px', color: 'var(--muted)', fontFamily: 'sans-serif', margin: 0 }}>
-            Curated new developments across Portugal.
+            {footer.tagline}
           </p>
         </div>
       </div>
+
       <div className="container-editorial" style={{ padding: '48px 2rem 32px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '40px', marginBottom: '48px' }}>
           {/* Developments */}
           <div>
             <div style={{ fontSize: '11px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
-              Developments
+              {footer.sections.developments}
             </div>
             {[
-              { href: '/developments', label: 'All Developments' },
-              { href: '/locations/lisbon', label: 'Lisbon' },
-              { href: '/locations/porto', label: 'Porto' },
-              { href: '/locations/cascais', label: 'Cascais' },
-              { href: '/locations/algarve', label: 'Algarve' },
-              { href: '/locations/comporta', label: 'Comporta' },
+              { href: `/${lang}/developments`, label: footer.links.allDevelopments },
+              { href: `/${lang}/locations/lisbon`, label: 'Lisbon' },
+              { href: `/${lang}/locations/porto`, label: 'Porto' },
+              { href: `/${lang}/locations/cascais`, label: 'Cascais' },
+              { href: `/${lang}/locations/algarve`, label: 'Algarve' },
+              { href: `/${lang}/locations/comporta`, label: 'Comporta' },
             ].map(({ href, label }) => (
               <Link key={href} href={href} style={{ display: 'block', fontSize: '13px', color: 'var(--muted)', marginBottom: '8px', textDecoration: 'none' }}>
                 {label}
@@ -45,14 +51,14 @@ export default function Footer() {
           {/* Journal */}
           <div>
             <div style={{ fontSize: '11px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
-              Journal
+              {footer.sections.journal}
             </div>
             {[
-              { href: '/journal', label: 'All Articles' },
-              { href: '/journal/category/area-guides', label: 'Area Guides' },
-              { href: '/journal/category/investment', label: 'Investment' },
-              { href: '/journal/category/architecture', label: 'Architecture' },
-              { href: '/journal/category/branded-residences', label: 'Branded Residences' },
+              { href: `/${lang}/journal`, label: footer.links.allArticles },
+              { href: `/${lang}/journal/category/area-guides`, label: footer.links.areaGuides },
+              { href: `/${lang}/journal/category/investment`, label: footer.links.investment },
+              { href: `/${lang}/journal/category/architecture`, label: footer.links.architecture },
+              { href: `/${lang}/journal/category/branded-residences`, label: footer.links.brandedResidences },
             ].map(({ href, label }) => (
               <Link key={href} href={href} style={{ display: 'block', fontSize: '13px', color: 'var(--muted)', marginBottom: '8px', textDecoration: 'none' }}>
                 {label}
@@ -63,13 +69,13 @@ export default function Footer() {
           {/* Platform */}
           <div>
             <div style={{ fontSize: '11px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
-              Platform
+              {footer.sections.platform}
             </div>
             {[
-              { href: '/methodology', label: 'Methodology' },
-              { href: '/about', label: 'About' },
-              { href: '/for-developers', label: 'For Developers' },
-              { href: '/contact', label: 'Contact' },
+              { href: `/${lang}/methodology`, label: footer.links.methodology },
+              { href: `/${lang}/about`, label: footer.links.about },
+              { href: `/${lang}/for-developers`, label: footer.links.forDevelopers },
+              { href: `/${lang}/contact`, label: footer.links.contact },
             ].map(({ href, label }) => (
               <Link key={href} href={href} style={{ display: 'block', fontSize: '13px', color: 'var(--muted)', marginBottom: '8px', textDecoration: 'none' }}>
                 {label}
@@ -80,10 +86,10 @@ export default function Footer() {
 
         <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
           <p style={{ fontSize: '12px', color: 'var(--muted)', fontFamily: 'sans-serif' }}>
-            © {year} Portugal Developments Review by Viriato. All rights reserved.
+            {footer.copyright.replace('{year}', String(year))}
           </p>
           <p style={{ fontSize: '12px', color: 'var(--muted)', fontFamily: 'sans-serif' }}>
-            A curated platform for new developments across Portugal.
+            {footer.platformTagline}
           </p>
         </div>
       </div>

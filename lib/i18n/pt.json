@@ -1,0 +1,346 @@
+{
+  "common": {
+    "siteName": "Portugal Developments Review",
+    "byViriato": "by Viriato",
+    "home": "Início",
+    "viewAll": "Ver Todos →",
+    "allArticles": "Todos os Artigos →",
+    "allDevelopments": "Todos os Projetos →",
+    "learnMore": "Saber Mais →",
+    "contactUs": "Contacte-nos →",
+    "readMethodology": "Ler a Nossa Metodologia →",
+    "priceOnRequest": "Preço sob Consulta",
+    "featured": "Destaque",
+    "viewArrow": "Ver →",
+    "sendingEllipsis": "A enviar…",
+    "somethingWentWrong": "Algo correu mal. Por favor tente novamente.",
+    "locations": "Localizações"
+  },
+
+  "nav": {
+    "developments": "Projetos",
+    "locations": "Localizações",
+    "journal": "Revista",
+    "methodology": "Metodologia",
+    "about": "Sobre",
+    "enquire": "Contactar",
+    "toggleMenu": "Abrir menu"
+  },
+
+  "footer": {
+    "tagline": "Desenvolvimentos selecionados em Portugal.",
+    "copyright": "© {year} Portugal Developments Review by Viriato. Todos os direitos reservados.",
+    "platformTagline": "Uma plataforma curada para novos desenvolvimentos em Portugal.",
+    "sections": {
+      "developments": "Projetos",
+      "journal": "Revista",
+      "platform": "Plataforma"
+    },
+    "links": {
+      "allDevelopments": "Todos os Projetos",
+      "allArticles": "Todos os Artigos",
+      "areaGuides": "Guias de Área",
+      "investment": "Investimento",
+      "architecture": "Arquitetura",
+      "brandedResidences": "Residências de Marca",
+      "methodology": "Metodologia",
+      "about": "Sobre",
+      "forDevelopers": "Para Promotores",
+      "contact": "Contacto"
+    }
+  },
+
+  "home": {
+    "hero": {
+      "eyebrow": "Portugal Developments Review",
+      "headline": "Desenvolvimentos selecionados em Portugal.",
+      "exploreBtn": "Explorar Projetos",
+      "browseBtn": "Pesquisar por Localização",
+      "aside": "Uma plataforma editorial para projetos residenciais excecionais — selecionados através de escolha independente, inteligência de localização e apresentação premium."
+    },
+    "featured": {
+      "eyebrow": "Destaque",
+      "heading": "Projetos Selecionados"
+    },
+    "browseByLocation": {
+      "eyebrow": "Inteligência de Localização",
+      "heading": "Pesquisar por Localização"
+    },
+    "shortlist": {
+      "eyebrow": "A Seleção",
+      "heading": "Seja o primeiro a saber o que importa.",
+      "body": "Receba a seleção mensal privada da PDR com desenvolvimentos excecionais em Lisboa, Porto, Cascais, Algarve, Comporta e mais."
+    },
+    "approach": {
+      "eyebrow": "A Nossa Abordagem",
+      "heading": "Como selecionamos os projetos nesta plataforma.",
+      "body1": "O Portugal Developments Review não opera como um portal de anúncios. Cada projeto que aparece nesta plataforma foi avaliado através da nossa metodologia de curadoria — verificado segundo critérios que incluem qualidade arquitetónica, historial do promotor, fundamentos da localização e a coerência da proposta do projeto.",
+      "body2": "Não somos uma imobiliária. Somos uma plataforma de descoberta com uma perspetiva editorial.",
+      "criteriaHeading": "Critérios de Seleção",
+      "criteria": [
+        "Qualidade arquitetónica e coerência de design",
+        "Historial e credibilidade do promotor",
+        "Fundamentos e fatores de procura da localização",
+        "Integridade da especificação e entrega",
+        "Autenticidade da proposta do projeto"
+      ]
+    },
+    "journal": {
+      "eyebrow": "Análises",
+      "heading": "Revista"
+    },
+    "forDevelopers": {
+      "eyebrow": "Para Promotores",
+      "heading": "O seu projeto é suficientemente excecional para ser considerado?",
+      "body": "Trabalhamos com um número limitado de promotores que cumprem os nossos critérios de curadoria. Os clientes Viriato recebem colocação editorial como parte do seu pacote de serviços. Não-clientes selecionados podem ser considerados por uma via separada."
+    }
+  },
+
+  "developments": {
+    "eyebrow": "Seleção Curada",
+    "heading": "Novos Projetos em Portugal",
+    "subheading": "Cada projeto nesta plataforma foi avaliado através do nosso processo de seleção editorial. A quantidade não é o objetivo.",
+    "filters": {
+      "allLocations": "Todas as Localizações",
+      "allTypes": "Todos os Tipos",
+      "allStatus": "Todos os Estados",
+      "clearFilters": "Limpar filtros",
+      "sort": "Ordenar:",
+      "sortFeatured": "Destaque",
+      "sortNewest": "Mais Recentes"
+    },
+    "results": {
+      "count_one": "{count} projeto",
+      "count_other": "{count} projetos",
+      "matchingFilters": " correspondentes aos seus filtros",
+      "noResults": "Nenhum projeto corresponde aos seus filtros atuais.",
+      "clearFiltersBtn": "Limpar Filtros"
+    },
+    "detail": {
+      "breadcrumbDevelopments": "Projetos",
+      "keyFacts": "Factos Chave",
+      "availability": "Disponibilidade",
+      "developerLabel": "Promotor",
+      "viriatoClient": "Cliente Viriato",
+      "locationContext": "Contexto da Localização",
+      "locationContextBody": "{name} está localizado em {location}, um dos endereços mais procurados de Portugal para novos desenvolvimentos residenciais.",
+      "exploreLocation": "Explorar {location} →",
+      "lifestyle": "Estilo de Vida",
+      "gallery": "Galeria",
+      "relatedHeading": "Outros Projetos em {location}"
+    }
+  },
+
+  "locations": {
+    "breadcrumbLocations": "Localizações",
+    "headingPrefix": "Novos Projetos em",
+    "developmentsHeading": "Projetos Curados",
+    "noDevelopments": "Ainda não existem desenvolvimentos curados nesta localização.",
+    "journalHeading": "Leitura Relacionada",
+    "nearbyHeading": "Localizações Próximas",
+    "exploreArrow": "Explorar →"
+  },
+
+  "journal": {
+    "eyebrow": "Análises",
+    "heading": "Revista",
+    "subheading": "Análise editorial, guias de área, explicadores de investimento e críticas de arquitetura — tudo ligado aos projetos e localizações desta plataforma.",
+    "filterAll": "Todos",
+    "categories": {
+      "architecture": "Arquitetura",
+      "area-guides": "Guias de Área",
+      "branded-residences": "Residências de Marca",
+      "new-developments": "Novos Projetos",
+      "second-home": "Segunda Residência",
+      "investment": "Investimento"
+    },
+    "article": {
+      "relatedDevelopments": "Projetos Relacionados",
+      "relatedLocation": "Localização"
+    }
+  },
+
+  "contact": {
+    "eyebrow": "Contactos",
+    "heading": "Contacto",
+    "subheading": "Registe interesse num projeto, faça uma pergunta ou diga-nos o que procura. Respondemos num dia útil.",
+    "whatHappensNext": "O que acontece a seguir",
+    "whatHappensNextBody": "O seu pedido chega primeiro à nossa equipa. Qualificamos o pedido e colocamo-lo em contacto com a equipa do projeto ou consultor relevante. Não partilhamos os seus dados com terceiros sem o seu conhecimento.",
+    "responseTime": "Tempo de resposta",
+    "responseTimeBody": "Num dia útil. Os pedidos recebidos fora do horário de expediente são reconhecidos na manhã seguinte.",
+    "otherWays": "Outras formas de nos contactar",
+    "forDevelopersLink": "Informação para promotores →"
+  },
+
+  "contactForm": {
+    "fullName": "Nome Completo *",
+    "fullNamePlaceholder": "O seu nome completo",
+    "email": "Endereço de Email *",
+    "emailPlaceholder": "o-seu@email.com",
+    "phone": "Telefone",
+    "phonePlaceholder": "+351 ou número internacional",
+    "enquiryType": "Tipo de Pedido *",
+    "development": "Projeto (se aplicável)",
+    "developmentPlaceholder": "Nome do projeto em que tem interesse",
+    "message": "Mensagem *",
+    "messagePlaceholder": "Diga-nos o que procura...",
+    "submit": "Enviar Pedido",
+    "submitting": "A enviar…",
+    "errorMessage": "Algo correu mal. Por favor tente novamente ou contacte-nos diretamente.",
+    "privacyNote": "Não partilhamos os seus dados com terceiros sem o seu consentimento prévio. Receberá uma resposta da nossa equipa num dia útil.",
+    "successHeading": "Obrigado.",
+    "successBody": "Recebemos o seu pedido e responderemos num dia útil.",
+    "enquiryTypes": [
+      "Registar Interesse num Projeto",
+      "Solicitar Brochura",
+      "Descarregar Pacote de Investimento",
+      "Agendar Consulta",
+      "Falar com um Consultor",
+      "Pedido de Promotor",
+      "Questão Geral"
+    ]
+  },
+
+  "inquiry": {
+    "iWouldLikeTo": "Gostaria de:",
+    "fullNamePlaceholder": "Nome completo",
+    "emailPlaceholder": "Endereço de email",
+    "phonePlaceholder": "Telefone (opcional)",
+    "messagePlaceholder": "Mensagem (opcional)",
+    "errorMessage": "Algo correu mal. Por favor tente novamente.",
+    "successHeading": "Obrigado pelo seu contacto.",
+    "successBody": "Entraremos em contacto num dia útil.",
+    "privacyNote": "O seu pedido chega ao Portugal Developments Review. Colocamo-lo em contacto com a equipa relevante.",
+    "ctaOptions": [
+      "Solicitar Brochura",
+      "Registar Interesse",
+      "Descarregar Pacote de Investimento",
+      "Agendar Consulta",
+      "Falar com um Consultor"
+    ]
+  },
+
+  "newsletter": {
+    "emailLabel": "Endereço de email",
+    "emailPlaceholder": "o-seu@email.com",
+    "submitBtn": "Receber a Seleção",
+    "submitting": "A enviar…",
+    "successMessage": "Está na nossa lista. A próxima edição chegará diretamente a si.",
+    "footnote": "Uma edição por mês. Seleções curadas, alertas antecipados e brochuras selecionadas."
+  },
+
+  "about": {
+    "eyebrow": "Plataforma",
+    "heading": "Sobre",
+    "subheading": "O que é o Portugal Developments Review — e o que não é.",
+    "platformHeading": "A Plataforma",
+    "platform1": "O Portugal Developments Review é uma plataforma editorial independente para descobrir desenvolvimentos residenciais novos e excecionais em Portugal. Não é uma imobiliária, um portal, nem um serviço de anúncios. É uma seleção curada — sustentada por uma metodologia, mantida por uma equipa editorial e apresentada a um público específico.",
+    "platform2": "A plataforma existe porque o crescimento do mercado de novos desenvolvimentos em Portugal ultrapassou a capacidade de descoberta fiável. Há mais produto, mais marketing e mais ruído — mas não necessariamente mais clareza. O Portugal Developments Review foi concebido para proporcionar essa clareza.",
+    "platform3": "Cada projeto nesta plataforma foi revisto através do nosso processo editorial. A quantidade de projetos é deliberadamente limitada. O objetivo não é a cobertura total — é o sinal fiável.",
+    "forBuyersHeading": "Para Compradores",
+    "forBuyers1": "A plataforma é gratuita. Não há registo obrigatório, recolha de dados nem classificações patrocinadas. Todos os pedidos submetidos através da plataforma passam primeiro pela nossa equipa.",
+    "viriatoHeading": "Viriato",
+    "viriato1": "O Portugal Developments Review é publicado pela Viriato — uma empresa de consultoria imobiliária que opera no mercado premium de propriedades em Portugal. A Viriato trabalha com promotores, investidores e compradores privados na aquisição, estruturação e gestão de ativos imobiliários significativos.",
+    "viriato2": "A plataforma oferece aos clientes promotores da Viriato um canal editorial premium em complemento à sua relação de assessoria existente. Proporciona também a compradores sérios uma visão curada e de confiança do mercado de novos desenvolvimentos em Portugal.",
+    "viriato3": "Os padrões editoriais da plataforma são mantidos de forma independente das relações comerciais. A inclusão no Portugal Developments Review exige o cumprimento dos mesmos critérios, independentemente de o promotor ser ou não cliente da Viriato.",
+    "audiencesHeading": "Os Nossos Públicos",
+    "audiences": [
+      "HNWI portugueses",
+      "Investidores internacionais a comprar em Portugal",
+      "Compradores da diáspora",
+      "Compradores afluentes de segunda residência"
+    ],
+    "locationsCoveredHeading": "Localizações Cobertas"
+  },
+
+  "methodology": {
+    "eyebrow": "O Nosso Processo",
+    "heading": "Metodologia",
+    "subheading": "Por que a curadoria importa — e como decidimos o que aparece nesta plataforma.",
+    "whyCurationHeading": "Por que a curadoria importa",
+    "whyCuration1": "O mercado de novos desenvolvimentos em Portugal expandiu-se significativamente na última década. O número de projetos cresceu mais rapidamente do que a capacidade do mercado para manter uma qualidade consistente. Nem todos os desenvolvimentos que se apresentam como premium são premium em qualquer sentido significativo.",
+    "whyCuration2": "Para um comprador sério — seja a adquirir uma residência principal, uma segunda habitação ou um ativo de investimento — navegar neste panorama sem orientação é demorado e arriscado. A fotografia de marca e as brochuras cuidadas não são um substituto fiável para a qualidade.",
+    "whyCuration3": "O Portugal Developments Review existe para desempenhar uma função editorial independente: rever o mercado, aplicar critérios consistentes e apresentar apenas os desenvolvimentos que cumprem o nosso limiar. O resultado é uma seleção mais pequena e mais ponderada — em que um comprador sério pode confiar.",
+    "criteriaHeading": "Critérios de seleção",
+    "criteriaIntro": "Avaliamos cada projeto segundo cinco dimensões principais:",
+    "criteria": [
+      {
+        "title": "Qualidade arquitetónica e coerência de design",
+        "body": "Procuramos projetos onde o design é intencional — onde a forma, os materiais e a organização espacial são consistentes com a proposta declarada do projeto. A arquitetura ao nível da fachada não é suficiente. Procuramos coerência desde o briefing até ao detalhe."
+      },
+      {
+        "title": "Historial e credibilidade do promotor",
+        "body": "O promotor por detrás de um projeto é tão importante quanto o próprio projeto. Examinamos entregas anteriores, a situação financeira da organização e a integridade com que tratou compradores anteriores. As promessas em planta devem ser avaliadas em relação a um historial de entrega."
+      },
+      {
+        "title": "Fundamentos e fatores de procura da localização",
+        "body": "A localização não é simplesmente um código postal. Avaliamos o terreno específico, o contexto imediato, o acesso a transportes e infraestruturas e os fatores a médio prazo que sustentarão ou deteriorarão a procura. Um desenvolvimento bem concebido numa localização estruturalmente fraca continua a ser um risco."
+      },
+      {
+        "title": "Integridade da especificação e entrega",
+        "body": "As afirmações sobre especificações — sistemas domésticos inteligentes, materiais sustentáveis, eletrodomésticos premium — devem ser credíveis e proporcionais ao ponto de preço. Procuramos especificações genuinamente entregáveis ao preço declarado, não aspiracionais."
+      },
+      {
+        "title": "Autenticidade da proposta do projeto",
+        "body": "Cada desenvolvimento conta uma história sobre si próprio. Avaliamos se essa história é coerente, honesta e sustentada por evidências. Os projetos que fazem afirmações aspiracionais sem substância são excluídos independentemente das suas outras qualidades."
+      }
+    ],
+    "limitsHeading": "O que pode limitar a inclusão",
+    "limitsIntro": "Um projeto pode ser excluído ou diferido por razões que não estão relacionadas com a qualidade:",
+    "limits": [
+      "Informação insuficiente disponível para uma avaliação responsável",
+      "Disputas legais ou regulatórias ativas envolvendo o projeto",
+      "Falta de cooperação do promotor no processo de revisão",
+      "O projeto está demasiado numa fase inicial para uma avaliação editorial significativa",
+      "O projeto entra em conflito com desenvolvimentos já apresentados na mesma localização ao mesmo ponto de preço"
+    ],
+    "reviewHeading": "Processo de revisão e atualização",
+    "review1": "O processo de desenvolvimento imobiliário é dinâmico. Os projetos mudam. Os promotores encontram dificuldades. As condições de mercado alteram-se. A nossa equipa editorial monitoriza os desenvolvimentos listados de forma contínua e irá atualizar, qualificar ou remover um projeto se informações materiais se alterarem.",
+    "review2": "Esta não é uma diretoria estática. É uma plataforma editorial viva.",
+    "considerationHeading": "Como os promotores podem ser considerados",
+    "consideration1": "Os clientes Viriato são avaliados para inclusão como parte da sua relação de serviço existente. Isto não é automático — os padrões editoriais aplicam-se igualmente a projetos de clientes e não-clientes — mas o processo de revisão é iniciado como parte do compromisso do cliente.",
+    "consideration2": "Promotores não clientes podem submeter os seus projetos para consideração. Não existe taxa para esta avaliação inicial. Se um projeto cumprir o nosso limiar, pode ser incluído na plataforma. Também consideraremos acordos formais para colocação em destaque com promotores cujos projetos sejam incluídos.",
+    "forDevelopersLink": "Informação para Promotores →"
+  },
+
+  "forDevelopers": {
+    "eyebrow": "Promotores",
+    "heading": "Para Promotores",
+    "subheading": "Este é um ambiente premium voltado para compradores — não um portal de anúncios. Se o seu projeto cumpre os nossos critérios de curadoria, gostaríamos de o discutir.",
+    "whatItIsHeading": "O que é esta plataforma",
+    "whatItIs1": "O Portugal Developments Review não é um portal imobiliário tradicional. É uma plataforma editorial curada — seletiva por design, com um público focado de compradores sérios.",
+    "whatItIs2": "A plataforma não compete com o seu marketing existente. Ocupa uma camada específica: descoberta premium, enquadramento editorial e captação de contactos qualificados — dirigida a compradores que estão ativamente a considerar o mercado português e que não são servidos por portais de massa.",
+    "whatItIs3": "Os nossos públicos principais são HNWI portugueses, investidores internacionais, compradores da diáspora e compradores afluentes de segunda residência. São compradores para quem a curadoria sinaliza credibilidade.",
+    "whatReceiveHeading": "O que os promotores recebem",
+    "whatReceive": [
+      {
+        "title": "Apresentação editorial",
+        "body": "Cada projeto recebe uma página editorial dedicada — não um simples anúncio. O seu projeto é enquadrado através de uma tese editorial: o que o torna distinto, por que importa e por que pertence a uma plataforma curada."
+      },
+      {
+        "title": "Ligação interna e visibilidade",
+        "body": "O seu projeto está ligado a partir das páginas de localização relevantes, artigos de revista e secções em destaque em todo o site. Isto cria múltiplos caminhos de descoberta para compradores que pesquisam áreas específicas."
+      },
+      {
+        "title": "Fluxo de contactos qualificados",
+        "body": "Os contactos de compradores que leram uma apresentação editorial são diferentes dos contactos de portais. Têm contexto, intenção e um nível de envolvimento que reflete a natureza da plataforma."
+      },
+      {
+        "title": "Presença em SEO",
+        "body": "Cada página de projeto está estruturada para descoberta em motores de pesquisa — com HTML semântico limpo, metadados dinâmicos e ligação a conteúdos de localização e revista indexados. O seu projeto beneficia da crescente presença orgânica da plataforma."
+      }
+    ],
+    "viriatoClientsEyebrow": "Clientes Viriato",
+    "viriatoClientsHeading": "Inclusão como parte do seu serviço",
+    "viriatoClients1": "Os promotores que trabalham com a Viriato recebem avaliação editorial e colocação na plataforma como parte da sua relação de serviço existente. Isto não é automático — os mesmos padrões editoriais aplicam-se — mas o processo de revisão é iniciado como parte do compromisso.",
+    "viriatoClients2": "Se já é cliente Viriato e o seu projeto ainda não foi considerado para a plataforma, contacte o seu representante Viriato.",
+    "nonClientEyebrow": "Promotores Não-Clientes",
+    "nonClientHeading": "Submissão e consideração",
+    "nonClient1": "Se não é atualmente cliente Viriato, pode submeter o seu projeto para consideração. Não existe taxa para a avaliação editorial inicial. Rever o projeto segundo os nossos critérios e responder com a nossa avaliação.",
+    "nonClient2": "Se o projeto cumprir o nosso limiar e for aceite, discutiremos os termos de inclusão. Não garantimos contactos nem prometemos resultados além da própria apresentação editorial.",
+    "submitBtn": "Submeter o Seu Projeto",
+    "noPromisesHeading": "O que não prometemos",
+    "noPromises1": "Não garantimos volumes de contactos, taxas de pedido ou resultados de vendas. O valor da plataforma reside na sua credibilidade editorial — que depende da sua independência e contenção. Não comprometemos os nossos padrões de curadoria para acomodar pressão comercial.",
+    "noPromises2": "Reservamo-nos também o direito de remover um projeto da plataforma se surgir informação material que altere a nossa avaliação, ou se a conduta do projeto se tornar inconsistente com os padrões que representamos."
+  }
+}
