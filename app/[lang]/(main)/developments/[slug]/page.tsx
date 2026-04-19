@@ -16,10 +16,30 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang, slug } = await params
   const dev = await getDevelopmentBySlug(slug, hasLocale(lang) ? lang : 'en')
   if (!dev) return {}
+
+  const title = dev.seoTitle || `${dev.name} — ${dev.location.name}`
+  const description = dev.seoDescription || dev.editorialThesis || `Discover ${dev.name}, a curated new development in ${dev.location.name}, Portugal.`
+  const ogImage = dev.heroImage
+    ? urlFor(dev.heroImage).width(1200).height(630).fit('crop').auto('format').url()
+    : undefined
+
   return {
-    title: `${dev.name} — ${dev.location.name}`,
-    description: dev.editorialThesis || `Discover ${dev.name}, a curated new development in ${dev.location.name}, Portugal.`,
+    title,
+    description,
     alternates: getAlternates(`/developments/${slug}`),
+    robots: dev.noindex ? { index: false, follow: false } : { index: true, follow: true },
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630, alt: dev.name }] }),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      ...(ogImage && { images: [ogImage] }),
+    },
   }
 }
 

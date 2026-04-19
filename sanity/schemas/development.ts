@@ -88,6 +88,13 @@ export const development = defineType({
     defineField({ name: 'publishedAt', title: 'Published At', type: 'datetime' }),
     defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string' }),
     defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2 }),
+    defineField({
+      name: 'noindex',
+      title: 'Hide from Search Engines (noindex)',
+      type: 'boolean',
+      description: 'Enable while content is placeholder/draft. Disables Google indexing for this page.',
+      initialValue: false,
+    }),
   ],
   preview: {
     select: { title: 'name', subtitle: 'status', media: 'heroImage' },

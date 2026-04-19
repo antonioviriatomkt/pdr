@@ -48,7 +48,7 @@ export async function getDevelopmentBySlug(slug: string, lang = 'en') {
     *[_type == "development" && slug.current == $slug][0] {
       _id, name, slug, status, type, priceDisplay, isFeatured,
       lifestyleTags, heroImage,
-      "gallery": gallery[] { _key, _type, asset, hotspot, crop },
+      "gallery": gallery[defined(asset._ref)] { _key, asset, hotspot, crop },
       "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
       "typologyNote": coalesce(typologyNote[$lang], typologyNote.en),
       "whyStandsOut": coalesce(whyStandsOut[$lang], whyStandsOut.en),
@@ -59,7 +59,7 @@ export async function getDevelopmentBySlug(slug: string, lang = 'en') {
       developer->{ name, logo, description, website, isViriatoClient },
       relatedDevelopments[]->{ name, slug, heroImage, status, type, priceDisplay, location->{ name } },
       relatedArticles[]->{ "title": coalesce(title[$lang], title.en), slug, heroImage, category, "excerpt": coalesce(excerpt[$lang], excerpt.en), publishedAt },
-      seoTitle, seoDescription
+      seoTitle, seoDescription, noindex
     }
   `, { slug, lang })
 }
