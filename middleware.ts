@@ -8,31 +8,28 @@ function getLocale(request: NextRequest): string {
   const acceptLanguage = request.headers.get('accept-language') ?? ''
   for (const locale of locales) {
     if (acceptLanguage.toLowerCase().startsWith(locale)) return locale
-    // Match e.g. "pt-BR" → "pt"
     if (acceptLanguage.toLowerCase().includes(`${locale}-`) || acceptLanguage.toLowerCase().includes(`,${locale}`)) return locale
   }
   return defaultLocale
 }
 
-export function proxy(request: NextRequest) {
+export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Check if there is already a supported locale prefix
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
 
   if (pathnameHasLocale) return
 
-  // Redirect to add locale prefix
   const locale = getLocale(request)
   request.nextUrl.pathname = `/${locale}${pathname}`
-  return NextResponse.redirect(request.nextUrl)
+  // 308 = permanent redirect that preserves HTTP method
+  return NextResponse.redirect(request.nextUrl, 308)
 }
 
 export const config = {
   matcher: [
-    // Skip _next internals, API routes, studio, and static files
     '/((?!_next|api|studio|favicon\\.ico|.*\\..*).*)',
   ],
 }

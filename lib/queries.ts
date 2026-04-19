@@ -34,7 +34,7 @@ export async function getAllDevelopments(lang = 'en', filters?: {
   return client.fetch(`
     ${filter} | order(${sort}) {
       _id, name, slug, status, type, priceDisplay, isFeatured,
-      lifestyleTags, heroImage,
+      lifestyleTags, heroImage, publishedAt,
       "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
       primaryCta,
       location->{ name, slug },
@@ -140,6 +140,16 @@ export async function getArticleBySlug(slug: string, lang = 'en') {
       seoTitle, seoDescription
     }
   `, { slug, lang })
+}
+
+export async function getAllArticles(lang = 'en') {
+  return client.fetch(`
+    *[_type == "journalArticle"] | order(publishedAt desc) {
+      _id,
+      "title": coalesce(title[$lang], title.en),
+      slug, category, publishedAt
+    }
+  `, { lang })
 }
 
 export async function getArticlesByLocation(locationSlug: string, lang = 'en') {
