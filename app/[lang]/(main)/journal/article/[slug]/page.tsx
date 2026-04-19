@@ -36,7 +36,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
 
   const j = dict.journal
   const categories = j.categories
-  const devCardUi = { priceOnRequest: dict.common.priceOnRequest, featured: dict.common.featured, viewArrow: dict.common.viewArrow }
+  const devCardUi = { priceOnRequest: dict.common.priceOnRequest, featured: dict.common.featured, viewArrow: dict.common.viewArrow, statusLabels: dict.developments.statusLabels, typeLabels: dict.developments.typeLabels, priceLabels: dict.developments.priceLabels, lifestyleTagLabels: dict.developments.lifestyleTagLabels }
 
   const label = categories[article.category as keyof typeof categories] ?? article.category
 
