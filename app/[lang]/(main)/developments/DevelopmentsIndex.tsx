@@ -8,6 +8,10 @@ interface DevCardUi {
   priceOnRequest: string
   featured: string
   viewArrow: string
+  statusLabels: Record<string, string>
+  typeLabels: Record<string, string>
+  priceLabels: Record<string, string>
+  lifestyleTagLabels: Record<string, string>
 }
 
 interface Props {
@@ -70,11 +74,11 @@ export default function DevelopmentsIndex({ developments, locations, lang, dict,
             </select>
             <select value={typeFilter} onChange={e => setTypeFilter(e.target.value)} style={selectStyle}>
               <option value="">{f.allTypes}</option>
-              {TYPES.map(t => <option key={t} value={t}>{t}</option>)}
+              {TYPES.map(t => <option key={t} value={t}>{dict.typeLabels[t] ?? t}</option>)}
             </select>
             <select value={statusFilter} onChange={e => setStatusFilter(e.target.value)} style={selectStyle}>
               <option value="">{f.allStatus}</option>
-              {STATUSES.map(s => <option key={s} value={s}>{s}</option>)}
+              {STATUSES.map(s => <option key={s} value={s}>{dict.statusLabels[s] ?? s}</option>)}
             </select>
             {hasFilters && (
               <button onClick={clearAll} style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}>

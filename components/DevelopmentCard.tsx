@@ -6,6 +6,10 @@ interface DevCardUi {
   priceOnRequest: string
   featured: string
   viewArrow: string
+  statusLabels: Record<string, string>
+  typeLabels: Record<string, string>
+  priceLabels: Record<string, string>
+  lifestyleTagLabels: Record<string, string>
 }
 
 interface DevelopmentCardProps {
@@ -30,6 +34,11 @@ interface DevelopmentCardProps {
 
 export default function DevelopmentCard({ development, variant = 'default', lang, ui }: DevelopmentCardProps) {
   const href = `/${lang}/developments/${development.slug.current}`
+  const status = ui.statusLabels[development.status] ?? development.status
+  const type = development.type ? (ui.typeLabels[development.type] ?? development.type) : undefined
+  const price = development.priceDisplay
+    ? (ui.priceLabels[development.priceDisplay] ?? development.priceDisplay)
+    : ui.priceOnRequest
 
   if (variant === 'compact') {
     return (
@@ -38,12 +47,12 @@ export default function DevelopmentCard({ development, variant = 'default', lang
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', gap: '16px' }}>
             <div>
               <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '4px' }}>
-                {development.location?.name} · {development.status}
+                {development.location?.name} · {status}
               </div>
               <h3 style={{ fontSize: '16px', fontWeight: 400, margin: 0 }}>{development.name}</h3>
             </div>
             <div style={{ textAlign: 'right', flexShrink: 0 }}>
-              <div style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>{development.priceDisplay}</div>
+              <div style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>{price}</div>
             </div>
           </div>
         </article>
@@ -76,8 +85,8 @@ export default function DevelopmentCard({ development, variant = 'default', lang
         </div>
 
         <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
-          {development.location?.name} · {development.status}
-          {development.type && ` · ${development.type}`}
+          {development.location?.name} · {status}
+          {type && ` · ${type}`}
         </div>
 
         <h3 style={{ fontSize: '20px', fontWeight: 400, margin: '0 0 8px 0', lineHeight: 1.2 }}>
@@ -92,7 +101,7 @@ export default function DevelopmentCard({ development, variant = 'default', lang
 
         <div style={{ borderTop: '1px solid var(--border)', marginTop: '14px', paddingTop: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <span style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>
-            {development.priceDisplay || ui.priceOnRequest}
+            {price}
           </span>
           <span style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', borderBottom: '1px solid var(--foreground)' }}>
             {ui.viewArrow}
@@ -103,7 +112,7 @@ export default function DevelopmentCard({ development, variant = 'default', lang
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '12px' }}>
             {development.lifestyleTags.slice(0, 3).map(tag => (
               <span key={tag} style={{ fontSize: '10px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '3px 8px' }}>
-                {tag}
+                {ui.lifestyleTagLabels[tag] ?? tag}
               </span>
             ))}
           </div>

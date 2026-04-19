@@ -116,6 +116,39 @@
       "noResults": "No developments match your current filters.",
       "clearFiltersBtn": "Clear Filters"
     },
+    "statusLabels": {
+      "Off-plan": "Off-plan",
+      "Under Construction": "Under Construction",
+      "Completed": "Completed",
+      "Selling Now": "Selling Now"
+    },
+    "typeLabels": {
+      "Apartments": "Apartments",
+      "Villas": "Villas",
+      "Townhouses": "Townhouses",
+      "Penthouse": "Penthouse",
+      "Mixed-use": "Mixed-use",
+      "Branded Residences": "Branded Residences"
+    },
+    "priceLabels": {
+      "Price on Request": "Price on Request",
+      "From €500k": "From €500k",
+      "From €750k": "From €750k",
+      "From €1M": "From €1M",
+      "From €2M": "From €2M",
+      "From €3M+": "From €3M+"
+    },
+    "lifestyleTagLabels": {
+      "Golf": "Golf",
+      "Beachfront": "Beachfront",
+      "Marina": "Marina",
+      "City Centre": "City Centre",
+      "Countryside": "Countryside",
+      "Mountain": "Mountain",
+      "Historic Quarter": "Historic Quarter",
+      "Spa & Wellness": "Spa & Wellness",
+      "Investment-grade": "Investment-grade"
+    },
     "detail": {
       "breadcrumbDevelopments": "Developments",
       "keyFacts": "Key Facts",

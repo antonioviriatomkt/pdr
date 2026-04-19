@@ -116,6 +116,39 @@
       "noResults": "Nenhum projeto corresponde aos seus filtros atuais.",
       "clearFiltersBtn": "Limpar Filtros"
     },
+    "statusLabels": {
+      "Off-plan": "Em Planta",
+      "Under Construction": "Em Construção",
+      "Completed": "Concluído",
+      "Selling Now": "À Venda"
+    },
+    "typeLabels": {
+      "Apartments": "Apartamentos",
+      "Villas": "Moradias",
+      "Townhouses": "Casas em Banda",
+      "Penthouse": "Cobertura",
+      "Mixed-use": "Uso Misto",
+      "Branded Residences": "Residências de Marca"
+    },
+    "priceLabels": {
+      "Price on Request": "Preço sob Consulta",
+      "From €500k": "A partir de €500 mil",
+      "From €750k": "A partir de €750 mil",
+      "From €1M": "A partir de €1 M",
+      "From €2M": "A partir de €2 M",
+      "From €3M+": "A partir de €3 M+"
+    },
+    "lifestyleTagLabels": {
+      "Golf": "Golfe",
+      "Beachfront": "Frente de Praia",
+      "Marina": "Marina",
+      "City Centre": "Centro Urbano",
+      "Countryside": "Campo",
+      "Mountain": "Montanha",
+      "Historic Quarter": "Zona Histórica",
+      "Spa & Wellness": "Spa e Bem-Estar",
+      "Investment-grade": "Grau de Investimento"
+    },
     "detail": {
       "breadcrumbDevelopments": "Projetos",
       "keyFacts": "Factos Chave",

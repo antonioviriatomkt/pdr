@@ -23,7 +23,7 @@ export default async function DevelopmentsPage({ params }: { params: Promise<{ l
     getDictionary(lang),
   ])
 
-  const devCardUi = { priceOnRequest: dict.common.priceOnRequest, featured: dict.common.featured, viewArrow: dict.common.viewArrow }
+  const devCardUi = { priceOnRequest: dict.common.priceOnRequest, featured: dict.common.featured, viewArrow: dict.common.viewArrow, statusLabels: dict.developments.statusLabels, typeLabels: dict.developments.typeLabels, priceLabels: dict.developments.priceLabels, lifestyleTagLabels: dict.developments.lifestyleTagLabels }
 
   return (
     <DevelopmentsIndex

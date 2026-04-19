@@ -26,7 +26,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
   ])
 
   const t = dict.home
-  const devCardUi = { priceOnRequest: dict.common.priceOnRequest, featured: dict.common.featured, viewArrow: dict.common.viewArrow }
+  const devCardUi = { priceOnRequest: dict.common.priceOnRequest, featured: dict.common.featured, viewArrow: dict.common.viewArrow, statusLabels: dict.developments.statusLabels, typeLabels: dict.developments.typeLabels, priceLabels: dict.developments.priceLabels, lifestyleTagLabels: dict.developments.lifestyleTagLabels }
   const categories = dict.journal.categories
 
   return (
