@@ -88,7 +88,14 @@
 - [ ] Add image optimization improvements (real images from Sanity)
 - [ ] Add analytics
 - [ ] Add better form routing / CRM integration later
-- [ ] Add multilingual support later if needed
+- [x] Add multilingual support (EN + PT, sub-path routing, UI strings + CMS content)
+  - [x] 1. Configure Next.js i18n routing (`/en/` and `/pt/` sub-paths, default locale)
+  - [x] 2. Create translation files (`lib/i18n/en.json` + `pt.json`) and translation utility
+  - [x] 3. Add language switcher to Header
+  - [x] 4. Update all UI components to use translation keys (replace hardcoded strings)
+  - [x] 5. Update Sanity schemas for localized CMS content (Development, Location, JournalArticle)
+  - [x] 6. Update CMS data fetching to pass and respect locale
+  - [x] 7. Update SEO metadata for locales (hreflang tags, per-locale titles/descriptions)
 - [ ] Refine design details without changing the restrained visual system
 - [ ] Connect Sanity CMS (requires sanity.io project creation)
 

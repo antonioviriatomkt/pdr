@@ -2,6 +2,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { urlFor } from '@/lib/sanity.image'
 
+interface DevCardUi {
+  priceOnRequest: string
+  featured: string
+  viewArrow: string
+}
+
 interface DevelopmentCardProps {
   development: {
     name: string
@@ -18,10 +24,12 @@ interface DevelopmentCardProps {
     heroImage?: unknown
   }
   variant?: 'default' | 'compact'
+  lang: string
+  ui: DevCardUi
 }
 
-export default function DevelopmentCard({ development, variant = 'default' }: DevelopmentCardProps) {
-  const href = `/developments/${development.slug.current}`
+export default function DevelopmentCard({ development, variant = 'default', lang, ui }: DevelopmentCardProps) {
+  const href = `/${lang}/developments/${development.slug.current}`
 
   if (variant === 'compact') {
     return (
@@ -46,29 +54,10 @@ export default function DevelopmentCard({ development, variant = 'default' }: De
   return (
     <Link href={href} style={{ display: 'block', textDecoration: 'none' }}>
       <article>
-        {/* Image placeholder */}
-        <div style={{
-          aspectRatio: '4/3',
-          background: 'var(--surface)',
-          marginBottom: '16px',
-          overflow: 'hidden',
-          position: 'relative',
-        }}>
+        <div style={{ aspectRatio: '4/3', background: 'var(--surface)', marginBottom: '16px', overflow: 'hidden', position: 'relative' }}>
           {development.isFeatured && (
-            <div style={{
-              position: 'absolute',
-              top: '12px',
-              left: '12px',
-              background: 'var(--foreground)',
-              color: 'var(--background)',
-              fontSize: '10px',
-              fontFamily: 'sans-serif',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              padding: '4px 8px',
-              zIndex: 1,
-            }}>
-              Featured
+            <div style={{ position: 'absolute', top: '12px', left: '12px', background: 'var(--foreground)', color: 'var(--background)', fontSize: '10px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '4px 8px', zIndex: 1 }}>
+              {ui.featured}
             </div>
           )}
           {development.heroImage ? (
@@ -80,23 +69,12 @@ export default function DevelopmentCard({ development, variant = 'default' }: De
               sizes="(max-width: 768px) 100vw, 400px"
             />
           ) : (
-            <div style={{
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'var(--muted)',
-              fontSize: '12px',
-              fontFamily: 'sans-serif',
-              letterSpacing: '0.04em',
-            }}>
+            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--muted)', fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.04em' }}>
               {development.location?.name}
             </div>
           )}
         </div>
 
-        {/* Meta */}
         <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
           {development.location?.name} · {development.status}
           {development.type && ` · ${development.type}`}
@@ -112,27 +90,19 @@ export default function DevelopmentCard({ development, variant = 'default' }: De
           </p>
         )}
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ borderTop: '1px solid var(--border)', marginTop: '14px', paddingTop: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <span style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>
-            {development.priceDisplay || 'Price on Request'}
+            {development.priceDisplay || ui.priceOnRequest}
           </span>
           <span style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', borderBottom: '1px solid var(--foreground)' }}>
-            View →
+            {ui.viewArrow}
           </span>
         </div>
 
         {development.lifestyleTags && development.lifestyleTags.length > 0 && (
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '12px' }}>
             {development.lifestyleTags.slice(0, 3).map(tag => (
-              <span key={tag} style={{
-                fontSize: '10px',
-                fontFamily: 'sans-serif',
-                letterSpacing: '0.06em',
-                textTransform: 'uppercase',
-                color: 'var(--muted)',
-                border: '1px solid var(--border)',
-                padding: '3px 8px',
-              }}>
+              <span key={tag} style={{ fontSize: '10px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '3px 8px' }}>
                 {tag}
               </span>
             ))}

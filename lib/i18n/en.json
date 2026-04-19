@@ -1,0 +1,346 @@
+{
+  "common": {
+    "siteName": "Portugal Developments Review",
+    "byViriato": "by Viriato",
+    "home": "Home",
+    "viewAll": "View All →",
+    "allArticles": "All Articles →",
+    "allDevelopments": "All Developments →",
+    "learnMore": "Learn More →",
+    "contactUs": "Contact Us →",
+    "readMethodology": "Read Our Methodology →",
+    "priceOnRequest": "Price on Request",
+    "featured": "Featured",
+    "viewArrow": "View →",
+    "sendingEllipsis": "Sending…",
+    "somethingWentWrong": "Something went wrong. Please try again.",
+    "locations": "Locations"
+  },
+
+  "nav": {
+    "developments": "Developments",
+    "locations": "Locations",
+    "journal": "Journal",
+    "methodology": "Methodology",
+    "about": "About",
+    "enquire": "Enquire",
+    "toggleMenu": "Toggle menu"
+  },
+
+  "footer": {
+    "tagline": "Curated new developments across Portugal.",
+    "copyright": "© {year} Portugal Developments Review by Viriato. All rights reserved.",
+    "platformTagline": "A curated platform for new developments across Portugal.",
+    "sections": {
+      "developments": "Developments",
+      "journal": "Journal",
+      "platform": "Platform"
+    },
+    "links": {
+      "allDevelopments": "All Developments",
+      "allArticles": "All Articles",
+      "areaGuides": "Area Guides",
+      "investment": "Investment",
+      "architecture": "Architecture",
+      "brandedResidences": "Branded Residences",
+      "methodology": "Methodology",
+      "about": "About",
+      "forDevelopers": "For Developers",
+      "contact": "Contact"
+    }
+  },
+
+  "home": {
+    "hero": {
+      "eyebrow": "Portugal Developments Review",
+      "headline": "Curated new developments across Portugal.",
+      "exploreBtn": "Explore Developments",
+      "browseBtn": "Browse by Location",
+      "aside": "An editorial platform for exceptional new residential projects — curated through independent selection, location intelligence, and premium presentation."
+    },
+    "featured": {
+      "eyebrow": "Featured",
+      "heading": "Selected Developments"
+    },
+    "browseByLocation": {
+      "eyebrow": "Location Intelligence",
+      "heading": "Browse by Location"
+    },
+    "shortlist": {
+      "eyebrow": "The Shortlist",
+      "heading": "Be first to see what matters.",
+      "body": "Receive PDR's private monthly shortlist of exceptional new developments in Lisbon, Porto, Cascais, Algarve, Comporta, and beyond."
+    },
+    "approach": {
+      "eyebrow": "Our Approach",
+      "heading": "How we select the developments on this platform.",
+      "body1": "Portugal Developments Review does not operate as a listings portal. Each development that appears on this platform has been considered through our curation methodology — assessed against criteria that include architectural quality, developer track record, location fundamentals, and the coherence of the project proposition.",
+      "body2": "We are not a brokerage. We are a discovery platform with an editorial point of view.",
+      "criteriaHeading": "Selection Criteria",
+      "criteria": [
+        "Architectural quality and design coherence",
+        "Developer track record and credibility",
+        "Location fundamentals and demand drivers",
+        "Specification and delivery integrity",
+        "Authenticity of project proposition"
+      ]
+    },
+    "journal": {
+      "eyebrow": "Insights",
+      "heading": "Journal"
+    },
+    "forDevelopers": {
+      "eyebrow": "For Developers",
+      "heading": "Is your development exceptional enough to be considered?",
+      "body": "We work with a small number of developers who meet our curation criteria. Viriato clients receive editorial placement as part of their service package. Selected non-clients may be considered through a separate route."
+    }
+  },
+
+  "developments": {
+    "eyebrow": "Curated Selection",
+    "heading": "New Developments in Portugal",
+    "subheading": "Every project on this platform has been assessed through our editorial selection process. Quantity is not the aim.",
+    "filters": {
+      "allLocations": "All Locations",
+      "allTypes": "All Types",
+      "allStatus": "All Status",
+      "clearFilters": "Clear filters",
+      "sort": "Sort:",
+      "sortFeatured": "Featured",
+      "sortNewest": "Newest"
+    },
+    "results": {
+      "count_one": "{count} development",
+      "count_other": "{count} developments",
+      "matchingFilters": " matching your filters",
+      "noResults": "No developments match your current filters.",
+      "clearFiltersBtn": "Clear Filters"
+    },
+    "detail": {
+      "breadcrumbDevelopments": "Developments",
+      "keyFacts": "Key Facts",
+      "availability": "Availability",
+      "developerLabel": "Developer",
+      "viriatoClient": "Viriato client",
+      "locationContext": "Location Context",
+      "locationContextBody": "{name} is located in {location}, one of Portugal's most sought-after addresses for new residential development.",
+      "exploreLocation": "Explore {location} →",
+      "lifestyle": "Lifestyle",
+      "gallery": "Gallery",
+      "relatedHeading": "Other Developments in {location}"
+    }
+  },
+
+  "locations": {
+    "breadcrumbLocations": "Locations",
+    "headingPrefix": "New Developments in",
+    "developmentsHeading": "Curated Developments",
+    "noDevelopments": "No curated developments in this location yet.",
+    "journalHeading": "Related Reading",
+    "nearbyHeading": "Nearby Locations",
+    "exploreArrow": "Explore →"
+  },
+
+  "journal": {
+    "eyebrow": "Insights",
+    "heading": "Journal",
+    "subheading": "Editorial analysis, area guides, investment explainers, and architecture reviews — all connecting back into the developments and locations on this platform.",
+    "filterAll": "All",
+    "categories": {
+      "architecture": "Architecture",
+      "area-guides": "Area Guides",
+      "branded-residences": "Branded Residences",
+      "new-developments": "New Developments",
+      "second-home": "Second-Home Narratives",
+      "investment": "Investment Explainers"
+    },
+    "article": {
+      "relatedDevelopments": "Related Developments",
+      "relatedLocation": "Location"
+    }
+  },
+
+  "contact": {
+    "eyebrow": "Enquiries",
+    "heading": "Contact",
+    "subheading": "Register interest in a development, ask a question, or tell us what you are looking for. We respond within one business day.",
+    "whatHappensNext": "What happens next",
+    "whatHappensNextBody": "Your enquiry reaches our team first. We qualify the request and connect you with the relevant development team or advisor. We do not pass your details to third parties without your knowledge.",
+    "responseTime": "Response time",
+    "responseTimeBody": "Within one business day. Enquiries received outside business hours are acknowledged the following morning.",
+    "otherWays": "Other ways to reach us",
+    "forDevelopersLink": "Developer information →"
+  },
+
+  "contactForm": {
+    "fullName": "Full Name *",
+    "fullNamePlaceholder": "Your full name",
+    "email": "Email Address *",
+    "emailPlaceholder": "your@email.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+351 or international",
+    "enquiryType": "Enquiry Type *",
+    "development": "Development (if applicable)",
+    "developmentPlaceholder": "Name of the development you are interested in",
+    "message": "Message *",
+    "messagePlaceholder": "Tell us what you are looking for...",
+    "submit": "Send Enquiry",
+    "submitting": "Sending…",
+    "errorMessage": "Something went wrong. Please try again or contact us directly.",
+    "privacyNote": "We do not pass your details to third parties without your prior consent. You will receive a response from our team within one business day.",
+    "successHeading": "Thank you.",
+    "successBody": "We have received your enquiry and will respond within one business day.",
+    "enquiryTypes": [
+      "Register Interest in a Development",
+      "Request Brochure",
+      "Download Investment Pack",
+      "Schedule Consultation",
+      "Speak with an Advisor",
+      "Developer Enquiry",
+      "General Question"
+    ]
+  },
+
+  "inquiry": {
+    "iWouldLikeTo": "I would like to:",
+    "fullNamePlaceholder": "Full name",
+    "emailPlaceholder": "Email address",
+    "phonePlaceholder": "Phone (optional)",
+    "messagePlaceholder": "Message (optional)",
+    "errorMessage": "Something went wrong. Please try again.",
+    "successHeading": "Thank you for your enquiry.",
+    "successBody": "We will be in touch within one business day.",
+    "privacyNote": "Your enquiry goes to Portugal Developments Review. We will connect you with the relevant team.",
+    "ctaOptions": [
+      "Request Brochure",
+      "Register Interest",
+      "Download Investment Pack",
+      "Schedule Consultation",
+      "Speak with an Advisor"
+    ]
+  },
+
+  "newsletter": {
+    "emailLabel": "Email address",
+    "emailPlaceholder": "your@email.com",
+    "submitBtn": "Receive the Shortlist",
+    "submitting": "Sending…",
+    "successMessage": "You are on the shortlist. The next edition will reach you directly.",
+    "footnote": "One edition per month. Curated selections, early release alerts, and selected brochures."
+  },
+
+  "about": {
+    "eyebrow": "Platform",
+    "heading": "About",
+    "subheading": "What Portugal Developments Review is — and what it is not.",
+    "platformHeading": "The Platform",
+    "platform1": "Portugal Developments Review is an independent editorial platform for discovering exceptional new residential developments across Portugal. It is not a brokerage, a portal, or a listings service. It is a curated selection — backed by a methodology, maintained by an editorial team, and presented to a specific audience.",
+    "platform2": "The platform exists because the growth of Portugal's new development market has outpaced reliable discovery. There is more product, more marketing, and more noise — but not necessarily more clarity. Portugal Developments Review is designed to provide that clarity.",
+    "platform3": "Every development on this platform has been reviewed through our editorial process. The quantity of developments is deliberately limited. The aim is not comprehensive coverage — it is reliable signal.",
+    "forBuyersHeading": "For Buyers",
+    "forBuyers1": "The platform is free to use. There are no registration walls, no data harvesting, and no sponsored rankings. Every enquiry submitted through the platform goes through our team first.",
+    "viriatoHeading": "Viriato",
+    "viriato1": "Portugal Developments Review is published by Viriato — a real estate advisory firm operating across Portugal's premium property market. Viriato works with developers, investors, and private buyers on the acquisition, structuring, and management of significant property assets.",
+    "viriato2": "The platform gives Viriato's developer clients a premium editorial channel alongside their existing advisory relationship. It also gives serious buyers access to a curated, trustworthy view of Portugal's new development market.",
+    "viriato3": "The editorial standards of the platform are maintained independently of the commercial relationships. Inclusion on Portugal Developments Review requires meeting the same criteria regardless of whether a developer is a Viriato client.",
+    "audiencesHeading": "Our Audiences",
+    "audiences": [
+      "Portuguese HNWI",
+      "International investors buying in Portugal",
+      "Diaspora buyers",
+      "Affluent second-home buyers"
+    ],
+    "locationsCoveredHeading": "Locations Covered"
+  },
+
+  "methodology": {
+    "eyebrow": "Our Process",
+    "heading": "Methodology",
+    "subheading": "Why curation matters — and how we decide what appears on this platform.",
+    "whyCurationHeading": "Why curation matters",
+    "whyCuration1": "Portugal's new development market has expanded significantly over the past decade. The pipeline of projects has grown faster than the market's capacity for consistent quality. Not all developments that present themselves as premium are premium in any meaningful sense.",
+    "whyCuration2": "For a serious buyer — whether purchasing a primary residence, a second home, or an investment asset — navigating this landscape without guidance is time-consuming and risky. Branded photography and polished brochures are not a reliable proxy for quality.",
+    "whyCuration3": "Portugal Developments Review exists to perform an independent editorial function: to review the market, apply consistent criteria, and present only those developments that meet our threshold. The result is a smaller, more considered selection — one that a serious buyer can trust.",
+    "criteriaHeading": "Selection criteria",
+    "criteriaIntro": "We assess each development against five principal dimensions:",
+    "criteria": [
+      {
+        "title": "Architectural quality and design coherence",
+        "body": "We look for projects where design is purposeful — where form, materials, and spatial organisation are consistent with the project's stated proposition. Facade-level architecture does not qualify. We are looking for coherence from the brief to the detail."
+      },
+      {
+        "title": "Developer track record and credibility",
+        "body": "The developer behind a project matters as much as the project itself. We examine previous deliveries, the organisation's financial standing, and the integrity with which it has handled past buyers. Off-plan promises must be evaluated against a history of delivery."
+      },
+      {
+        "title": "Location fundamentals and demand drivers",
+        "body": "Location is not simply a postcode. We assess the specific site, the immediate context, transport and infrastructure access, and the medium-term factors that will sustain or erode demand. A well-designed development in a structurally weak location is still a risk."
+      },
+      {
+        "title": "Specification and delivery integrity",
+        "body": "Specification claims — smart home systems, sustainable materials, premium appliances — must be credible and proportionate to the price point. We look for specifications that are genuinely deliverable at the stated price, not aspirational."
+      },
+      {
+        "title": "Authenticity of project proposition",
+        "body": "Every development tells a story about itself. We assess whether that story is coherent, honest, and supported by evidence. Projects that make aspirational claims without substance are excluded regardless of their other qualities."
+      }
+    ],
+    "limitsHeading": "What may limit inclusion",
+    "limitsIntro": "A development may be excluded or deferred for reasons that are not about quality:",
+    "limits": [
+      "Insufficient information available to make a responsible assessment",
+      "Active legal or regulatory disputes involving the project",
+      "Lack of cooperation from the developer in the review process",
+      "Project is too early-stage for meaningful editorial assessment",
+      "The project conflicts with developments already featured in the same location at the same price point"
+    ],
+    "reviewHeading": "Review and update process",
+    "review1": "The real estate development process is dynamic. Projects change. Developers encounter difficulties. Market conditions shift. Our editorial team monitors listed developments on an ongoing basis and will update, qualify, or remove a project if material information changes.",
+    "review2": "This is not a set-and-forget directory. It is a living editorial platform.",
+    "considerationHeading": "How developers can be considered",
+    "consideration1": "Viriato clients are assessed for inclusion as part of their existing service relationship. This is not automatic — the editorial standards apply equally to client and non-client projects — but the review process is initiated as part of the client engagement.",
+    "consideration2": "Non-client developers may submit their projects for consideration. There is no fee for this initial assessment. If a project meets our threshold, it may be included in the platform. We will also consider formal arrangements for featured placement with developers whose projects are included.",
+    "forDevelopersLink": "Information for Developers →"
+  },
+
+  "forDevelopers": {
+    "eyebrow": "Developers",
+    "heading": "For Developers",
+    "subheading": "This is a premium buyer-facing environment — not a listings portal. If your project meets our curation criteria, we would like to discuss it.",
+    "whatItIsHeading": "What this platform is",
+    "whatItIs1": "Portugal Developments Review is not a traditional property portal. It is a curated editorial platform — selective by design, with a focused audience of serious buyers.",
+    "whatItIs2": "The platform does not compete with your existing marketing. It occupies a specific layer: premium discovery, editorial framing, and qualified lead capture — aimed at buyers who are actively considering the Portuguese market and who are not served by mass-market portals.",
+    "whatItIs3": "Our primary audiences are Portuguese HNWI, international investors, diaspora buyers, and affluent second-home seekers. These are buyers for whom curation signals credibility.",
+    "whatReceiveHeading": "What developers receive",
+    "whatReceive": [
+      {
+        "title": "Editorial presentation",
+        "body": "Each development receives a dedicated editorial page — not a raw listing. Your project is framed through an editorial thesis: what makes it distinct, why it matters, and why it belongs on a curated platform."
+      },
+      {
+        "title": "Internal linking and visibility",
+        "body": "Your development is linked from the relevant location pages, journal articles, and featured sections across the site. This creates multiple discovery paths for buyers researching specific areas."
+      },
+      {
+        "title": "Qualified lead flow",
+        "body": "Enquiries from buyers who have read an editorial presentation are different from portal enquiries. They have context, intent, and a level of engagement that reflects the nature of the platform."
+      },
+      {
+        "title": "SEO presence",
+        "body": "Each development page is structured for search discovery — with clean semantic HTML, dynamic metadata, and connection to indexed location and journal content. Your project benefits from the platform's growing organic presence."
+      }
+    ],
+    "viriatoClientsEyebrow": "Viriato Clients",
+    "viriatoClientsHeading": "Inclusion as part of your service",
+    "viriatoClients1": "Developers who work with Viriato receive editorial assessment and platform placement as part of their existing service relationship. This is not automatic — the same editorial standards apply — but the review process is initiated as part of the engagement.",
+    "viriatoClients2": "If you are already a Viriato client and your project has not yet been considered for the platform, contact your Viriato representative.",
+    "nonClientEyebrow": "Non-Client Developers",
+    "nonClientHeading": "Submission and consideration",
+    "nonClient1": "If you are not a current Viriato client, you may submit your project for consideration. There is no fee for the initial editorial assessment. We will review the project against our criteria and respond with our assessment.",
+    "nonClient2": "If the project meets our threshold and is accepted, we will discuss the terms of inclusion. We do not guarantee leads, and we do not promise outcomes beyond the editorial presentation itself.",
+    "submitBtn": "Submit Your Project",
+    "noPromisesHeading": "What we do not promise",
+    "noPromises1": "We do not guarantee lead volumes, enquiry rates, or sales outcomes. The platform's value lies in its editorial credibility — which depends on its independence and restraint. We will not compromise our curation standards to accommodate commercial pressure.",
+    "noPromises2": "We also reserve the right to remove a development from the platform if material information comes to light that changes our assessment, or if the project's conduct becomes inconsistent with the standards we represent."
+  }
+}

@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { urlFor } from '@/lib/sanity.image'
-import { categoryLabels } from '@/lib/demo-data'
 
 interface ArticleCardProps {
   article: {
@@ -14,22 +13,25 @@ interface ArticleCardProps {
     linkedLocation?: { name: string; slug: { current: string } }
   }
   variant?: 'default' | 'compact'
+  lang: string
+  categories: Record<string, string>
 }
 
-function formatDate(date: string) {
-  return new Date(date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+function formatDate(date: string, lang: string) {
+  const locale = lang === 'pt' ? 'pt-PT' : 'en-GB'
+  return new Date(date).toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
 }
 
-export default function ArticleCard({ article, variant = 'default' }: ArticleCardProps) {
-  const href = `/journal/article/${article.slug.current}`
-  const label = categoryLabels[article.category] || article.category
+export default function ArticleCard({ article, variant = 'default', lang, categories }: ArticleCardProps) {
+  const href = `/${lang}/journal/article/${article.slug.current}`
+  const label = categories[article.category] || article.category
 
   if (variant === 'compact') {
     return (
       <Link href={href} style={{ display: 'block', textDecoration: 'none' }}>
         <article style={{ borderTop: '1px solid var(--border)', paddingTop: '16px', paddingBottom: '16px' }}>
           <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
-            {label} · {formatDate(article.publishedAt)}
+            {label} · {formatDate(article.publishedAt, lang)}
           </div>
           <h4 style={{ fontSize: '16px', fontWeight: 400, margin: 0, lineHeight: 1.3 }}>{article.title}</h4>
         </article>
@@ -74,7 +76,7 @@ export default function ArticleCard({ article, variant = 'default' }: ArticleCar
         )}
 
         <span style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>
-          {formatDate(article.publishedAt)}
+          {formatDate(article.publishedAt, lang)}
         </span>
       </article>
     </Link>

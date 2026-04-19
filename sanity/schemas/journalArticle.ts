@@ -5,8 +5,17 @@ export const journalArticle = defineType({
   title: 'Journal Article',
   type: 'document',
   fields: [
-    defineField({ name: 'title', title: 'Title', type: 'string', validation: r => r.required() }),
-    defineField({ name: 'slug', title: 'Slug', type: 'slug', options: { source: 'title' }, validation: r => r.required() }),
+    defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'object',
+      validation: r => r.required(),
+      fields: [
+        defineField({ name: 'en', title: 'English', type: 'string', validation: r => r.required() }),
+        defineField({ name: 'pt', title: 'Portuguese', type: 'string' }),
+      ],
+    }),
+    defineField({ name: 'slug', title: 'Slug', type: 'slug', options: { source: 'title.en' }, validation: r => r.required() }),
     defineField({
       name: 'category',
       title: 'Category',
@@ -24,8 +33,24 @@ export const journalArticle = defineType({
       validation: r => r.required(),
     }),
     defineField({ name: 'heroImage', title: 'Hero Image', type: 'image', options: { hotspot: true } }),
-    defineField({ name: 'excerpt', title: 'Excerpt', type: 'text', rows: 3 }),
-    defineField({ name: 'body', title: 'Body', type: 'array', of: [{ type: 'block' }, { type: 'image', options: { hotspot: true } }] }),
+    defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'object',
+      fields: [
+        defineField({ name: 'en', title: 'English', type: 'text', rows: 3 }),
+        defineField({ name: 'pt', title: 'Portuguese', type: 'text', rows: 3 }),
+      ],
+    }),
+    defineField({
+      name: 'body',
+      title: 'Body',
+      type: 'object',
+      fields: [
+        defineField({ name: 'en', title: 'English', type: 'array', of: [{ type: 'block' }, { type: 'image', options: { hotspot: true } }] }),
+        defineField({ name: 'pt', title: 'Portuguese', type: 'array', of: [{ type: 'block' }, { type: 'image', options: { hotspot: true } }] }),
+      ],
+    }),
     defineField({ name: 'linkedLocation', title: 'Linked Location', type: 'reference', to: [{ type: 'location' }] }),
     defineField({ name: 'linkedDevelopment', title: 'Linked Development', type: 'reference', to: [{ type: 'development' }] }),
     defineField({ name: 'publishedAt', title: 'Published At', type: 'datetime', validation: r => r.required() }),
@@ -33,6 +58,6 @@ export const journalArticle = defineType({
     defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2 }),
   ],
   preview: {
-    select: { title: 'title', subtitle: 'category', media: 'heroImage' },
+    select: { title: 'title.en', subtitle: 'category', media: 'heroImage' },
   },
 })
