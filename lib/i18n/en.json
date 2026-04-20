@@ -160,7 +160,11 @@
       "exploreLocation": "Explore {location} →",
       "lifestyle": "Lifestyle",
       "gallery": "Gallery",
-      "relatedHeading": "Other Developments in {location}"
+      "relatedHeading": "Other Developments in {location}",
+      "brochureLabel": "Brochure",
+      "brochureCtaTitle": "Request the complete project brochure",
+      "brochureCtaSubtitle": "Get all the project details delivered straight to your inbox",
+      "brochureCtaBtn": "Request Brochure"
     }
   },
 

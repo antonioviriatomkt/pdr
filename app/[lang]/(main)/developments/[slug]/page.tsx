@@ -184,6 +184,33 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
               </div>
             )}
 
+            {dev.brochureUrl && (
+              <div style={{ marginBottom: '40px' }}>
+                <h2 style={{ fontSize: '14px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
+                  {dev.name} {d.brochureLabel}
+                </h2>
+                <div style={{ border: '1px solid var(--border)' }}>
+                  <iframe
+                    src={dev.brochureUrl}
+                    title={`${dev.name} ${d.brochureLabel}`}
+                    style={{ width: '100%', height: '560px', display: 'block', border: 'none' }}
+                  />
+                  <div style={{ borderTop: '1px solid var(--border)', background: 'var(--surface)', padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '24px', flexWrap: 'wrap' }}>
+                    <div>
+                      <p style={{ fontSize: '15px', fontWeight: 400, margin: '0 0 4px' }}>{d.brochureCtaTitle}</p>
+                      <p style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: 0 }}>{d.brochureCtaSubtitle}</p>
+                    </div>
+                    <a
+                      href="#inquiry"
+                      style={{ background: 'var(--foreground)', color: 'var(--background)', padding: '12px 24px', fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none', whiteSpace: 'nowrap' }}
+                    >
+                      {d.brochureCtaBtn}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {dev.typologyNote && (
               <div style={{ marginBottom: '40px' }}>
                 <h2 style={{ fontSize: '14px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 12px' }}>
@@ -244,7 +271,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
             )}
           </div>
 
-          <div style={{ position: 'sticky', top: '80px' }}>
+          <div id="inquiry" style={{ position: 'sticky', top: '80px' }}>
             <InquiryPanel development={dev} dict={dict.inquiry} />
           </div>
         </div>

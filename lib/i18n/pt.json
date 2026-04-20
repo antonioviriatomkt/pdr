@@ -160,7 +160,11 @@
       "exploreLocation": "Explorar {location} →",
       "lifestyle": "Estilo de Vida",
       "gallery": "Galeria",
-      "relatedHeading": "Outros Projetos em {location}"
+      "relatedHeading": "Outros Projetos em {location}",
+      "brochureLabel": "Brochura",
+      "brochureCtaTitle": "Solicite a brochura completa do projeto",
+      "brochureCtaSubtitle": "Receba todos os detalhes do projeto diretamente na sua caixa de entrada",
+      "brochureCtaBtn": "Solicitar Brochura"
     }
   },
 

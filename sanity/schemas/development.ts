@@ -83,6 +83,13 @@ export const development = defineType({
       options: { list: ['Request Brochure', 'Register Interest', 'Download Investment Pack', 'Schedule Consultation', 'Speak with an Advisor'] },
       initialValue: 'Register Interest',
     }),
+    defineField({
+      name: 'brochure',
+      title: 'Brochure (PDF)',
+      type: 'file',
+      options: { accept: '.pdf' },
+      description: 'Upload the project brochure as a PDF. It will be embedded on the development page.',
+    }),
     defineField({ name: 'relatedDevelopments', title: 'Related Developments', type: 'array', of: [{ type: 'reference', to: [{ type: 'development' }] }] }),
     defineField({ name: 'relatedArticles', title: 'Related Journal Stories', type: 'array', of: [{ type: 'reference', to: [{ type: 'journalArticle' }] }] }),
     defineField({ name: 'publishedAt', title: 'Published At', type: 'datetime' }),
