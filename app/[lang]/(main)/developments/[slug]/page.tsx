@@ -119,14 +119,16 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
       {/* Breadcrumb */}
       <div style={{ borderBottom: '1px solid var(--border)', padding: '12px 0' }}>
         <div className="container-editorial">
-          <nav style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', display: 'flex', gap: '8px' }}>
-            <Link href={`/${lang}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{dict.common.home}</Link>
-            <span>›</span>
-            <Link href={`/${lang}/developments`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{d.breadcrumbDevelopments}</Link>
-            <span>›</span>
-            <Link href={`/${lang}/locations/${dev.location.slug.current}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{dev.location.name}</Link>
-            <span>›</span>
-            <span style={{ color: 'var(--foreground)' }}>{dev.name}</span>
+          <nav aria-label="Breadcrumb">
+            <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', gap: '8px', fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>
+              <li><Link href={`/${lang}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{dict.common.home}</Link></li>
+              <li aria-hidden="true">›</li>
+              <li><Link href={`/${lang}/developments`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{d.breadcrumbDevelopments}</Link></li>
+              <li aria-hidden="true">›</li>
+              <li><Link href={`/${lang}/locations/${dev.location.slug.current}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{dev.location.name}</Link></li>
+              <li aria-hidden="true">›</li>
+              <li aria-current="page" style={{ color: 'var(--foreground)' }}>{dev.name}</li>
+            </ol>
           </nav>
         </div>
       </div>
@@ -171,14 +173,14 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                 <h2 style={{ fontSize: '14px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
                   {d.keyFacts}
                 </h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
+                <dl style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)', margin: 0 }}>
                   {dev.keyFacts.map((fact: { label: string; value: string }, i: number) => (
                     <div key={i} style={{ background: 'var(--background)', padding: '16px' }}>
-                      <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '4px' }}>{fact.label}</div>
-                      <div style={{ fontSize: '16px', fontWeight: 400 }}>{fact.value}</div>
+                      <dt style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '4px' }}>{fact.label}</dt>
+                      <dd style={{ fontSize: '16px', fontWeight: 400, margin: 0 }}>{fact.value}</dd>
                     </div>
                   ))}
-                </div>
+                </dl>
               </div>
             )}
 
@@ -231,13 +233,13 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                 <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
                   {d.lifestyle}
                 </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {dev.lifestyleTags.map((tag: string) => (
-                    <span key={tag} style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '5px 12px' }}>
+                    <li key={tag} style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '5px 12px' }}>
                       {(labels.lifestyleTagLabels as Record<string, string>)[tag] ?? tag}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             )}
           </div>
