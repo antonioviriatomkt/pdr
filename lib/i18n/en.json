@@ -165,6 +165,9 @@
   },
 
   "locations": {
+    "indexEyebrow": "Location Intelligence",
+    "indexHeading": "Browse by Location",
+    "indexSubheading": "Portugal's most considered addresses for new residential development — each with distinct fundamentals, character, and buyer demand.",
     "breadcrumbLocations": "Locations",
     "headingPrefix": "New Developments in",
     "developmentsHeading": "Curated Developments",

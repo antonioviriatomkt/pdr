@@ -1,13 +1,35 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git -C \"C:/Users/anton/Dropbox/PDR/.claude/worktrees/nostalgic-kalam\" rev-parse --git-common-dir)",
-      "Bash(node node_modules/next/dist/bin/next build)",
-      "Bash(node \"C:/Users/anton/Dropbox/PDR/node_modules/typescript/bin/tsc\" --noEmit)",
-      "Bash(node \"C:/Users/anton/Dropbox/PDR/node_modules/next/dist/bin/next\" build)",
-      "Bash(node \"C:/Users/anton/Dropbox/PDR/node_modules/next/dist/bin/next\" build --no-turbopack)",
-      "Bash(NEXT_TURBO=0 node \"C:/Users/anton/Dropbox/PDR/node_modules/next/dist/bin/next\" build)",
-      "Bash(grep \"\\\\.d\\\\.ts$\")"
+      "WebFetch(domain:portugaldevelopmentsreview.com)",
+      "Bash(curl -s -I https://portugaldevelopmentsreview.com/en/developments/serralves-garden-boavista-living)",
+      "WebFetch(domain:a-d.com.au)",
+      "Bash(git -C /Users/upscale/Desktop/PDR remote -v)",
+      "Bash(git fetch *)",
+      "Bash(git reset *)",
+      "Bash(npx tsc *)",
+      "Bash(node_modules/.bin/tsc --noEmit)",
+      "Bash(npm install *)",
+      "Bash(vercel --version)",
+      "Bash(git -C /Users/upscale/Desktop/PDR status --porcelain)",
+      "Bash(vercel --prod)",
+      "Bash(git -C /Users/upscale/Desktop/PDR rev-parse --short HEAD)",
+      "Bash(curl -s -I -A \"GPTBot/1.0\" https://portugaldevelopmentsreview.com/en/developments/serralves-garden-boavista-living)",
+      "Bash(curl -s -I -A \"PerplexityBot/1.0\" https://portugaldevelopmentsreview.com/en/developments/serralves-garden-boavista-living)",
+      "Bash(dig portugaldevelopmentsreview.com +short)",
+      "Bash(curl -sv --max-time 10 https://portugaldevelopmentsreview.com/en/developments/serralves-garden-boavista-living)",
+      "Bash(curl -s -I -A \"PerplexityBot/1.0\" https://portugaldevelopmentsreview.com/)",
+      "Bash(curl -s -I -A \"PerplexityBot/1.0\" https://portugaldevelopmentsreview.com/developments/serralves-garden-boavista-living)",
+      "Bash(curl -s -I -L -A \"PerplexityBot/1.0\" https://portugaldevelopmentsreview.com/)",
+      "Bash(curl -s https://portugaldevelopmentsreview.com/robots.txt)",
+      "Bash(git -C /Users/upscale/Desktop/PDR status --short)",
+      "Bash(git add *)",
+      "Bash(git -C /Users/upscale/Desktop/PDR commit -m ' *)",
+      "Bash(git push *)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(git commit -m ' *)",
+      "Bash(find /Users/upscale/Desktop/PDR/lib -type f \\\\\\( -name \"*.ts\" -o -name \"*.tsx\" \\\\\\) -exec grep -l \"location\\\\|Location\" {} \\\\;)",
+      "Bash(find /Users/upscale/Desktop/PDR/sanity -type f \\\\\\( -name \"*.ts\" -o -name \"*.tsx\" \\\\\\) -exec grep -l \"location\" {} \\\\;)"
     ]
   }
 }

@@ -165,6 +165,9 @@
   },
 
   "locations": {
+    "indexEyebrow": "Inteligência de Localização",
+    "indexHeading": "Pesquisar por Localização",
+    "indexSubheading": "Os endereços mais considerados de Portugal para novos desenvolvimentos residenciais — cada um com fundamentos, carácter e procura distintos.",
     "breadcrumbLocations": "Localizações",
     "headingPrefix": "Novos Projetos em",
     "developmentsHeading": "Projetos Curados",
