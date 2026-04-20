@@ -23,9 +23,9 @@ export default function middleware(request: NextRequest) {
   if (pathnameHasLocale) return NextResponse.next()
 
   const locale = getLocale(request)
-  request.nextUrl.pathname = `/${locale}${pathname}`
-  // 308 = permanent redirect that preserves HTTP method
-  return NextResponse.redirect(request.nextUrl, 308)
+  const url = request.nextUrl.clone()
+  url.pathname = `/${locale}${pathname}`
+  return NextResponse.redirect(url, 301)
 }
 
 export const config = {

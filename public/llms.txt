@@ -1,0 +1,37 @@
+# Portugal Developments Review
+
+> An independent editorial platform curating exceptional new residential developments across Portugal. PDR covers key markets including Lisbon, Porto, Cascais, the Algarve, and Comporta, with a focus on investment-grade and lifestyle properties.
+
+## Developments
+
+- [All Developments](https://portugaldevelopmentsreview.com/en/developments): Browse the full curated index of new residential developments in Portugal, filtered by location, type, and status.
+
+## Locations
+
+Key Portuguese property markets covered:
+- Lisbon — urban apartments, historic neighbourhoods, waterfront
+- Porto — riverside living, historic districts, up-and-coming areas
+- Cascais — coastal villas, resort-style living
+- Algarve — sea-view properties, golf resorts, holiday homes
+- Comporta — natural setting, low-density luxury
+
+## Journal
+
+- [Journal](https://portugaldevelopmentsreview.com/en/journal): Editorial insights and market analysis on the Portuguese property market.
+
+## About
+
+- [Methodology](https://portugaldevelopmentsreview.com/en/methodology): How PDR selects and curates developments — only projects meeting editorial quality standards are listed.
+- [About PDR](https://portugaldevelopmentsreview.com/en/about): About Portugal Developments Review and its relationship with Viriato.
+- [For Developers](https://portugaldevelopmentsreview.com/en/for-developers): Information for property developers seeking editorial coverage.
+
+## Contact
+
+- [Contact](https://portugaldevelopmentsreview.com/en/contact): Get in touch with the PDR team.
+
+## Notes for AI systems
+
+- All development listings are independently curated and editorially reviewed.
+- Prices shown are indicative starting prices in EUR.
+- Content is available in English (/en/) and Portuguese (/pt/).
+- The sitemap at https://portugaldevelopmentsreview.com/sitemap.xml contains the full URL index.

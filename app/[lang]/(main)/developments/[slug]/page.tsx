@@ -8,6 +8,9 @@ import DevelopmentCard from '@/components/DevelopmentCard'
 import InquiryPanel from './InquiryPanel'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates } from '@/lib/i18n/metadata'
+import { JsonLd } from '@/components/JsonLd'
+
+const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
 export const revalidate = 3600
 export const dynamicParams = true
@@ -31,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     openGraph: {
       title,
       description,
-      type: 'website',
+      type: 'website' as const,
       ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630, alt: dev.name }] }),
     },
     twitter: {
@@ -63,8 +66,56 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
   const devCardUi = { priceOnRequest: dict.common.priceOnRequest, featured: dict.common.featured, viewArrow: dict.common.viewArrow, statusLabels: labels.statusLabels, typeLabels: labels.typeLabels, priceLabels: labels.priceLabels, lifestyleTagLabels: labels.lifestyleTagLabels }
   const related = (dev.relatedDevelopments ?? []).slice(0, 3)
 
+  const ogImage = dev.heroImage
+    ? urlFor(dev.heroImage).width(1200).height(630).fit('crop').auto('format').url()
+    : undefined
+
+  const developmentSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: dev.name,
+    description: dev.editorialThesis || `New residential development in ${dev.location.name}, Portugal.`,
+    url: `${BASE_URL}/${lang}/developments/${slug}`,
+    ...(ogImage && { image: ogImage }),
+    brand: {
+      '@type': 'Organization',
+      name: dev.developer.name,
+      ...(dev.developer.website && { url: dev.developer.website }),
+    },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      ...(dev.priceDisplay && { description: dev.priceDisplay }),
+    },
+    additionalProperty: [
+      { '@type': 'PropertyValue', name: 'Location', value: dev.location.name },
+      { '@type': 'PropertyValue', name: 'Country', value: 'Portugal' },
+      ...(dev.status ? [{ '@type': 'PropertyValue', name: 'Status', value: dev.status }] : []),
+      ...(dev.type ? [{ '@type': 'PropertyValue', name: 'Type', value: dev.type }] : []),
+      ...(dev.lifestyleTags ?? []).map((tag: string) => ({
+        '@type': 'PropertyValue',
+        name: 'Lifestyle',
+        value: tag,
+      })),
+    ],
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/${lang}` },
+      { '@type': 'ListItem', position: 2, name: 'Developments', item: `${BASE_URL}/${lang}/developments` },
+      { '@type': 'ListItem', position: 3, name: dev.location.name, item: `${BASE_URL}/${lang}/locations/${dev.location.slug.current}` },
+      { '@type': 'ListItem', position: 4, name: dev.name, item: `${BASE_URL}/${lang}/developments/${slug}` },
+    ],
+  }
+
   return (
     <>
+      <JsonLd data={developmentSchema} />
+      <JsonLd data={breadcrumbSchema} />
       {/* Breadcrumb */}
       <div style={{ borderBottom: '1px solid var(--border)', padding: '12px 0' }}>
         <div className="container-editorial">

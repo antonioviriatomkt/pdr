@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import '../globals.css'
 import { getAlternates } from '@/lib/i18n/metadata'
+import { JsonLd } from '@/components/JsonLd'
+
+const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
 export const metadata: Metadata = {
   title: {
@@ -29,9 +32,37 @@ export async function generateStaticParams() {
 
 export default async function LocaleLayout({ children, params }: LayoutProps<'/[lang]'>) {
   const { lang } = await params
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Portugal Developments Review by Viriato',
+    url: BASE_URL,
+    logo: `${BASE_URL}/logo.png`,
+    description: 'An independent editorial platform curating exceptional new residential developments across Portugal.',
+    sameAs: [`${BASE_URL}/en/about`],
+  }
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Portugal Developments Review',
+    url: BASE_URL,
+    description: 'Curated new developments across Portugal. A premium editorial discovery platform for exceptional new residential projects in Lisbon, Porto, Cascais, the Algarve, and Comporta.',
+    inLanguage: ['en', 'pt'],
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${BASE_URL}/en/developments`,
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
   return (
     <html lang={lang}>
-      <body>{children}</body>
+      <body>
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={websiteSchema} />
+        {children}
+      </body>
     </html>
   )
 }

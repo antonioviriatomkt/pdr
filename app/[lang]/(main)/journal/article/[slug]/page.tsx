@@ -7,6 +7,9 @@ import { urlFor } from '@/lib/sanity.image'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates } from '@/lib/i18n/metadata'
 import DevelopmentCard from '@/components/DevelopmentCard'
+import { JsonLd } from '@/components/JsonLd'
+
+const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
 export const revalidate = 60
 export const dynamicParams = true
@@ -70,8 +73,40 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
 
   const linkedDevsSlice = (linkedDevs as any[]).slice(0, 2)
 
+  const ogImage = article.heroImage
+    ? urlFor(article.heroImage).width(1200).height(630).fit('crop').auto('format').url()
+    : undefined
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: article.title,
+    description: article.excerpt || `${article.title} — Portugal Developments Review Journal`,
+    datePublished: article.publishedAt,
+    url: `${BASE_URL}/${lang}/journal/article/${slug}`,
+    ...(ogImage && { image: ogImage }),
+    author: {
+      '@type': 'Organization',
+      name: 'Portugal Developments Review',
+      url: BASE_URL,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Portugal Developments Review by Viriato',
+      url: BASE_URL,
+    },
+    ...(article.linkedLocation && {
+      about: {
+        '@type': 'Place',
+        name: article.linkedLocation.name,
+        url: `${BASE_URL}/${lang}/locations/${article.linkedLocation.slug.current}`,
+      },
+    }),
+  }
+
   return (
     <>
+      <JsonLd data={articleSchema} />
       <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0 48px' }}>
         <div className="container-editorial">
           <nav style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginBottom: '20px', display: 'flex', gap: '8px' }}>
