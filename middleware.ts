@@ -18,7 +18,8 @@ function getLocale(request: NextRequest): string {
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  if (COMING_SOON && pathname !== '/coming-soon') {
+  if (COMING_SOON) {
+    if (pathname === '/coming-soon') return NextResponse.next()
     const url = request.nextUrl.clone()
     url.pathname = '/coming-soon'
     return NextResponse.redirect(url, 307)
