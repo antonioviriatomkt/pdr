@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
+const COMING_SOON = true
+
 const locales = ['en', 'pt'] as const
 const defaultLocale = 'en'
 
@@ -15,6 +17,12 @@ function getLocale(request: NextRequest): string {
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+
+  if (COMING_SOON && pathname !== '/coming-soon') {
+    const url = request.nextUrl.clone()
+    url.pathname = '/coming-soon'
+    return NextResponse.redirect(url, 307)
+  }
 
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
