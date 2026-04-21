@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-const COMING_SOON = true
+const COMING_SOON = false
 
 const locales = ['en', 'pt'] as const
 const defaultLocale = 'en'
