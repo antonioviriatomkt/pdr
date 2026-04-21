@@ -13,30 +13,36 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Please enter a valid email address' }, { status: 400 })
     }
 
-    const lines = [
-      `New launch alert signup — Portugal Developments Review`,
-      ``,
-      `Email: ${data.email}`,
-      ``,
-      `Submitted: ${new Date().toISOString()}`,
-    ].join('\n')
-
     const resendApiKey = process.env.RESEND_API_KEY
-    const contactEmail = process.env.CONTACT_EMAIL || 'antonioviriatomkt@gmail.com'
 
     if (resendApiKey) {
       const { Resend } = await import('resend')
       const resend = new Resend(resendApiKey)
 
+      const audienceId = process.env.RESEND_AUDIENCE_ID
+      if (audienceId) {
+        await resend.contacts.create({
+          email: data.email,
+          audienceId,
+          unsubscribed: false,
+        })
+      }
+
+      const contactEmail = process.env.CONTACT_EMAIL || 'antonioviriatomkt@gmail.com'
       await resend.emails.send({
         from: 'Portugal Developments Review <noreply@pdr.pt>',
         to: contactEmail,
         subject: `PDR Launch Alert Signup — ${data.email}`,
-        text: lines,
+        text: [
+          `New launch alert signup — Portugal Developments Review`,
+          ``,
+          `Email: ${data.email}`,
+          ``,
+          `Submitted: ${new Date().toISOString()}`,
+        ].join('\n'),
       })
     } else {
-      console.log('[PDR Coming Soon Signup]')
-      console.log(lines)
+      console.log(`[PDR Coming Soon Signup] ${data.email}`)
     }
 
     return NextResponse.json({ success: true })
