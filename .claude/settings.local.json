@@ -29,7 +29,16 @@
       "mcp__Claude_in_Chrome__tabs_context_mcp",
       "Bash(git commit -m ' *)",
       "Bash(find /Users/upscale/Desktop/PDR/lib -type f \\\\\\( -name \"*.ts\" -o -name \"*.tsx\" \\\\\\) -exec grep -l \"location\\\\|Location\" {} \\\\;)",
-      "Bash(find /Users/upscale/Desktop/PDR/sanity -type f \\\\\\( -name \"*.ts\" -o -name \"*.tsx\" \\\\\\) -exec grep -l \"location\" {} \\\\;)"
+      "Bash(find /Users/upscale/Desktop/PDR/sanity -type f \\\\\\( -name \"*.ts\" -o -name \"*.tsx\" \\\\\\) -exec grep -l \"location\" {} \\\\;)",
+      "WebFetch(domain:www.sublimecomporta.pt)",
+      "WebSearch",
+      "WebFetch(domain:www.sublimehotels.pt)",
+      "Bash(python -m scripts.aggregate_benchmark \"/Users/upscale/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/14e60661-c565-4059-aaca-9f1c561bc389/034101c1-b5f3-4f8b-8084-90907601d598/pdr-listing-agent-workspace/iteration-1\" --skill-name \"pdr-listing-agent\")",
+      "Bash(python3 -m scripts.aggregate_benchmark \"/Users/upscale/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/14e60661-c565-4059-aaca-9f1c561bc389/034101c1-b5f3-4f8b-8084-90907601d598/pdr-listing-agent-workspace/iteration-1\" --skill-name \"pdr-listing-agent\")",
+      "Bash(nohup python3 *)",
+      "Bash(echo \"PID: $!\")",
+      "Read(//private/tmp/**)",
+      "Bash(open /tmp/pdr-listing-agent-review.html)"
     ]
   }
 }
