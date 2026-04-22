@@ -97,7 +97,7 @@
   - [x] 6. Update CMS data fetching to pass and respect locale
   - [x] 7. Update SEO metadata for locales (hreflang tags, per-locale titles/descriptions)
 - [ ] Refine design details without changing the restrained visual system
-- [ ] Connect Sanity CMS (requires sanity.io project creation)
+- [x] Connect Sanity CMS (requires sanity.io project creation)
 
 ---
 
