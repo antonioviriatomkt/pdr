@@ -6,6 +6,7 @@ import { JsonLd } from '@/components/JsonLd'
 const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
     default: 'Portugal Developments Review by Viriato',
     template: '%s | Portugal Developments Review',
@@ -57,7 +58,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   }
 
   return (
-    <html lang={lang}>
+    <html lang={lang === 'pt' ? 'pt-PT' : lang}>
       <body>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />

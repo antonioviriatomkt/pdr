@@ -82,6 +82,7 @@ export async function getLocationBySlug(slug: string, lang = 'en') {
       "intro": coalesce(intro[$lang], intro.en),
       "marketFraming": coalesce(marketFraming[$lang], marketFraming.en),
       nearbyLocations[]->{ name, slug, heroImage },
+      latitude, longitude, noindex,
       seoTitle, seoDescription
     }
   `, { slug, lang }, { next: { revalidate: 3600 } })
@@ -135,7 +136,7 @@ export async function getArticleBySlug(slug: string, lang = 'en') {
       slug, category, heroImage, seoImage,
       "excerpt": coalesce(excerpt[$lang], excerpt.en),
       "body": coalesce(body[$lang], body.en),
-      publishedAt,
+      publishedAt, _updatedAt, noindex,
       linkedLocation->{ name, slug, "intro": coalesce(intro[$lang], intro.en) },
       linkedDevelopment->{ name, slug, heroImage, status, priceDisplay },
       seoTitle, seoDescription

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import ArticleCard from '@/components/ArticleCard'
 import { getArticlesByCategory } from '@/lib/queries'
 import { getDictionary, hasLocale } from '@/lib/i18n'
-import { getAlternates } from '@/lib/i18n/metadata'
+import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 
 export const revalidate = 60
 export const dynamicParams = true
@@ -18,7 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: `${label} — Journal`,
     description: `Editorial articles about ${label.toLowerCase()} covering new developments across Portugal.`,
-    alternates: getAlternates(`/journal/category/${category}`),
+    alternates: getAlternates(`/journal/category/${category}`, lang),
+    openGraph: { type: 'website', ...getOgLocale(lang) },
     robots: (articles as any[]).length === 0 ? { index: false, follow: false } : { index: true, follow: true },
   }
 }

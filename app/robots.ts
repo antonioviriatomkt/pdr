@@ -25,13 +25,13 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/studio/'],
+        disallow: ['/api/', '/studio/', '/coming-soon'],
       },
       // Explicitly allow known AI crawlers so no security layer blocks them
       ...AI_CRAWLERS.map((userAgent) => ({
         userAgent,
         allow: '/',
-        disallow: ['/api/', '/studio/'],
+        disallow: ['/api/', '/studio/', '/coming-soon'],
       })),
     ],
     sitemap: `${BASE_URL}/sitemap.xml`,

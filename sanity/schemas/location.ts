@@ -28,8 +28,17 @@ export const location = defineType({
       ],
     }),
     defineField({ name: 'nearbyLocations', title: 'Nearby / Comparable Locations', type: 'array', of: [{ type: 'reference', to: [{ type: 'location' }] }] }),
+    defineField({ name: 'latitude', title: 'Latitude', type: 'number', description: 'Decimal degrees, e.g. 38.7169' }),
+    defineField({ name: 'longitude', title: 'Longitude', type: 'number', description: 'Decimal degrees, e.g. -9.1399' }),
     defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string' }),
     defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2 }),
     defineField({ name: 'seoImage', title: 'SEO / OG Image', type: 'image', options: { hotspot: true }, description: 'Custom Open Graph image (1200×630). Falls back to hero image if not set.' }),
+    defineField({
+      name: 'noindex',
+      title: 'Hide from Search Engines (noindex)',
+      type: 'boolean',
+      description: 'Enable while content is placeholder/draft. Disables Google indexing for this page.',
+      initialValue: false,
+    }),
   ],
 })

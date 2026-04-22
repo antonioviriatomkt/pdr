@@ -23,7 +23,7 @@ function formatDate(date: string, lang: string) {
 }
 
 export default function ArticleCard({ article, variant = 'default', lang, categories }: ArticleCardProps) {
-  const href = `/${lang}/journal/article/${article.slug.current}`
+  const href = `/${lang}/journal/${article.slug.current}`
   const label = categories[article.category] || article.category
 
   if (variant === 'compact') {

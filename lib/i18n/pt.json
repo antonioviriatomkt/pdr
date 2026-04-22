@@ -341,7 +341,44 @@
     "considerationHeading": "Como os promotores podem ser considerados",
     "consideration1": "Os clientes Viriato são avaliados para inclusão como parte da sua relação de serviço existente. Isto não é automático — os padrões editoriais aplicam-se igualmente a projetos de clientes e não-clientes — mas o processo de revisão é iniciado como parte do compromisso do cliente.",
     "consideration2": "Promotores não clientes podem submeter os seus projetos para consideração. Não existe taxa para esta avaliação inicial. Se um projeto cumprir o nosso limiar, pode ser incluído na plataforma. Também consideraremos acordos formais para colocação em destaque com promotores cujos projetos sejam incluídos.",
-    "forDevelopersLink": "Informação para Promotores →"
+    "forDevelopersLink": "Informação para Promotores →",
+    "faq": [
+      {
+        "q": "Por que o Portugal Developments Review cura projetos em vez de listar todos os novos empreendimentos?",
+        "a": "O mercado de novos empreendimentos em Portugal cresceu mais rapidamente do que a capacidade do mercado para manter qualidade consistente. A curadoria existe para desempenhar uma função editorial independente — aplicando critérios consistentes e apresentando apenas os empreendimentos que cumprem o limiar editorial — dando a compradores sérios uma seleção mais pequena e ponderada em que podem confiar."
+      },
+      {
+        "q": "Quais os critérios que determinam se um empreendimento é incluído na plataforma?",
+        "a": "Cada empreendimento é avaliado segundo cinco dimensões principais: qualidade arquitetónica e coerência de design; historial e credibilidade do promotor; fundamentos e fatores de procura da localização; integridade da especificação e entrega; e autenticidade da proposta do projeto."
+      },
+      {
+        "q": "Os clientes promotores da Viriato são incluídos automaticamente na plataforma?",
+        "a": "Não. Os clientes Viriato são avaliados para inclusão como parte da sua relação de serviço existente, mas os padrões editoriais aplicam-se igualmente a projetos de clientes e não-clientes. A inclusão nunca é automática — o processo de revisão é iniciado através do compromisso, mas o mesmo limiar aplica-se."
+      },
+      {
+        "q": "O que pode impedir que um bom empreendimento seja listado?",
+        "a": "Um projeto pode ser excluído ou diferido por razões não relacionadas com a qualidade — como informação insuficiente para uma avaliação responsável, disputas legais ou regulatórias ativas, falta de cooperação do promotor, o projeto estar numa fase demasiado inicial, ou um conflito com empreendimentos já destacados na mesma localização ao mesmo ponto de preço."
+      },
+      {
+        "q": "Como pode um promotor submeter o seu projeto para consideração?",
+        "a": "Promotores não clientes da Viriato podem submeter os seus projetos para consideração. Não existe taxa para a avaliação editorial inicial. Se um projeto cumprir o limiar editorial, pode ser incluído na plataforma e serão discutidos os termos formais de colocação."
+      }
+    ]
+  },
+
+  "seo": {
+    "developments": {
+      "title": "Novos Projetos em Portugal",
+      "description": "Descubra novos projetos residenciais curados em Portugal — Lisboa, Porto, Cascais, Algarve, Comporta e Gaia. Filtrado por localização, tipo e estado."
+    },
+    "journal": {
+      "title": "Revista — Perspetivas sobre Novos Projetos em Portugal",
+      "description": "Perspetivas editoriais sobre novos projetos, guias de área, explicações de investimento, arquitetura e residências de marca em Portugal."
+    },
+    "locations": {
+      "title": "Novos Projetos em {name}, Portugal",
+      "descriptionPrefix": "Descubra novos projetos residenciais curados em"
+    }
   },
 
   "forDevelopers": {
@@ -382,6 +419,28 @@
     "submitBtn": "Submeter o Seu Projeto",
     "noPromisesHeading": "O que não prometemos",
     "noPromises1": "Não garantimos volumes de contactos, taxas de pedido ou resultados de vendas. O valor da plataforma reside na sua credibilidade editorial — que depende da sua independência e contenção. Não comprometemos os nossos padrões de curadoria para acomodar pressão comercial.",
-    "noPromises2": "Reservamo-nos também o direito de remover um projeto da plataforma se surgir informação material que altere a nossa avaliação, ou se a conduta do projeto se tornar inconsistente com os padrões que representamos."
+    "noPromises2": "Reservamo-nos também o direito de remover um projeto da plataforma se surgir informação material que altere a nossa avaliação, ou se a conduta do projeto se tornar inconsistente com os padrões que representamos.",
+    "faq": [
+      {
+        "q": "O que é o Portugal Developments Review e em que difere de um portal imobiliário?",
+        "a": "O Portugal Developments Review é uma plataforma editorial curada — seletiva por design, com um público focado de compradores sérios. Não é um portal imobiliário tradicional. Ocupa uma camada específica: descoberta premium, enquadramento editorial e captação de contactos qualificados, dirigida a compradores que estão ativamente a considerar o mercado português."
+      },
+      {
+        "q": "O que recebe um promotor ao ser destacado na plataforma?",
+        "a": "Os empreendimentos destacados recebem uma página editorial dedicada com uma tese editorial, ligação interna a partir de páginas de localização e artigos de revista relevantes, fluxo de contactos qualificados através do sistema de pedidos da plataforma, e presença em SEO através de páginas semânticas estruturadas."
+      },
+      {
+        "q": "Como acedem os clientes promotores da Viriato à plataforma?",
+        "a": "Os promotores que trabalham com a Viriato recebem avaliação editorial e colocação na plataforma como parte da sua relação de serviço existente. Isto não é automático — os mesmos padrões editoriais aplicam-se — mas o processo de revisão é iniciado como parte do compromisso do cliente."
+      },
+      {
+        "q": "Podem promotores que não são clientes da Viriato candidatar-se à inclusão?",
+        "a": "Sim. Promotores não clientes da Viriato podem submeter o seu projeto para consideração. Não existe taxa para a avaliação editorial inicial. Se o projeto cumprir o limiar e for aceite, serão discutidos os termos de inclusão. Não há garantia de contactos ou resultados de vendas além da própria apresentação editorial."
+      },
+      {
+        "q": "O Portugal Developments Review garante volumes de contactos ou resultados de vendas?",
+        "a": "Não. A plataforma não garante volumes de contactos, taxas de pedido ou resultados de vendas. O seu valor reside na credibilidade editorial, que depende da sua independência e contenção. A plataforma reserva-se o direito de remover um empreendimento se informação material se alterar ou se a conduta do projeto se tornar inconsistente com os padrões que representa."
+      }
+    ]
   }
 }

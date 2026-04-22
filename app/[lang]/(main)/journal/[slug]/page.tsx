@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: article.title,
     description: article.excerpt || `${article.title} — Portugal Developments Review Journal`,
-    alternates: getAlternates(`/journal/article/${slug}`, lang),
+    alternates: getAlternates(`/journal/${slug}`, lang),
     robots: article.noindex ? { index: false, follow: false } : { index: true, follow: true },
     openGraph: {
       title: article.title,
@@ -82,7 +82,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
     ? urlFor(ogImageSource).width(1200).height(630).fit('crop').auto('format').url()
     : undefined
 
-  const articleUrl = `${BASE_URL}/${lang}/journal/article/${slug}`
+  const articleUrl = `${BASE_URL}/${lang}/journal/${slug}`
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -139,7 +139,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         </div>
       </section>
 
-      {/* Hero image */}
       {article.heroImage ? (
         <div style={{ aspectRatio: '16/7', background: 'var(--surface)', maxHeight: '420px', overflow: 'hidden', position: 'relative' }}>
           <Image
@@ -159,10 +158,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         </div>
       )}
 
-      {/* Article body */}
       <div className="container-editorial">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 280px', gap: '60px', padding: '48px 0' }}>
-          {/* Body */}
           <article>
             {article.excerpt && (
               <p style={{ fontSize: '20px', lineHeight: 1.6, color: 'var(--foreground)', margin: '0 0 32px', fontStyle: 'italic' }}>
@@ -191,7 +188,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
             )}
           </article>
 
-          {/* Sidebar */}
           <aside>
             {linkedDevsSlice.length > 0 && (
               <div style={{ marginBottom: '32px' }}>

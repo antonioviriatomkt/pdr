@@ -341,7 +341,44 @@
     "considerationHeading": "How developers can be considered",
     "consideration1": "Viriato clients are assessed for inclusion as part of their existing service relationship. This is not automatic — the editorial standards apply equally to client and non-client projects — but the review process is initiated as part of the client engagement.",
     "consideration2": "Non-client developers may submit their projects for consideration. There is no fee for this initial assessment. If a project meets our threshold, it may be included in the platform. We will also consider formal arrangements for featured placement with developers whose projects are included.",
-    "forDevelopersLink": "Information for Developers →"
+    "forDevelopersLink": "Information for Developers →",
+    "faq": [
+      {
+        "q": "Why does Portugal Developments Review curate projects instead of listing all new developments?",
+        "a": "Portugal's new development market has grown faster than the market's capacity for consistent quality. Curation exists to perform an independent editorial function — applying consistent criteria and presenting only those developments that meet the editorial threshold — giving serious buyers a smaller, more considered selection they can trust."
+      },
+      {
+        "q": "What criteria determine whether a development is included on the platform?",
+        "a": "Each development is assessed against five principal dimensions: architectural quality and design coherence; developer track record and credibility; location fundamentals and demand drivers; specification and delivery integrity; and authenticity of the project proposition."
+      },
+      {
+        "q": "Are Viriato developer clients automatically included on the platform?",
+        "a": "No. Viriato clients are assessed for inclusion as part of their existing service relationship, but the editorial standards apply equally to client and non-client projects. Inclusion is never automatic — the review process is initiated through the engagement, but the same threshold applies."
+      },
+      {
+        "q": "What can prevent a strong development from being listed?",
+        "a": "A project may be excluded or deferred for reasons unrelated to quality — such as insufficient information for a responsible assessment, active legal or regulatory disputes, lack of developer cooperation, the project being too early-stage, or a conflict with existing featured developments in the same location at the same price point."
+      },
+      {
+        "q": "How can a developer submit their project for consideration?",
+        "a": "Non-Viriato developers may submit their projects for consideration. There is no fee for the initial editorial assessment. If a project meets the editorial threshold, it may be included on the platform and formal terms for placement will be discussed."
+      }
+    ]
+  },
+
+  "seo": {
+    "developments": {
+      "title": "New Developments in Portugal",
+      "description": "Browse curated new residential developments across Portugal — Lisbon, Porto, Cascais, Algarve, Comporta, and Gaia. Filtered by location, type, and status."
+    },
+    "journal": {
+      "title": "Journal — Insights on New Developments in Portugal",
+      "description": "Editorial insights on new developments, area guides, investment explainers, architecture, and branded residences across Portugal."
+    },
+    "locations": {
+      "title": "New Developments in {name}, Portugal",
+      "descriptionPrefix": "Discover curated new residential developments in"
+    }
   },
 
   "forDevelopers": {
@@ -382,6 +419,28 @@
     "submitBtn": "Submit Your Project",
     "noPromisesHeading": "What we do not promise",
     "noPromises1": "We do not guarantee lead volumes, enquiry rates, or sales outcomes. The platform's value lies in its editorial credibility — which depends on its independence and restraint. We will not compromise our curation standards to accommodate commercial pressure.",
-    "noPromises2": "We also reserve the right to remove a development from the platform if material information comes to light that changes our assessment, or if the project's conduct becomes inconsistent with the standards we represent."
+    "noPromises2": "We also reserve the right to remove a development from the platform if material information comes to light that changes our assessment, or if the project's conduct becomes inconsistent with the standards we represent.",
+    "faq": [
+      {
+        "q": "What is Portugal Developments Review and how is it different from a property portal?",
+        "a": "Portugal Developments Review is a curated editorial platform — selective by design, with a focused audience of serious buyers. It is not a traditional property portal. It occupies a specific layer: premium discovery, editorial framing, and qualified lead capture aimed at buyers who are actively considering the Portuguese market and who are not served by mass-market portals."
+      },
+      {
+        "q": "What does a developer receive from being featured on the platform?",
+        "a": "Featured developments receive a dedicated editorial page with an editorial thesis, internal linking from relevant location pages and journal articles, qualified lead flow through the platform's enquiry system, and SEO presence through structured semantic pages connected to indexed location and journal content."
+      },
+      {
+        "q": "How do Viriato developer clients access the platform?",
+        "a": "Developers who work with Viriato receive editorial assessment and platform placement as part of their existing service relationship. This is not automatic — the same editorial standards apply — but the review process is initiated as part of the client engagement. If you are already a Viriato client and your project has not been considered, contact your Viriato representative."
+      },
+      {
+        "q": "Can developers who are not Viriato clients apply for inclusion?",
+        "a": "Yes. Non-Viriato developers may submit their project for consideration. There is no fee for the initial editorial assessment. If the project meets the threshold and is accepted, terms of inclusion will be discussed. There is no guarantee of leads or sales outcomes beyond the editorial presentation itself."
+      },
+      {
+        "q": "Does Portugal Developments Review guarantee lead volumes or sales outcomes?",
+        "a": "No. The platform does not guarantee lead volumes, enquiry rates, or sales outcomes. Its value lies in editorial credibility, which depends on independence and restraint. The platform reserves the right to remove a development if material information changes or if project conduct becomes inconsistent with the standards it represents."
+      }
+    ]
   }
 }

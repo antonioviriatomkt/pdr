@@ -11,5 +11,12 @@ export const developer = defineType({
     defineField({ name: 'description', title: 'Description', type: 'text', rows: 3 }),
     defineField({ name: 'website', title: 'Website URL', type: 'url' }),
     defineField({ name: 'isViriatoClient', title: 'Viriato Client', type: 'boolean', initialValue: false }),
+    defineField({
+      name: 'noindex',
+      title: 'Hide from Search Engines (noindex)',
+      type: 'boolean',
+      description: 'Enable while content is placeholder/draft. Disables Google indexing for this page.',
+      initialValue: false,
+    }),
   ],
 })

@@ -4,14 +4,19 @@ import Link from 'next/link'
 import ArticleCard from '@/components/ArticleCard'
 import { getLatestArticles } from '@/lib/queries'
 import { getDictionary, hasLocale } from '@/lib/i18n'
-import { getAlternates } from '@/lib/i18n/metadata'
+import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'Journal — Insights on New Developments in Portugal',
-  description: 'Editorial insights on new developments, area guides, investment explainers, architecture, and branded residences across Portugal.',
-  alternates: getAlternates('/journal'),
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(hasLocale(lang) ? lang : 'en')
+  return {
+    title: dict.seo.journal.title,
+    description: dict.seo.journal.description,
+    alternates: getAlternates('/journal', lang),
+    openGraph: { type: 'website', ...getOgLocale(lang) },
+  }
 }
 
 export default async function JournalPage({ params }: { params: Promise<{ lang: string }> }) {

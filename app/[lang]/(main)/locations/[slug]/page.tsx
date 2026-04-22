@@ -6,17 +6,23 @@ import ArticleCard from '@/components/ArticleCard'
 import { getLocationBySlug, getDevelopmentsByLocation, getArticlesByLocation, getAllLocations } from '@/lib/queries'
 import { urlFor } from '@/lib/sanity.image'
 import { getDictionary, hasLocale } from '@/lib/i18n'
-import { getAlternates } from '@/lib/i18n/metadata'
+import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
+import { JsonLd } from '@/components/JsonLd'
+
+const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
 export const revalidate = 60
 export const dynamicParams = true
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
   const { lang, slug } = await params
-  const loc = await getLocationBySlug(slug, hasLocale(lang) ? lang : 'en')
+  const [loc, dict] = await Promise.all([
+    getLocationBySlug(slug, hasLocale(lang) ? lang : 'en'),
+    getDictionary(hasLocale(lang) ? lang : 'en'),
+  ])
   if (!loc) return {}
-  const title = `New Developments in ${loc.name}, Portugal`
-  const description = `Discover curated new residential developments in ${loc.name}. ${loc.intro?.slice(0, 120)}...`
+  const title = dict.seo.locations.title.replace('{name}', loc.name)
+  const description = `${dict.seo.locations.descriptionPrefix} ${loc.name}. ${loc.intro?.slice(0, 120) ?? ''}...`
   const ogImageSource = loc.seoImage ?? loc.heroImage
   const ogImage = ogImageSource
     ? urlFor(ogImageSource).width(1200).height(630).fit('crop').auto('format').url()
@@ -24,11 +30,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title,
     description,
-    alternates: getAlternates(`/locations/${slug}`),
+    alternates: getAlternates(`/locations/${slug}`, lang),
+    robots: loc.noindex ? { index: false, follow: false } : { index: true, follow: true },
     openGraph: {
       title,
       description,
       type: 'website',
+      ...getOgLocale(lang),
       ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630, alt: loc.name }] }),
     },
     twitter: {
@@ -62,8 +70,52 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
   const categories = dict.journal.categories
   const nearby = (loc.nearbyLocations ?? []).slice(0, 4)
 
+  const ogImageSource = loc.seoImage ?? loc.heroImage
+  const ogImage = ogImageSource
+    ? urlFor(ogImageSource).width(1200).height(630).fit('crop').auto('format').url()
+    : undefined
+
+  const placeSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    name: loc.name,
+    description: loc.intro ?? undefined,
+    url: `${BASE_URL}/${lang}/locations/${slug}`,
+    ...(ogImage && { image: ogImage }),
+    containedInPlace: { '@type': 'Country', name: 'Portugal' },
+    ...(loc.latitude != null && loc.longitude != null && {
+      geo: { '@type': 'GeoCoordinates', latitude: loc.latitude, longitude: loc.longitude },
+    }),
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: dict.common.home, item: `${BASE_URL}/${lang}` },
+      { '@type': 'ListItem', position: 2, name: l.breadcrumbLocations, item: `${BASE_URL}/${lang}/locations` },
+      { '@type': 'ListItem', position: 3, name: loc.name, item: `${BASE_URL}/${lang}/locations/${slug}` },
+    ],
+  }
+
+  const itemListSchema = developments.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${l.developmentsHeading} — ${loc.name}`,
+    url: `${BASE_URL}/${lang}/locations/${slug}`,
+    itemListElement: (developments as any[]).map((dev, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: dev.name,
+      url: `${BASE_URL}/${lang}/developments/${dev.slug.current}`,
+    })),
+  } : null
+
   return (
     <>
+      <JsonLd data={placeSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      {itemListSchema && <JsonLd data={itemListSchema} />}
       {/* Hero */}
       <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0 48px' }}>
         <div className="container-editorial">

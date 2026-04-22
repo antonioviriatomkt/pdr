@@ -24,6 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     { path: '', priority: 1, changeFrequency: 'weekly' as const },
     { path: '/developments', priority: 0.9, changeFrequency: 'daily' as const },
+    { path: '/locations', priority: 0.8, changeFrequency: 'weekly' as const },
     { path: '/journal', priority: 0.8, changeFrequency: 'weekly' as const },
     { path: '/methodology', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/about', priority: 0.5, changeFrequency: 'monthly' as const },
@@ -60,7 +61,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const articlePages: MetadataRoute.Sitemap = LOCALES.flatMap(locale =>
     (articles as any[]).map(a => ({
-      url: `${BASE}/${locale}/journal/article/${a.slug.current}`,
+      url: `${BASE}/${locale}/journal/${a.slug.current}`,
       lastModified: a.publishedAt ? new Date(a.publishedAt) : new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.7,

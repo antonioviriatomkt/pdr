@@ -7,7 +7,7 @@ import { urlFor } from '@/lib/sanity.image'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import InquiryPanel from './InquiryPanel'
 import { getDictionary, hasLocale } from '@/lib/i18n'
-import { getAlternates } from '@/lib/i18n/metadata'
+import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 import { JsonLd } from '@/components/JsonLd'
 import PortableTextRenderer from '@/components/PortableTextRenderer'
 
@@ -31,12 +31,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title,
     description,
-    alternates: getAlternates(`/developments/${slug}`),
+    alternates: getAlternates(`/developments/${slug}`, lang),
     robots: dev.noindex ? { index: false, follow: false } : { index: true, follow: true },
     openGraph: {
       title,
       description,
       type: 'website' as const,
+      ...getOgLocale(lang),
       ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630, alt: dev.name }] }),
     },
     twitter: {
@@ -81,9 +82,19 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
   }
   const availability = availabilityMap[dev.status?.toLowerCase()] ?? 'https://schema.org/InStock'
 
+  const schemaTypeMap: Record<string, string | string[]> = {
+    'Apartments': 'Apartment',
+    'Villas': 'House',
+    'Townhouses': 'Townhouse',
+    'Penthouse': 'Apartment',
+    'Mixed-use': ['Residence', 'Product'],
+    'Branded Residences': ['Residence', 'Product'],
+  }
+  const schemaType = dev.type ? (schemaTypeMap[dev.type] ?? ['Residence', 'Product']) : ['Residence', 'Product']
+
   const developmentSchema = {
     '@context': 'https://schema.org',
-    '@type': 'RealEstateListing',
+    '@type': schemaType,
     name: dev.name,
     description: dev.editorialThesis || `New residential development in ${dev.location.name}, Portugal.`,
     url: `${BASE_URL}/${lang}/developments/${slug}`,
@@ -93,9 +104,13 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
       name: dev.developer.name,
       ...(dev.developer.website && { url: dev.developer.website }),
     },
-    priceCurrency: 'EUR',
-    availability,
-    ...(dev.priceDisplay && { price: dev.priceDisplay }),
+    offers: {
+      '@type': 'Offer',
+      url: `${BASE_URL}/${lang}/developments/${slug}`,
+      priceCurrency: 'EUR',
+      availability,
+      ...(dev.priceDisplay && { price: dev.priceDisplay }),
+    },
     additionalProperty: [
       { '@type': 'PropertyValue', name: 'Location', value: dev.location.name },
       { '@type': 'PropertyValue', name: 'Country', value: 'Portugal' },

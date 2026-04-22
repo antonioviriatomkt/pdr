@@ -38,7 +38,13 @@
       "Bash(nohup python3 *)",
       "Bash(echo \"PID: $!\")",
       "Read(//private/tmp/**)",
-      "Bash(open /tmp/pdr-listing-agent-review.html)"
+      "Bash(open /tmp/pdr-listing-agent-review.html)",
+      "Bash(unzip -p \"portugal-developments-review-summary \\(1\\).docx\" word/document.xml)",
+      "Bash(unzip -p \"pdr-strategy-next-step \\(1\\).docx\" word/document.xml)",
+      "Bash(unzip -p \"/Users/upscale/Desktop/PDR/docs/pdr-strategy-next-step \\(1\\).docx\" word/document.xml)",
+      "Bash(unzip -p \"/Users/upscale/Desktop/PDR/docs/PDR_Journal_Social_Content_Strategy.docx\" word/document.xml)",
+      "Bash(unzip -p \"/Users/upscale/Desktop/PDR/docs/PDR_SEO_Keyword_Strategy.xlsx\" xl/sharedStrings.xml)",
+      "Bash(grep -v '^$')"
     ]
   }
 }
