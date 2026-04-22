@@ -9,6 +9,7 @@ import InquiryPanel from './InquiryPanel'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates } from '@/lib/i18n/metadata'
 import { JsonLd } from '@/components/JsonLd'
+import PortableTextRenderer from '@/components/PortableTextRenderer'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
@@ -168,6 +169,15 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
               </div>
             )}
 
+            {dev.whyStandsOut && dev.whyStandsOut.length > 0 && (
+              <div style={{ marginBottom: '40px' }}>
+                <h2 style={{ fontSize: '14px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
+                  {d.whyStandsOut}
+                </h2>
+                <PortableTextRenderer value={dev.whyStandsOut} />
+              </div>
+            )}
+
             {dev.keyFacts && dev.keyFacts.length > 0 && (
               <div style={{ marginBottom: '40px' }}>
                 <h2 style={{ fontSize: '14px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
@@ -250,6 +260,11 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
               <p style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: 1.7, margin: '0 0 12px' }}>
                 {d.locationContextBody.replace('{name}', dev.name).replace('{location}', dev.location.name)}
               </p>
+              {dev.areaGuide && dev.areaGuide.length > 0 && (
+                <div style={{ marginBottom: '12px' }}>
+                  <PortableTextRenderer value={dev.areaGuide} />
+                </div>
+              )}
               <Link href={`/${lang}/locations/${dev.location.slug.current}`} style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}>
                 {d.exploreLocation.replace('{location}', dev.location.name)}
               </Link>
