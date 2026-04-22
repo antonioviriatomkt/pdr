@@ -121,6 +121,11 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
         name: 'Lifestyle',
         value: tag,
       })),
+      ...(dev.keyFacts ?? []).map((fact: { label: string; value: string }) => ({
+        '@type': 'PropertyValue',
+        name: fact.label,
+        value: fact.value,
+      })),
     ],
   }
 
