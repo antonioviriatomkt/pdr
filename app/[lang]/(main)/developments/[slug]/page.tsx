@@ -159,7 +159,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
       {/* Main content */}
       <div className="container-editorial">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '60px', padding: '48px 0', alignItems: 'start' }}>
-          <div>
+          <article>
             <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
               {dev.location.name} · {(labels.statusLabels as Record<string, string>)[dev.status] ?? dev.status}{dev.type ? ` · ${(labels.typeLabels as Record<string, string>)[dev.type] ?? dev.type}` : ''}
             </div>
@@ -291,7 +291,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                 </ul>
               </div>
             )}
-          </div>
+          </article>
 
           <div id="inquiry" style={{ position: 'sticky', top: '80px' }}>
             <InquiryPanel development={dev} dict={dict.inquiry} />

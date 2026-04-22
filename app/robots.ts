@@ -15,6 +15,8 @@ const AI_CRAWLERS = [
   'Meta-ExternalFetcher',
   'Googlebot',
   'Bingbot',
+  'Bytespider',
+  'Googlebot-Extended',
 ]
 
 export default function robots(): MetadataRoute.Robots {
