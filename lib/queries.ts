@@ -48,7 +48,7 @@ export async function getDevelopmentBySlug(slug: string, lang = 'en') {
     *[_type == "development" && slug.current == $slug][0] {
       _id, name, slug, status, type, priceDisplay, isFeatured,
       lifestyleTags, heroImage,
-      "gallery": gallery[defined(asset._ref)] { _key, asset, hotspot, crop },
+      "gallery": gallery[defined(image.asset._ref)] { _key, "asset": image.asset, "hotspot": image.hotspot, "crop": image.crop, alt },
       "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
       "typologyNote": coalesce(typologyNote[$lang], typologyNote.en),
       "whyStandsOut": coalesce(whyStandsOut[$lang], whyStandsOut.en),

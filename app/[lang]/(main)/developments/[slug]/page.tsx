@@ -314,7 +314,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: '1px', background: 'var(--border)' }}>
               {dev.gallery.filter((img: any) => img?.asset).map((img: any, i: number) => (
                 <div key={img._key || i} style={{ aspectRatio: '4/3', position: 'relative', overflow: 'hidden', background: 'var(--surface)' }}>
-                  <Image src={urlFor(img).width(800).height(600).auto('format').url()} alt={`${dev.name} — ${i + 1}`} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src={urlFor(img).width(800).height(600).auto('format').url()} alt={img.alt || `${dev.name} — ${i + 1}`} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
               ))}
             </div>

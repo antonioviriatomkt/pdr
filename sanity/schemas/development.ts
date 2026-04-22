@@ -37,7 +37,19 @@ export const development = defineType({
       options: { list: ['Golf', 'Beachfront', 'Marina', 'City Centre', 'Countryside', 'Mountain', 'Historic Quarter', 'Spa & Wellness', 'Investment-grade'] },
     }),
     defineField({ name: 'heroImage', title: 'Hero Image', type: 'image', options: { hotspot: true }, validation: r => r.required() }),
-    defineField({ name: 'gallery', title: 'Gallery', type: 'array', of: [{ type: 'image', options: { hotspot: true } }] }),
+    defineField({
+      name: 'gallery',
+      title: 'Gallery',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          { name: 'image', title: 'Image', type: 'image', options: { hotspot: true } },
+          { name: 'alt', title: 'Alt Text', type: 'string', description: 'Describe the image for accessibility and SEO' },
+        ],
+        preview: { select: { media: 'image', title: 'alt' } },
+      }],
+    }),
     defineField({
       name: 'editorialThesis',
       title: 'Editorial Thesis',
