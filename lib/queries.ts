@@ -78,7 +78,7 @@ export async function getAllLocations(lang = 'en') {
 export async function getLocationBySlug(slug: string, lang = 'en') {
   return client.fetch(`
     *[_type == "location" && slug.current == $slug][0] {
-      _id, name, slug, region, heroImage,
+      _id, name, slug, region, heroImage, seoImage,
       "intro": coalesce(intro[$lang], intro.en),
       "marketFraming": coalesce(marketFraming[$lang], marketFraming.en),
       nearbyLocations[]->{ name, slug, heroImage },
@@ -132,7 +132,7 @@ export async function getArticleBySlug(slug: string, lang = 'en') {
     *[_type == "journalArticle" && slug.current == $slug][0] {
       _id,
       "title": coalesce(title[$lang], title.en),
-      slug, category, heroImage,
+      slug, category, heroImage, seoImage,
       "excerpt": coalesce(excerpt[$lang], excerpt.en),
       "body": coalesce(body[$lang], body.en),
       publishedAt,

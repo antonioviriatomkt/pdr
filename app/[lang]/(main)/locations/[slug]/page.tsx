@@ -17,8 +17,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (!loc) return {}
   const title = `New Developments in ${loc.name}, Portugal`
   const description = `Discover curated new residential developments in ${loc.name}. ${loc.intro?.slice(0, 120)}...`
-  const ogImage = loc.heroImage
-    ? urlFor(loc.heroImage).width(1200).height(630).fit('crop').auto('format').url()
+  const ogImageSource = loc.seoImage ?? loc.heroImage
+  const ogImage = ogImageSource
+    ? urlFor(ogImageSource).width(1200).height(630).fit('crop').auto('format').url()
     : undefined
   return {
     title,

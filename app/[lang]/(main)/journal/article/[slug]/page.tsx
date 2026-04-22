@@ -19,8 +19,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang, slug } = await params
   const article = await getArticleBySlug(slug, hasLocale(lang) ? lang : 'en')
   if (!article) return {}
-  const ogImage = article.heroImage
-    ? urlFor(article.heroImage).width(1200).height(630).fit('crop').auto('format').url()
+  const ogImageSource = article.seoImage ?? article.heroImage
+  const ogImage = ogImageSource
+    ? urlFor(ogImageSource).width(1200).height(630).fit('crop').auto('format').url()
     : undefined
   return {
     title: article.title,
@@ -74,8 +75,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
 
   const linkedDevsSlice = (linkedDevs as any[]).slice(0, 2)
 
-  const ogImage = article.heroImage
-    ? urlFor(article.heroImage).width(1200).height(630).fit('crop').auto('format').url()
+  const ogImageSource = article.seoImage ?? article.heroImage
+  const ogImage = ogImageSource
+    ? urlFor(ogImageSource).width(1200).height(630).fit('crop').auto('format').url()
     : undefined
 
   const articleSchema = {
