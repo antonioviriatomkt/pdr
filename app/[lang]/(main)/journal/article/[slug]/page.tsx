@@ -8,6 +8,7 @@ import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates } from '@/lib/i18n/metadata'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import { JsonLd } from '@/components/JsonLd'
+import PortableTextRenderer from '@/components/PortableTextRenderer'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
@@ -162,8 +163,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
             )}
 
             {article.body && (
-              <div style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--foreground)' }}>
-                {/* Portable Text rendering would go here */}
+              <div>
+                <PortableTextRenderer value={article.body} />
               </div>
             )}
 
