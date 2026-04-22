@@ -2,15 +2,20 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getDictionary, hasLocale } from '@/lib/i18n'
-import { getAlternates } from '@/lib/i18n/metadata'
+import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 import { JsonLd } from '@/components/JsonLd'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'For Developers — Portugal Developments Review',
-  description: 'Information for developers considering Portugal Developments Review. Learn how editorial placement works and how Viriato clients benefit from the platform.',
-  alternates: getAlternates('/for-developers'),
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(hasLocale(lang) ? lang : 'en')
+  return {
+    title: dict.seo.forDevelopers.title,
+    description: dict.seo.forDevelopers.description,
+    alternates: getAlternates('/for-developers', lang),
+    openGraph: { type: 'website', ...getOgLocale(lang) },
+  }
 }
 
 export default async function ForDevelopersPage({ params }: { params: Promise<{ lang: string }> }) {

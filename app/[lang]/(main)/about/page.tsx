@@ -2,14 +2,19 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getDictionary, hasLocale } from '@/lib/i18n'
-import { getAlternates } from '@/lib/i18n/metadata'
+import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'About — Portugal Developments Review by Viriato',
-  description: 'About Portugal Developments Review — a curated editorial platform for discovering exceptional new developments across Portugal, by Viriato.',
-  alternates: getAlternates('/about'),
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(hasLocale(lang) ? lang : 'en')
+  return {
+    title: dict.seo.about.title,
+    description: dict.seo.about.description,
+    alternates: getAlternates('/about', lang),
+    openGraph: { type: 'website', ...getOgLocale(lang) },
+  }
 }
 
 export default async function AboutPage({ params }: { params: Promise<{ lang: string }> }) {

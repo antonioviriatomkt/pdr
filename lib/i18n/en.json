@@ -367,6 +367,10 @@
   },
 
   "seo": {
+    "home": {
+      "title": "Portugal Developments Review — Curated New Developments in Portugal",
+      "description": "An independent editorial platform curating exceptional new residential developments across Portugal — Lisbon, Porto, Cascais, the Algarve, and Comporta."
+    },
     "developments": {
       "title": "New Developments in Portugal",
       "description": "Browse curated new residential developments across Portugal — Lisbon, Porto, Cascais, Algarve, Comporta, and Gaia. Filtered by location, type, and status."
@@ -375,9 +379,29 @@
       "title": "Journal — Insights on New Developments in Portugal",
       "description": "Editorial insights on new developments, area guides, investment explainers, architecture, and branded residences across Portugal."
     },
+    "locationsIndex": {
+      "title": "New Development Locations in Portugal",
+      "description": "Explore Portugal's most sought-after locations for new residential development. Lisbon, Porto, Cascais, Algarve, Comporta, and more."
+    },
     "locations": {
       "title": "New Developments in {name}, Portugal",
       "descriptionPrefix": "Discover curated new residential developments in"
+    },
+    "about": {
+      "title": "About — Portugal Developments Review by Viriato",
+      "description": "About Portugal Developments Review — a curated editorial platform for discovering exceptional new developments across Portugal, by Viriato."
+    },
+    "contact": {
+      "title": "Contact — Register Interest",
+      "description": "Get in touch with Portugal Developments Review. Register interest in a development, request a brochure, or make a general enquiry."
+    },
+    "methodology": {
+      "title": "Methodology — How We Curate New Developments",
+      "description": "Our editorial curation process for selecting new developments in Portugal. Why curation matters, selection criteria, and how developers can be considered."
+    },
+    "forDevelopers": {
+      "title": "For Developers — Portugal Developments Review",
+      "description": "Information for developers considering Portugal Developments Review. Learn how editorial placement works and how Viriato clients benefit from the platform."
     }
   },
 

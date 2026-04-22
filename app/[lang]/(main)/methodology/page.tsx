@@ -2,15 +2,20 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getDictionary, hasLocale } from '@/lib/i18n'
-import { getAlternates } from '@/lib/i18n/metadata'
+import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 import { JsonLd } from '@/components/JsonLd'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'Methodology — How We Curate New Developments',
-  description: 'Our editorial curation process for selecting new developments in Portugal. Why curation matters, selection criteria, and how developers can be considered.',
-  alternates: getAlternates('/methodology'),
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(hasLocale(lang) ? lang : 'en')
+  return {
+    title: dict.seo.methodology.title,
+    description: dict.seo.methodology.description,
+    alternates: getAlternates('/methodology', lang),
+    openGraph: { type: 'website', ...getOgLocale(lang) },
+  }
 }
 
 export default async function MethodologyPage({ params }: { params: Promise<{ lang: string }> }) {

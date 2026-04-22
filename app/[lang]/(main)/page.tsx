@@ -6,10 +6,17 @@ import ArticleCard from '@/components/ArticleCard'
 import NewsletterSignup from '@/components/NewsletterSignup'
 import { getFeaturedDevelopments, getAllLocations, getLatestArticles } from '@/lib/queries'
 import { getDictionary, hasLocale } from '@/lib/i18n'
-import { getAlternates } from '@/lib/i18n/metadata'
+import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 
-export const metadata: Metadata = {
-  alternates: getAlternates(''),
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(hasLocale(lang) ? lang : 'en')
+  return {
+    title: dict.seo.home.title,
+    description: dict.seo.home.description,
+    alternates: getAlternates('', lang),
+    openGraph: { type: 'website', ...getOgLocale(lang) },
+  }
 }
 
 export const revalidate = 60

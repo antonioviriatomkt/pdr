@@ -2,14 +2,19 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import ContactForm from './ContactForm'
-import { getAlternates } from '@/lib/i18n/metadata'
+import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'Contact — Register Interest',
-  description: 'Get in touch with Portugal Developments Review. Register interest in a development, request a brochure, or make a general enquiry.',
-  alternates: getAlternates('/contact'),
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(hasLocale(lang) ? lang : 'en')
+  return {
+    title: dict.seo.contact.title,
+    description: dict.seo.contact.description,
+    alternates: getAlternates('/contact', lang),
+    openGraph: { type: 'website', ...getOgLocale(lang) },
+  }
 }
 
 export default async function ContactPage({ params }: { params: Promise<{ lang: string }> }) {

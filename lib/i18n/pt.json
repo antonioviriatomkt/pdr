@@ -367,6 +367,10 @@
   },
 
   "seo": {
+    "home": {
+      "title": "Portugal Developments Review — Novos Projetos Selecionados em Portugal",
+      "description": "Uma plataforma editorial independente que apresenta novos projetos residenciais excecionais em Portugal — Lisboa, Porto, Cascais, Algarve e Comporta."
+    },
     "developments": {
       "title": "Novos Projetos em Portugal",
       "description": "Descubra novos projetos residenciais curados em Portugal — Lisboa, Porto, Cascais, Algarve, Comporta e Gaia. Filtrado por localização, tipo e estado."
@@ -375,9 +379,29 @@
       "title": "Revista — Perspetivas sobre Novos Projetos em Portugal",
       "description": "Perspetivas editoriais sobre novos projetos, guias de área, explicações de investimento, arquitetura e residências de marca em Portugal."
     },
+    "locationsIndex": {
+      "title": "Localizações de Novos Projetos em Portugal",
+      "description": "Explore as localizações mais procuradas de Portugal para novos projetos residenciais. Lisboa, Porto, Cascais, Algarve, Comporta e mais."
+    },
     "locations": {
       "title": "Novos Projetos em {name}, Portugal",
       "descriptionPrefix": "Descubra novos projetos residenciais curados em"
+    },
+    "about": {
+      "title": "Sobre — Portugal Developments Review by Viriato",
+      "description": "Sobre o Portugal Developments Review — uma plataforma editorial curada para descobrir novos projetos excecionais em Portugal, pela Viriato."
+    },
+    "contact": {
+      "title": "Contacto — Registar Interesse",
+      "description": "Entre em contacto com o Portugal Developments Review. Registe interesse num projeto, solicite uma brochura ou faça uma pergunta geral."
+    },
+    "methodology": {
+      "title": "Metodologia — Como Selecionamos Novos Projetos",
+      "description": "O nosso processo editorial de curadoria para selecionar novos projetos em Portugal. Por que a curadoria importa, critérios de seleção e como os promotores podem ser considerados."
+    },
+    "forDevelopers": {
+      "title": "Para Promotores — Portugal Developments Review",
+      "description": "Informação para promotores que consideram o Portugal Developments Review. Saiba como funciona a colocação editorial e como os clientes Viriato beneficiam da plataforma."
     }
   },
 
