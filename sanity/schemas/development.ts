@@ -107,6 +107,7 @@ export const development = defineType({
     defineField({ name: 'publishedAt', title: 'Published At', type: 'datetime' }),
     defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string' }),
     defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2 }),
+    defineField({ name: 'seoImage', title: 'SEO / OG Image', type: 'image', options: { hotspot: true }, description: 'Custom Open Graph image (1200×630). Falls back to hero image if not set.' }),
     defineField({
       name: 'noindex',
       title: 'Hide from Search Engines (noindex)',

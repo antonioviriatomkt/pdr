@@ -23,8 +23,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   const title = dev.seoTitle || `${dev.name} — ${dev.location.name}`
   const description = dev.seoDescription || dev.editorialThesis || `Discover ${dev.name}, a curated new development in ${dev.location.name}, Portugal.`
-  const ogImage = dev.heroImage
-    ? urlFor(dev.heroImage).width(1200).height(630).fit('crop').auto('format').url()
+  const ogImageSource = dev.seoImage ?? dev.heroImage
+  const ogImage = ogImageSource
+    ? urlFor(ogImageSource).width(1200).height(630).fit('crop').auto('format').url()
     : undefined
 
   return {
@@ -67,8 +68,9 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
   const devCardUi = { priceOnRequest: dict.common.priceOnRequest, featured: dict.common.featured, viewArrow: dict.common.viewArrow, statusLabels: labels.statusLabels, typeLabels: labels.typeLabels, priceLabels: labels.priceLabels, lifestyleTagLabels: labels.lifestyleTagLabels }
   const related = (dev.relatedDevelopments ?? []).slice(0, 3)
 
-  const ogImage = dev.heroImage
-    ? urlFor(dev.heroImage).width(1200).height(630).fit('crop').auto('format').url()
+  const ogImageSource = dev.seoImage ?? dev.heroImage
+  const ogImage = ogImageSource
+    ? urlFor(ogImageSource).width(1200).height(630).fit('crop').auto('format').url()
     : undefined
 
   const availabilityMap: Record<string, string> = {

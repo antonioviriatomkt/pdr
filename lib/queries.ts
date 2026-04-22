@@ -59,7 +59,7 @@ export async function getDevelopmentBySlug(slug: string, lang = 'en') {
       developer->{ name, logo, description, website, isViriatoClient },
       relatedDevelopments[]->{ name, slug, heroImage, status, type, priceDisplay, location->{ name } },
       relatedArticles[]->{ "title": coalesce(title[$lang], title.en), slug, heroImage, category, "excerpt": coalesce(excerpt[$lang], excerpt.en), publishedAt },
-      seoTitle, seoDescription, noindex,
+      seoTitle, seoDescription, seoImage, noindex,
       "brochureUrl": brochure.asset->url
     }
   `, { slug, lang }, { next: { revalidate: 3600 } })
