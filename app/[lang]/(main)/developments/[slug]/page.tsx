@@ -71,24 +71,29 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
     ? urlFor(dev.heroImage).width(1200).height(630).fit('crop').auto('format').url()
     : undefined
 
+  const availabilityMap: Record<string, string> = {
+    'available': 'https://schema.org/InStock',
+    'selling fast': 'https://schema.org/LimitedAvailability',
+    'sold out': 'https://schema.org/SoldOut',
+    'coming soon': 'https://schema.org/PreOrder',
+  }
+  const availability = availabilityMap[dev.status?.toLowerCase()] ?? 'https://schema.org/InStock'
+
   const developmentSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'RealEstateListing',
     name: dev.name,
     description: dev.editorialThesis || `New residential development in ${dev.location.name}, Portugal.`,
     url: `${BASE_URL}/${lang}/developments/${slug}`,
     ...(ogImage && { image: ogImage }),
-    brand: {
+    seller: {
       '@type': 'Organization',
       name: dev.developer.name,
       ...(dev.developer.website && { url: dev.developer.website }),
     },
-    offers: {
-      '@type': 'Offer',
-      priceCurrency: 'EUR',
-      availability: 'https://schema.org/InStock',
-      ...(dev.priceDisplay && { description: dev.priceDisplay }),
-    },
+    priceCurrency: 'EUR',
+    availability,
+    ...(dev.priceDisplay && { price: dev.priceDisplay }),
     additionalProperty: [
       { '@type': 'PropertyValue', name: 'Location', value: dev.location.name },
       { '@type': 'PropertyValue', name: 'Country', value: 'Portugal' },
