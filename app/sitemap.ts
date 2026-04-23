@@ -1,25 +1,18 @@
 import { MetadataRoute } from 'next'
-import { getAllDevelopments, getAllLocations, getAllArticles } from '@/lib/queries'
+import { getAllDevelopments, getAllLocations, getAllArticles, getCategoriesWithArticles, getActiveLifestyleTags } from '@/lib/queries'
+import { LIFESTYLE_TAG_SLUGS } from '@/lib/lifestyle-tags'
 
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
 const LOCALES = ['en', 'pt'] as const
 
-const ARTICLE_CATEGORIES = [
-  'architecture',
-  'area-guides',
-  'branded-residences',
-  'new-developments',
-  'second-home',
-  'investment',
-  'buyer-guides',
-]
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [developments, locations, articles] = await Promise.all([
+  const [developments, locations, articles, activeCategories, activeTags] = await Promise.all([
     getAllDevelopments(),
     getAllLocations(),
     getAllArticles(),
+    getCategoriesWithArticles(),
+    getActiveLifestyleTags(),
   ])
 
   const staticRoutes = [
@@ -70,7 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   )
 
   const categoryPages: MetadataRoute.Sitemap = LOCALES.flatMap(locale =>
-    ARTICLE_CATEGORIES.map(c => ({
+    (activeCategories as string[]).map(c => ({
       url: `${BASE}/${locale}/journal/category/${c}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
@@ -78,5 +71,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   )
 
-  return [...staticPages, ...developmentPages, ...locationPages, ...articlePages, ...categoryPages]
+  const lifestylePages: MetadataRoute.Sitemap = LOCALES.flatMap(locale =>
+    (activeTags as string[])
+      .filter(tag => LIFESTYLE_TAG_SLUGS[tag])
+      .map(tag => ({
+        url: `${BASE}/${locale}/lifestyle/${LIFESTYLE_TAG_SLUGS[tag]}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.7,
+      }))
+  )
+
+  return [...staticPages, ...developmentPages, ...locationPages, ...articlePages, ...categoryPages, ...lifestylePages]
 }

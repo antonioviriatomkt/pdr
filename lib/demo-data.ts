@@ -271,12 +271,124 @@ export const demoArticles = [
   },
 ]
 
+export const demoLifestyles = [
+  {
+    _id: 'ls1',
+    tag: 'Golf',
+    slug: { current: 'golf' },
+    intro: {
+      en: "Golf property in Portugal occupies a distinct position in the premium residential market. The country's courses — concentrated in the Algarve but increasingly present across the Lisbon peninsula and the Silver Coast — have created an ecosystem of resort communities, branded residences, and private villas that consistently attract serious international capital. Portugal has twelve of the top one hundred golf courses in Europe, and the lifestyle that surrounds them is one of its most bankable residential propositions.",
+      pt: 'O imobiliário de golfe em Portugal ocupa uma posição distinta no mercado residencial premium. Os campos do país — concentrados no Algarve, mas cada vez mais presentes na Península de Setúbal e na Costa de Prata — criaram um ecossistema de comunidades resort e residências de marca que atrai capital internacional sério de forma consistente.',
+    },
+    seoTitle: 'Golf Property in Portugal — Portugal Developments Review',
+    seoDescription: "Curated golf-adjacent residential developments across Portugal. Editorially selected for location, developer track record, and specification integrity.",
+    noindex: false,
+  },
+  {
+    _id: 'ls2',
+    tag: 'Beachfront',
+    slug: { current: 'beachfront' },
+    intro: {
+      en: "Beachfront property in Portugal ranges from the protected Atlantic coastline of Comporta — where low-density planning restrictions have preserved some of Europe's most extraordinary natural landscapes — to the resort-oriented frontline developments of the Algarve. The defining characteristic of the best beachfront proposition in Portugal is scarcity: genuine direct-access development opportunities are rare and, when they emerge, command sustained capital appreciation over time.",
+      pt: 'O imobiliário de frente de praia em Portugal vai desde a costa atlântica protegida da Comporta — onde as restrições de planeamento preservaram algumas das paisagens naturais mais extraordinárias da Europa — até aos projetos frontline do Algarve. A característica definidora da melhor oferta beira-mar em Portugal é a escassez.',
+    },
+    seoTitle: 'Beachfront Property in Portugal — Portugal Developments Review',
+    seoDescription: 'Curated beachfront residential developments in Portugal — Comporta, Algarve, and the Atlantic coast. Rare direct-access opportunities, editorially selected.',
+    noindex: false,
+  },
+  {
+    _id: 'ls3',
+    tag: 'Investment-grade',
+    slug: { current: 'investment-grade' },
+    intro: {
+      en: "Investment-grade designation on this platform indicates developments that have demonstrated, or carry credible potential to demonstrate, capital performance above the market baseline. This requires a combination of factors: a developer with a track record of delivering on projection, a location with sustained demand drivers, and product design that appeals to a rental market as well as a purchaser. Not every well-designed development is investment-grade; not every investment-grade development is the finest design on the market.",
+      pt: 'A designação de grau de investimento nesta plataforma indica projetos que demonstraram, ou têm potencial credível para demonstrar, desempenho de capital acima da linha de base do mercado. Combina historial do promotor, localização com fatores de procura sustentados e design de produto que apela ao mercado de arrendamento.',
+    },
+    seoTitle: 'Investment-Grade Property in Portugal — Portugal Developments Review',
+    seoDescription: 'Curated investment-grade developments across Portugal. Selected for capital performance potential, developer track record, and location fundamentals.',
+    noindex: false,
+  },
+]
+
 export const categoryLabels: Record<string, string> = {
   'architecture': 'Architecture',
   'area-guides': 'Area Guides',
   'branded-residences': 'Branded Residences',
-  'new-developments': 'New Developments',
+  'market-intelligence': 'Market Intelligence',
   'second-home': 'Second-Home Narratives',
   'investment': 'Investment Explainers',
   'buyer-guides': 'Buyer Guides',
 }
+
+export const demoJournalCategories = [
+  {
+    slug: 'architecture',
+    title: { en: 'Architecture', pt: 'Arquitetura' },
+    intro: {
+      en: "Portugal's most considered new developments begin with architecture. This section examines how leading architects are approaching residential briefs — from material selection and spatial organisation to the balance between typological tradition and contemporary expression. Our architecture coverage focuses on authorship, coherence, and the relationship between a project's stated proposition and its physical realisation.",
+      pt: 'Os projetos residenciais mais considerados de Portugal começam com a arquitetura. Esta secção examina como os principais arquitetos abordam os programas residenciais — desde a seleção de materiais e a organização espacial ao equilíbrio entre a tradição tipológica e a expressão contemporânea.',
+    },
+    seoTitle: 'Architecture — Journal | Portugal Developments Review',
+    seoDescription: 'Editorial analysis of architectural design in Portugal\'s premium new residential developments. Authorship, coherence, and the built proposition.',
+  },
+  {
+    slug: 'area-guides',
+    title: { en: 'Area Guides', pt: 'Guias de Área' },
+    intro: {
+      en: 'Understanding a location is the first step in understanding any development within it. Our area guides examine Portugal\'s key residential markets through the lens of urban character, infrastructure, and buyer demand — covering Lisbon\'s most coveted quartiers to the Atlantic-facing communities of the Algarve. Each guide is written to help serious buyers build a grounded picture of a location.',
+      pt: 'Compreender uma localização é o primeiro passo para avaliar qualquer projeto nela inserido. Os nossos guias de área examinam os principais mercados residenciais de Portugal — desde os bairros mais cobiçados de Lisboa às comunidades atlânticas do Algarve.',
+    },
+    seoTitle: 'Area Guides — Journal | Portugal Developments Review',
+    seoDescription: 'Editorial guides to Portugal\'s key residential locations — Lisbon, Porto, Algarve, Comporta, Cascais, and beyond.',
+  },
+  {
+    slug: 'branded-residences',
+    title: { en: 'Branded Residences', pt: 'Residências de Marca' },
+    intro: {
+      en: 'The arrival of international hospitality brands as residential partners has transformed the premium development landscape across Lisbon and the Algarve. Branded residences promise management infrastructure, brand premium, and rental yield — but the reality varies considerably by operator and project. Our coverage examines each partnership on its own terms.',
+      pt: 'A chegada de marcas hoteleiras internacionais como parceiras residenciais transformou o panorama dos projetos premium em Lisboa e no Algarve. As residências de marca prometem infraestrutura de gestão, premium de marca e rendimento de arrendamento — mas a realidade varia consideravelmente.',
+    },
+    seoTitle: 'Branded Residences — Journal | Portugal Developments Review',
+    seoDescription: 'Editorial analysis of branded residence developments in Portugal — hotel-branded property in Lisbon, the Algarve, and beyond.',
+  },
+  {
+    slug: 'market-intelligence',
+    title: { en: 'Market Intelligence', pt: 'Informação de Mercado' },
+    intro: {
+      en: 'Periodic editorial notes on the Portuguese new-development market — pricing context, pipeline observations, and PDR\'s forward view. These notes are structured editorial observations from a team with consistent access to active projects, developer briefings, and buyer behaviour across Portugal\'s principal residential markets. Published at intervals when the market warrants commentary.',
+      pt: 'Notas editoriais periódicas sobre o mercado de novos projetos em Portugal — contexto de preços, observações sobre a oferta e a perspetiva da PDR. Publicadas quando o mercado justifica comentário editorial.',
+    },
+    seoTitle: 'Market Intelligence — Journal | Portugal Developments Review',
+    seoDescription: 'Periodic editorial notes on Portugal\'s new residential development market — pricing, pipeline, and PDR\'s forward view.',
+  },
+  {
+    slug: 'second-home',
+    title: { en: 'Second-Home Narratives', pt: 'Segunda Residência' },
+    intro: {
+      en: 'The decision to purchase a second home in Portugal occupies a different register from a pure investment calculation. Lifestyle, access, community, and emotional alignment all carry weight alongside yield and capital performance. Our second-home coverage explores how international buyers are approaching Portugal as a destination for extended stays, and what that means for how they select locations and developments.',
+      pt: 'A decisão de adquirir uma segunda habitação em Portugal situa-se num registo diferente de um cálculo puramente de investimento. Estilo de vida, acesso, comunidade e alinhamento emocional têm peso, a par com rendimento e desempenho de capital.',
+    },
+    seoTitle: 'Second-Home Narratives — Journal | Portugal Developments Review',
+    seoDescription: 'Editorial perspectives on buying a second home in Portugal — lifestyle, location, and the international buyer\'s decision.',
+  },
+  {
+    slug: 'investment',
+    title: { en: 'Investment Explainers', pt: 'Investimento' },
+    intro: {
+      en: "Portugal's new development market has demonstrated consistent appeal to capital-led buyers across multiple economic cycles. Our investment coverage provides structured context — examining capital appreciation trends, rental yield profiles, and the macroeconomic factors that underwrite demand across specific markets. The aim is not to predict outcomes, but to give serious buyers the framework to ask better questions.",
+      pt: 'O mercado de novos projetos em Portugal demonstrou um apelo consistente a compradores orientados para o capital em múltiplos ciclos económicos. A nossa cobertura de investimento fornece contexto estruturado — examinando tendências de valorização e perfis de rendimento de arrendamento.',
+    },
+    seoTitle: 'Investment Explainers — Journal | Portugal Developments Review',
+    seoDescription: 'Editorial analysis of Portugal property investment — capital appreciation, rental yields, and market context across key locations.',
+  },
+  {
+    slug: 'buyer-guides',
+    title: { en: 'Buyer Guides', pt: 'Guias de Compra' },
+    intro: {
+      en: 'Purchasing property in a foreign market requires a different kind of preparation. Our buyer guides address the procedural, legal, and financial realities of acquiring new-build property in Portugal — from the purchase process and transaction costs to financing structures, tax considerations, and the practical timeline from offer to keys. Written for the internationally mobile buyer who wants editorial clarity.',
+      pt: 'Adquirir um imóvel num mercado estrangeiro exige uma preparação diferente. Os nossos guias de compra abordam as realidades processuais, legais e financeiras da aquisição de imóveis novos em Portugal — desde o processo de compra e custos de transação até às estruturas de financiamento.',
+    },
+    seoTitle: 'Buyer Guides — Journal | Portugal Developments Review',
+    seoDescription: 'Practical guides to buying property in Portugal for international buyers — legal process, costs, financing, and timelines explained.',
+  },
+]

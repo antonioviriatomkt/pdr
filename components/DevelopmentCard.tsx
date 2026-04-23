@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { urlFor } from '@/lib/sanity.image'
+import { LIFESTYLE_TAG_SLUGS } from '@/lib/lifestyle-tags'
 
 interface DevCardUi {
   priceOnRequest: string
@@ -60,9 +61,11 @@ export default function DevelopmentCard({ development, variant = 'default', lang
     )
   }
 
+  const tags = development.lifestyleTags?.slice(0, 3) ?? []
+
   return (
-    <Link href={href} style={{ display: 'block', textDecoration: 'none' }}>
-      <article>
+    <article>
+      <Link href={href} style={{ display: 'block', textDecoration: 'none' }}>
         <div style={{ aspectRatio: '4/3', background: 'var(--surface)', marginBottom: '16px', overflow: 'hidden', position: 'relative' }}>
           {development.isFeatured && (
             <div style={{ position: 'absolute', top: '12px', left: '12px', background: 'var(--foreground)', color: 'var(--background)', fontSize: '10px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '4px 8px', zIndex: 1 }}>
@@ -107,17 +110,28 @@ export default function DevelopmentCard({ development, variant = 'default', lang
             {ui.viewArrow}
           </span>
         </div>
+      </Link>
 
-        {development.lifestyleTags && development.lifestyleTags.length > 0 && (
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '12px' }}>
-            {development.lifestyleTags.slice(0, 3).map(tag => (
+      {tags.length > 0 && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '12px' }}>
+          {tags.map(tag => {
+            const tagSlug = LIFESTYLE_TAG_SLUGS[tag]
+            return tagSlug ? (
+              <Link
+                key={tag}
+                href={`/${lang}/lifestyle/${tagSlug}`}
+                style={{ fontSize: '10px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '3px 8px', textDecoration: 'none' }}
+              >
+                {ui.lifestyleTagLabels[tag] ?? tag}
+              </Link>
+            ) : (
               <span key={tag} style={{ fontSize: '10px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '3px 8px' }}>
                 {ui.lifestyleTagLabels[tag] ?? tag}
               </span>
-            ))}
-          </div>
-        )}
-      </article>
-    </Link>
+            )
+          })}
+        </div>
+      )}
+    </article>
   )
 }

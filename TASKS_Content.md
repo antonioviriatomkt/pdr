@@ -17,14 +17,14 @@
 
 ### 1.1 — Add `buyer-guides` category to the journal
 
-- [ ] In `sanity/schemas/journalArticle.ts`, add `{ title: 'Buyer Guides', value: 'buyer-guides' }` to the `category` field's options list.
-- [ ] Add `buyerGuides: 'Buyer Guides'` key to `lib/i18n/en.json` under `journal.categories`.
-- [ ] Add Portuguese equivalent (`'Guias de Compra'`) to `lib/i18n/pt.json` under `journal.categories`.
-- [ ] Add `'buyer-guides'` to the `ARTICLE_CATEGORIES` array in `app/sitemap.ts`.
+- [x] In `sanity/schemas/journalArticle.ts`, add `{ title: 'Buyer Guides', value: 'buyer-guides' }` to the `category` field's options list.
+- [x] Add `buyerGuides: 'Buyer Guides'` key to `lib/i18n/en.json` under `journal.categories`.
+- [x] Add Portuguese equivalent (`'Guias de Compra'`) to `lib/i18n/pt.json` under `journal.categories`.
+- [x] Add `'buyer-guides'` to the `ARTICLE_CATEGORIES` array in `app/sitemap.ts`.
 
 ### 1.2 — Add `isPillar` flag to journal articles
 
-- [ ] In `sanity/schemas/journalArticle.ts`, add:
+- [x] In `sanity/schemas/journalArticle.ts`, add:
   ```ts
   defineField({
     name: 'isPillar',
@@ -34,11 +34,11 @@
     initialValue: false,
   }),
   ```
-- [ ] Extend `lib/queries.ts` with a `getPillarArticles(lang)` function that returns articles where `isPillar == true`, ordered by `publishedAt desc`.
+- [x] Extend `lib/queries.ts` with a `getPillarArticles(lang)` function that returns articles where `isPillar == true`, ordered by `publishedAt desc`.
 
 ### 1.3 — Create pillar page 1: "Buying Property in Portugal"
 
-- [ ] Create a new journal article in Sanity (or demo data if Sanity is not yet live) with:
+- [x] Create a new journal article in Sanity (or demo data if Sanity is not yet live) with:
   - **Slug:** `buying-property-in-portugal-guide`
   - **Category:** `buyer-guides`
   - **isPillar:** `true`
@@ -54,11 +54,11 @@
     6. Typical timeline from offer to keys
     7. Common mistakes and how Viriato helps
   - **Internal links (minimum):** link to `/{lang}/locations/lisbon`, `/{lang}/locations/algarve`, `/{lang}/locations/comporta`, `/{lang}/methodology`, and `/{lang}/contact`.
-- [ ] Confirm the article renders with the existing journal article template.
+- [x] Confirm the article renders with the existing journal article template.
 
 ### 1.4 — Create pillar page 2: "Portugal Tax Incentives Explained"
 
-- [ ] Same as 1.3 with:
+- [x] Same as 1.3 with:
   - **Slug:** `portugal-tax-incentives-property-buyers`
   - **Title (EN):** "Portugal Tax Incentives for Property Buyers: NHR, IFICI, and the New Regimes"
   - **Title (PT):** "Incentivos Fiscais em Portugal para Compradores: NHR, IFICI e os Novos Regimes"
@@ -72,7 +72,7 @@
 
 ### 1.5 — Create pillar page 3: "Where to Buy in Portugal"
 
-- [ ] Same as 1.3 with:
+- [x] Same as 1.3 with:
   - **Slug:** `where-to-buy-property-portugal`
   - **Title (EN):** "Where to Buy in Portugal: A Location Intelligence Overview"
   - **Title (PT):** "Onde Comprar em Portugal: Uma Visão Editorial das Localizações"
@@ -80,20 +80,20 @@
 
 ### 1.6 — Surface pillar content on development detail pages
 
-- [ ] In `app/[lang]/(main)/developments/[slug]/page.tsx`, after the `InquiryPanel` block, add a "Before you enquire" module that links to the three pillar guides. Use the existing em-dash list pattern (see `docs/design-language.md` § 7 "List pattern").
-- [ ] Fetch pillar articles via the new `getPillarArticles()` query. Render only if at least one pillar article exists.
+- [x] In `app/[lang]/(main)/developments/[slug]/page.tsx`, after the `InquiryPanel` block, add a "Before you enquire" module that links to the three pillar guides. Use the existing em-dash list pattern (see `docs/design-language.md` § 7 "List pattern").
+- [x] Fetch pillar articles via the new `getPillarArticles()` query. Render only if at least one pillar article exists.
 
 ### 1.7 — Surface pillar content on journal index
 
-- [ ] In `app/[lang]/(main)/journal/page.tsx`, add a "Guides" section at the top of the article grid (above the category nav strip) that renders up to 3 pillar articles in the default `ArticleCard` grid.
+- [x] In `app/[lang]/(main)/journal/page.tsx`, add a "Guides" section at the top of the article grid (above the category nav strip) that renders up to 3 pillar articles in the default `ArticleCard` grid.
 
 ### 1.8 — Acceptance criteria
 
-- [ ] All three pillar pages return 200 in both locales.
-- [ ] Sitemap includes all six URLs (3 articles × 2 locales).
-- [ ] Each pillar article has at least 5 outbound internal links to locations/developments.
-- [ ] Each pillar page passes Core Web Vitals (LCP < 2.5s on 4G throttled test).
-- [ ] `Article` JSON-LD renders on each pillar page (see Gap 3 task 3.5 for the schema component).
+- [x] All three pillar pages return 200 in both locales.
+- [x] Sitemap includes all six URLs (3 articles × 2 locales).
+- [x] Each pillar article has at least 5 outbound internal links to locations/developments.
+- [x] Each pillar page passes Core Web Vitals (LCP < 2.5s on 4G throttled test).
+- [x] `Article` JSON-LD renders on each pillar page (see Gap 3 task 3.5 for the schema component).
 
 ---
 
@@ -103,7 +103,7 @@
 
 ### 2.1 — Extend the `location` Sanity schema
 
-- [ ] In `sanity/schemas/location.ts`, add before `nearbyLocations`:
+- [x] In `sanity/schemas/location.ts`, add before `nearbyLocations`:
   ```ts
   defineField({
     name: 'parentLocation',
@@ -124,11 +124,11 @@
 
 ### 2.2 — Update queries and demo data
 
-- [ ] In `lib/queries.ts`:
+- [x] In `lib/queries.ts`:
   - Update `getAllLocations()` to include `parentLocation->{name, slug}` and `locationType` in the projection.
   - Add `getLocationChildren(parentSlug, lang)` returning all locations where `parentLocation->slug.current == $parentSlug`.
   - Add `getLocationBreadcrumbs(slug, lang)` that walks the parent chain up to the macro location.
-- [ ] Update `lib/demo-data.ts`:
+- [x] Update `lib/demo-data.ts`:
   - Add `locationType: 'macro'` to all existing demo locations.
   - Add 5 neighbourhood demo locations with `parentLocation` set:
     - Príncipe Real → Lisbon
@@ -139,7 +139,7 @@
 
 ### 2.3 — Update the location page template
 
-- [ ] In `app/[lang]/(main)/locations/[slug]/page.tsx`:
+- [x] In `app/[lang]/(main)/locations/[slug]/page.tsx`:
   - Fetch child locations via `getLocationChildren(slug, lang)`.
   - If `loc.locationType === 'macro'` and children exist, render a "Neighbourhoods" section before "Developments in this location". Use the location tile grid pattern (`repeat(auto-fill, minmax(240px, 1fr))`, 1px border grid).
   - If `loc.parentLocation` exists, include the parent in the breadcrumb: `Home › Locations › {parent.name} › {loc.name}`.
@@ -147,10 +147,10 @@
 
 ### 2.4 — Add two new macro-locations
 
-- [ ] Create Silver Coast location (covers Óbidos, Peniche, Ericeira, Nazaré region). Intro copy to be supplied by editorial.
-- [ ] Create Madeira location. Intro copy to be supplied by editorial.
-- [ ] Both must be added to demo data with `locationType: 'macro'` and appropriate `region` field value.
-- [ ] Update `location` schema region enum if Ericeira/Óbidos need finer regional grouping.
+- [x] Create Silver Coast location (covers Óbidos, Peniche, Ericeira, Nazaré region). Intro copy to be supplied by editorial.
+- [x] Create Madeira location. Intro copy to be supplied by editorial.
+- [x] Both must be added to demo data with `locationType: 'macro'` and appropriate `region` field value.
+- [x] Update `location` schema region enum if Ericeira/Óbidos need finer regional grouping.
 
 ### 2.5 — Add priority neighbourhood pages
 
@@ -164,21 +164,21 @@ Required neighbourhoods to publish (content written by editorial):
 | Foz do Douro | Porto | Article exists; no entity page |
 | Golden Triangle | Algarve | Investment article exists; no entity page |
 
-- [ ] Each page needs: 150–250 word editorial intro, lat/long coordinates, at least one linked journal article, `parentLocation` set.
+- [x] Each page needs: 150–250 word editorial intro, lat/long coordinates, at least one linked journal article, `parentLocation` set.
 
 ### 2.6 — Link articles to sub-locations retroactively
 
-- [ ] Update the `Why Comporta Remains Portugal's Most Protected Coastline` article to link to the Comporta page (already does).
-- [ ] Update the `Porto's Foz District` article to set `linkedLocation` to the new Foz do Douro neighbourhood entity.
-- [ ] Update `Golden Triangle Investment Landscape` article to `linkedLocation: Golden Triangle` instead of `Algarve`.
+- [x] Update the `Why Comporta Remains Portugal's Most Protected Coastline` article to link to the Comporta page (already does).
+- [x] Update the `Porto's Foz District` article to set `linkedLocation` to the new Foz do Douro neighbourhood entity.
+- [x] Update `Golden Triangle Investment Landscape` article to `linkedLocation: Golden Triangle` instead of `Algarve`.
 
 ### 2.7 — Acceptance criteria
 
-- [ ] Neighbourhood pages render with full parent breadcrumb.
-- [ ] Macro-location pages show a "Neighbourhoods" grid when children exist.
-- [ ] Sitemap includes all new locations in both locales with priority 0.8.
-- [ ] `BreadcrumbList` schema reflects actual parent hierarchy.
-- [ ] Parent-child links are bidirectional (parent shows child grid; child shows parent in breadcrumb + "back to {parent}" link).
+- [x] Neighbourhood pages render with full parent breadcrumb.
+- [x] Macro-location pages show a "Neighbourhoods" grid when children exist.
+- [x] Sitemap includes all new locations in both locales with priority 0.8.
+- [x] `BreadcrumbList` schema reflects actual parent hierarchy.
+- [x] Parent-child links are bidirectional (parent shows child grid; child shows parent in breadcrumb + "back to {parent}" link).
 
 ---
 
@@ -188,27 +188,27 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 3.1 — Replace `new-developments` with `market-intelligence`
 
-- [ ] In `sanity/schemas/journalArticle.ts`, replace `{ title: 'New Developments', value: 'new-developments' }` with `{ title: 'Market Intelligence', value: 'market-intelligence' }`.
-- [ ] In `lib/i18n/en.json`, rename the corresponding category key.
-- [ ] In `lib/i18n/pt.json`, set the PT translation to `'Informação de Mercado'`.
-- [ ] In `app/sitemap.ts`, replace `'new-developments'` with `'market-intelligence'`.
-- [ ] Add a 301 redirect from `/journal/category/new-developments` → `/journal/category/market-intelligence` in `next.config.ts` for both locales.
+- [x] In `sanity/schemas/journalArticle.ts`, replace `{ title: 'New Developments', value: 'new-developments' }` with `{ title: 'Market Intelligence', value: 'market-intelligence' }`.
+- [x] In `lib/i18n/en.json`, rename the corresponding category key.
+- [x] In `lib/i18n/pt.json`, set the PT translation to `'Informação de Mercado'`.
+- [x] In `app/sitemap.ts`, replace `'new-developments'` with `'market-intelligence'`.
+- [x] Add a 301 redirect from `/journal/category/new-developments` → `/journal/category/market-intelligence` in `next.config.ts` for both locales.
 
 ### 3.2 — Make sitemap categories CMS-driven
 
-- [ ] In `app/sitemap.ts`, replace the hard-coded `ARTICLE_CATEGORIES` array with a query: categories that have at least 1 published article in that locale.
-- [ ] Add `getCategoriesWithArticles(lang)` to `lib/queries.ts`:
+- [x] In `app/sitemap.ts`, replace the hard-coded `ARTICLE_CATEGORIES` array with a query: categories that have at least 1 published article in that locale.
+- [x] Add `getCategoriesWithArticles(lang)` to `lib/queries.ts`:
   ```groq
   *[_type == "journalArticle" && !(_id in path("drafts.**")) && noindex != true] {
     category
   } | order(category asc)
   ```
   Then dedupe in TS.
-- [ ] Ensure the sitemap still emits category URLs for *both* EN and PT even if only one locale has content — because page renders bilingually.
+- [x] Ensure the sitemap still emits category URLs for *both* EN and PT even if only one locale has content — because page renders bilingually.
 
 ### 3.3 — Add editorial intros to category pages
 
-- [ ] Create a new Sanity schema `sanity/schemas/journalCategory.ts`:
+- [x] Create a new Sanity schema `sanity/schemas/journalCategory.ts`:
   ```ts
   export const journalCategory = defineType({
     name: 'journalCategory',
@@ -227,19 +227,19 @@ Required neighbourhoods to publish (content written by editorial):
     ],
   })
   ```
-- [ ] Register the new schema in `sanity/schemas/index.ts`.
-- [ ] In `app/[lang]/(main)/journal/category/[category]/page.tsx`, fetch the matching `journalCategory` document and render its editorial intro (50–150 words) above the article grid.
-- [ ] Use the category document's `seoTitle` / `seoDescription` in `generateMetadata` when present.
+- [x] Register the new schema in `sanity/schemas/index.ts`.
+- [x] In `app/[lang]/(main)/journal/category/[category]/page.tsx`, fetch the matching `journalCategory` document and render its editorial intro (50–150 words) above the article grid.
+- [x] Use the category document's `seoTitle` / `seoDescription` in `generateMetadata` when present.
 
 ### 3.4 — Seed category intros (editorial content task)
 
-- [ ] Write a 100-word intro for each of the 6 active categories (architecture, area-guides, branded-residences, market-intelligence, second-home, investment, buyer-guides).
-- [ ] Translate each to PT.
-- [ ] Create the 7 `journalCategory` documents in Sanity (or demo data).
+- [x] Write a 100-word intro for each of the 6 active categories (architecture, area-guides, branded-residences, market-intelligence, second-home, investment, buyer-guides).
+- [x] Translate each to PT.
+- [x] Create the 7 `journalCategory` documents in Sanity (or demo data).
 
 ### 3.5 — Add `Article` JSON-LD to journal article page
 
-- [ ] In `app/[lang]/(main)/journal/article/[slug]/page.tsx`, add an `Article` schema block alongside the existing hero render:
+- [x] In `app/[lang]/(main)/journal/article/[slug]/page.tsx`, add an `Article` schema block alongside the existing hero render:
   ```ts
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -259,15 +259,15 @@ Required neighbourhoods to publish (content written by editorial):
     ...(article.isPillar && { articleSection: 'Pillar Guide' }),
   }
   ```
-- [ ] Add `BreadcrumbList` schema: Home → Journal → Category → Article.
-- [ ] Render both via the existing `<JsonLd data={...} />` component.
+- [x] Add `BreadcrumbList` schema: Home → Journal → Category → Article.
+- [x] Render both via the existing `<JsonLd data={...} />` component.
 
 ### 3.6 — Acceptance criteria
 
-- [ ] `/journal/category/new-developments` (both locales) returns 301 to `/market-intelligence`.
-- [ ] Sitemap only emits categories that have at least one article.
-- [ ] Every category page has an editorial intro.
-- [ ] Every article page renders `Article` + `BreadcrumbList` JSON-LD; Rich Results Test passes.
+- [x] `/journal/category/new-developments` (both locales) returns 301 to `/market-intelligence`.
+- [x] Sitemap only emits categories that have at least one article.
+- [x] Every category page has an editorial intro.
+- [x] Every article page renders `Article` + `BreadcrumbList` JSON-LD; Rich Results Test passes.
 
 ---
 
@@ -277,7 +277,7 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 4.1 — Define canonical tag slugs
 
-- [ ] Add a tag slug map to `lib/i18n/index.ts` (or create `lib/lifestyle-tags.ts`):
+- [x] Add a tag slug map to `lib/i18n/index.ts` (or create `lib/lifestyle-tags.ts`):
   ```ts
   export const LIFESTYLE_TAG_SLUGS: Record<string, string> = {
     'Golf': 'golf',
@@ -297,7 +297,7 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 4.2 — Create the lifestyle route
 
-- [ ] Create `app/[lang]/(main)/lifestyle/[tag]/page.tsx`:
+- [x] Create `app/[lang]/(main)/lifestyle/[tag]/page.tsx`:
   - `generateStaticParams`: return only tags that appear in at least one published, non-noindexed development.
   - `generateMetadata`: localized title per locale. Example: *"Golf Property in Portugal"* / *"Imóveis de Golfe em Portugal"*.
   - Page body:
@@ -309,7 +309,7 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 4.3 — Add lifestyle content schema
 
-- [ ] Create `sanity/schemas/lifestyle.ts`:
+- [x] Create `sanity/schemas/lifestyle.ts`:
   ```ts
   export const lifestyle = defineType({
     name: 'lifestyle',
@@ -331,28 +331,28 @@ Required neighbourhoods to publish (content written by editorial):
     ],
   })
   ```
-- [ ] Register in `sanity/schemas/index.ts`.
-- [ ] Seed demo lifestyle documents for the 3 tags with multiple developments: Golf, Beachfront, Investment-grade.
+- [x] Register in `sanity/schemas/index.ts`.
+- [x] Seed demo lifestyle documents for the 3 tags with multiple developments: Golf, Beachfront, Investment-grade.
 
 ### 4.4 — Extend queries
 
-- [ ] `lib/queries.ts`:
+- [x] `lib/queries.ts`:
   - `getDevelopmentsByLifestyle(tag, lang)` — returns developments where `$tag in lifestyleTags`, excluding noindexed.
   - `getLifestyle(slug, lang)` — returns the `lifestyle` document.
   - `getActiveLifestyleTags()` — returns the distinct tags present in at least one published development (used by `generateStaticParams`).
 
 ### 4.5 — Add structured data
 
-- [ ] On each lifestyle page, render `ItemList` JSON-LD listing the developments shown, plus `BreadcrumbList` (Home → Lifestyle → Tag).
+- [x] On each lifestyle page, render `ItemList` JSON-LD listing the developments shown, plus `BreadcrumbList` (Home → Lifestyle → Tag).
 
 ### 4.6 — Surface lifestyle links
 
-- [ ] On `DevelopmentCard`, make each rendered `lifestyleTag` a link to `/{lang}/lifestyle/{slug}` (currently renders as plain text).
-- [ ] Add "Lifestyle" column to the footer nav linking to the top 4 lifestyle pages.
+- [x] On `DevelopmentCard`, make each rendered `lifestyleTag` a link to `/{lang}/lifestyle/{slug}` (currently renders as plain text).
+- [x] Add "Lifestyle" column to the footer nav linking to the top 4 lifestyle pages.
 
 ### 4.7 — Add to sitemap
 
-- [ ] In `app/sitemap.ts`, add a `lifestylePages` section:
+- [x] In `app/sitemap.ts`, add a `lifestylePages` section:
   ```ts
   const lifestyleTags = await getActiveLifestyleTags()
   const lifestylePages = LOCALES.flatMap(locale =>
@@ -367,11 +367,11 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 4.8 — Acceptance criteria
 
-- [ ] `/lifestyle/golf`, `/lifestyle/beachfront`, `/lifestyle/investment-grade` all return 200 in both locales.
-- [ ] Tags with zero matching developments return 404 (not an empty page).
-- [ ] Tag links on `DevelopmentCard` navigate to the correct lifestyle page.
-- [ ] Sitemap emits only active lifestyle tags.
-- [ ] `ItemList` JSON-LD passes Rich Results Test.
+- [x] `/lifestyle/golf`, `/lifestyle/beachfront`, `/lifestyle/investment-grade` all return 200 in both locales.
+- [x] Tags with zero matching developments return 404 (not an empty page).
+- [x] Tag links on `DevelopmentCard` navigate to the correct lifestyle page.
+- [x] Sitemap emits only active lifestyle tags.
+- [x] `ItemList` JSON-LD passes Rich Results Test.
 
 ---
 

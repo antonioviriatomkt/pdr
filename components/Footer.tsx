@@ -66,6 +66,23 @@ export default function Footer({ lang, footer }: FooterProps) {
             ))}
           </div>
 
+          {/* Lifestyle */}
+          <div>
+            <div style={{ fontSize: '11px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+              {footer.sections.lifestyle}
+            </div>
+            {[
+              { href: `/${lang}/lifestyle/golf`, label: footer.links.lifestyleGolf },
+              { href: `/${lang}/lifestyle/beachfront`, label: footer.links.lifestyleBeachfront },
+              { href: `/${lang}/lifestyle/investment-grade`, label: footer.links.lifestyleInvestmentGrade },
+              { href: `/${lang}/lifestyle/city-centre`, label: footer.links.lifestyleCityCentre },
+            ].map(({ href, label }) => (
+              <Link key={href} href={href} style={{ display: 'block', fontSize: '13px', color: 'var(--muted)', marginBottom: '8px', textDecoration: 'none' }}>
+                {label}
+              </Link>
+            ))}
+          </div>
+
           {/* Platform */}
           <div>
             <div style={{ fontSize: '11px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>

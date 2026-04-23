@@ -111,11 +111,24 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         url: `${BASE_URL}/${lang}/locations/${article.linkedLocation.slug.current}`,
       },
     }),
+    ...(article.isPillar && { articleSection: 'Pillar Guide' }),
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: dict.common.home, item: `${BASE_URL}/${lang}` },
+      { '@type': 'ListItem', position: 2, name: j.heading, item: `${BASE_URL}/${lang}/journal` },
+      { '@type': 'ListItem', position: 3, name: label, item: `${BASE_URL}/${lang}/journal/category/${article.category}` },
+      { '@type': 'ListItem', position: 4, name: article.title, item: articleUrl },
+    ],
   }
 
   return (
     <>
       <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0 48px' }}>
         <div className="container-editorial">
           <nav style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginBottom: '20px', display: 'flex', gap: '8px' }}>

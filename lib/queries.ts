@@ -3,6 +3,8 @@ import {
   demoLocations,
   demoDevelopments,
   demoArticles,
+  demoJournalCategories,
+  demoLifestyles,
 } from './demo-data'
 
 async function safeFetch<T>(fetcher: () => Promise<T>, fallback: T): Promise<T> {
@@ -209,7 +211,7 @@ export async function getArticleBySlug(slug: string, lang = 'en') {
         slug, category, heroImage, seoImage,
         "excerpt": coalesce(excerpt[$lang], excerpt.en),
         "body": coalesce(body[$lang], body.en),
-        publishedAt, _updatedAt, noindex,
+        publishedAt, _updatedAt, noindex, isPillar,
         linkedLocation->{ name, slug, "intro": coalesce(intro[$lang], intro.en) },
         linkedDevelopment->{ name, slug, heroImage, status, priceDisplay },
         seoTitle, seoDescription
@@ -244,6 +246,67 @@ export async function getPillarArticles(lang = 'en') {
       }
     `, { lang }, { next: { revalidate: 3600 } }),
     demoArticles.filter(a => (a as any).isPillar) as any[]
+  )
+}
+
+export async function getActiveLifestyleTags(): Promise<string[]> {
+  return safeFetch(
+    () => client.fetch(`
+      array::unique(*[_type == "development" && defined(lifestyleTags) && noindex != true].lifestyleTags[])
+    `, {}, { next: { revalidate: 3600 } }),
+    [...new Set(demoDevelopments.flatMap(d => d.lifestyleTags ?? []))]
+  )
+}
+
+export async function getDevelopmentsByLifestyle(tag: string, lang = 'en') {
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "development" && $tag in lifestyleTags && noindex != true] | order(isFeatured desc, publishedAt desc) {
+        _id, name, slug, status, type, priceDisplay, isFeatured,
+        lifestyleTags, heroImage,
+        "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
+        primaryCta,
+        location->{ name, slug },
+        developer->{ name }
+      }
+    `, { tag, lang }, { next: { revalidate: 300 } }),
+    demoDevelopments.filter(d => d.lifestyleTags?.includes(tag)) as any[]
+  )
+}
+
+export async function getLifestyle(slug: string, lang = 'en') {
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "lifestyle" && slug.current == $slug && noindex != true][0] {
+        tag, slug,
+        "intro": coalesce(intro[$lang], intro.en),
+        heroImage, seoTitle, seoDescription, noindex
+      }
+    `, { slug, lang }, { next: { revalidate: 3600 } }),
+    (demoLifestyles.find(l => l.slug.current === slug) ?? null) as any
+  )
+}
+
+export async function getCategoriesWithArticles(): Promise<string[]> {
+  return safeFetch(
+    () => client.fetch(`
+      array::unique(*[_type == "journalArticle" && !(_id in path("drafts.**")) && noindex != true].category)
+    `, {}, { next: { revalidate: 3600 } }),
+    [...new Set(demoArticles.map(a => a.category))]
+  )
+}
+
+export async function getJournalCategory(slug: string, lang = 'en') {
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "journalCategory" && slug == $slug][0] {
+        slug,
+        "title": coalesce(title[$lang], title.en),
+        "intro": coalesce(intro[$lang], intro.en),
+        seoTitle, seoDescription
+      }
+    `, { slug, lang }, { next: { revalidate: 3600 } }),
+    (demoJournalCategories.find(c => c.slug === slug) ?? null) as any
   )
 }
 

@@ -25,7 +25,7 @@ export const journalArticle = defineType({
           { title: 'Architecture', value: 'architecture' },
           { title: 'Area Guides', value: 'area-guides' },
           { title: 'Branded Residences', value: 'branded-residences' },
-          { title: 'New Developments', value: 'new-developments' },
+          { title: 'Market Intelligence', value: 'market-intelligence' },
           { title: 'Second-Home Narratives', value: 'second-home' },
           { title: 'Investment Explainers', value: 'investment' },
           { title: 'Buyer Guides', value: 'buyer-guides' },

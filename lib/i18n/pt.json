@@ -34,6 +34,7 @@
     "sections": {
       "developments": "Projetos",
       "journal": "Revista",
+      "lifestyle": "Estilo de Vida",
       "platform": "Plataforma"
     },
     "links": {
@@ -43,6 +44,10 @@
       "investment": "Investimento",
       "architecture": "Arquitetura",
       "brandedResidences": "Residências de Marca",
+      "lifestyleGolf": "Golfe",
+      "lifestyleBeachfront": "Frente de Praia",
+      "lifestyleInvestmentGrade": "Grau de Investimento",
+      "lifestyleCityCentre": "Centro Urbano",
       "methodology": "Metodologia",
       "about": "Sobre",
       "forDevelopers": "Para Promotores",
@@ -194,7 +199,7 @@
       "architecture": "Arquitetura",
       "area-guides": "Guias de Área",
       "branded-residences": "Residências de Marca",
-      "new-developments": "Novos Projetos",
+      "market-intelligence": "Informação de Mercado",
       "second-home": "Segunda Residência",
       "investment": "Investimento",
       "buyer-guides": "Guias de Compra"
@@ -369,6 +374,15 @@
         "a": "Promotores não clientes da Viriato podem submeter os seus projetos para consideração. Não existe taxa para a avaliação editorial inicial. Se um projeto cumprir o limiar editorial, pode ser incluído na plataforma e serão discutidos os termos formais de colocação."
       }
     ]
+  },
+
+  "lifestyle": {
+    "eyebrow": "Estilo de Vida",
+    "breadcrumbLifestyle": "Estilo de Vida",
+    "relatedLifestyles": "Outros Estilos de Vida",
+    "noResults": "Ainda não existem projetos curados com este perfil de estilo de vida.",
+    "relatedArticles": "Leitura Relacionada",
+    "developmentsHeading": "Projetos Curados"
   },
 
   "seo": {

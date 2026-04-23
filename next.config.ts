@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: '/:lang/journal/:slug',
         permanent: true,
       },
+      {
+        source: '/:lang/journal/category/new-developments',
+        destination: '/:lang/journal/category/market-intelligence',
+        permanent: true,
+      },
     ]
   },
   images: {

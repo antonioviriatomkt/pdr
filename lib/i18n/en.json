@@ -34,6 +34,7 @@
     "sections": {
       "developments": "Developments",
       "journal": "Journal",
+      "lifestyle": "Lifestyle",
       "platform": "Platform"
     },
     "links": {
@@ -43,6 +44,10 @@
       "investment": "Investment",
       "architecture": "Architecture",
       "brandedResidences": "Branded Residences",
+      "lifestyleGolf": "Golf",
+      "lifestyleBeachfront": "Beachfront",
+      "lifestyleInvestmentGrade": "Investment-grade",
+      "lifestyleCityCentre": "City Centre",
       "methodology": "Methodology",
       "about": "About",
       "forDevelopers": "For Developers",
@@ -194,7 +199,7 @@
       "architecture": "Architecture",
       "area-guides": "Area Guides",
       "branded-residences": "Branded Residences",
-      "new-developments": "New Developments",
+      "market-intelligence": "Market Intelligence",
       "second-home": "Second-Home Narratives",
       "investment": "Investment Explainers",
       "buyer-guides": "Buyer Guides"
@@ -369,6 +374,15 @@
         "a": "Non-Viriato developers may submit their projects for consideration. There is no fee for the initial editorial assessment. If a project meets the editorial threshold, it may be included on the platform and formal terms for placement will be discussed."
       }
     ]
+  },
+
+  "lifestyle": {
+    "eyebrow": "Lifestyle",
+    "breadcrumbLifestyle": "Lifestyle",
+    "relatedLifestyles": "Other Lifestyles",
+    "noResults": "No curated developments with this lifestyle profile yet.",
+    "relatedArticles": "Related Reading",
+    "developmentsHeading": "Curated Developments"
   },
 
   "seo": {

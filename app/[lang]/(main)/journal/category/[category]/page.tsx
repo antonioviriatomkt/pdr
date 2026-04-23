@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import ArticleCard from '@/components/ArticleCard'
-import { getArticlesByCategory } from '@/lib/queries'
+import { getArticlesByCategory, getJournalCategory } from '@/lib/queries'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 
@@ -11,13 +11,17 @@ export const dynamicParams = true
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; category: string }> }): Promise<Metadata> {
   const { category, lang } = await params
-  const dict = await getDictionary(hasLocale(lang) ? lang : 'en')
+  const locale = hasLocale(lang) ? lang : 'en'
+  const [dict, catDoc, articles] = await Promise.all([
+    getDictionary(locale),
+    getJournalCategory(category, locale),
+    getArticlesByCategory(category, locale),
+  ])
   const label = dict.journal.categories[category as keyof typeof dict.journal.categories]
   if (!label) return {}
-  const articles = await getArticlesByCategory(category, hasLocale(lang) ? lang : 'en')
   return {
-    title: `${label} — Journal`,
-    description: `Editorial articles about ${label.toLowerCase()} covering new developments across Portugal.`,
+    title: catDoc?.seoTitle || `${label} — Journal | Portugal Developments Review`,
+    description: catDoc?.seoDescription || `Editorial articles about ${label.toLowerCase()} covering new developments across Portugal.`,
     alternates: getAlternates(`/journal/category/${category}`, lang),
     openGraph: { type: 'website', ...getOgLocale(lang) },
     robots: (articles as any[]).length === 0 ? { index: false, follow: false } : { index: true, follow: true },
@@ -28,9 +32,10 @@ export default async function JournalCategoryPage({ params }: { params: Promise<
   const { lang, category } = await params
   if (!hasLocale(lang)) notFound()
 
-  const [articles, dict] = await Promise.all([
+  const [articles, dict, catDoc] = await Promise.all([
     getArticlesByCategory(category, lang),
     getDictionary(lang),
+    getJournalCategory(category, lang),
   ])
 
   const j = dict.journal
@@ -53,6 +58,11 @@ export default async function JournalCategoryPage({ params }: { params: Promise<
           <h1 style={{ fontSize: '36px', fontWeight: 400, margin: '0 0 12px', letterSpacing: '-0.02em' }}>
             {label}
           </h1>
+          {catDoc?.intro && (
+            <p style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--muted)', maxWidth: '680px', margin: '16px 0 0', fontFamily: 'sans-serif' }}>
+              {catDoc.intro}
+            </p>
+          )}
         </div>
       </section>
 
