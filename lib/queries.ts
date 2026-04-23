@@ -1,17 +1,33 @@
 import { client } from './sanity.client'
+import {
+  demoLocations,
+  demoDevelopments,
+  demoArticles,
+} from './demo-data'
+
+async function safeFetch<T>(fetcher: () => Promise<T>, fallback: T): Promise<T> {
+  try {
+    return await fetcher()
+  } catch {
+    return fallback
+  }
+}
 
 // Developments
 export async function getFeaturedDevelopments(lang = 'en') {
-  return client.fetch(`
-    *[_type == "development" && isFeatured == true] | order(publishedAt desc) [0...6] {
-      _id, name, slug, status, type, priceDisplay, isFeatured,
-      lifestyleTags, heroImage,
-      "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
-      primaryCta,
-      location->{ name, slug },
-      developer->{ name }
-    }
-  `, { lang }, { next: { revalidate: 300 } })
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "development" && isFeatured == true] | order(publishedAt desc) [0...6] {
+        _id, name, slug, status, type, priceDisplay, isFeatured,
+        lifestyleTags, heroImage,
+        "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
+        primaryCta,
+        location->{ name, slug },
+        developer->{ name }
+      }
+    `, { lang }, { next: { revalidate: 300 } }),
+    demoDevelopments.filter(d => d.isFeatured) as any[]
+  )
 }
 
 export async function getAllDevelopments(lang = 'en', filters?: {
@@ -31,137 +47,189 @@ export async function getAllDevelopments(lang = 'en', filters?: {
 
   const sort = filters?.sort === 'newest' ? 'publishedAt desc' : 'isFeatured desc, publishedAt desc'
 
-  return client.fetch(`
-    ${filter} | order(${sort}) {
-      _id, name, slug, status, type, priceDisplay, isFeatured,
-      lifestyleTags, heroImage, publishedAt,
-      "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
-      primaryCta,
-      location->{ name, slug },
-      developer->{ name }
-    }
-  `, { lang }, { next: { revalidate: 300 } })
+  const fallback = demoDevelopments.filter(d => {
+    if (filters?.location && d.location.slug.current !== filters.location) return false
+    if (filters?.type && d.type !== filters.type) return false
+    if (filters?.status && d.status !== filters.status) return false
+    return true
+  })
+
+  return safeFetch(
+    () => client.fetch(`
+      ${filter} | order(${sort}) {
+        _id, name, slug, status, type, priceDisplay, isFeatured,
+        lifestyleTags, heroImage, publishedAt,
+        "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
+        primaryCta,
+        location->{ name, slug },
+        developer->{ name }
+      }
+    `, { lang }, { next: { revalidate: 300 } }),
+    fallback as any[]
+  )
 }
 
 export async function getDevelopmentBySlug(slug: string, lang = 'en') {
-  return client.fetch(`
-    *[_type == "development" && slug.current == $slug][0] {
-      _id, name, slug, status, type, priceDisplay, isFeatured,
-      lifestyleTags, heroImage,
-      "gallery": gallery[defined(image.asset._ref)] { _key, "asset": image.asset, "hotspot": image.hotspot, "crop": image.crop, alt },
-      "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
-      "typologyNote": coalesce(typologyNote[$lang], typologyNote.en),
-      "whyStandsOut": coalesce(whyStandsOut[$lang], whyStandsOut.en),
-      "areaGuide": coalesce(areaGuide[$lang], areaGuide.en),
-      keyFacts, primaryCta,
-      publishedAt,
-      location->{ name, slug, "intro": coalesce(intro[$lang], intro.en), region },
-      developer->{ name, logo, description, website, isViriatoClient },
-      relatedDevelopments[]->{ name, slug, heroImage, status, type, priceDisplay, location->{ name } },
-      relatedArticles[]->{ "title": coalesce(title[$lang], title.en), slug, heroImage, category, "excerpt": coalesce(excerpt[$lang], excerpt.en), publishedAt },
-      seoTitle, seoDescription, seoImage, noindex,
-      "brochureUrl": brochure.asset->url
-    }
-  `, { slug, lang }, { next: { revalidate: 3600 } })
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "development" && slug.current == $slug][0] {
+        _id, name, slug, status, type, priceDisplay, isFeatured,
+        lifestyleTags, heroImage,
+        "gallery": gallery[defined(image.asset._ref)] { _key, "asset": image.asset, "hotspot": image.hotspot, "crop": image.crop, alt },
+        "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
+        "typologyNote": coalesce(typologyNote[$lang], typologyNote.en),
+        "whyStandsOut": coalesce(whyStandsOut[$lang], whyStandsOut.en),
+        "areaGuide": coalesce(areaGuide[$lang], areaGuide.en),
+        keyFacts, primaryCta,
+        publishedAt,
+        location->{ name, slug, "intro": coalesce(intro[$lang], intro.en), region },
+        developer->{ name, logo, description, website, isViriatoClient },
+        relatedDevelopments[]->{ name, slug, heroImage, status, type, priceDisplay, location->{ name } },
+        relatedArticles[]->{ "title": coalesce(title[$lang], title.en), slug, heroImage, category, "excerpt": coalesce(excerpt[$lang], excerpt.en), publishedAt },
+        seoTitle, seoDescription, seoImage, noindex,
+        "brochureUrl": brochure.asset->url
+      }
+    `, { slug, lang }, { next: { revalidate: 3600 } }),
+    (demoDevelopments.find(d => d.slug.current === slug) ?? null) as any
+  )
 }
 
 // Locations
 export async function getAllLocations(lang = 'en') {
-  return client.fetch(`
-    *[_type == "location"] | order(name asc) {
-      _id, name, slug, region, heroImage,
-      "intro": coalesce(intro[$lang], intro.en)
-    }
-  `, { lang }, { next: { revalidate: 3600 } })
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "location"] | order(name asc) {
+        _id, name, slug, region, heroImage,
+        "intro": coalesce(intro[$lang], intro.en)
+      }
+    `, { lang }, { next: { revalidate: 3600 } }),
+    demoLocations as any[]
+  )
 }
 
 export async function getLocationBySlug(slug: string, lang = 'en') {
-  return client.fetch(`
-    *[_type == "location" && slug.current == $slug][0] {
-      _id, name, slug, region, heroImage, seoImage,
-      "intro": coalesce(intro[$lang], intro.en),
-      "marketFraming": coalesce(marketFraming[$lang], marketFraming.en),
-      nearbyLocations[]->{ name, slug, heroImage },
-      latitude, longitude, noindex,
-      seoTitle, seoDescription
-    }
-  `, { slug, lang }, { next: { revalidate: 3600 } })
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "location" && slug.current == $slug][0] {
+        _id, name, slug, region, heroImage, seoImage,
+        "intro": coalesce(intro[$lang], intro.en),
+        "marketFraming": coalesce(marketFraming[$lang], marketFraming.en),
+        nearbyLocations[]->{ name, slug, heroImage },
+        latitude, longitude, noindex,
+        seoTitle, seoDescription
+      }
+    `, { slug, lang }, { next: { revalidate: 3600 } }),
+    (demoLocations.find(l => l.slug.current === slug) ?? null) as any
+  )
 }
 
 export async function getDevelopmentsByLocation(locationSlug: string, lang = 'en') {
-  return client.fetch(`
-    *[_type == "development" && location->slug.current == $locationSlug] | order(isFeatured desc, publishedAt desc) {
-      _id, name, slug, status, type, priceDisplay, isFeatured,
-      heroImage,
-      "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
-      primaryCta,
-      location->{ name, slug }
-    }
-  `, { locationSlug, lang }, { next: { revalidate: 300 } })
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "development" && location->slug.current == $locationSlug] | order(isFeatured desc, publishedAt desc) {
+        _id, name, slug, status, type, priceDisplay, isFeatured,
+        heroImage,
+        "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
+        primaryCta,
+        location->{ name, slug }
+      }
+    `, { locationSlug, lang }, { next: { revalidate: 300 } }),
+    demoDevelopments.filter(d => d.location.slug.current === locationSlug) as any[]
+  )
 }
 
 // Journal
 export async function getLatestArticles(limit = 6, lang = 'en') {
-  return client.fetch(`
-    *[_type == "journalArticle"] | order(publishedAt desc) [0...$limit] {
-      _id,
-      "title": coalesce(title[$lang], title.en),
-      slug, category, heroImage,
-      "excerpt": coalesce(excerpt[$lang], excerpt.en),
-      publishedAt,
-      linkedLocation->{ name, slug },
-      linkedDevelopment->{ name, slug }
-    }
-  `, { limit, lang }, { next: { revalidate: 300 } })
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "journalArticle"] | order(publishedAt desc) [0...$limit] {
+        _id,
+        "title": coalesce(title[$lang], title.en),
+        slug, category, heroImage,
+        "excerpt": coalesce(excerpt[$lang], excerpt.en),
+        publishedAt,
+        linkedLocation->{ name, slug },
+        linkedDevelopment->{ name, slug }
+      }
+    `, { limit, lang }, { next: { revalidate: 300 } }),
+    demoArticles.slice(0, limit) as any[]
+  )
 }
 
 export async function getArticlesByCategory(category: string, lang = 'en') {
-  return client.fetch(`
-    *[_type == "journalArticle" && category == $category] | order(publishedAt desc) {
-      _id,
-      "title": coalesce(title[$lang], title.en),
-      slug, category, heroImage,
-      "excerpt": coalesce(excerpt[$lang], excerpt.en),
-      publishedAt,
-      linkedLocation->{ name, slug }
-    }
-  `, { category, lang }, { next: { revalidate: 300 } })
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "journalArticle" && category == $category] | order(publishedAt desc) {
+        _id,
+        "title": coalesce(title[$lang], title.en),
+        slug, category, heroImage,
+        "excerpt": coalesce(excerpt[$lang], excerpt.en),
+        publishedAt,
+        linkedLocation->{ name, slug }
+      }
+    `, { category, lang }, { next: { revalidate: 300 } }),
+    demoArticles.filter(a => a.category === category) as any[]
+  )
 }
 
 export async function getArticleBySlug(slug: string, lang = 'en') {
-  return client.fetch(`
-    *[_type == "journalArticle" && slug.current == $slug][0] {
-      _id,
-      "title": coalesce(title[$lang], title.en),
-      slug, category, heroImage, seoImage,
-      "excerpt": coalesce(excerpt[$lang], excerpt.en),
-      "body": coalesce(body[$lang], body.en),
-      publishedAt, _updatedAt, noindex,
-      linkedLocation->{ name, slug, "intro": coalesce(intro[$lang], intro.en) },
-      linkedDevelopment->{ name, slug, heroImage, status, priceDisplay },
-      seoTitle, seoDescription
-    }
-  `, { slug, lang }, { next: { revalidate: 3600 } })
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "journalArticle" && slug.current == $slug][0] {
+        _id,
+        "title": coalesce(title[$lang], title.en),
+        slug, category, heroImage, seoImage,
+        "excerpt": coalesce(excerpt[$lang], excerpt.en),
+        "body": coalesce(body[$lang], body.en),
+        publishedAt, _updatedAt, noindex,
+        linkedLocation->{ name, slug, "intro": coalesce(intro[$lang], intro.en) },
+        linkedDevelopment->{ name, slug, heroImage, status, priceDisplay },
+        seoTitle, seoDescription
+      }
+    `, { slug, lang }, { next: { revalidate: 3600 } }),
+    (demoArticles.find(a => a.slug.current === slug) ?? null) as any
+  )
 }
 
 export async function getAllArticles(lang = 'en') {
-  return client.fetch(`
-    *[_type == "journalArticle"] | order(publishedAt desc) {
-      _id,
-      "title": coalesce(title[$lang], title.en),
-      slug, category, publishedAt
-    }
-  `, { lang }, { next: { revalidate: 3600 } })
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "journalArticle"] | order(publishedAt desc) {
+        _id,
+        "title": coalesce(title[$lang], title.en),
+        slug, category, publishedAt
+      }
+    `, { lang }, { next: { revalidate: 3600 } }),
+    demoArticles as any[]
+  )
+}
+
+export async function getPillarArticles(lang = 'en') {
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "journalArticle" && isPillar == true && !(_id in path("drafts.**")) && noindex != true] | order(publishedAt desc) {
+        _id,
+        "title": coalesce(title[$lang], title.en),
+        slug, category, heroImage,
+        "excerpt": coalesce(excerpt[$lang], excerpt.en),
+        publishedAt
+      }
+    `, { lang }, { next: { revalidate: 3600 } }),
+    demoArticles.filter(a => (a as any).isPillar) as any[]
+  )
 }
 
 export async function getArticlesByLocation(locationSlug: string, lang = 'en') {
-  return client.fetch(`
-    *[_type == "journalArticle" && linkedLocation->slug.current == $locationSlug] | order(publishedAt desc) [0...4] {
-      _id,
-      "title": coalesce(title[$lang], title.en),
-      slug, category, heroImage,
-      "excerpt": coalesce(excerpt[$lang], excerpt.en),
-      publishedAt
-    }
-  `, { locationSlug, lang }, { next: { revalidate: 300 } })
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "journalArticle" && linkedLocation->slug.current == $locationSlug] | order(publishedAt desc) [0...4] {
+        _id,
+        "title": coalesce(title[$lang], title.en),
+        slug, category, heroImage,
+        "excerpt": coalesce(excerpt[$lang], excerpt.en),
+        publishedAt
+      }
+    `, { locationSlug, lang }, { next: { revalidate: 300 } }),
+    demoArticles.filter(a => (a as any).linkedLocation?.slug?.current === locationSlug).slice(0, 4) as any[]
+  )
 }

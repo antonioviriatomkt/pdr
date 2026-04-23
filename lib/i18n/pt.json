@@ -165,7 +165,8 @@
       "brochureLabel": "Brochura",
       "brochureCtaTitle": "Solicite a brochura completa do projeto",
       "brochureCtaSubtitle": "Receba todos os detalhes do projeto diretamente na sua caixa de entrada",
-      "brochureCtaBtn": "Solicitar Brochura"
+      "brochureCtaBtn": "Solicitar Brochura",
+      "beforeEnquireHeading": "Antes de Enquirir"
     }
   },
 
@@ -193,8 +194,10 @@
       "branded-residences": "Residências de Marca",
       "new-developments": "Novos Projetos",
       "second-home": "Segunda Residência",
-      "investment": "Investimento"
+      "investment": "Investimento",
+      "buyer-guides": "Guias de Compra"
     },
+    "guidesHeading": "Guias",
     "article": {
       "relatedDevelopments": "Projetos Relacionados",
       "relatedLocation": "Localização"

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import ArticleCard from '@/components/ArticleCard'
-import { getLatestArticles } from '@/lib/queries'
+import { getLatestArticles, getPillarArticles } from '@/lib/queries'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 
@@ -23,8 +23,9 @@ export default async function JournalPage({ params }: { params: Promise<{ lang: 
   const { lang } = await params
   if (!hasLocale(lang)) notFound()
 
-  const [articles, dict] = await Promise.all([
+  const [articles, pillarArticles, dict] = await Promise.all([
     getLatestArticles(24, lang),
+    getPillarArticles(lang),
     getDictionary(lang),
   ])
 
@@ -46,6 +47,22 @@ export default async function JournalPage({ params }: { params: Promise<{ lang: 
           </p>
         </div>
       </section>
+
+      {/* Pillar guides */}
+      {pillarArticles.length > 0 && (
+        <section style={{ borderBottom: '1px solid var(--border)', padding: '48px 0' }}>
+          <div className="container-editorial">
+            <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 24px' }}>
+              {j.guidesHeading}
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '48px 40px' }}>
+              {pillarArticles.slice(0, 3).map((article: any) => (
+                <ArticleCard key={article._id} article={article} lang={lang} categories={categories} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Category nav */}
       <section style={{ borderBottom: '1px solid var(--border)', padding: '16px 0', background: 'var(--surface)' }}>

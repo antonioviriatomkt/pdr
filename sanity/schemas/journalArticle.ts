@@ -28,6 +28,7 @@ export const journalArticle = defineType({
           { title: 'New Developments', value: 'new-developments' },
           { title: 'Second-Home Narratives', value: 'second-home' },
           { title: 'Investment Explainers', value: 'investment' },
+          { title: 'Buyer Guides', value: 'buyer-guides' },
         ],
       },
       validation: r => r.required(),
@@ -57,6 +58,13 @@ export const journalArticle = defineType({
     defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string' }),
     defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2 }),
     defineField({ name: 'seoImage', title: 'SEO / OG Image', type: 'image', options: { hotspot: true }, description: 'Custom Open Graph image (1200×630). Falls back to hero image if not set.' }),
+    defineField({
+      name: 'isPillar',
+      title: 'Pillar Content',
+      type: 'boolean',
+      description: 'Cornerstone evergreen content. Displayed prominently on the journal index and linked from development detail pages.',
+      initialValue: false,
+    }),
     defineField({
       name: 'noindex',
       title: 'Hide from Search Engines (noindex)',

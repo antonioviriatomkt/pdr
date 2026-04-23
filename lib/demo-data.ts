@@ -227,6 +227,36 @@ export const demoArticles = [
     publishedAt: '2024-01-01',
     linkedLocation: { name: 'Lisbon', slug: { current: 'lisbon' } },
   },
+  {
+    _id: 'a7',
+    title: 'Buying Property in Portugal: A Practical Guide for International Buyers',
+    slug: { current: 'buying-property-in-portugal-guide' },
+    category: 'buyer-guides',
+    isPillar: true,
+    excerpt: 'Everything international buyers need to understand before purchasing residential property in Portugal — from the legal process and purchase costs to financing, timelines, and common pitfalls.',
+    publishedAt: '2024-03-15',
+    linkedLocation: null,
+  },
+  {
+    _id: 'a8',
+    title: 'Portugal Tax Incentives for Property Buyers: NHR, IFICI, and the New Regimes',
+    slug: { current: 'portugal-tax-incentives-property-buyers' },
+    category: 'buyer-guides',
+    isPillar: true,
+    excerpt: 'A clear-eyed editorial overview of the tax frameworks available to international property buyers in Portugal — including the current status of NHR, the IFICI regime, and the D7 residency route.',
+    publishedAt: '2024-03-10',
+    linkedLocation: null,
+  },
+  {
+    _id: 'a9',
+    title: 'Where to Buy in Portugal: A Location Intelligence Overview',
+    slug: { current: 'where-to-buy-property-portugal' },
+    category: 'buyer-guides',
+    isPillar: true,
+    excerpt: 'An editorial overview of Portugal\'s principal macro-locations for new residential development — from Lisbon and Porto to the Algarve, Comporta, Cascais, and the emerging Silver Coast.',
+    publishedAt: '2024-03-01',
+    linkedLocation: null,
+  },
 ]
 
 export const categoryLabels: Record<string, string> = {
@@ -236,4 +266,5 @@ export const categoryLabels: Record<string, string> = {
   'new-developments': 'New Developments',
   'second-home': 'Second-Home Narratives',
   'investment': 'Investment Explainers',
+  'buyer-guides': 'Buyer Guides',
 }

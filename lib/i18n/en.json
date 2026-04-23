@@ -165,7 +165,8 @@
       "brochureLabel": "Brochure",
       "brochureCtaTitle": "Request the complete project brochure",
       "brochureCtaSubtitle": "Get all the project details delivered straight to your inbox",
-      "brochureCtaBtn": "Request Brochure"
+      "brochureCtaBtn": "Request Brochure",
+      "beforeEnquireHeading": "Before You Enquire"
     }
   },
 
@@ -193,8 +194,10 @@
       "branded-residences": "Branded Residences",
       "new-developments": "New Developments",
       "second-home": "Second-Home Narratives",
-      "investment": "Investment Explainers"
+      "investment": "Investment Explainers",
+      "buyer-guides": "Buyer Guides"
     },
+    "guidesHeading": "Guides",
     "article": {
       "relatedDevelopments": "Related Developments",
       "relatedLocation": "Location"

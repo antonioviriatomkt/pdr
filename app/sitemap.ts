@@ -12,6 +12,7 @@ const ARTICLE_CATEGORIES = [
   'new-developments',
   'second-home',
   'investment',
+  'buyer-guides',
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

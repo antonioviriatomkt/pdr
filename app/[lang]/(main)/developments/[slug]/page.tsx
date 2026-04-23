@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getDevelopmentBySlug, getAllDevelopments } from '@/lib/queries'
+import { getDevelopmentBySlug, getAllDevelopments, getPillarArticles } from '@/lib/queries'
 import { urlFor } from '@/lib/sanity.image'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import InquiryPanel from './InquiryPanel'
@@ -58,9 +58,10 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
   const { lang, slug } = await params
   if (!hasLocale(lang)) notFound()
 
-  const [dev, dict] = await Promise.all([
+  const [dev, dict, pillarArticles] = await Promise.all([
     getDevelopmentBySlug(slug, lang),
     getDictionary(lang),
+    getPillarArticles(lang),
   ])
   if (!dev) notFound()
 
@@ -315,6 +316,21 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
 
           <div id="inquiry" style={{ position: 'sticky', top: '80px' }}>
             <InquiryPanel development={dev} dict={dict.inquiry} />
+            {pillarArticles.length > 0 && (
+              <div style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid var(--border)' }}>
+                <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
+                  {d.beforeEnquireHeading}
+                </p>
+                {pillarArticles.slice(0, 3).map((article: any) => (
+                  <div key={article._id} style={{ display: 'flex', gap: '12px', marginBottom: '12px', alignItems: 'start' }}>
+                    <span style={{ fontSize: '11px', color: 'var(--muted)', marginTop: '3px' }}>—</span>
+                    <Link href={`/${lang}/journal/${article.slug.current}`} style={{ fontSize: '14px', color: 'var(--muted)', textDecoration: 'none', lineHeight: 1.5, borderBottom: '1px solid var(--border)' }}>
+                      {article.title}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
