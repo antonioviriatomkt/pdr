@@ -99,7 +99,7 @@ export default async function LifestyleTagPage({ params }: { params: Promise<{ l
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: dict.common.home, item: `${BASE_URL}/${lang}` },
       { '@type': 'ListItem', position: 2, name: l.breadcrumbLifestyle, item: `${BASE_URL}/${lang}/lifestyle` },
-      { '@type': 'ListItem', position: 3, name: dict.developments.lifestyleTagLabels[tagLabel] ?? tagLabel, item: pageUrl },
+      { '@type': 'ListItem', position: 3, name: dict.developments.lifestyleTagLabels[tagLabel as keyof typeof dict.developments.lifestyleTagLabels] ?? tagLabel, item: pageUrl },
     ],
   }
 
@@ -116,13 +116,13 @@ export default async function LifestyleTagPage({ params }: { params: Promise<{ l
             <span>›</span>
             <span>{l.breadcrumbLifestyle}</span>
             <span>›</span>
-            <span>{dict.developments.lifestyleTagLabels[tagLabel] ?? tagLabel}</span>
+            <span>{dict.developments.lifestyleTagLabels[tagLabel as keyof typeof dict.developments.lifestyleTagLabels] ?? tagLabel}</span>
           </nav>
           <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
             {l.eyebrow}
           </p>
           <h1 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 400, margin: '0 0 16px', letterSpacing: '-0.02em' }}>
-            {dict.developments.lifestyleTagLabels[tagLabel] ?? tagLabel}
+            {dict.developments.lifestyleTagLabels[tagLabel as keyof typeof dict.developments.lifestyleTagLabels] ?? tagLabel}
           </h1>
           {lifestyleDoc?.intro && (
             <p style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--muted)', maxWidth: '680px', margin: 0, fontFamily: 'sans-serif' }}>
@@ -160,7 +160,7 @@ export default async function LifestyleTagPage({ params }: { params: Promise<{ l
                   href={`/${lang}/lifestyle/${LIFESTYLE_TAG_SLUGS[t]}`}
                   style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '6px 14px', textDecoration: 'none' }}
                 >
-                  {dict.developments.lifestyleTagLabels[t] ?? t}
+                  {dict.developments.lifestyleTagLabels[t as keyof typeof dict.developments.lifestyleTagLabels] ?? t}
                 </Link>
               ))}
             </div>
