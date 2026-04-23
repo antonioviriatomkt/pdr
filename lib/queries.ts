@@ -99,8 +99,9 @@ export async function getAllLocations(lang = 'en') {
   return safeFetch(
     () => client.fetch(`
       *[_type == "location"] | order(name asc) {
-        _id, name, slug, region, heroImage,
-        "intro": coalesce(intro[$lang], intro.en)
+        _id, name, slug, region, heroImage, locationType,
+        "intro": coalesce(intro[$lang], intro.en),
+        parentLocation->{ name, slug }
       }
     `, { lang }, { next: { revalidate: 3600 } }),
     demoLocations as any[]
@@ -111,9 +112,10 @@ export async function getLocationBySlug(slug: string, lang = 'en') {
   return safeFetch(
     () => client.fetch(`
       *[_type == "location" && slug.current == $slug][0] {
-        _id, name, slug, region, heroImage, seoImage,
+        _id, name, slug, region, heroImage, seoImage, locationType,
         "intro": coalesce(intro[$lang], intro.en),
         "marketFraming": coalesce(marketFraming[$lang], marketFraming.en),
+        parentLocation->{ name, slug, parentLocation->{ name, slug } },
         nearbyLocations[]->{ name, slug, heroImage },
         latitude, longitude, noindex,
         seoTitle, seoDescription
@@ -121,6 +123,32 @@ export async function getLocationBySlug(slug: string, lang = 'en') {
     `, { slug, lang }, { next: { revalidate: 3600 } }),
     (demoLocations.find(l => l.slug.current === slug) ?? null) as any
   )
+}
+
+export async function getLocationChildren(parentSlug: string, lang = 'en') {
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "location" && parentLocation->slug.current == $parentSlug] | order(name asc) {
+        _id, name, slug, region, heroImage, locationType,
+        "intro": coalesce(intro[$lang], intro.en)
+      }
+    `, { parentSlug, lang }, { next: { revalidate: 3600 } }),
+    demoLocations.filter(l => (l as any).parentLocation?.slug?.current === parentSlug) as any[]
+  )
+}
+
+export async function getLocationBreadcrumbs(slug: string, lang = 'en'): Promise<any[]> {
+  const chain: any[] = []
+  let currentSlug: string | undefined = slug
+  const visited = new Set<string>()
+  while (currentSlug && !visited.has(currentSlug)) {
+    visited.add(currentSlug)
+    const loc = await getLocationBySlug(currentSlug, lang)
+    if (!loc) break
+    chain.unshift({ name: loc.name, slug: loc.slug })
+    currentSlug = loc.parentLocation?.slug?.current
+  }
+  return chain
 }
 
 export async function getDevelopmentsByLocation(locationSlug: string, lang = 'en') {

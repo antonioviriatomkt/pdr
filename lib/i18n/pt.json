@@ -180,7 +180,9 @@
     "noDevelopments": "Ainda não existem desenvolvimentos curados nesta localização.",
     "journalHeading": "Leitura Relacionada",
     "nearbyHeading": "Localizações Próximas",
-    "exploreArrow": "Explorar →"
+    "exploreArrow": "Explorar →",
+    "neighbourhoodsHeading": "Bairros",
+    "backTo": "Voltar a {name}"
   },
 
   "journal": {

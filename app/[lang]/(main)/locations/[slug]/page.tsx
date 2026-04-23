@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import ArticleCard from '@/components/ArticleCard'
-import { getLocationBySlug, getDevelopmentsByLocation, getArticlesByLocation, getAllLocations } from '@/lib/queries'
+import { getLocationBySlug, getDevelopmentsByLocation, getArticlesByLocation, getAllLocations, getLocationChildren } from '@/lib/queries'
 import { urlFor } from '@/lib/sanity.image'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
@@ -57,10 +57,11 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
   const { lang, slug } = await params
   if (!hasLocale(lang)) notFound()
 
-  const [loc, developments, articles, dict] = await Promise.all([
+  const [loc, developments, articles, children, dict] = await Promise.all([
     getLocationBySlug(slug, lang),
     getDevelopmentsByLocation(slug, lang),
     getArticlesByLocation(slug, lang),
+    getLocationChildren(slug, lang),
     getDictionary(lang),
   ])
   if (!loc) notFound()
@@ -88,14 +89,24 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
     }),
   }
 
+  const breadcrumbItems: { '@type': string; position: number; name: string; item: string }[] = [
+    { '@type': 'ListItem', position: 1, name: dict.common.home, item: `${BASE_URL}/${lang}` },
+    { '@type': 'ListItem', position: 2, name: l.breadcrumbLocations, item: `${BASE_URL}/${lang}/locations` },
+  ]
+  if (loc.parentLocation?.parentLocation) {
+    breadcrumbItems.push({ '@type': 'ListItem', position: 3, name: loc.parentLocation.parentLocation.name, item: `${BASE_URL}/${lang}/locations/${loc.parentLocation.parentLocation.slug.current}` })
+    breadcrumbItems.push({ '@type': 'ListItem', position: 4, name: loc.parentLocation.name, item: `${BASE_URL}/${lang}/locations/${loc.parentLocation.slug.current}` })
+    breadcrumbItems.push({ '@type': 'ListItem', position: 5, name: loc.name, item: `${BASE_URL}/${lang}/locations/${slug}` })
+  } else if (loc.parentLocation) {
+    breadcrumbItems.push({ '@type': 'ListItem', position: 3, name: loc.parentLocation.name, item: `${BASE_URL}/${lang}/locations/${loc.parentLocation.slug.current}` })
+    breadcrumbItems.push({ '@type': 'ListItem', position: 4, name: loc.name, item: `${BASE_URL}/${lang}/locations/${slug}` })
+  } else {
+    breadcrumbItems.push({ '@type': 'ListItem', position: 3, name: loc.name, item: `${BASE_URL}/${lang}/locations/${slug}` })
+  }
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: dict.common.home, item: `${BASE_URL}/${lang}` },
-      { '@type': 'ListItem', position: 2, name: l.breadcrumbLocations, item: `${BASE_URL}/${lang}/locations` },
-      { '@type': 'ListItem', position: 3, name: loc.name, item: `${BASE_URL}/${lang}/locations/${slug}` },
-    ],
+    itemListElement: breadcrumbItems,
   }
 
   const itemListSchema = developments.length > 0 ? {
@@ -119,10 +130,22 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
       {/* Hero */}
       <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0 48px' }}>
         <div className="container-editorial">
-          <nav style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginBottom: '24px', display: 'flex', gap: '8px' }}>
+          <nav style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginBottom: '24px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             <Link href={`/${lang}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{dict.common.home}</Link>
             <span>›</span>
-            <span style={{ color: 'var(--foreground)' }}>{l.breadcrumbLocations}</span>
+            <Link href={`/${lang}/locations`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{l.breadcrumbLocations}</Link>
+            {loc.parentLocation?.parentLocation && (
+              <>
+                <span>›</span>
+                <Link href={`/${lang}/locations/${loc.parentLocation.parentLocation.slug.current}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{loc.parentLocation.parentLocation.name}</Link>
+              </>
+            )}
+            {loc.parentLocation && (
+              <>
+                <span>›</span>
+                <Link href={`/${lang}/locations/${loc.parentLocation.slug.current}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{loc.parentLocation.name}</Link>
+              </>
+            )}
             <span>›</span>
             <span style={{ color: 'var(--foreground)' }}>{loc.name}</span>
           </nav>
@@ -136,8 +159,41 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
           <p style={{ fontSize: '17px', color: 'var(--muted)', lineHeight: 1.7, maxWidth: '600px', margin: 0 }}>
             {loc.intro}
           </p>
+          {loc.parentLocation && (
+            <div style={{ marginTop: '24px' }}>
+              <Link href={`/${lang}/locations/${loc.parentLocation.slug.current}`} style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+                {l.backTo.replace('{name}', loc.parentLocation.name)}
+              </Link>
+            </div>
+          )}
         </div>
       </section>
+
+      {/* Neighbourhoods — only for macro locations with children */}
+      {loc.locationType === 'macro' && children.length > 0 && (
+        <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0' }}>
+          <div className="container-editorial">
+            <h2 style={{ fontSize: '22px', fontWeight: 400, margin: '0 0 32px', letterSpacing: '-0.01em' }}>
+              {l.neighbourhoodsHeading} — {loc.name}
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
+              {children.map((child: any) => (
+                <Link key={child._id} href={`/${lang}/locations/${child.slug.current}`} style={{ display: 'block', background: 'var(--background)', padding: '20px', textDecoration: 'none' }}>
+                  <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
+                    {child.locationType === 'sub-region' ? child.locationType : loc.name}
+                  </div>
+                  <div style={{ fontSize: '18px', fontWeight: 400, marginBottom: '8px' }}>{child.name}</div>
+                  {child.intro && (
+                    <p style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: 0, lineHeight: 1.5 }}>
+                      {child.intro.slice(0, 80)}…
+                    </p>
+                  )}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Developments in this location */}
       <section style={{ padding: '56px 0', borderBottom: '1px solid var(--border)' }}>

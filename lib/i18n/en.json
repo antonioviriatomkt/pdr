@@ -180,7 +180,9 @@
     "noDevelopments": "No curated developments in this location yet.",
     "journalHeading": "Related Reading",
     "nearbyHeading": "Nearby Locations",
-    "exploreArrow": "Explore →"
+    "exploreArrow": "Explore →",
+    "neighbourhoodsHeading": "Neighbourhoods",
+    "backTo": "Back to {name}"
   },
 
   "journal": {

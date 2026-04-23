@@ -1,12 +1,24 @@
 // Demo data used when Sanity is not configured or has no content
 
 export const demoLocations = [
-  { _id: '1', name: 'Lisbon', slug: { current: 'lisbon' }, region: 'Lisbon', intro: 'The Portuguese capital combines centuries of architectural heritage with a dynamic contemporary scene. Lisbon offers some of Europe\'s most compelling urban living, from the historic Alfama to the riverside Ribeira moderna.' },
-  { _id: '2', name: 'Porto', slug: { current: 'porto' }, region: 'Porto', intro: 'Porto\'s renewed confidence as a European cultural capital has catalysed a generation of exceptional new residential projects. The city blends granite severity with warm hospitality.' },
-  { _id: '3', name: 'Cascais', slug: { current: 'cascais' }, region: 'Cascais', intro: 'Cascais has long been the preferred address for affluent Lisboetas and international buyers seeking Atlantic-facing living within reach of the capital.' },
-  { _id: '4', name: 'Algarve', slug: { current: 'algarve' }, region: 'Algarve', intro: 'The Algarve\'s international appeal has been consistently underwritten by exceptional climate, infrastructure, and the finest golf courses in Europe.' },
-  { _id: '5', name: 'Comporta', slug: { current: 'comporta' }, region: 'Comporta', intro: 'Comporta has emerged as Portugal\'s most coveted new destination — a protected coastal enclave combining extraordinary natural beauty with low-density, design-led development.' },
-  { _id: '6', name: 'Gaia', slug: { current: 'gaia' }, region: 'Gaia', intro: 'Across the Douro from Porto, Gaia offers exceptional river and city views alongside a compelling pipeline of high-specification residential projects.' },
+  // Macro locations
+  { _id: '1', name: 'Lisbon', slug: { current: 'lisbon' }, region: 'Lisbon', locationType: 'macro', parentLocation: null, intro: 'The Portuguese capital combines centuries of architectural heritage with a dynamic contemporary scene. Lisbon offers some of Europe\'s most compelling urban living, from the historic Alfama to the riverside Ribeira moderna.' },
+  { _id: '2', name: 'Porto', slug: { current: 'porto' }, region: 'Porto', locationType: 'macro', parentLocation: null, intro: 'Porto\'s renewed confidence as a European cultural capital has catalysed a generation of exceptional new residential projects. The city blends granite severity with warm hospitality.' },
+  { _id: '3', name: 'Cascais', slug: { current: 'cascais' }, region: 'Cascais', locationType: 'macro', parentLocation: null, intro: 'Cascais has long been the preferred address for affluent Lisboetas and international buyers seeking Atlantic-facing living within reach of the capital.' },
+  { _id: '4', name: 'Algarve', slug: { current: 'algarve' }, region: 'Algarve', locationType: 'macro', parentLocation: null, intro: 'The Algarve\'s international appeal has been consistently underwritten by exceptional climate, infrastructure, and the finest golf courses in Europe.' },
+  { _id: '5', name: 'Comporta', slug: { current: 'comporta' }, region: 'Comporta', locationType: 'macro', parentLocation: null, intro: 'Comporta has emerged as Portugal\'s most coveted new destination — a protected coastal enclave combining extraordinary natural beauty with low-density, design-led development.' },
+  { _id: '6', name: 'Gaia', slug: { current: 'gaia' }, region: 'Gaia', locationType: 'macro', parentLocation: null, intro: 'Across the Douro from Porto, Gaia offers exceptional river and city views alongside a compelling pipeline of high-specification residential projects.' },
+  { _id: '7', name: 'Silver Coast', slug: { current: 'silver-coast' }, region: 'Silver Coast', locationType: 'macro', parentLocation: null, intro: 'The Silver Coast — spanning the Atlantic-facing stretch from Óbidos to Ericeira, through Peniche and Nazaré — remains one of Portugal\'s most undervalued residential propositions for international buyers seeking authenticity at scale.' },
+  { _id: '8', name: 'Madeira', slug: { current: 'madeira' }, region: 'Madeira', locationType: 'macro', parentLocation: null, intro: 'Madeira\'s combination of subtropical climate, favourable tax environment, and a new generation of high-specification residential supply has brought the island into serious consideration for international buyers.' },
+  // Neighbourhood locations — Lisbon
+  { _id: 'n1', name: 'Príncipe Real', slug: { current: 'principe-real' }, region: 'Lisbon', locationType: 'neighbourhood', parentLocation: { name: 'Lisbon', slug: { current: 'lisbon' } }, intro: 'Príncipe Real is Lisbon\'s most curated address — a hillside quarter of 19th-century palaces, independent boutiques, and a distinguished residential tradition. Its relative quietude within the Lisbon luxury market makes it the neighbourhood most consistently referenced in Viriato\'s editorial work.', latitude: 38.7169, longitude: -9.1529 },
+  { _id: 'n2', name: 'Chiado', slug: { current: 'chiado' }, region: 'Lisbon', locationType: 'neighbourhood', parentLocation: { name: 'Lisbon', slug: { current: 'lisbon' } }, intro: 'Chiado occupies the cultural and commercial heart of central Lisbon. Its cobbled slopes, literary heritage, and concentration of high-end retail have made it the first neighbourhood most international buyers visit — and one of the most competitive for new residential supply.', latitude: 38.7105, longitude: -9.1424 },
+  { _id: 'n3', name: 'Parque das Nações', slug: { current: 'parque-das-nacoes' }, region: 'Lisbon', locationType: 'neighbourhood', parentLocation: { name: 'Lisbon', slug: { current: 'lisbon' } }, intro: 'Built on the site of Expo \'98, Parque das Nações represents Lisbon\'s most coherent example of contemporary urban planning. Wide boulevards, riverside promenades, and consistently high-specification residential stock attract a younger, internationally mobile buyer profile.', latitude: 38.7583, longitude: -9.0933 },
+  // Neighbourhood locations — Porto
+  { _id: 'n4', name: 'Foz do Douro', slug: { current: 'foz-do-douro' }, region: 'Porto', locationType: 'neighbourhood', parentLocation: { name: 'Porto', slug: { current: 'porto' } }, intro: 'Foz do Douro sits where the River Douro meets the Atlantic — Porto\'s most prestigious residential address for over a century. Its combination of granite villas, ocean-facing apartments, and proximity to the city centre makes it the benchmark neighbourhood for premium Porto property.', latitude: 41.1496, longitude: -8.6726 },
+  // Sub-region + nested neighbourhood — Algarve
+  { _id: 'n5', name: 'Golden Triangle', slug: { current: 'golden-triangle' }, region: 'Algarve', locationType: 'sub-region', parentLocation: { name: 'Algarve', slug: { current: 'algarve' } }, intro: 'The Golden Triangle — comprising Vale do Lobo, Quinta do Lago, and Vilamoura — is the Algarve\'s most established premium resort zone. Two decades of sustained international capital have created an ecosystem of golf courses, branded residences, and villa communities with proven rental and capital performance.', latitude: 37.0635, longitude: -8.0800 },
+  { _id: 'n6', name: 'Vale do Lobo', slug: { current: 'vale-do-lobo' }, region: 'Algarve', locationType: 'neighbourhood', parentLocation: { name: 'Golden Triangle', slug: { current: 'golden-triangle' } }, intro: 'Vale do Lobo is the Algarve\'s most recognised resort address — a private condominium of international standing with two championship golf courses, Atlantic clifftop villas, and a resident community that returns year after year.', latitude: 37.0543, longitude: -8.0622 },
 ]
 
 export const demoDevelopments = [
@@ -189,7 +201,7 @@ export const demoArticles = [
     category: 'investment',
     excerpt: 'The Algarve\'s premium triangle — Vale do Lobo, Quinta do Lago, and Vilamoura — has absorbed consistent international capital for twenty years. What does this tell us about resilience, and where does value now sit?',
     publishedAt: '2024-02-28',
-    linkedLocation: { name: 'Algarve', slug: { current: 'algarve' } },
+    linkedLocation: { name: 'Golden Triangle', slug: { current: 'golden-triangle' } },
   },
   {
     _id: 'a3',
@@ -198,7 +210,7 @@ export const demoArticles = [
     category: 'area-guides',
     excerpt: 'Foz do Douro has long been Porto\'s answer to the premium residential question. We map the neighbourhood, explain its appeal, and identify where new supply is emerging.',
     publishedAt: '2024-02-14',
-    linkedLocation: { name: 'Porto', slug: { current: 'porto' } },
+    linkedLocation: { name: 'Foz do Douro', slug: { current: 'foz-do-douro' } },
   },
   {
     _id: 'a4',
