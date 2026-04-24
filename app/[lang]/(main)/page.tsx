@@ -80,10 +80,10 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       </section>
 
       {/* Location quick nav */}
-      <section style={{ borderBottom: '1px solid var(--border)', padding: '20px 0', background: 'var(--surface)' }}>
+      <section style={{ borderBottom: '1px solid var(--border)', padding: '16px 0', background: 'var(--surface)' }}>
         <div className="container-editorial">
-          <div className="location-quicknav" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0' }}>
-            <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase', marginRight: '24px' }}>
+          <div className="location-quicknav" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+            <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               {dict.common.locations}
             </span>
             {[
@@ -93,13 +93,10 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
               { href: `/${lang}/locations/algarve`, label: 'Algarve' },
               { href: `/${lang}/locations/comporta`, label: 'Comporta' },
               { href: `/${lang}/locations/gaia`, label: 'Gaia' },
-            ].map(({ href, label }, i, arr) => (
-              <span key={href} style={{ display: 'inline-flex', alignItems: 'center' }}>
-                <Link href={href} style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.02em', color: 'var(--foreground)', textDecoration: 'none' }}>
-                  {label}
-                </Link>
-                {i < arr.length - 1 && <span style={{ color: 'var(--border)', margin: '0 14px', fontSize: '13px', userSelect: 'none' }}>—</span>}
-              </span>
+            ].map(({ href, label }) => (
+              <Link key={href} href={href} style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', textDecoration: 'none' }}>
+                {label}
+              </Link>
             ))}
             <Link href={`/${lang}/developments`} className="location-quicknav-all" style={{ marginLeft: 'auto', fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
               {dict.common.allDevelopments}
