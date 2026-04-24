@@ -83,7 +83,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       <section style={{ borderBottom: '1px solid var(--border)', padding: '16px 0', background: 'var(--surface)' }}>
         <div className="container-editorial">
           <div className="location-quicknav" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-            <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            <span style={{ flexBasis: '100%', fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               {dict.common.locations}
             </span>
             {[
@@ -98,9 +98,11 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                 {label}
               </Link>
             ))}
-            <Link href={`/${lang}/developments`} className="location-quicknav-all" style={{ flexBasis: '100%', fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)', display: 'inline-block', width: 'fit-content' }}>
-              {dict.common.allDevelopments}
-            </Link>
+            <div style={{ flexBasis: '100%' }}>
+              <Link href={`/${lang}/developments`} className="location-quicknav-all" style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+                {dict.common.allDevelopments}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
