@@ -44,7 +44,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '80px', alignItems: 'end' }} className="hero-grid">
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '32px' }}>
-                <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', margin: 0, flexShrink: 0 }}>
+                <p style={{ fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', margin: 0, flexShrink: 0 }}>
                   {t.hero.eyebrow}
                 </p>
                 <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
@@ -53,10 +53,10 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                 {t.hero.headline}
               </h1>
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <Link href={`/${lang}/developments`} style={{ display: 'inline-block', background: 'var(--foreground)', color: 'var(--background)', padding: '14px 28px', fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
+                <Link href={`/${lang}/developments`} style={{ display: 'inline-block', background: 'var(--foreground)', color: 'var(--background)', padding: '14px 28px', fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
                   {t.hero.exploreBtn}
                 </Link>
-                <Link href={`/${lang}/developments`} style={{ display: 'inline-block', border: '1px solid var(--border)', color: 'var(--foreground)', padding: '14px 28px', fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
+                <Link href={`/${lang}/developments`} style={{ display: 'inline-block', border: '1px solid var(--border)', color: 'var(--foreground)', padding: '14px 28px', fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
                   {t.hero.browseBtn}
                 </Link>
               </div>
@@ -65,7 +65,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
               <p style={{ fontSize: '16px', color: 'var(--muted)', lineHeight: 1.75, margin: '0 0 32px' }}>
                 {t.hero.aside}
               </p>
-              <Link href={`/${lang}/methodology`} style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+              <Link href={`/${lang}/methodology`} style={{ fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
                 {dict.common.readMethodology}
               </Link>
             </div>
@@ -83,7 +83,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       <section style={{ borderBottom: '1px solid var(--border)', padding: '16px 0', background: 'var(--surface)' }}>
         <div className="container-editorial">
           <div className="location-quicknav" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-            <span style={{ flexBasis: '100%', fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            <span style={{ flexBasis: '100%', fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               {dict.common.locations}
             </span>
             {[
@@ -94,12 +94,12 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
               { href: `/${lang}/locations/comporta`, label: 'Comporta' },
               { href: `/${lang}/locations/gaia`, label: 'Gaia' },
             ].map(({ href, label }) => (
-              <Link key={href} href={href} style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', textDecoration: 'none' }}>
+              <Link key={href} href={href} style={{ fontSize: '12px', color: 'var(--muted)', textDecoration: 'none' }}>
                 {label}
               </Link>
             ))}
             <div style={{ flexBasis: '100%' }}>
-              <Link href={`/${lang}/developments`} className="location-quicknav-all" style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+              <Link href={`/${lang}/developments`} className="location-quicknav-all" style={{ fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
                 {dict.common.allDevelopments}
               </Link>
             </div>
@@ -112,14 +112,14 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         <div className="container-editorial">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '40px', flexWrap: 'wrap', gap: '12px' }}>
             <div>
-              <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 6px' }}>
+              <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 6px' }}>
                 {t.featured.eyebrow}
               </p>
               <h2 style={{ fontSize: '28px', fontWeight: 400, margin: 0, letterSpacing: '-0.01em' }}>
                 {t.featured.heading}
               </h2>
             </div>
-            <Link href={`/${lang}/developments`} style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+            <Link href={`/${lang}/developments`} style={{ fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
               {dict.common.viewAll}
             </Link>
           </div>
@@ -135,7 +135,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       <section style={{ padding: '64px 0', borderBottom: '1px solid var(--border)', background: 'var(--surface)' }}>
         <div className="container-editorial">
           <div style={{ marginBottom: '40px' }}>
-            <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 6px' }}>
+            <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 6px' }}>
               {t.browseByLocation.eyebrow}
             </p>
             <h2 style={{ fontSize: '28px', fontWeight: 400, margin: 0, letterSpacing: '-0.01em' }}>
@@ -145,7 +145,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
             {locations.map((loc: any) => (
               <Link key={loc._id} href={`/${lang}/locations/${loc.slug.current}`} style={{ textDecoration: 'none', display: 'block', background: 'var(--background)', padding: '28px 24px' }}>
-                <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>{loc.region}</div>
+                <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>{loc.region}</div>
                 <div style={{ fontSize: '20px', fontWeight: 400, letterSpacing: '-0.01em', marginBottom: '8px' }}>{loc.name}</div>
                 <div style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.5 }}>{loc.intro?.slice(0, 80)}...</div>
               </Link>
@@ -159,7 +159,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         <div className="container-editorial">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '60px', alignItems: 'start' }}>
             <div>
-              <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
+              <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
                 {t.shortlist.eyebrow}
               </p>
               <h2 style={{ fontSize: '28px', fontWeight: 400, margin: '0 0 20px', letterSpacing: '-0.01em', lineHeight: 1.25 }}>
@@ -182,7 +182,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         <div className="container-editorial">
           <div className="approach-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }}>
             <div>
-              <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
+              <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
                 {t.approach.eyebrow}
               </p>
               <h2 style={{ fontSize: '28px', fontWeight: 400, margin: '0 0 20px', letterSpacing: '-0.01em', lineHeight: 1.25 }}>
@@ -194,17 +194,17 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
               <p style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: 1.7, margin: '0 0 28px' }}>
                 {t.approach.body2}
               </p>
-              <Link href={`/${lang}/methodology`} style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}>
+              <Link href={`/${lang}/methodology`} style={{ fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}>
                 {dict.common.readMethodology}
               </Link>
             </div>
             <div className="approach-aside" style={{ borderLeft: '1px solid var(--border)', paddingLeft: '60px' }}>
-              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+              <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
                 {t.approach.criteriaHeading}
               </div>
               {t.approach.criteria.map((item, i) => (
                 <div key={i} style={{ display: 'flex', gap: '12px', marginBottom: '12px', alignItems: 'start' }}>
-                  <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', marginTop: '3px' }}>—</span>
+                  <span style={{ fontSize: '11px', color: 'var(--muted)', marginTop: '3px' }}>—</span>
                   <p style={{ fontSize: '14px', color: 'var(--muted)', margin: 0, lineHeight: 1.5 }}>{item}</p>
                 </div>
               ))}
@@ -218,20 +218,27 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         <div className="container-editorial">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '40px', flexWrap: 'wrap', gap: '12px' }}>
             <div>
-              <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 6px' }}>
+              <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 6px' }}>
                 {t.journal.eyebrow}
               </p>
               <h2 style={{ fontSize: '28px', fontWeight: 400, margin: 0, letterSpacing: '-0.01em' }}>
                 {t.journal.heading}
               </h2>
             </div>
-            <Link href={`/${lang}/journal`} style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+            <Link href={`/${lang}/journal`} style={{ fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
               {dict.common.allArticles}
             </Link>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
             {latestArticles.map((article: any) => (
-              <ArticleCard key={article._id} article={article} lang={lang} categories={categories} />
+              <div key={article._id}>
+                {article.category === 'market-intelligence' && (
+                  <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 8px' }}>
+                    {dict.journal.marketNoteEyebrow}
+                  </p>
+                )}
+                <ArticleCard article={article} lang={lang} categories={categories} />
+              </div>
             ))}
           </div>
         </div>
@@ -241,7 +248,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       <section style={{ padding: '64px 0', background: 'var(--surface)' }}>
         <div className="container-editorial">
           <div style={{ maxWidth: '540px' }}>
-            <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
+            <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
               {t.forDevelopers.eyebrow}
             </p>
             <h2 style={{ fontSize: '24px', fontWeight: 400, margin: '0 0 16px', letterSpacing: '-0.01em', lineHeight: 1.3 }}>
@@ -250,7 +257,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
             <p style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: 1.7, margin: '0 0 24px' }}>
               {t.forDevelopers.body}
             </p>
-            <Link href={`/${lang}/for-developers`} style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}>
+            <Link href={`/${lang}/for-developers`} style={{ fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}>
               {dict.common.learnMore}
             </Link>
           </div>

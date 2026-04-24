@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getArticleBySlug, getLatestArticles, getDevelopmentsByLocation } from '@/lib/queries'
+import { getArticleBySlug, getAllArticles, getLatestArticles, getDevelopmentsByLocation } from '@/lib/queries'
 import { urlFor } from '@/lib/sanity.image'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
@@ -15,22 +15,32 @@ const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopme
 export const revalidate = 60
 export const dynamicParams = true
 
+export async function generateStaticParams() {
+  const articles = await getAllArticles()
+  return (articles as any[]).map((a: any) => ({ slug: a.slug.current }))
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
   const { lang, slug } = await params
-  const article = await getArticleBySlug(slug, hasLocale(lang) ? lang : 'en')
+  const locale = hasLocale(lang) ? lang : 'en'
+  const [article, dict] = await Promise.all([
+    getArticleBySlug(slug, locale),
+    getDictionary(locale),
+  ])
   if (!article) return {}
   const ogImageSource = article.seoImage ?? article.heroImage
   const ogImage = ogImageSource
     ? urlFor(ogImageSource).width(1200).height(630).fit('crop').auto('format').url()
     : undefined
+  const description = article.excerpt || `${article.title} ${dict.seo.journal.articleDescriptionSuffix}`
   return {
     title: article.title,
-    description: article.excerpt || `${article.title} — Portugal Developments Review Journal`,
+    description,
     alternates: getAlternates(`/journal/${slug}`, lang),
     robots: article.noindex ? { index: false, follow: false } : { index: true, follow: true },
     openGraph: {
       title: article.title,
-      description: article.excerpt || `${article.title} — Portugal Developments Review Journal`,
+      description,
       type: 'article',
       ...getOgLocale(lang),
       ...(ogImage && { images: [{ url: ogImage, width: 1200, height: 630, alt: article.title }] }),
@@ -38,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     twitter: {
       card: 'summary_large_image',
       title: article.title,
-      description: article.excerpt || `${article.title} — Portugal Developments Review Journal`,
+      description,
       ...(ogImage && { images: [ogImage] }),
     },
   }
@@ -131,13 +141,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       <JsonLd data={breadcrumbSchema} />
       <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0 48px' }}>
         <div className="container-editorial">
-          <nav style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginBottom: '20px', display: 'flex', gap: '8px' }}>
+          <nav style={{ fontSize: '12px', color: 'var(--muted)', marginBottom: '20px', display: 'flex', gap: '8px' }}>
             <Link href={`/${lang}/journal`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{j.heading}</Link>
             <span>›</span>
             <Link href={`/${lang}/journal/category/${article.category}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{label}</Link>
           </nav>
 
-          <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 12px' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 12px' }}>
             {label}
             {article.linkedLocation && ` · ${article.linkedLocation.name}`}
           </p>
@@ -146,7 +156,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
             {article.title}
           </h1>
 
-          <p style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>
+          <p style={{ fontSize: '12px', color: 'var(--muted)' }}>
             {formatDate(article.publishedAt, lang)}
           </p>
         </div>
@@ -165,7 +175,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         </div>
       ) : (
         <div style={{ aspectRatio: '16/7', background: 'var(--surface)', maxHeight: '420px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+          <span style={{ fontSize: '12px', color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
             {label}
           </span>
         </div>
@@ -188,7 +198,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
 
             {article.linkedLocation && (
               <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', marginTop: '32px' }}>
-                <p style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: '0 0 8px' }}>
+                <p style={{ fontSize: '13px', color: 'var(--muted)', margin: '0 0 8px' }}>
                   {j.article.relatedLocation}
                 </p>
                 <Link
@@ -204,7 +214,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
           <aside className="article-aside">
             {linkedDevsSlice.length > 0 && (
               <div style={{ marginBottom: '32px' }}>
-                <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
+                <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
                   {j.article.relatedDevelopments}
                 </div>
                 {linkedDevsSlice.map((dev: any) => (
@@ -215,13 +225,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
 
             {relatedArticles.length > 0 && (
               <div>
-                <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
+                <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
                   {label}
                 </div>
                 {relatedArticles.map((a: any) => (
                   <Link key={a._id} href={`/${lang}/journal/${a.slug.current}`} style={{ display: 'block', textDecoration: 'none', borderTop: '1px solid var(--border)', paddingTop: '12px', paddingBottom: '12px' }}>
                     <p style={{ fontSize: '14px', color: 'var(--foreground)', margin: '0 0 4px', lineHeight: 1.4 }}>{a.title}</p>
-                    <p style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: 0 }}>{formatDate(a.publishedAt, lang)}</p>
+                    <p style={{ fontSize: '12px', color: 'var(--muted)', margin: 0 }}>{formatDate(a.publishedAt, lang)}</p>
                   </Link>
                 ))}
               </div>

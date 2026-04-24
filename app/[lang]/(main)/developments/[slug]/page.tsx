@@ -18,11 +18,17 @@ export const dynamicParams = true
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
   const { lang, slug } = await params
-  const dev = await getDevelopmentBySlug(slug, hasLocale(lang) ? lang : 'en')
+  const locale = hasLocale(lang) ? lang : 'en'
+  const [dev, dict] = await Promise.all([
+    getDevelopmentBySlug(slug, locale),
+    getDictionary(locale),
+  ])
   if (!dev) return {}
-
   const title = dev.seoTitle || `${dev.name} — ${dev.location.name}`
-  const description = dev.seoDescription || dev.editorialThesis || `Discover ${dev.name}, a curated new development in ${dev.location.name}, Portugal.`
+  const description = dev.seoDescription || dev.editorialThesis ||
+    dict.seo.developments.descriptionFallback
+      .replace('{name}', dev.name)
+      .replace('{location}', dev.location.name)
   const ogImageSource = dev.seoImage ?? dev.heroImage
   const ogImage = ogImageSource
     ? urlFor(ogImageSource).width(1200).height(630).fit('crop').auto('format').url()
@@ -149,7 +155,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
       <div style={{ borderBottom: '1px solid var(--border)', padding: '12px 0' }}>
         <div className="container-editorial">
           <nav aria-label="Breadcrumb">
-            <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', gap: '8px', fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>
+            <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', gap: '8px', fontSize: '12px', color: 'var(--muted)' }}>
               <li><Link href={`/${lang}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{dict.common.home}</Link></li>
               <li aria-hidden="true">›</li>
               <li><Link href={`/${lang}/developments`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{d.breadcrumbDevelopments}</Link></li>
@@ -169,7 +175,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
             <Image src={urlFor(dev.heroImage).width(1600).height(700).auto('format').url()} alt={dev.name} fill priority style={{ objectFit: 'cover' }} sizes="100vw" />
           ) : (
             <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <span style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+              <span style={{ fontSize: '12px', color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                 {dev.name} — {dev.location.name}
               </span>
             </div>
@@ -181,14 +187,14 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
       <div className="container-editorial">
         <div className="dev-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '60px', padding: '48px 0', alignItems: 'start' }}>
           <article>
-            <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
+            <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
               {dev.location.name} · {(labels.statusLabels as Record<string, string>)[dev.status] ?? dev.status}{dev.type ? ` · ${(labels.typeLabels as Record<string, string>)[dev.type] ?? dev.type}` : ''}
             </div>
             <h1 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 400, margin: '0 0 8px', letterSpacing: '-0.02em', lineHeight: 1.15 }}>
               {dev.name}
             </h1>
             {dev.priceDisplay && (
-              <p style={{ fontSize: '18px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: '0 0 32px' }}>{(labels.priceLabels as Record<string, string>)[dev.priceDisplay] ?? dev.priceDisplay}</p>
+              <p style={{ fontSize: '18px', color: 'var(--muted)', margin: '0 0 32px' }}>{(labels.priceLabels as Record<string, string>)[dev.priceDisplay] ?? dev.priceDisplay}</p>
             )}
 
             {dev.editorialThesis && (
@@ -199,7 +205,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
 
             {dev.whyStandsOut && dev.whyStandsOut.length > 0 && (
               <div style={{ marginBottom: '40px' }}>
-                <h2 style={{ fontSize: '14px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
+                <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
                   {d.whyStandsOut}
                 </h2>
                 <PortableTextRenderer value={dev.whyStandsOut} />
@@ -208,13 +214,13 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
 
             {dev.keyFacts && dev.keyFacts.length > 0 && (
               <div style={{ marginBottom: '40px' }}>
-                <h2 style={{ fontSize: '14px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
+                <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
                   {d.keyFacts}
                 </h2>
                 <dl style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)', margin: 0 }}>
                   {dev.keyFacts.map((fact: { label: string; value: string }, i: number) => (
                     <div key={i} style={{ background: 'var(--background)', padding: '16px' }}>
-                      <dt style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '4px' }}>{fact.label}</dt>
+                      <dt style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '4px' }}>{fact.label}</dt>
                       <dd style={{ fontSize: '16px', fontWeight: 400, margin: 0 }}>{fact.value}</dd>
                     </div>
                   ))}
@@ -224,7 +230,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
 
             {dev.brochureUrl && (
               <div style={{ marginBottom: '40px' }}>
-                <h2 style={{ fontSize: '14px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
+                <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
                   {dev.name} {d.brochureLabel}
                 </h2>
                 <div style={{ border: '1px solid var(--border)' }}>
@@ -237,11 +243,11 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                   <div style={{ borderTop: '1px solid var(--border)', background: 'var(--surface)', padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '24px', flexWrap: 'wrap' }}>
                     <div>
                       <p style={{ fontSize: '15px', fontWeight: 400, margin: '0 0 4px' }}>{d.brochureCtaTitle}</p>
-                      <p style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: 0 }}>{d.brochureCtaSubtitle}</p>
+                      <p style={{ fontSize: '13px', color: 'var(--muted)', margin: 0 }}>{d.brochureCtaSubtitle}</p>
                     </div>
                     <a
                       href="#inquiry"
-                      style={{ background: 'var(--foreground)', color: 'var(--background)', padding: '12px 24px', fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none', whiteSpace: 'nowrap' }}
+                      style={{ background: 'var(--foreground)', color: 'var(--background)', padding: '12px 24px', fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none', whiteSpace: 'nowrap' }}
                     >
                       {d.brochureCtaBtn}
                     </a>
@@ -252,7 +258,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
 
             {dev.typologyNote && (
               <div style={{ marginBottom: '40px' }}>
-                <h2 style={{ fontSize: '14px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 12px' }}>
+                <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 12px' }}>
                   {d.availability}
                 </h2>
                 <p style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{dev.typologyNote}</p>
@@ -260,7 +266,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
             )}
 
             <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', marginBottom: '40px' }}>
-              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
+              <div style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
                 {d.developerLabel}
               </div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px' }}>
@@ -277,11 +283,11 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                     <div style={{ fontSize: '16px', fontWeight: 400 }}>{dev.developer.name}</div>
                   )}
                   {dev.developer.isViriatoClient && (
-                    <div style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginTop: '4px' }}>{d.viriatoClient}</div>
+                    <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '4px' }}>{d.viriatoClient}</div>
                   )}
                   {dev.developer.website && dev.developer.slug?.current && (
                     <div style={{ marginTop: '6px' }}>
-                      <a href={dev.developer.website} target="_blank" rel="noopener noreferrer" style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+                      <a href={dev.developer.website} target="_blank" rel="noopener noreferrer" style={{ fontSize: '12px', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
                         {new URL(dev.developer.website).hostname.replace(/^www\./, '')} ↗
                       </a>
                     </div>
@@ -294,7 +300,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
             </div>
 
             <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', marginBottom: '40px' }}>
-              <h2 style={{ fontSize: '14px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 12px' }}>
+              <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 12px' }}>
                 {d.locationContext}
               </h2>
               <p style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: 1.7, margin: '0 0 12px' }}>
@@ -305,19 +311,19 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                   <PortableTextRenderer value={dev.areaGuide} />
                 </div>
               )}
-              <Link href={`/${lang}/locations/${dev.location.slug.current}`} style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}>
+              <Link href={`/${lang}/locations/${dev.location.slug.current}`} style={{ fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}>
                 {d.exploreLocation.replace('{location}', dev.location.name)}
               </Link>
             </div>
 
             {dev.lifestyleTags && dev.lifestyleTags.length > 0 && (
               <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px' }}>
-                <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
+                <div style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
                   {d.lifestyle}
                 </div>
                 <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {dev.lifestyleTags.map((tag: string) => (
-                    <li key={tag} style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '5px 12px' }}>
+                    <li key={tag} style={{ fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '5px 12px' }}>
                       {(labels.lifestyleTagLabels as Record<string, string>)[tag] ?? tag}
                     </li>
                   ))}
@@ -330,7 +336,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
             <InquiryPanel development={dev} dict={dict.inquiry} />
             {pillarArticles.length > 0 && (
               <div style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid var(--border)' }}>
-                <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
+                <p style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
                   {d.beforeEnquireHeading}
                 </p>
                 {pillarArticles.slice(0, 3).map((article: any) => (
@@ -363,7 +369,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
       {dev.gallery && dev.gallery.length > 0 && (
         <section style={{ padding: '48px 0' }}>
           <div className="container-editorial">
-            <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 24px' }}>
+            <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 24px' }}>
               {d.gallery}
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: '1px', background: 'var(--border)' }}>
@@ -373,7 +379,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                     <Image src={urlFor(img).width(800).height(600).auto('format').url()} alt={img.alt || `${dev.name} — ${i + 1}`} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
                   </div>
                   {img.alt && (
-                    <figcaption style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', padding: '8px 12px', lineHeight: 1.4 }}>
+                    <figcaption style={{ fontSize: '11px', color: 'var(--muted)', padding: '8px 12px', lineHeight: 1.4 }}>
                       {img.alt}
                     </figcaption>
                   )}

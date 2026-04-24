@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import Link from 'next/link'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import type { Dictionary } from '@/lib/i18n/types'
 
@@ -45,7 +46,7 @@ export default function DevelopmentsIndex({ developments, locations, lang, dict,
   const f = dict.filters
   const r = dict.results
 
-  const selectStyle = { fontSize: '13px', fontFamily: 'sans-serif', border: '1px solid var(--border)', padding: '8px 12px', background: 'var(--background)', color: 'var(--foreground)', cursor: 'pointer', appearance: 'none' as const, minWidth: '160px' }
+  const selectStyle = { fontSize: '13px', border: '1px solid var(--border)', padding: '8px 12px', background: 'var(--background)', color: 'var(--foreground)', cursor: 'pointer', appearance: 'none' as const, minWidth: '160px' }
 
   const clearAll = () => { setLocationFilter(''); setTypeFilter(''); setStatusFilter('') }
 
@@ -53,7 +54,7 @@ export default function DevelopmentsIndex({ developments, locations, lang, dict,
     <>
       <section style={{ borderBottom: '1px solid var(--border)', padding: '48px 0 40px' }}>
         <div className="container-editorial">
-          <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 8px' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 8px' }}>
             {dict.eyebrow}
           </p>
           <h1 style={{ fontSize: '36px', fontWeight: 400, margin: '0 0 12px', letterSpacing: '-0.02em' }}>
@@ -81,17 +82,23 @@ export default function DevelopmentsIndex({ developments, locations, lang, dict,
               {STATUSES.map(s => <option key={s} value={s}>{(dict.statusLabels as Record<string, string>)[s] ?? s}</option>)}
             </select>
             {hasFilters && (
-              <button onClick={clearAll} style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}>
+              <button onClick={clearAll} style={{ fontSize: '12px', color: 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}>
                 {f.clearFilters}
               </button>
             )}
+            <Link
+              href={`/${lang}/journal/off-plan-vs-ready-portugal-property`}
+              style={{ fontSize: '12px', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}
+            >
+              {f.offPlanGuide}
+            </Link>
             <div className="filter-sort" style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>{f.sort}</span>
+              <span style={{ fontSize: '12px', color: 'var(--muted)' }}>{f.sort}</span>
               {[{ value: 'featured', label: f.sortFeatured }, { value: 'newest', label: f.sortNewest }].map(s => (
                 <button
                   key={s.value}
                   onClick={() => setSort(s.value)}
-                  style={{ fontSize: '12px', fontFamily: 'sans-serif', color: sort === s.value ? 'var(--foreground)' : 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: sort === s.value ? 'underline' : 'none', padding: '4px 0' }}
+                  style={{ fontSize: '12px', color: sort === s.value ? 'var(--foreground)' : 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: sort === s.value ? 'underline' : 'none', padding: '4px 0' }}
                 >
                   {s.label}
                 </button>
@@ -104,15 +111,15 @@ export default function DevelopmentsIndex({ developments, locations, lang, dict,
       <section style={{ padding: '48px 0' }}>
         <div className="container-editorial">
           <div style={{ marginBottom: '24px' }}>
-            <span style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>
+            <span style={{ fontSize: '13px', color: 'var(--muted)' }}>
               {filtered.length === 1 ? r.count_one.replace('{count}', '1') : r.count_other.replace('{count}', String(filtered.length))}
               {hasFilters ? r.matchingFilters : ''}
             </span>
           </div>
           {filtered.length === 0 ? (
             <div style={{ padding: '80px 0', textAlign: 'center' }}>
-              <p style={{ fontSize: '16px', color: 'var(--muted)', fontFamily: 'sans-serif' }}>{r.noResults}</p>
-              <button onClick={clearAll} style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--foreground)', background: 'none', border: '1px solid var(--border)', cursor: 'pointer', padding: '10px 20px', marginTop: '16px' }}>
+              <p style={{ fontSize: '16px', color: 'var(--muted)' }}>{r.noResults}</p>
+              <button onClick={clearAll} style={{ fontSize: '13px', color: 'var(--foreground)', background: 'none', border: '1px solid var(--border)', cursor: 'pointer', padding: '10px 20px', marginTop: '16px' }}>
                 {r.clearFiltersBtn}
               </button>
             </div>

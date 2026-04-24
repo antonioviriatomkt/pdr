@@ -39,7 +39,7 @@ export default function NewsletterSignup({ dict }: NewsletterSignupProps) {
   if (status === 'success') {
     return (
       <div style={{ background: 'var(--surface)', padding: '20px 24px' }}>
-        <p style={{ fontSize: '14px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: 0, lineHeight: 1.6 }}>
+        <p style={{ fontSize: '14px', color: 'var(--muted)', margin: 0, lineHeight: 1.6 }}>
           {dict.successMessage}
         </p>
       </div>
@@ -52,7 +52,7 @@ export default function NewsletterSignup({ dict }: NewsletterSignupProps) {
         <div style={{ marginBottom: '12px' }}>
           <label
             htmlFor="newsletter-email"
-            style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', display: 'block', marginBottom: '6px' }}
+            style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', display: 'block', marginBottom: '6px' }}
           >
             {dict.emailLabel}
           </label>
@@ -67,23 +67,23 @@ export default function NewsletterSignup({ dict }: NewsletterSignupProps) {
             required
             disabled={status === 'submitting'}
             autoComplete="email"
-            style={{ width: '100%', padding: '11px 14px', fontSize: '14px', fontFamily: 'sans-serif', border: `1px solid ${focused ? 'var(--foreground)' : 'var(--border)'}`, background: 'var(--background)', color: 'var(--foreground)', borderRadius: '0', outline: 'none', boxSizing: 'border-box', opacity: status === 'submitting' ? 0.6 : 1 }}
+            style={{ width: '100%', padding: '11px 14px', fontSize: '14px', border: `1px solid ${focused ? 'var(--foreground)' : 'var(--border)'}`, background: 'var(--background)', color: 'var(--foreground)', borderRadius: '0', outline: 'none', boxSizing: 'border-box', opacity: status === 'submitting' ? 0.6 : 1 }}
           />
         </div>
         <button
           type="submit"
           disabled={status === 'submitting'}
-          style={{ width: '100%', background: 'var(--foreground)', color: 'var(--background)', padding: '13px 24px', fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', border: 'none', cursor: status === 'submitting' ? 'not-allowed' : 'pointer', opacity: status === 'submitting' ? 0.6 : 1 }}
+          style={{ width: '100%', background: 'var(--foreground)', color: 'var(--background)', padding: '13px 24px', fontSize: '13px', letterSpacing: '0.08em', textTransform: 'uppercase', border: 'none', cursor: status === 'submitting' ? 'not-allowed' : 'pointer', opacity: status === 'submitting' ? 0.6 : 1 }}
         >
           {status === 'submitting' ? dict.submitting : dict.submitBtn}
         </button>
         {errorMessage && (
-          <p style={{ fontSize: '13px', fontFamily: 'sans-serif', color: '#B91C1C', margin: '10px 0 0', lineHeight: 1.5 }}>
+          <p style={{ fontSize: '13px', color: '#B91C1C', margin: '10px 0 0', lineHeight: 1.5 }}>
             {errorMessage}
           </p>
         )}
       </form>
-      <p style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: '16px 0 0', lineHeight: 1.6, letterSpacing: '0.01em' }}>
+      <p style={{ fontSize: '13px', color: 'var(--muted)', margin: '16px 0 0', lineHeight: 1.6, letterSpacing: '0.01em' }}>
         {dict.footnote}
       </p>
     </>

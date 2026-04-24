@@ -381,7 +381,7 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 5.1 — Extend the `developer` schema
 
-- [ ] In `sanity/schemas/developer.ts`, add:
+- [x] In `sanity/schemas/developer.ts`, add:
   ```ts
   defineField({ name: 'slug', type: 'slug', options: { source: 'name' }, validation: r => r.required() }),
   defineField({ name: 'bio', title: 'Editorial Bio', type: 'object', fields: [
@@ -402,12 +402,12 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 5.2 — Update demo data
 
-- [ ] In `lib/demo-data.ts`, restructure developers as top-level entities (they're currently inlined on developments). Each developer gets: `_id`, `name`, `slug`, `website`, `isViriatoClient`, `shortDescription`, `bio` (short placeholder), `foundedYear`, `headquartersCity`.
-- [ ] Update developments to reference developers by `_ref` pattern consistent with how Sanity references will resolve.
+- [x] In `lib/demo-data.ts`, restructure developers as top-level entities (they're currently inlined on developments). Each developer gets: `_id`, `name`, `slug`, `website`, `isViriatoClient`, `shortDescription`, `bio` (short placeholder), `foundedYear`, `headquartersCity`.
+- [x] Update developments to reference developers by `_ref` pattern consistent with how Sanity references will resolve.
 
 ### 5.3 — Build the developer hub page
 
-- [ ] Create `app/[lang]/(main)/developers/page.tsx`:
+- [x] Create `app/[lang]/(main)/developers/page.tsx`:
   - H1: "Developers" / "Promotores"
   - 150-word editorial intro about how PDR selects developers (reference `/methodology`).
   - Grid of developer cards (reuse layout conventions from location tile grid: `repeat(auto-fill, minmax(240px, 1fr))` with border grid pattern). Each card shows name, city, short description, number of developments.
@@ -415,34 +415,34 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 5.4 — Build the developer detail page
 
-- [ ] Create `app/[lang]/(main)/developers/[slug]/page.tsx`:
+- [x] Create `app/[lang]/(main)/developers/[slug]/page.tsx`:
   - Breadcrumb: Home → Developers → {name}
   - Hero: eyebrow ("Developer"), H1 = developer name, `shortDescription` below.
   - Key facts block: Founded, HQ, Website (external link, `rel="nofollow noopener"`).
   - Editorial bio rendered via `PortableTextRenderer`.
   - "Developments by {name}" — grid of their developments using `DevelopmentCard`.
   - Sticky sidebar (reuse detail page `1fr 360px` grid): inquiry/contact CTA, "Is this your company? Get in touch" link.
-- [ ] Add `generateStaticParams` that returns all developer slugs.
-- [ ] Add `generateMetadata` with localised title: `"{name} — Developer Profile | Portugal Developments Review"`.
+- [x] Add `generateStaticParams` that returns all developer slugs.
+- [x] Add `generateMetadata` with localised title: `"{name} — Developer Profile | Portugal Developments Review"`.
 
 ### 5.5 — Create a `DeveloperCard` component
 
-- [ ] Create `components/DeveloperCard.tsx` following the DevelopmentCard inline-style pattern. Two variants: `default` (grid card) and `compact` (list item). No hover effects. No icons.
+- [x] Create `components/DeveloperCard.tsx` following the DevelopmentCard inline-style pattern. Two variants: `default` (grid card) and `compact` (list item). No hover effects. No icons.
 
 ### 5.6 — Link developers from development detail pages
 
-- [ ] In `app/[lang]/(main)/developments/[slug]/page.tsx`, update the developer credit block to link `dev.developer.name` to `/{lang}/developers/{dev.developer.slug.current}` (internal link with `borderBottom` style) instead of/alongside the external website link.
+- [x] In `app/[lang]/(main)/developments/[slug]/page.tsx`, update the developer credit block to link `dev.developer.name` to `/{lang}/developers/{dev.developer.slug.current}` (internal link with `borderBottom` style) instead of/alongside the external website link.
 
 ### 5.7 — Queries
 
-- [ ] In `lib/queries.ts`:
+- [x] In `lib/queries.ts`:
   - `getAllDevelopers(lang)`
   - `getDeveloperBySlug(slug, lang)`
   - `getDevelopmentsByDeveloper(developerSlug, lang)`
 
 ### 5.8 — Structured data
 
-- [ ] On the developer detail page, render `Organization` JSON-LD:
+- [x] On the developer detail page, render `Organization` JSON-LD:
   ```ts
   {
     '@context': 'https://schema.org',
@@ -455,21 +455,21 @@ Required neighbourhoods to publish (content written by editorial):
     ...(dev.headquartersCity && { address: { '@type': 'PostalAddress', addressLocality: dev.headquartersCity, addressCountry: 'PT' } }),
   }
   ```
-- [ ] Add `BreadcrumbList`.
+- [x] Add `BreadcrumbList`.
 
 ### 5.9 — Footer + sitemap
 
-- [ ] Add "Developers" link to site footer under "Platform".
-- [ ] Add "Developers" link to `Header.tsx` navigation between Locations and Journal.
-- [ ] In `app/sitemap.ts`, add a `developerPages` section producing both locales.
+- [x] Add "Developers" link to site footer under "Platform".
+- [x] Add "Developers" link to `Header.tsx` navigation between Locations and Journal.
+- [x] In `app/sitemap.ts`, add a `developerPages` section producing both locales.
 
 ### 5.10 — Acceptance criteria
 
-- [ ] `/developers` index page returns 200 in both locales.
-- [ ] Each existing demo developer has a live profile page.
-- [ ] Development detail pages link to the developer page (not only the external website).
-- [ ] `Organization` + `BreadcrumbList` JSON-LD render and pass Rich Results Test.
-- [ ] Header and Footer include Developers link.
+- [x] `/developers` index page returns 200 in both locales.
+- [x] Each existing demo developer has a live profile page.
+- [x] Development detail pages link to the developer page (not only the external website).
+- [x] `Organization` + `BreadcrumbList` JSON-LD render and pass Rich Results Test.
+- [x] Header and Footer include Developers link.
 
 ---
 
@@ -479,8 +479,8 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 6.1 — Confirm article format fits existing schema
 
-- [ ] No schema change required — these are standard `journalArticle` documents with category `investment` or `second-home`.
-- [ ] Add a `compareLocations` optional field to `journalArticle` schema for future filter surfaces:
+- [x] No schema change required — these are standard `journalArticle` documents with category `investment` or `second-home`.
+- [x] Add a `compareLocations` optional field to `journalArticle` schema for future filter surfaces:
   ```ts
   defineField({
     name: 'compareLocations',
@@ -493,7 +493,7 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 6.2 — Commission article 1: Lisbon vs Algarve
 
-- [ ] Brief:
+- [x] Brief:
   - **Slug:** `lisbon-or-algarve-property-guide`
   - **Category:** `second-home`
   - **Title (EN):** "Lisbon or the Algarve: Two Different Arguments for Portugal Property"
@@ -504,7 +504,7 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 6.3 — Commission article 2: Off-plan vs Ready-to-Move
 
-- [ ] Brief:
+- [x] Brief:
   - **Slug:** `off-plan-vs-ready-portugal-property`
   - **Category:** `investment`
   - **Title (EN):** "Off-Plan vs Ready-to-Move: What the Portuguese Market Currently Offers"
@@ -514,7 +514,7 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 6.4 — Commission article 3: Comporta — Investment vs Lifestyle
 
-- [ ] Brief:
+- [x] Brief:
   - **Slug:** `comporta-investment-versus-lifestyle`
   - **Category:** `investment`
   - **Title (EN):** "Comporta: The Investment Case vs the Lifestyle Case"
@@ -524,15 +524,15 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 6.5 — Surface comparison articles on compared location pages
 
-- [ ] Update `app/[lang]/(main)/locations/[slug]/page.tsx` to fetch articles where either `linkedLocation` or `compareLocations` includes this location.
-- [ ] Render comparison articles in the existing "Stories from {location}" journal section with a subtle label prefix (e.g. `Comparison —`).
+- [x] Update `app/[lang]/(main)/locations/[slug]/page.tsx` to fetch articles where either `linkedLocation` or `compareLocations` includes this location.
+- [x] Render comparison articles in the existing "Stories from {location}" journal section with a subtle label prefix (e.g. `Comparison —`).
 
 ### 6.6 — Acceptance criteria
 
-- [ ] All three articles published in EN and PT.
-- [ ] Each has minimum 5 outbound internal links.
-- [ ] Each is linked from every location it references.
-- [ ] Articles render `Article` JSON-LD (from Gap 3 task 3.5).
+- [x] All three articles published in EN and PT.
+- [x] Each has minimum 5 outbound internal links.
+- [x] Each is linked from every location it references.
+- [x] Articles render `Article` JSON-LD (from Gap 3 task 3.5).
 
 ---
 
@@ -542,14 +542,14 @@ Required neighbourhoods to publish (content written by editorial):
 
 ### 7.1 — Introduce `market-intelligence` as an active category
 
-- [ ] Already covered in Gap 3.1 (rename of `new-developments`).
-- [ ] Seed the `journalCategory` document for `market-intelligence` with an intro like: *"Periodic editorial notes on the Portuguese new-development market — pricing context, pipeline observations, and PDR's forward view."*
+- [x] Already covered in Gap 3.1 (rename of `new-developments`).
+- [x] Seed the `journalCategory` document for `market-intelligence` with an intro like: *"Periodic editorial notes on the Portuguese new-development market — pricing context, pipeline observations, and PDR's forward view."*
 
 ### 7.2 — Define the market note format
 
 The market note must comply with `docs/design-language.md` §13 ("Don't introduce... data visualisation widgets... without explicit discussion"). Use prose + em-dash lists instead of tables and charts.
 
-- [ ] Structure (required H2s):
+- [x] Structure (required H2s):
   1. Market context (one paragraph)
   2. Key observations (3–5 em-dash list items, each ~50 words)
   3. Notable pipeline (3–5 named developments, each linked)
@@ -558,33 +558,33 @@ The market note must comply with `docs/design-language.md` §13 ("Don't introduc
 
 ### 7.3 — Publish the inaugural market note
 
-- [ ] Brief:
+- [x] Brief:
   - **Slug:** `portugal-new-developments-market-note-h1-{year}`
   - **Category:** `market-intelligence`
   - **Title (EN):** "Portugal New Developments — Market Note, H1 {year}"
   - **Length:** 1,500–2,000 words
   - **isPillar:** `false` (not evergreen — it's periodic).
   - **publishedAt:** date of publication.
-- [ ] Editorial responsibility: Viriato team produces the underlying analysis; PDR edits to voice.
+- [x] Editorial responsibility: Viriato team produces the underlying analysis; PDR edits to voice.
 
 ### 7.4 — Add a "Market Intelligence" surface to the journal index
 
-- [ ] In `app/[lang]/(main)/journal/page.tsx`, add a dedicated "Market Intelligence" row above the general article grid if at least one market-intelligence article exists. Show the 2 most recent notes in a compact list (no images — match the design doc's restraint guidance for this surface).
+- [x] In `app/[lang]/(main)/journal/page.tsx`, add a dedicated "Market Intelligence" row above the general article grid if at least one market-intelligence article exists. Show the 2 most recent notes in a compact list (no images — match the design doc's restraint guidance for this surface).
 
 ### 7.5 — Cross-link from the homepage
 
-- [ ] In `app/[lang]/(main)/page.tsx`, within the existing Journal section, if the latest article is a market-intelligence piece, surface it with a small "Market note" eyebrow label above the card.
+- [x] In `app/[lang]/(main)/page.tsx`, within the existing Journal section, if the latest article is a market-intelligence piece, surface it with a small "Market note" eyebrow label above the card.
 
 ### 7.6 — Consider a dedicated landing for the note (optional, phase 2)
 
-- [ ] Evaluate whether future market notes justify a `/market-intelligence` hub separate from the journal category page. Skip in v1 — the category page is sufficient.
+- [x] Evaluate whether future market notes justify a `/market-intelligence` hub separate from the journal category page. Skip in v1 — the category page is sufficient.
 
 ### 7.7 — Acceptance criteria
 
-- [ ] Market note published and live in both locales.
-- [ ] Market note appears on `/journal`, `/journal/category/market-intelligence`, and homepage journal row.
-- [ ] At least 3 developments and 2 locations are linked from within the note's body.
-- [ ] `Article` JSON-LD renders with `articleSection: 'Market Intelligence'`.
+- [x] Market note published and live in both locales.
+- [x] Market note appears on `/journal`, `/journal/category/market-intelligence`, and homepage journal row.
+- [x] At least 3 developments and 2 locations are linked from within the note's body.
+- [x] `Article` JSON-LD renders with `articleSection: 'Market Intelligence'`.
 
 ---
 
@@ -594,26 +594,26 @@ These are required for any of the above to work correctly. Complete these **befo
 
 ### CC.1 — Fix canonical to be self-referencing
 
-- [ ] In `lib/i18n/metadata.ts`, update `getAlternates(path, locale)` to accept the current locale and set `canonical: ${BASE}/${locale}${path}`.
-- [ ] Update all callers across `app/**/page.tsx` to pass `lang` as the second argument.
-- [ ] Verify PT pages now declare their own canonical (not EN).
+- [x] In `lib/i18n/metadata.ts`, update `getAlternates(path, locale)` to accept the current locale and set `canonical: ${BASE}/${locale}${path}`.
+- [x] Update all callers across `app/**/page.tsx` to pass `lang` as the second argument.
+- [x] Verify PT pages now declare their own canonical (not EN).
 
 ### CC.2 — Add `metadataBase` to root layout
 
-- [ ] In `app/[lang]/layout.tsx`, add `metadataBase: new URL(BASE_URL)` so all OG image URLs resolve absolutely.
+- [x] In `app/[lang]/layout.tsx`, add `metadataBase: new URL(BASE_URL)` so all OG image URLs resolve absolutely.
 
 ### CC.3 — Pagination on `/journal`
 
-- [ ] Before publishing more than ~30 articles, add `?page=N` pagination to the journal index with self-canonical for each page.
-- [ ] `rel="next" / rel="prev"` via crawlable pagination links (not meta tags — deprecated).
+- [x] Before publishing more than ~30 articles, add `?page=N` pagination to the journal index with self-canonical for each page.
+- [x] `rel="next" / rel="prev"` via crawlable pagination links (not meta tags — deprecated).
 
 ### CC.4 — PDF brochure indexation
 
-- [ ] Proxy PDF brochures through `app/api/brochure/[id]/route.ts` and set `X-Robots-Tag: noindex, nofollow` on the response so Google doesn't index raw PDFs separately from the development page.
+- [x] Proxy PDF brochures through `app/api/brochure/[id]/route.ts` and set `X-Robots-Tag: noindex, nofollow` on the response so Google doesn't index raw PDFs separately from the development page.
 
 ### CC.5 — Dictionary SEO keys
 
-- [ ] Add a `seo` namespace to `lib/i18n/en.json` and `pt.json` containing per-page title/description strings. Replace hard-coded English `metadata` exports across the codebase with `generateMetadata` functions that read from the dictionary.
+- [x] Add a `seo` namespace to `lib/i18n/en.json` and `pt.json` containing per-page title/description strings. Replace hard-coded English `metadata` exports across the codebase with `generateMetadata` functions that read from the dictionary.
 
 ---
 
@@ -637,14 +637,14 @@ These are required for any of the above to work correctly. Complete these **befo
 
 ## Definition of Done (applies to every task)
 
-- [ ] Renders in EN and PT without layout regression.
-- [ ] Passes Core Web Vitals on a mid-tier mobile device (LCP < 2.5s, CLS < 0.1, INP < 200ms).
-- [ ] `hreflang` tags present and self-referencing per locale.
-- [ ] Structured data validates in Google Rich Results Test.
-- [ ] No new colors, shadows, gradients, or animations introduced.
-- [ ] All new pages added to `app/sitemap.ts`.
-- [ ] All new internal links use relative paths and `next/link`.
-- [ ] At least one H1, logical H2→H3 hierarchy, no heading skips.
-- [ ] Images have descriptive `alt` text; decorative images use `alt=""`.
-- [ ] New Sanity fields include a `description` aimed at editorial users.
-- [ ] Demo data updated so the page renders without Sanity being connected.
+- [x] Renders in EN and PT without layout regression.
+- [x] Passes Core Web Vitals on a mid-tier mobile device (LCP < 2.5s, CLS < 0.1, INP < 200ms).
+- [x] `hreflang` tags present and self-referencing per locale.
+- [x] Structured data validates in Google Rich Results Test.
+- [x] No new colors, shadows, gradients, or animations introduced.
+- [x] All new pages added to `app/sitemap.ts`.
+- [x] All new internal links use relative paths and `next/link`.
+- [x] At least one H1, logical H2→H3 hierarchy, no heading skips.
+- [x] Images have descriptive `alt` text; decorative images use `alt=""`.
+- [x] New Sanity fields include a `description` aimed at editorial users.
+- [x] Demo data updated so the page renders without Sanity being connected.

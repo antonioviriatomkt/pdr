@@ -46,7 +46,17 @@
       "Bash(unzip -p \"/Users/upscale/Desktop/PDR/docs/PDR_SEO_Keyword_Strategy.xlsx\" xl/sharedStrings.xml)",
       "Bash(grep -v '^$')",
       "Bash(npm run *)",
-      "Bash(grep -v \"^\\\\s*$\")"
+      "Bash(grep -v \"^\\\\s*$\")",
+      "Bash(git pull *)",
+      "Bash(npx next *)",
+      "mcp__8a53a84c-fcbd-462a-ba17-5488284656b5__whoami",
+      "mcp__8a53a84c-fcbd-462a-ba17-5488284656b5__query_documents",
+      "mcp__8a53a84c-fcbd-462a-ba17-5488284656b5__create_documents_from_json",
+      "mcp__8a53a84c-fcbd-462a-ba17-5488284656b5__publish_documents",
+      "Bash(node -e \"const pkg = require\\('./package.json'\\); console.log\\(pkg.dependencies?.next || pkg.devDependencies?.next\\)\")",
+      "Bash(grep -E \"\\\\.\\(ts|tsx\\)$\")",
+      "Bash(xargs perl *)",
+      "Bash(grep \"defineField.*name.*description\\\\|defineField\\({$\" /Users/upscale/Desktop/PDR/sanity/schemas/developer.ts)"
     ]
   }
 }

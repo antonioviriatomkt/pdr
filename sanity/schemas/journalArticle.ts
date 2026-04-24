@@ -54,6 +54,13 @@ export const journalArticle = defineType({
     }),
     defineField({ name: 'linkedLocation', title: 'Linked Location', type: 'reference', to: [{ type: 'location' }] }),
     defineField({ name: 'linkedDevelopment', title: 'Linked Development', type: 'reference', to: [{ type: 'development' }] }),
+    defineField({
+      name: 'compareLocations',
+      title: 'Compared Locations',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'location' }] }],
+      description: 'For comparison articles. Used to surface this article on each compared location page.',
+    }),
     defineField({ name: 'publishedAt', title: 'Published At', type: 'datetime', validation: r => r.required() }),
     defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string' }),
     defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2 }),

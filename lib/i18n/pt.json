@@ -112,6 +112,7 @@
       "allTypes": "Todos os Tipos",
       "allStatus": "Todos os Estados",
       "clearFilters": "Limpar filtros",
+      "offPlanGuide": "A ponderar off-plan vs pronto a habitar?",
       "sort": "Ordenar:",
       "sortFeatured": "Destaque",
       "sortNewest": "Mais Recentes"
@@ -186,6 +187,7 @@
     "developmentsHeading": "Projetos Curados",
     "noDevelopments": "Ainda não existem desenvolvimentos curados nesta localização.",
     "journalHeading": "Leitura Relacionada",
+    "comparisonLabel": "Comparação",
     "nearbyHeading": "Localizações Próximas",
     "exploreArrow": "Explorar →",
     "neighbourhoodsHeading": "Bairros",
@@ -207,10 +209,13 @@
       "buyer-guides": "Guias de Compra"
     },
     "guidesHeading": "Guias",
+    "marketIntelligenceHeading": "Informação de Mercado",
+    "marketNoteEyebrow": "Nota de Mercado",
     "article": {
       "relatedDevelopments": "Projetos Relacionados",
       "relatedLocation": "Localização"
-    }
+    },
+    "noArticlesInCategory": "Ainda não existem artigos nesta categoria."
   },
 
   "contact": {
@@ -414,11 +419,15 @@
     },
     "developments": {
       "title": "Novos Projetos em Portugal",
-      "description": "Descubra novos projetos residenciais curados em Portugal — Lisboa, Porto, Cascais, Algarve, Comporta e Gaia. Filtrado por localização, tipo e estado."
+      "description": "Descubra novos projetos residenciais curados em Portugal — Lisboa, Porto, Cascais, Algarve, Comporta e Gaia. Filtrado por localização, tipo e estado.",
+      "descriptionFallback": "Descubra {name}, um novo projeto residencial curado em {location}, Portugal."
     },
     "journal": {
       "title": "Revista — Perspetivas sobre Novos Projetos em Portugal",
-      "description": "Perspetivas editoriais sobre novos projetos, guias de área, explicações de investimento, arquitetura e residências de marca em Portugal."
+      "description": "Perspetivas editoriais sobre novos projetos, guias de área, explicações de investimento, arquitetura e residências de marca em Portugal.",
+      "articleDescriptionSuffix": "— Revista Portugal Developments Review",
+      "categoryTitle": "{label} — Revista | Portugal Developments Review",
+      "categoryDescription": "Artigos editoriais sobre {label} cobrindo novos projetos em Portugal."
     },
     "locationsIndex": {
       "title": "Localizações de Novos Projetos em Portugal",
@@ -446,7 +455,8 @@
     },
     "developers": {
       "title": "Perfis de Promotores — Portugal Developments Review",
-      "description": "Perfis editoriais dos promotores por detrás dos projetos residenciais mais considerados de Portugal — selecionados pelo historial, integridade de entrega e coerência do projeto."
+      "description": "Perfis editoriais dos promotores por detrás dos projetos residenciais mais considerados de Portugal — selecionados pelo historial, integridade de entrega e coerência do projeto.",
+      "profileTitle": "{name} — Perfil do Promotor | Portugal Developments Review"
     }
   },
 

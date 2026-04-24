@@ -14,14 +14,14 @@ export default function Footer({ lang, footer }: FooterProps) {
       <div className="container-editorial">
         <div style={{ padding: '40px 0 36px', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '16px' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>
-            <span style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)' }}>
+            <span style={{ fontSize: '13px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)' }}>
               Portugal Developments Review
             </span>
-            <span style={{ fontSize: '11px', color: 'var(--muted)', fontFamily: 'sans-serif', letterSpacing: '0.04em' }}>
+            <span style={{ fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.04em' }}>
               by Viriato
             </span>
           </div>
-          <p style={{ fontSize: '13px', color: 'var(--muted)', fontFamily: 'sans-serif', margin: 0 }}>
+          <p style={{ fontSize: '13px', color: 'var(--muted)', margin: 0 }}>
             {footer.tagline}
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function Footer({ lang, footer }: FooterProps) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '40px', marginBottom: '48px' }}>
           {/* Developments */}
           <div>
-            <div style={{ fontSize: '11px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+            <div style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
               {footer.sections.developments}
             </div>
             {[
@@ -50,7 +50,7 @@ export default function Footer({ lang, footer }: FooterProps) {
 
           {/* Journal */}
           <div>
-            <div style={{ fontSize: '11px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+            <div style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
               {footer.sections.journal}
             </div>
             {[
@@ -68,7 +68,7 @@ export default function Footer({ lang, footer }: FooterProps) {
 
           {/* Lifestyle */}
           <div>
-            <div style={{ fontSize: '11px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+            <div style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
               {footer.sections.lifestyle}
             </div>
             {[
@@ -85,7 +85,7 @@ export default function Footer({ lang, footer }: FooterProps) {
 
           {/* Platform */}
           <div>
-            <div style={{ fontSize: '11px', fontFamily: 'sans-serif', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+            <div style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
               {footer.sections.platform}
             </div>
             {[
@@ -103,10 +103,10 @@ export default function Footer({ lang, footer }: FooterProps) {
         </div>
 
         <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-          <p style={{ fontSize: '12px', color: 'var(--muted)', fontFamily: 'sans-serif' }}>
+          <p style={{ fontSize: '12px', color: 'var(--muted)' }}>
             {footer.copyright.replace('{year}', String(year))}
           </p>
-          <p style={{ fontSize: '12px', color: 'var(--muted)', fontFamily: 'sans-serif' }}>
+          <p style={{ fontSize: '12px', color: 'var(--muted)' }}>
             {footer.platformTagline}
           </p>
         </div>

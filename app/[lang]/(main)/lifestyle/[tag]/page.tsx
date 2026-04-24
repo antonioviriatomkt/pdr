@@ -111,21 +111,21 @@ export default async function LifestyleTagPage({ params }: { params: Promise<{ l
       {/* Hero */}
       <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0 48px' }}>
         <div className="container-editorial">
-          <nav style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginBottom: '20px', display: 'flex', gap: '8px' }}>
+          <nav style={{ fontSize: '12px', color: 'var(--muted)', marginBottom: '20px', display: 'flex', gap: '8px' }}>
             <Link href={`/${lang}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{dict.common.home}</Link>
             <span>›</span>
             <span>{l.breadcrumbLifestyle}</span>
             <span>›</span>
             <span>{dict.developments.lifestyleTagLabels[tagLabel as keyof typeof dict.developments.lifestyleTagLabels] ?? tagLabel}</span>
           </nav>
-          <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
             {l.eyebrow}
           </p>
           <h1 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 400, margin: '0 0 16px', letterSpacing: '-0.02em' }}>
             {dict.developments.lifestyleTagLabels[tagLabel as keyof typeof dict.developments.lifestyleTagLabels] ?? tagLabel}
           </h1>
           {lifestyleDoc?.intro && (
-            <p style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--muted)', maxWidth: '680px', margin: 0, fontFamily: 'sans-serif' }}>
+            <p style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--muted)', maxWidth: '680px', margin: 0 }}>
               {lifestyleDoc.intro}
             </p>
           )}
@@ -135,7 +135,7 @@ export default async function LifestyleTagPage({ params }: { params: Promise<{ l
       {/* Developments grid */}
       <section style={{ padding: '56px 0', borderBottom: '1px solid var(--border)' }}>
         <div className="container-editorial">
-          <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 32px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 32px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
             {l.developmentsHeading}
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '48px 40px' }}>
@@ -150,7 +150,7 @@ export default async function LifestyleTagPage({ params }: { params: Promise<{ l
       {otherTags.length > 0 && (
         <section style={{ padding: '48px 0' }}>
           <div className="container-editorial">
-            <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 20px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
+            <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 20px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
               {l.relatedLifestyles}
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -158,7 +158,7 @@ export default async function LifestyleTagPage({ params }: { params: Promise<{ l
                 <Link
                   key={t}
                   href={`/${lang}/lifestyle/${LIFESTYLE_TAG_SLUGS[t]}`}
-                  style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '6px 14px', textDecoration: 'none' }}
+                  style={{ fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '6px 14px', textDecoration: 'none' }}
                 >
                   {dict.developments.lifestyleTagLabels[t as keyof typeof dict.developments.lifestyleTagLabels] ?? t}
                 </Link>

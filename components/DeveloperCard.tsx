@@ -34,11 +34,11 @@ export default function DeveloperCard({
         <div>
           <span style={{ fontSize: '15px', fontWeight: 400, color: 'var(--foreground)' }}>{developer.name}</span>
           {developer.headquartersCity && (
-            <span style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)', marginLeft: '12px' }}>{developer.headquartersCity}</span>
+            <span style={{ fontSize: '13px', color: 'var(--muted)', marginLeft: '12px' }}>{developer.headquartersCity}</span>
           )}
         </div>
         {developer.isViriatoClient && (
-          <span style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', flexShrink: 0 }}>
+          <span style={{ fontSize: '11px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', flexShrink: 0 }}>
             {viriatoLabel}
           </span>
         )}
@@ -54,13 +54,13 @@ export default function DeveloperCard({
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', gap: '12px', marginBottom: '12px' }}>
         <div style={{ fontSize: '16px', fontWeight: 400, color: 'var(--foreground)', lineHeight: 1.3 }}>{developer.name}</div>
         {developer.isViriatoClient && (
-          <span style={{ fontSize: '10px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '3px 8px', flexShrink: 0 }}>
+          <span style={{ fontSize: '10px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '3px 8px', flexShrink: 0 }}>
             {viriatoLabel}
           </span>
         )}
       </div>
       {developer.headquartersCity && (
-        <div style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.04em', marginBottom: '12px' }}>
+        <div style={{ fontSize: '12px', color: 'var(--muted)', letterSpacing: '0.04em', marginBottom: '12px' }}>
           {developer.headquartersCity}
         </div>
       )}
@@ -70,7 +70,7 @@ export default function DeveloperCard({
         </p>
       )}
       {typeof developer.developmentCount === 'number' && (
-        <div style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.04em', borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
+        <div style={{ fontSize: '12px', color: 'var(--muted)', letterSpacing: '0.04em', borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
           {developmentsCountLabel ?? `${developer.developmentCount} development${developer.developmentCount !== 1 ? 's' : ''}`}
         </div>
       )}

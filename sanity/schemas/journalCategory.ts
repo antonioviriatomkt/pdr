@@ -16,6 +16,7 @@ export const journalCategory = defineType({
       name: 'title',
       title: 'Title',
       type: 'object',
+      description: 'Display name for this category. Shown in the category nav strip and page headings.',
       fields: [
         defineField({ name: 'en', title: 'English', type: 'string' }),
         defineField({ name: 'pt', title: 'Portuguese', type: 'string' }),
@@ -31,8 +32,8 @@ export const journalCategory = defineType({
         defineField({ name: 'pt', title: 'Portuguese', type: 'text', rows: 3 }),
       ],
     }),
-    defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string' }),
-    defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2 }),
+    defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string', description: 'Overrides the default category page title in search engines.' }),
+    defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2, description: 'Overrides the default meta description for this category page.' }),
   ],
   preview: {
     select: { title: 'slug' },

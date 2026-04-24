@@ -314,15 +314,22 @@ export async function getJournalCategory(slug: string, lang = 'en') {
 export async function getArticlesByLocation(locationSlug: string, lang = 'en') {
   return safeFetch(
     () => client.fetch(`
-      *[_type == "journalArticle" && linkedLocation->slug.current == $locationSlug] | order(publishedAt desc) [0...4] {
+      *[_type == "journalArticle" && (linkedLocation->slug.current == $locationSlug || $locationSlug in compareLocations[]->slug.current)] | order(publishedAt desc) [0...6] {
         _id,
         "title": coalesce(title[$lang], title.en),
         slug, category, heroImage,
         "excerpt": coalesce(excerpt[$lang], excerpt.en),
-        publishedAt
+        publishedAt,
+        "isComparison": $locationSlug in compareLocations[]->slug.current && linkedLocation->slug.current != $locationSlug
       }
     `, { locationSlug, lang }, { next: { revalidate: 300 } }),
-    demoArticles.filter(a => (a as any).linkedLocation?.slug?.current === locationSlug).slice(0, 4) as any[]
+    demoArticles
+      .filter(a => (a as any).linkedLocation?.slug?.current === locationSlug || ((a as any).compareLocations ?? []).some((l: any) => l.slug?.current === locationSlug))
+      .slice(0, 6)
+      .map(a => ({
+        ...a,
+        isComparison: (a as any).linkedLocation?.slug?.current !== locationSlug && ((a as any).compareLocations ?? []).some((l: any) => l.slug?.current === locationSlug),
+      })) as any[]
   )
 }
 

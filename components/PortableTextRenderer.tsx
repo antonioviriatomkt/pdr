@@ -73,7 +73,7 @@ const components: PortableTextComponents = {
             />
           </div>
           {value.caption && (
-            <figcaption style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginTop: '8px', lineHeight: 1.5 }}>
+            <figcaption style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '8px', lineHeight: 1.5 }}>
               {value.caption}
             </figcaption>
           )}

@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { getAllLocations } from '@/lib/queries'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
+import { JsonLd } from '@/components/JsonLd'
+
+const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
 export const revalidate = 60
 
@@ -29,11 +32,34 @@ export default async function LocationsPage({ params }: { params: Promise<{ lang
 
   const l = dict.locations
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: dict.common.home, item: `${BASE_URL}/${lang}` },
+      { '@type': 'ListItem', position: 2, name: dict.nav.locations, item: `${BASE_URL}/${lang}/locations` },
+    ],
+  }
+
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: l.indexHeading,
+    itemListElement: (locations as any[]).map((loc: any, i: number) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: loc.name,
+      url: `${BASE_URL}/${lang}/locations/${loc.slug.current}`,
+    })),
+  }
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={itemListSchema} />
       <section style={{ borderBottom: '1px solid var(--border)', padding: '80px 0 72px' }}>
         <div className="container-editorial">
-          <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
             {l.indexEyebrow}
           </p>
           <h1 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 400, margin: '0 0 20px', letterSpacing: '-0.02em' }}>
@@ -60,7 +86,7 @@ export default async function LocationsPage({ params }: { params: Promise<{ lang
                 href={`/${lang}/locations/${loc.slug.current}`}
                 style={{ display: 'block', background: 'var(--background)', padding: '28px 24px', textDecoration: 'none' }}
               >
-                <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 8px' }}>
+                <p style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 8px' }}>
                   {loc.region}
                 </p>
                 <h2 style={{ fontSize: '20px', fontWeight: 400, margin: '0 0 10px', letterSpacing: '-0.01em' }}>
@@ -80,7 +106,7 @@ export default async function LocationsPage({ params }: { params: Promise<{ lang
                     {loc.intro}
                   </p>
                 )}
-                <span style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', borderBottom: '1px solid var(--foreground)' }}>
+                <span style={{ fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', borderBottom: '1px solid var(--foreground)' }}>
                   {l.exploreArrow}
                 </span>
               </Link>

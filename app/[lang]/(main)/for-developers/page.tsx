@@ -40,7 +40,7 @@ export default async function ForDevelopersPage({ params }: { params: Promise<{ 
       <JsonLd data={faqSchema} />
       <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0 48px' }}>
         <div className="container-editorial">
-          <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
             {fd.eyebrow}
           </p>
           <h1 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 400, margin: '0 0 16px', letterSpacing: '-0.02em' }}>
@@ -90,7 +90,7 @@ export default async function ForDevelopersPage({ params }: { params: Promise<{ 
           {/* Viriato clients */}
           <div className="fd-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', marginBottom: '56px' }}>
             <div>
-              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+              <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
                 {fd.viriatoClientsEyebrow}
               </div>
               <h2 style={{ fontSize: '22px', fontWeight: 400, margin: '0 0 16px', letterSpacing: '-0.01em' }}>
@@ -105,7 +105,7 @@ export default async function ForDevelopersPage({ params }: { params: Promise<{ 
             </div>
 
             <div>
-              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+              <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
                 {fd.nonClientEyebrow}
               </div>
               <h2 style={{ fontSize: '22px', fontWeight: 400, margin: '0 0 16px', letterSpacing: '-0.01em' }}>
@@ -119,7 +119,7 @@ export default async function ForDevelopersPage({ params }: { params: Promise<{ 
               </p>
               <Link
                 href={`/${lang}/contact`}
-                style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--background)', background: 'var(--foreground)', padding: '12px 24px', textDecoration: 'none', display: 'inline-block' }}
+                style={{ fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--background)', background: 'var(--foreground)', padding: '12px 24px', textDecoration: 'none', display: 'inline-block' }}
               >
                 {fd.submitBtn}
               </Link>

@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
+import { JsonLd } from '@/components/JsonLd'
+
+const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
 export const revalidate = 60
 
@@ -24,11 +27,26 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
   const dict = await getDictionary(lang)
   const a = dict.about
 
+  const aboutSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: a.heading,
+    description: a.subheading,
+    url: `${BASE_URL}/${lang}/about`,
+    inLanguage: lang === 'pt' ? 'pt-PT' : 'en',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Portugal Developments Review by Viriato',
+      url: BASE_URL,
+    },
+  }
+
   return (
     <>
+      <JsonLd data={aboutSchema} />
       <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0 48px' }}>
         <div className="container-editorial">
-          <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
             {a.eyebrow}
           </p>
           <h1 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 400, margin: '0 0 16px', letterSpacing: '-0.02em' }}>
@@ -63,7 +81,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               <p style={{ fontSize: '15px', lineHeight: 1.7, color: 'var(--muted)', margin: '0 0 12px' }}>
                 {a.forBuyers1}
               </p>
-              <Link href={`/${lang}/contact`} style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}>
+              <Link href={`/${lang}/contact`} style={{ fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}>
                 {dict.common.contactUs}
               </Link>
             </div>
@@ -84,7 +102,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
             </p>
 
             <div style={{ borderTop: '1px solid var(--border)', marginTop: '32px', paddingTop: '32px' }}>
-              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+              <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
                 {a.audiencesHeading}
               </div>
               {a.audiences.map((item: string, i: number) => (
@@ -96,7 +114,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
             </div>
 
             <div style={{ borderTop: '1px solid var(--border)', marginTop: '24px', paddingTop: '24px' }}>
-              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+              <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
                 {a.locationsCoveredHeading}
               </div>
               {['Lisbon', 'Porto', 'Gaia', 'Cascais', 'Algarve', 'Comporta'].map((loc, i) => (

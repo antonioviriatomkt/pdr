@@ -130,7 +130,7 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
       {/* Hero */}
       <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0 48px' }}>
         <div className="container-editorial">
-          <nav style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginBottom: '24px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+          <nav style={{ fontSize: '12px', color: 'var(--muted)', marginBottom: '24px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             <Link href={`/${lang}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{dict.common.home}</Link>
             <span>›</span>
             <Link href={`/${lang}/locations`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{l.breadcrumbLocations}</Link>
@@ -150,7 +150,7 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
             <span style={{ color: 'var(--foreground)' }}>{loc.name}</span>
           </nav>
 
-          <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
             {loc.region}
           </p>
           <h1 style={{ fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: 400, margin: '0 0 20px', letterSpacing: '-0.02em' }}>
@@ -161,7 +161,7 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
           </p>
           {loc.parentLocation && (
             <div style={{ marginTop: '24px' }}>
-              <Link href={`/${lang}/locations/${loc.parentLocation.slug.current}`} style={{ fontSize: '13px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+              <Link href={`/${lang}/locations/${loc.parentLocation.slug.current}`} style={{ fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
                 {l.backTo.replace('{name}', loc.parentLocation.name)}
               </Link>
             </div>
@@ -179,12 +179,12 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
               {children.map((child: any) => (
                 <Link key={child._id} href={`/${lang}/locations/${child.slug.current}`} style={{ display: 'block', background: 'var(--background)', padding: '20px', textDecoration: 'none' }}>
-                  <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
+                  <div style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
                     {child.locationType === 'sub-region' ? child.locationType : loc.name}
                   </div>
                   <div style={{ fontSize: '18px', fontWeight: 400, marginBottom: '8px' }}>{child.name}</div>
                   {child.intro && (
-                    <p style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: 0, lineHeight: 1.5 }}>
+                    <p style={{ fontSize: '13px', color: 'var(--muted)', margin: 0, lineHeight: 1.5 }}>
                       {child.intro.slice(0, 80)}…
                     </p>
                   )}
@@ -203,10 +203,10 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
           </h2>
           {developments.length === 0 ? (
             <div style={{ padding: '48px 0', borderTop: '1px solid var(--border)' }}>
-              <p style={{ fontSize: '15px', color: 'var(--muted)', fontFamily: 'sans-serif' }}>
+              <p style={{ fontSize: '15px', color: 'var(--muted)' }}>
                 {l.noDevelopments}
               </p>
-              <Link href={`/${lang}/developments`} style={{ fontSize: '13px', fontFamily: 'sans-serif', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)', marginTop: '12px', display: 'inline-block' }}>
+              <Link href={`/${lang}/developments`} style={{ fontSize: '13px', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)', marginTop: '12px', display: 'inline-block' }}>
                 {dict.common.allDevelopments}
               </Link>
             </div>
@@ -229,7 +229,14 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '40px' }}>
               {articles.map((a: any) => (
-                <ArticleCard key={a._id} article={a} lang={lang} categories={categories} />
+                <div key={a._id}>
+                  {a.isComparison && (
+                    <p style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 8px' }}>
+                      {l.comparisonLabel} —
+                    </p>
+                  )}
+                  <ArticleCard article={a} lang={lang} categories={categories} />
+                </div>
               ))}
             </div>
           </div>
@@ -246,7 +253,7 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
               {nearby.map((n: any) => (
                 <Link key={n._id} href={`/${lang}/locations/${n.slug.current}`} style={{ display: 'block', background: 'var(--background)', padding: '20px', textDecoration: 'none' }}>
-                  <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
+                  <div style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
                     {n.region}
                   </div>
                   <div style={{ fontSize: '18px', fontWeight: 400 }}>{n.name}</div>

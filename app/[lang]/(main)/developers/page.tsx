@@ -50,18 +50,18 @@ export default async function DevelopersPage({ params }: { params: Promise<{ lan
       {/* Hero */}
       <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0 48px' }}>
         <div className="container-editorial">
-          <nav style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginBottom: '20px', display: 'flex', gap: '8px' }}>
+          <nav style={{ fontSize: '12px', color: 'var(--muted)', marginBottom: '20px', display: 'flex', gap: '8px' }}>
             <Link href={`/${lang}`} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{dict.common.home}</Link>
             <span>›</span>
             <span>{d.breadcrumbDevelopers}</span>
           </nav>
-          <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
             {d.eyebrow}
           </p>
           <h1 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 400, margin: '0 0 24px', letterSpacing: '-0.02em' }}>
             {d.indexHeading}
           </h1>
-          <p style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--muted)', maxWidth: '680px', margin: '0 0 16px', fontFamily: 'sans-serif' }}>
+          <p style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--muted)', maxWidth: '680px', margin: '0 0 16px' }}>
             {d.indexSubheading}
           </p>
           <p style={{ fontSize: '15px', lineHeight: 1.8, color: 'var(--muted)', maxWidth: '680px', margin: 0 }}>

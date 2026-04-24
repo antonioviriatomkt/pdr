@@ -1,8 +1,27 @@
 import type { Metadata } from 'next'
+import localFont from 'next/font/local'
 import '../globals.css'
 import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 import { JsonLd } from '@/components/JsonLd'
 import { RouteFade } from '@/components/RouteFade'
+
+const dmSans = localFont({
+  src: [
+    { path: '../fonts/DMSans-VariableFont_opsz,wght.ttf', style: 'normal' },
+    { path: '../fonts/DMSans-Italic-VariableFont_opsz,wght.ttf', style: 'italic' },
+  ],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const instrumentSerif = localFont({
+  src: [
+    { path: '../fonts/InstrumentSerif-Regular.ttf', weight: '400', style: 'normal' },
+    { path: '../fonts/InstrumentSerif-Italic.ttf', weight: '400', style: 'italic' },
+  ],
+  variable: '--font-serif',
+  display: 'swap',
+})
 
 const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
@@ -63,7 +82,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   }
 
   return (
-    <html lang={lang === 'pt' ? 'pt-PT' : lang}>
+    <html lang={lang === 'pt' ? 'pt-PT' : lang} className={`${dmSans.variable} ${instrumentSerif.variable}`}>
       <body>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />

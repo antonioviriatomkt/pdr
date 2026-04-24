@@ -38,8 +38,7 @@ export default function DevelopersGrid({ developers, lang, labels }: DevelopersG
     border: 'none',
     cursor: 'pointer',
     fontSize: '12px',
-    fontFamily: 'sans-serif',
-    letterSpacing: '0.06em',
+        letterSpacing: '0.06em',
     textTransform: 'uppercase' as const,
     color: active ? 'var(--foreground)' : 'var(--muted)',
     borderBottom: active ? '1px solid var(--foreground)' : '1px solid transparent',
@@ -63,7 +62,7 @@ export default function DevelopersGrid({ developers, lang, labels }: DevelopersG
       </div>
 
       {filtered.length === 0 ? (
-        <p style={{ fontSize: '15px', color: 'var(--muted)', fontFamily: 'sans-serif' }}>{labels.noDevelopers}</p>
+        <p style={{ fontSize: '15px', color: 'var(--muted)' }}>{labels.noDevelopers}</p>
       ) : (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1px', background: 'var(--border)' }}>
           {filtered.map(dev => (

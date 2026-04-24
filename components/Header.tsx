@@ -33,10 +33,10 @@ export default function Header({ lang, nav }: HeaderProps) {
           {/* Logo */}
           <Link href={`/${lang}`} style={{ textDecoration: 'none' }}>
             <div>
-              <span style={{ fontSize: '13px', fontFamily: '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)' }}>
+              <span style={{ fontSize: '13px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)' }}>
                 Portugal Developments Review
               </span>
-              <span style={{ fontSize: '11px', color: 'var(--muted)', marginLeft: '6px', fontFamily: '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif', letterSpacing: '0.04em' }}>
+              <span style={{ fontSize: '11px', color: 'var(--muted)', marginLeft: '6px', letterSpacing: '0.04em' }}>
                 by Viriato
               </span>
             </div>
@@ -48,27 +48,27 @@ export default function Header({ lang, nav }: HeaderProps) {
               <Link
                 key={href}
                 href={href}
-                style={{ fontSize: '13px', fontFamily: '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif', color: 'var(--muted)', letterSpacing: '0.02em', textDecoration: 'none' }}
+                style={{ fontSize: '13px', color: 'var(--muted)', letterSpacing: '0.02em', textDecoration: 'none' }}
               >
                 {label}
               </Link>
             ))}
             <Link
               href={`/${lang}/contact`}
-              style={{ fontSize: '12px', fontFamily: '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--background)', background: 'var(--foreground)', padding: '8px 16px', textDecoration: 'none' }}
+              style={{ fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--background)', background: 'var(--foreground)', padding: '8px 16px', textDecoration: 'none' }}
             >
               {nav.enquire}
             </Link>
 
             {/* Language switcher */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginLeft: '8px' }}>
-              <span style={{ fontSize: '11px', fontFamily: '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)', fontWeight: 500 }}>
+              <span style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)', fontWeight: 500 }}>
                 {lang.toUpperCase()}
               </span>
               <span style={{ fontSize: '11px', color: 'var(--border)', userSelect: 'none' }}>·</span>
               <Link
                 href={otherLangPath}
-                style={{ fontSize: '11px', fontFamily: '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none' }}
+                style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none' }}
               >
                 {otherLang.toUpperCase()}
               </Link>
@@ -98,21 +98,21 @@ export default function Header({ lang, nav }: HeaderProps) {
                 key={href}
                 href={href}
                 onClick={() => setMobileOpen(false)}
-                style={{ display: 'block', padding: '12px 0', fontSize: '14px', fontFamily: '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif', color: 'var(--foreground)', borderBottom: '1px solid var(--border)', textDecoration: 'none' }}
+                style={{ display: 'block', padding: '12px 0', fontSize: '14px', color: 'var(--foreground)', borderBottom: '1px solid var(--border)', textDecoration: 'none' }}
               >
                 {label}
               </Link>
             ))}
             {/* Mobile language switcher */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', paddingTop: '16px' }}>
-              <span style={{ fontSize: '12px', fontFamily: '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)', fontWeight: 500 }}>
+              <span style={{ fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)', fontWeight: 500 }}>
                 {lang.toUpperCase()}
               </span>
               <span style={{ fontSize: '12px', color: 'var(--border)', userSelect: 'none' }}>·</span>
               <Link
                 href={otherLangPath}
                 onClick={() => setMobileOpen(false)}
-                style={{ fontSize: '12px', fontFamily: '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none' }}
+                style={{ fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none' }}
               >
                 {otherLang.toUpperCase()}
               </Link>

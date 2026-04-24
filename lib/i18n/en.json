@@ -112,6 +112,7 @@
       "allTypes": "All Types",
       "allStatus": "All Status",
       "clearFilters": "Clear filters",
+      "offPlanGuide": "Weighing off-plan vs ready?",
       "sort": "Sort:",
       "sortFeatured": "Featured",
       "sortNewest": "Newest"
@@ -186,6 +187,7 @@
     "developmentsHeading": "Curated Developments",
     "noDevelopments": "No curated developments in this location yet.",
     "journalHeading": "Related Reading",
+    "comparisonLabel": "Comparison",
     "nearbyHeading": "Nearby Locations",
     "exploreArrow": "Explore →",
     "neighbourhoodsHeading": "Neighbourhoods",
@@ -207,10 +209,13 @@
       "buyer-guides": "Buyer Guides"
     },
     "guidesHeading": "Guides",
+    "marketIntelligenceHeading": "Market Intelligence",
+    "marketNoteEyebrow": "Market note",
     "article": {
       "relatedDevelopments": "Related Developments",
       "relatedLocation": "Location"
-    }
+    },
+    "noArticlesInCategory": "No articles in this category yet."
   },
 
   "contact": {
@@ -414,11 +419,15 @@
     },
     "developments": {
       "title": "New Developments in Portugal",
-      "description": "Browse curated new residential developments across Portugal — Lisbon, Porto, Cascais, Algarve, Comporta, and Gaia. Filtered by location, type, and status."
+      "description": "Browse curated new residential developments across Portugal — Lisbon, Porto, Cascais, Algarve, Comporta, and Gaia. Filtered by location, type, and status.",
+      "descriptionFallback": "Discover {name}, a curated new development in {location}, Portugal."
     },
     "journal": {
       "title": "Journal — Insights on New Developments in Portugal",
-      "description": "Editorial insights on new developments, area guides, investment explainers, architecture, and branded residences across Portugal."
+      "description": "Editorial insights on new developments, area guides, investment explainers, architecture, and branded residences across Portugal.",
+      "articleDescriptionSuffix": "— Portugal Developments Review Journal",
+      "categoryTitle": "{label} — Journal | Portugal Developments Review",
+      "categoryDescription": "Editorial articles about {label} covering new developments across Portugal."
     },
     "locationsIndex": {
       "title": "New Development Locations in Portugal",
@@ -446,7 +455,8 @@
     },
     "developers": {
       "title": "Developer Profiles — Portugal Developments Review",
-      "description": "Editorial profiles of the developers behind Portugal's most considered new residential projects — selected for track record, delivery integrity, and project coherence."
+      "description": "Editorial profiles of the developers behind Portugal's most considered new residential projects — selected for track record, delivery integrity, and project coherence.",
+      "profileTitle": "{name} — Developer Profile | Portugal Developments Review"
     }
   },
 

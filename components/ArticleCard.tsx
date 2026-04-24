@@ -30,7 +30,7 @@ export default function ArticleCard({ article, variant = 'default', lang, catego
     return (
       <Link href={href} style={{ display: 'block', textDecoration: 'none' }}>
         <article style={{ borderTop: '1px solid var(--border)', paddingTop: '16px', paddingBottom: '16px' }}>
-          <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
+          <div style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
             {label} · {formatDate(article.publishedAt, lang)}
           </div>
           <h4 style={{ fontSize: '16px', fontWeight: 400, margin: 0, lineHeight: 1.3 }}>{article.title}</h4>
@@ -53,14 +53,14 @@ export default function ArticleCard({ article, variant = 'default', lang, catego
             />
           ) : (
             <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+              <span style={{ fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                 {label}
               </span>
             </div>
           )}
         </div>
 
-        <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>
+        <div style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>
           {label}
           {article.linkedLocation && ` · ${article.linkedLocation.name}`}
         </div>
@@ -75,7 +75,7 @@ export default function ArticleCard({ article, variant = 'default', lang, catego
           </p>
         )}
 
-        <span style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>
+        <span style={{ fontSize: '12px', color: 'var(--muted)' }}>
           {formatDate(article.publishedAt, lang)}
         </span>
       </article>

@@ -9,6 +9,7 @@ export const lifestyle = defineType({
       name: 'tag',
       title: 'Lifestyle Tag',
       type: 'string',
+      description: 'Must match exactly one of the lifestyleTag values used on development records.',
       options: {
         list: [
           'Golf', 'Beachfront', 'Marina', 'City Centre', 'Countryside',
@@ -21,6 +22,7 @@ export const lifestyle = defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      description: 'URL-safe identifier auto-generated from the tag. Used in the /lifestyle/{slug} route.',
       options: { source: 'tag' },
       validation: r => r.required(),
     }),
@@ -34,9 +36,9 @@ export const lifestyle = defineType({
         defineField({ name: 'pt', title: 'Portuguese', type: 'text', rows: 4 }),
       ],
     }),
-    defineField({ name: 'heroImage', title: 'Hero Image', type: 'image', options: { hotspot: true } }),
-    defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string' }),
-    defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2 }),
+    defineField({ name: 'heroImage', title: 'Hero Image', type: 'image', description: 'Optional hero image for the lifestyle landing page. Displayed at 16:7 aspect ratio.', options: { hotspot: true } }),
+    defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string', description: 'Overrides the default page title in search engines. Leave blank to use the auto-generated title.' }),
+    defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2, description: 'Overrides the default meta description for this lifestyle page.' }),
     defineField({
       name: 'noindex',
       title: 'Hide from Search Engines (noindex)',

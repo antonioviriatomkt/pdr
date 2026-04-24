@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import ContactForm from './ContactForm'
 import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
+import { JsonLd } from '@/components/JsonLd'
+
+const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
 export const revalidate = 60
 
@@ -24,11 +27,27 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
   const dict = await getDictionary(lang)
   const c = dict.contact
 
+  const contactSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: c.heading,
+    description: c.subheading,
+    url: `${BASE_URL}/${lang}/contact`,
+    inLanguage: lang === 'pt' ? 'pt-PT' : 'en',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'Portugal Developments Review by Viriato',
+      url: BASE_URL,
+      email: 'contact@pdr.pt',
+    },
+  }
+
   return (
     <>
+      <JsonLd data={contactSchema} />
       <section style={{ borderBottom: '1px solid var(--border)', padding: '56px 0 48px' }}>
         <div className="container-editorial">
-          <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 10px' }}>
             {c.eyebrow}
           </p>
           <h1 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 400, margin: '0 0 16px', letterSpacing: '-0.02em' }}>
@@ -48,7 +67,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
 
           <div className="contact-aside" style={{ borderLeft: '1px solid var(--border)', paddingLeft: '80px' }}>
             <div style={{ marginBottom: '40px' }}>
-              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
+              <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
                 {c.whatHappensNext}
               </div>
               <p style={{ fontSize: '15px', lineHeight: 1.7, color: 'var(--muted)' }}>
@@ -57,7 +76,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
             </div>
 
             <div style={{ marginBottom: '40px' }}>
-              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
+              <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
                 {c.responseTime}
               </div>
               <p style={{ fontSize: '15px', lineHeight: 1.7, color: 'var(--muted)' }}>
@@ -66,7 +85,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
             </div>
 
             <div style={{ borderTop: '1px solid var(--border)', paddingTop: '32px' }}>
-              <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
+              <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
                 {c.otherWays}
               </div>
               <div style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: 2 }}>

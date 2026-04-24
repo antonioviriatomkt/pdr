@@ -7,8 +7,8 @@ export const developer = defineType({
   fields: [
     defineField({ name: 'name', title: 'Company Name', type: 'string', validation: r => r.required() }),
     defineField({ name: 'slug', title: 'Slug', type: 'slug', options: { source: 'name' }, validation: r => r.required() }),
-    defineField({ name: 'logo', title: 'Logo', type: 'image' }),
-    defineField({ name: 'description', title: 'Description', type: 'text', rows: 3 }),
+    defineField({ name: 'logo', title: 'Logo', type: 'image', description: 'Company logo used in developer cards and structured data. Transparent PNG preferred.' }),
+    defineField({ name: 'description', title: 'Description', type: 'text', rows: 3, description: 'Internal reference description. Not shown on the public site.' }),
     defineField({
       name: 'shortDescription',
       title: 'Short Description',
@@ -31,8 +31,8 @@ export const developer = defineType({
     }),
     defineField({ name: 'foundedYear', title: 'Founded Year', type: 'number', description: 'Year the company was founded.' }),
     defineField({ name: 'headquartersCity', title: 'Headquarters City', type: 'string', description: 'Primary city of operation or HQ.' }),
-    defineField({ name: 'website', title: 'Website URL', type: 'url' }),
-    defineField({ name: 'isViriatoClient', title: 'Viriato Client', type: 'boolean', initialValue: false }),
+    defineField({ name: 'website', title: 'Website URL', type: 'url', description: 'Primary developer website. Shown as an external link on the profile page (rel="nofollow noopener").' }),
+    defineField({ name: 'isViriatoClient', title: 'Viriato Client', type: 'boolean', description: 'Enables the Viriato client badge on the developer card and profile page.', initialValue: false }),
     defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string', description: 'Overrides the default page title in search engines.' }),
     defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2, description: 'Overrides the default meta description.' }),
     defineField({ name: 'seoImage', title: 'SEO Image', type: 'image', options: { hotspot: true }, description: 'OG image for social sharing.' }),

@@ -37,8 +37,7 @@ export default function ContactForm({ dict }: ContactFormProps) {
     width: '100%',
     padding: '11px 14px',
     fontSize: '14px',
-    fontFamily: 'sans-serif',
-    border: '1px solid var(--border)',
+        border: '1px solid var(--border)',
     background: 'var(--background)',
     color: 'var(--foreground)',
     display: 'block',
@@ -47,8 +46,7 @@ export default function ContactForm({ dict }: ContactFormProps) {
 
   const labelStyle = {
     fontSize: '11px',
-    fontFamily: 'sans-serif',
-    letterSpacing: '0.08em',
+        letterSpacing: '0.08em',
     textTransform: 'uppercase' as const,
     color: 'var(--muted)',
     display: 'block',
@@ -138,7 +136,7 @@ export default function ContactForm({ dict }: ContactFormProps) {
       </div>
 
       {formState === 'error' && (
-        <p style={{ fontSize: '14px', fontFamily: 'sans-serif', color: '#B91C1C', margin: '0 0 16px' }}>
+        <p style={{ fontSize: '14px', color: '#B91C1C', margin: '0 0 16px' }}>
           {dict.errorMessage}
         </p>
       )}
@@ -152,8 +150,7 @@ export default function ContactForm({ dict }: ContactFormProps) {
           background: 'var(--foreground)',
           color: 'var(--background)',
           fontSize: '13px',
-          fontFamily: 'sans-serif',
-          letterSpacing: '0.08em',
+                    letterSpacing: '0.08em',
           textTransform: 'uppercase',
           border: 'none',
           cursor: formState === 'submitting' ? 'not-allowed' : 'pointer',
@@ -163,7 +160,7 @@ export default function ContactForm({ dict }: ContactFormProps) {
         {formState === 'submitting' ? dict.submitting : dict.submit}
       </button>
 
-      <p style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', margin: '12px 0 0', lineHeight: 1.5 }}>
+      <p style={{ fontSize: '12px', color: 'var(--muted)', margin: '12px 0 0', lineHeight: 1.5 }}>
         {dict.privacyNote}
       </p>
     </form>

@@ -374,6 +374,142 @@ export const demoArticles = [
     publishedAt: '2024-03-01',
     linkedLocation: null,
   },
+  {
+    _id: 'a10',
+    title: 'Lisbon or the Algarve: Two Different Arguments for Portugal Property',
+    slug: { current: 'lisbon-or-algarve-property-guide' },
+    category: 'second-home',
+    excerpt: 'Two of Portugal\'s most compelling residential propositions — the capital and the coast — pull in different directions. We examine how international buyers are choosing between them, and what each location actually offers at the top of the market.',
+    publishedAt: '2024-04-10',
+    linkedLocation: { name: 'Lisbon', slug: { current: 'lisbon' } },
+    compareLocations: [
+      { name: 'Lisbon', slug: { current: 'lisbon' } },
+      { name: 'Algarve', slug: { current: 'algarve' } },
+    ],
+  },
+  {
+    _id: 'a11',
+    title: 'Off-Plan vs Ready-to-Move: What the Portuguese Market Currently Offers',
+    slug: { current: 'off-plan-vs-ready-portugal-property' },
+    category: 'investment',
+    excerpt: 'The choice between committing to an off-plan project and acquiring a completed property is not simply a question of patience. It is a question of risk profile, capital deployment, and what the current market actually makes available at each price point.',
+    publishedAt: '2024-04-05',
+    linkedLocation: null,
+  },
+  {
+    _id: 'a12',
+    title: 'Comporta: The Investment Case vs the Lifestyle Case',
+    slug: { current: 'comporta-investment-versus-lifestyle' },
+    category: 'investment',
+    excerpt: 'Comporta is a destination that resists simple categorisation. For some buyers it is the most credible investment argument in Portugal; for others it is a lifestyle acquisition that happens to hold value. We examine both positions — and what the difference means for how you should buy.',
+    publishedAt: '2024-03-28',
+    linkedLocation: { name: 'Comporta', slug: { current: 'comporta' } },
+    compareLocations: [
+      { name: 'Comporta', slug: { current: 'comporta' } },
+      { name: 'Cascais', slug: { current: 'cascais' } },
+    ],
+  },
+  {
+    _id: 'a13',
+    title: 'Portugal New Developments — Market Note, H1 2026',
+    slug: { current: 'portugal-new-developments-market-note-h1-2026' },
+    category: 'market-intelligence',
+    isPillar: false,
+    excerpt: 'PDR\'s first-half 2026 editorial note on the Portuguese new residential development market — supply conditions, pricing dynamics, and where the editorial team sees value across Lisbon, the Algarve, and Comporta.',
+    publishedAt: '2026-04-24',
+    linkedLocation: null,
+    body: [
+      {
+        _type: 'block', _key: 'h1', style: 'h2', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', text: 'Market Context', marks: [] }],
+      },
+      {
+        _type: 'block', _key: 'p1', style: 'normal', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', marks: [], text: 'The Portuguese new residential development market enters the first half of 2026 with supply consolidated across its principal markets and premium-segment pricing holding firm despite broader European macro uncertainty. The pipeline across Lisbon, the Algarve, and Comporta remains selective — the total number of developments meeting institutional quality thresholds has not inflated to match the wider volume increase. Two persistent structural pressures — construction cost escalation and extended planning timelines — continue to compress developer margins without yet disrupting the pricing environment for completed or near-completion product. International buyer activity has remained consistent through Q1 2026, with northern European and American buyer segments both active and enquiry rates broadly in line with the same period in 2025.' }],
+      },
+      {
+        _type: 'block', _key: 'h2', style: 'h2', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', text: 'Key Observations', marks: [] }],
+      },
+      {
+        _type: 'block', _key: 'p2', style: 'normal', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', marks: [], text: '— Lisbon\'s premium residential supply is tightening. Príncipe Real and Chiado-facing projects that reached the market in late 2025 and early 2026 are achieving absorption timelines that reflect genuine scarcity. The buyer profile in this sub-segment — typically northern European, 45–60, second-home or investment-motivated — has not softened in response to higher borrowing costs in their home markets. The relative pricing of Lisbon\'s best addresses, compared to comparable product in Barcelona or Milan, continues to underpin demand at the top of the segment.' }],
+      },
+      {
+        _type: 'block', _key: 'p3', style: 'normal', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', marks: [], text: '— The Algarve is experiencing a bifurcation. Golf-adjacent villa product within the Golden Triangle — priced above €1.5M for a 4- or 5-bedroom configuration — is absorbing in under eighteen months from launch. Product below this threshold, or positioned outside the three core resort zones, is taking significantly longer. This is a market where location specificity is becoming more important, not less, and where developer positioning relative to the established resort anchors carries material consequence for absorption pace.' }],
+      },
+      {
+        _type: 'block', _key: 'p4', style: 'normal', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', marks: [], text: '— Comporta remains the most disciplined supply market in Portugal. The absence of new planning permissions, combined with a buyer community that explicitly values low-density preservation, is sustaining price premiums across all product types. This is not a market driven by speculative demand; it is sustained by buyers who have made a deliberate lifestyle and capital choice, and whose sensitivity to oversupply means that any planning relaxation would be received as a negative signal rather than a positive one.' }],
+      },
+      {
+        _type: 'block', _key: 'p5', style: 'normal', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', marks: [], text: '— The Silver Coast is moving from an emerging story to an establishing one. Enquiry from buyers priced out of Comporta — and increasingly aware of the Atlantic-facing, lower-density proposition along the coast north of Lisbon — is now material. No single anchor project has yet defined the premium end of this market, which represents a genuine first-mover opportunity for the developer who understands the positioning correctly and executes with the architectural rigour the buyer segment requires.' }],
+      },
+      {
+        _type: 'block', _key: 'h3', style: 'h2', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', text: 'Notable Pipeline', marks: [] }],
+      },
+      {
+        _type: 'block', _key: 'p6', style: 'normal', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', marks: [], text: 'Three projects across PDR\'s curated selection are indicative of the quality register the market is currently producing:' }],
+      },
+      {
+        _type: 'block', _key: 'p7', style: 'normal',
+        markDefs: [{ _key: 'lk1', _type: 'link', href: '/en/developments/encosta-do-bairro' }],
+        children: [
+          { _type: 'span', _key: 's1', text: '', marks: [] },
+          { _type: 'span', _key: 's2', text: 'Encosta do Bairro', marks: ['lk1'] },
+          { _type: 'span', _key: 's3', marks: [], text: ' in Lisbon continues to represent the most precise articulation of the Príncipe Real proposition — 24 apartments designed by a practice with genuine understanding of the neighbourhood\'s scale and material character. With three units remaining, the project is a live signal of how quickly considered supply is absorbed in this specific address.' },
+        ],
+      },
+      {
+        _type: 'block', _key: 'p8', style: 'normal',
+        markDefs: [{ _key: 'lk2', _type: 'link', href: '/en/developments/quinta-da-comporta' }],
+        children: [
+          { _type: 'span', _key: 's1', text: '', marks: [] },
+          { _type: 'span', _key: 's2', text: 'Quinta da Comporta', marks: ['lk2'] },
+          { _type: 'span', _key: 's3', marks: [], text: ' remains the clearest expression of Comporta\'s ecological proposition. Designed by Aires Mateus within a 40-hectare natural reserve, the project\'s extended delivery timeline is a function of its ecological commitment and its state-owned development structure rather than developer difficulty. For buyers who understand what Comporta is and why supply will not grow to meet demand, this remains a compelling proposition at its price point.' },
+        ],
+      },
+      {
+        _type: 'block', _key: 'p9', style: 'normal',
+        markDefs: [{ _key: 'lk3', _type: 'link', href: '/en/developments/vale-verde-algarve' }],
+        children: [
+          { _type: 'span', _key: 's1', text: '', marks: [] },
+          { _type: 'span', _key: 's2', text: 'Vale Verde Algarve', marks: ['lk3'] },
+          { _type: 'span', _key: 's3', marks: [], text: ' in the Golden Triangle brings a private 9-hole course and 20 villas to the most established premium resort zone in Portugal. Phase 1 absorption has been strong, and the project\'s position within the Golden Triangle sub-market — which continues to demonstrate the resilience of golf-integrated product — supports the second-phase pricing structure.' },
+        ],
+      },
+      {
+        _type: 'block', _key: 'h4', style: 'h2', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', text: 'Where PDR Sees Value', marks: [] }],
+      },
+      {
+        _type: 'block', _key: 'p10', style: 'normal',
+        markDefs: [
+          { _key: 'lk4', _type: 'link', href: '/en/locations/lisbon' },
+          { _key: 'lk5', _type: 'link', href: '/en/locations/algarve' },
+        ],
+        children: [
+          { _type: 'span', _key: 's1', text: 'On balance, ', marks: [] },
+          { _type: 'span', _key: 's2', text: 'Lisbon', marks: ['lk4'] },
+          { _type: 'span', _key: 's3', marks: [], text: '\'s premium inner-city stock — particularly the small-scale, architecturally authored projects in the historic quartiers — represents the most compelling near-term combination of lifestyle value and capital preservation for the buyer with a long-term hold mandate. The scarcity argument is structural rather than cyclical, and the buyer profile is deep enough to sustain pricing through a macro headwind. In the resort context, ' },
+          { _type: 'span', _key: 's4', text: 'Algarve', marks: ['lk5'] },
+          { _type: 'span', _key: 's5', marks: [], text: ' villa product within the Golden Triangle and Vale do Lobo micro-markets continues to demonstrate the kind of consistent demand and rental yield performance that warrants a medium-term investment view. The bifurcation noted above means that selectivity on specific location within the Algarve is now more important than it was in 2022–23 when the entire region was absorbing indiscriminately.' },
+        ],
+      },
+      {
+        _type: 'block', _key: 'h5', style: 'h2', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', text: 'PDR\'s Forward View', marks: [] }],
+      },
+      {
+        _type: 'block', _key: 'p11', style: 'normal', markDefs: [],
+        children: [{ _type: 'span', _key: 's0', marks: [], text: 'The H2 2026 pipeline will determine whether the current supply tightness in Lisbon and Comporta represents a temporary condition or a structural one. A small number of new planning applications in Príncipe Real and two further Comporta projects are expected to reach resolution by year end. PDR does not expect the pricing environment to soften materially before this supply comes to market. For buyers with capital deployed or available now, the premium for certainty — purchasing into a project with delivery visibility, an established developer, and a clear absorption signal — remains the clearest argument for acting in the current cycle rather than waiting for future supply that may or may not emerge on the terms the market currently anticipates.' }],
+      },
+    ],
+  },
 ]
 
 export const demoLifestyles = [
