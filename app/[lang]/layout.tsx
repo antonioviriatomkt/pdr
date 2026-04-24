@@ -14,10 +14,10 @@ const dmSans = localFont({
   display: 'swap',
 })
 
-const instrumentSerif = localFont({
+const playfairDisplay = localFont({
   src: [
-    { path: '../fonts/InstrumentSerif-Regular.ttf', weight: '400', style: 'normal' },
-    { path: '../fonts/InstrumentSerif-Italic.ttf', weight: '400', style: 'italic' },
+    { path: '../fonts/PlayfairDisplay-VariableFont_wght.ttf', style: 'normal' },
+    { path: '../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf', style: 'italic' },
   ],
   variable: '--font-serif',
   display: 'swap',
@@ -82,7 +82,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   }
 
   return (
-    <html lang={lang === 'pt' ? 'pt-PT' : lang} className={`${dmSans.variable} ${instrumentSerif.variable}`}>
+    <html lang={lang === 'pt' ? 'pt-PT' : lang} className={`${dmSans.variable} ${playfairDisplay.variable}`}>
       <body>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
