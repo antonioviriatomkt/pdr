@@ -1,6 +1,6 @@
 # Motion Design — Task List
 
-Scope: Option 2 (minimal, invisible motion). One route-change opacity fade. Nothing else.
+Scope: Option 2 - (minimal, invisible motion). One route-change opacity fade. Nothing else.
 
 Reference: `docs/motion-design-system.md`.
 
