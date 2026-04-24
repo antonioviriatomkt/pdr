@@ -98,7 +98,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                 {label}
               </Link>
             ))}
-            <Link href={`/${lang}/developments`} className="location-quicknav-all" style={{ fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+            <Link href={`/${lang}/developments`} className="location-quicknav-all" style={{ flexBasis: '100%', fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)', display: 'inline-block', width: 'fit-content' }}>
               {dict.common.allDevelopments}
             </Link>
           </div>
@@ -256,7 +256,6 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       </section>
       <style>{`
         @media (max-width: 768px) {
-          .location-quicknav { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
           .approach-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
           .approach-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--border); padding-top: 28px !important; }
         }
