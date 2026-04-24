@@ -20,6 +20,7 @@ export default function Header({ lang, nav }: HeaderProps) {
   const navLinks = [
     { href: `/${lang}/developments`, label: nav.developments },
     { href: `/${lang}/locations`, label: nav.locations },
+    { href: `/${lang}/developers`, label: nav.developers },
     { href: `/${lang}/journal`, label: nav.journal },
     { href: `/${lang}/methodology`, label: nav.methodology },
     { href: `/${lang}/about`, label: nav.about },

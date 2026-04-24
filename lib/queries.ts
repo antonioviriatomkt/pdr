@@ -1,6 +1,7 @@
 import { client } from './sanity.client'
 import {
   demoLocations,
+  demoDevelopers,
   demoDevelopments,
   demoArticles,
   demoJournalCategories,
@@ -25,7 +26,7 @@ export async function getFeaturedDevelopments(lang = 'en') {
         "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
         primaryCta,
         location->{ name, slug },
-        developer->{ name }
+        developer->{ name, slug }
       }
     `, { lang }, { next: { revalidate: 300 } }),
     demoDevelopments.filter(d => d.isFeatured) as any[]
@@ -64,7 +65,7 @@ export async function getAllDevelopments(lang = 'en', filters?: {
         "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
         primaryCta,
         location->{ name, slug },
-        developer->{ name }
+        developer->{ name, slug }
       }
     `, { lang }, { next: { revalidate: 300 } }),
     fallback as any[]
@@ -85,7 +86,7 @@ export async function getDevelopmentBySlug(slug: string, lang = 'en') {
         keyFacts, primaryCta,
         publishedAt,
         location->{ name, slug, "intro": coalesce(intro[$lang], intro.en), region },
-        developer->{ name, logo, description, website, isViriatoClient },
+        developer->{ name, slug, logo, description, website, isViriatoClient },
         relatedDevelopments[]->{ name, slug, heroImage, status, type, priceDisplay, location->{ name } },
         relatedArticles[]->{ "title": coalesce(title[$lang], title.en), slug, heroImage, category, "excerpt": coalesce(excerpt[$lang], excerpt.en), publishedAt },
         seoTitle, seoDescription, seoImage, noindex,
@@ -267,7 +268,7 @@ export async function getDevelopmentsByLifestyle(tag: string, lang = 'en') {
         "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
         primaryCta,
         location->{ name, slug },
-        developer->{ name }
+        developer->{ name, slug }
       }
     `, { lifestyleTag: tag, lang }, { next: { revalidate: 300 } }),
     demoDevelopments.filter(d => d.lifestyleTags?.includes(tag)) as any[]
@@ -322,5 +323,55 @@ export async function getArticlesByLocation(locationSlug: string, lang = 'en') {
       }
     `, { locationSlug, lang }, { next: { revalidate: 300 } }),
     demoArticles.filter(a => (a as any).linkedLocation?.slug?.current === locationSlug).slice(0, 4) as any[]
+  )
+}
+
+// Developers
+export async function getAllDevelopers(lang = 'en') {
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "developer" && noindex != true] | order(name asc) {
+        _id, name, slug, website, isViriatoClient, foundedYear, headquartersCity,
+        logo,
+        "shortDescription": coalesce(shortDescription[$lang], shortDescription.en),
+        "developmentCount": count(*[_type == "development" && references(^._id) && noindex != true])
+      }
+    `, { lang }, { next: { revalidate: 3600 } }),
+    demoDevelopers.map(dev => ({
+      ...dev,
+      shortDescription: dev.shortDescription,
+      developmentCount: demoDevelopments.filter(d => d.developer._id === dev._id).length,
+    })) as any[]
+  )
+}
+
+export async function getDeveloperBySlug(slug: string, lang = 'en') {
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "developer" && slug.current == $slug][0] {
+        _id, name, slug, website, isViriatoClient, foundedYear, headquartersCity,
+        logo,
+        "shortDescription": coalesce(shortDescription[$lang], shortDescription.en),
+        "bio": coalesce(bio[$lang], bio.en),
+        seoTitle, seoDescription, seoImage, noindex
+      }
+    `, { slug, lang }, { next: { revalidate: 3600 } }),
+    (demoDevelopers.find(d => d.slug.current === slug) ?? null) as any
+  )
+}
+
+export async function getDevelopmentsByDeveloper(developerSlug: string, lang = 'en') {
+  return safeFetch(
+    () => client.fetch(`
+      *[_type == "development" && developer->slug.current == $developerSlug && noindex != true] | order(isFeatured desc, publishedAt desc) {
+        _id, name, slug, status, type, priceDisplay, isFeatured,
+        lifestyleTags, heroImage,
+        "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
+        primaryCta,
+        location->{ name, slug },
+        developer->{ name, slug }
+      }
+    `, { developerSlug, lang }, { next: { revalidate: 300 } }),
+    demoDevelopments.filter(d => d.developer.slug.current === developerSlug) as any[]
   )
 }

@@ -264,7 +264,11 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
               </div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px' }}>
                 <div>
-                  {dev.developer.website ? (
+                  {dev.developer.slug?.current ? (
+                    <Link href={`/${lang}/developers/${dev.developer.slug.current}`} style={{ fontSize: '16px', fontWeight: 400, color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+                      {dev.developer.name}
+                    </Link>
+                  ) : dev.developer.website ? (
                     <a href={dev.developer.website} target="_blank" rel="noopener noreferrer" style={{ fontSize: '16px', fontWeight: 400, color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
                       {dev.developer.name}
                     </a>
@@ -273,6 +277,13 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                   )}
                   {dev.developer.isViriatoClient && (
                     <div style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', marginTop: '4px' }}>{d.viriatoClient}</div>
+                  )}
+                  {dev.developer.website && dev.developer.slug?.current && (
+                    <div style={{ marginTop: '6px' }}>
+                      <a href={dev.developer.website} target="_blank" rel="noopener noreferrer" style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+                        {new URL(dev.developer.website).hostname.replace(/^www\./, '')} ↗
+                      </a>
+                    </div>
                   )}
                 </div>
                 {dev.developer.logo && (

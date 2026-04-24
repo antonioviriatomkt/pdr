@@ -20,6 +20,7 @@
   "nav": {
     "developments": "Projetos",
     "locations": "Localizações",
+    "developers": "Promotores",
     "journal": "Revista",
     "methodology": "Metodologia",
     "about": "Sobre",
@@ -48,6 +49,7 @@
       "lifestyleBeachfront": "Frente de Praia",
       "lifestyleInvestmentGrade": "Grau de Investimento",
       "lifestyleCityCentre": "Centro Urbano",
+      "developers": "Promotores",
       "methodology": "Metodologia",
       "about": "Sobre",
       "forDevelopers": "Para Promotores",
@@ -376,6 +378,26 @@
     ]
   },
 
+  "developers": {
+    "eyebrow": "Perfis de Promotores",
+    "breadcrumbDevelopers": "Promotores",
+    "indexHeading": "Promotores",
+    "indexSubheading": "As empresas e ateliers por detrás dos projetos residenciais mais considerados de Portugal — selecionados através do mesmo processo editorial que os próprios projetos.",
+    "indexIntro": "Cada projeto nesta plataforma representa um compromisso do seu promotor — um investimento de capital, intenção de design e historial. Os nossos perfis de promotores existem para dar a compradores sérios contexto sobre as organizações por detrás dos projetos: quem os construiu, a sua história e por que isso importa para a decisão de compra. Os critérios de seleção para promotores espelham a nossa curadoria de projetos: historial, integridade de entrega e coerência da proposta. Um perfil de promotor no Portugal Developments Review não é um endosso — é contexto editorial.",
+    "allFilter": "Todos os Promotores",
+    "viriatoFilter": "Clientes Viriato",
+    "developmentsCount_one": "{count} projeto",
+    "developmentsCount_other": "{count} projetos",
+    "noDevelopers": "Sem perfis de promotores disponíveis.",
+    "foundedLabel": "Fundado",
+    "hqLabel": "Sede",
+    "websiteLabel": "Website",
+    "developmentsByHeading": "Projetos de {name}",
+    "noDevelopmentsByDeveloper": "Ainda não existem projetos curados deste promotor.",
+    "isYourCompany": "Esta é a sua empresa? Entre em contacto.",
+    "contactCta": "Contacto →"
+  },
+
   "lifestyle": {
     "eyebrow": "Estilo de Vida",
     "breadcrumbLifestyle": "Estilo de Vida",
@@ -421,6 +443,10 @@
     "forDevelopers": {
       "title": "Para Promotores — Portugal Developments Review",
       "description": "Informação para promotores que consideram o Portugal Developments Review. Saiba como funciona a colocação editorial e como os clientes Viriato beneficiam da plataforma."
+    },
+    "developers": {
+      "title": "Perfis de Promotores — Portugal Developments Review",
+      "description": "Perfis editoriais dos promotores por detrás dos projetos residenciais mais considerados de Portugal — selecionados pelo historial, integridade de entrega e coerência do projeto."
     }
   },
 

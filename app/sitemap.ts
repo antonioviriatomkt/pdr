@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { getAllDevelopments, getAllLocations, getAllArticles, getCategoriesWithArticles, getActiveLifestyleTags } from '@/lib/queries'
+import { getAllDevelopments, getAllLocations, getAllArticles, getCategoriesWithArticles, getActiveLifestyleTags, getAllDevelopers } from '@/lib/queries'
 import { LIFESTYLE_TAG_SLUGS } from '@/lib/lifestyle-tags'
 
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
@@ -7,18 +7,20 @@ const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsr
 const LOCALES = ['en', 'pt'] as const
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [developments, locations, articles, activeCategories, activeTags] = await Promise.all([
+  const [developments, locations, articles, activeCategories, activeTags, developers] = await Promise.all([
     getAllDevelopments(),
     getAllLocations(),
     getAllArticles(),
     getCategoriesWithArticles(),
     getActiveLifestyleTags(),
+    getAllDevelopers(),
   ])
 
   const staticRoutes = [
     { path: '', priority: 1, changeFrequency: 'weekly' as const },
     { path: '/developments', priority: 0.9, changeFrequency: 'daily' as const },
     { path: '/locations', priority: 0.8, changeFrequency: 'weekly' as const },
+    { path: '/developers', priority: 0.7, changeFrequency: 'weekly' as const },
     { path: '/journal', priority: 0.8, changeFrequency: 'weekly' as const },
     { path: '/methodology', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/about', priority: 0.5, changeFrequency: 'monthly' as const },
@@ -82,5 +84,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       }))
   )
 
-  return [...staticPages, ...developmentPages, ...locationPages, ...articlePages, ...categoryPages, ...lifestylePages]
+  const developerPages: MetadataRoute.Sitemap = LOCALES.flatMap(locale =>
+    (developers as any[]).map(d => ({
+      url: `${BASE}/${locale}/developers/${d.slug.current}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+  )
+
+  return [...staticPages, ...developmentPages, ...locationPages, ...articlePages, ...categoryPages, ...lifestylePages, ...developerPages]
 }

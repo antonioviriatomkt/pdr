@@ -89,6 +89,7 @@ export default function Footer({ lang, footer }: FooterProps) {
               {footer.sections.platform}
             </div>
             {[
+              { href: `/${lang}/developers`, label: footer.links.developers },
               { href: `/${lang}/methodology`, label: footer.links.methodology },
               { href: `/${lang}/about`, label: footer.links.about },
               { href: `/${lang}/for-developers`, label: footer.links.forDevelopers },

@@ -20,6 +20,7 @@
   "nav": {
     "developments": "Developments",
     "locations": "Locations",
+    "developers": "Developers",
     "journal": "Journal",
     "methodology": "Methodology",
     "about": "About",
@@ -48,6 +49,7 @@
       "lifestyleBeachfront": "Beachfront",
       "lifestyleInvestmentGrade": "Investment-grade",
       "lifestyleCityCentre": "City Centre",
+      "developers": "Developers",
       "methodology": "Methodology",
       "about": "About",
       "forDevelopers": "For Developers",
@@ -376,6 +378,26 @@
     ]
   },
 
+  "developers": {
+    "eyebrow": "Developer Profiles",
+    "breadcrumbDevelopers": "Developers",
+    "indexHeading": "Developers",
+    "indexSubheading": "The companies and studios behind Portugal's most considered new residential developments — selected through the same editorial process as the developments themselves.",
+    "indexIntro": "Every development on this platform represents a commitment by its developer — an investment of capital, design intent, and track record. Our developer profiles exist to give serious buyers context on the organisations behind the projects: who built them, their history, and why it matters to the buying decision. Selection criteria for developers mirror our development curation: track record, delivery integrity, and the coherence of the project proposition. A developer profile on Portugal Developments Review is not an endorsement — it is editorial context.",
+    "allFilter": "All Developers",
+    "viriatoFilter": "Viriato Clients",
+    "developmentsCount_one": "{count} development",
+    "developmentsCount_other": "{count} developments",
+    "noDevelopers": "No developer profiles available.",
+    "foundedLabel": "Founded",
+    "hqLabel": "Headquarters",
+    "websiteLabel": "Website",
+    "developmentsByHeading": "Developments by {name}",
+    "noDevelopmentsByDeveloper": "No curated developments by this developer yet.",
+    "isYourCompany": "Is this your company? Get in touch.",
+    "contactCta": "Contact →"
+  },
+
   "lifestyle": {
     "eyebrow": "Lifestyle",
     "breadcrumbLifestyle": "Lifestyle",
@@ -421,6 +443,10 @@
     "forDevelopers": {
       "title": "For Developers — Portugal Developments Review",
       "description": "Information for developers considering Portugal Developments Review. Learn how editorial placement works and how Viriato clients benefit from the platform."
+    },
+    "developers": {
+      "title": "Developer Profiles — Portugal Developments Review",
+      "description": "Editorial profiles of the developers behind Portugal's most considered new residential projects — selected for track record, delivery integrity, and project coherence."
     }
   },
 
