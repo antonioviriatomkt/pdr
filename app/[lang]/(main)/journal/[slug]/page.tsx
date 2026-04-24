@@ -172,7 +172,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       )}
 
       <div className="container-editorial">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 280px', gap: '60px', padding: '48px 0' }}>
+        <div className="article-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 280px', gap: '60px', padding: '48px 0' }}>
           <article>
             {article.excerpt && (
               <p style={{ fontSize: '20px', lineHeight: 1.6, color: 'var(--foreground)', margin: '0 0 32px', fontStyle: 'italic' }}>
@@ -201,7 +201,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
             )}
           </article>
 
-          <aside>
+          <aside className="article-aside">
             {linkedDevsSlice.length > 0 && (
               <div style={{ marginBottom: '32px' }}>
                 <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
@@ -229,6 +229,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
           </aside>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 900px) {
+          .article-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 32px 0 !important; }
+          .article-aside { border-top: 1px solid var(--border); padding-top: 32px; }
+        }
+      `}</style>
     </>
   )
 }
