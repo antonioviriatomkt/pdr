@@ -261,7 +261,7 @@ export async function getActiveLifestyleTags(): Promise<string[]> {
 export async function getDevelopmentsByLifestyle(tag: string, lang = 'en') {
   return safeFetch(
     () => client.fetch(`
-      *[_type == "development" && $tag in lifestyleTags && noindex != true] | order(isFeatured desc, publishedAt desc) {
+      *[_type == "development" && $lifestyleTag in lifestyleTags && noindex != true] | order(isFeatured desc, publishedAt desc) {
         _id, name, slug, status, type, priceDisplay, isFeatured,
         lifestyleTags, heroImage,
         "editorialThesis": coalesce(editorialThesis[$lang], editorialThesis.en),
@@ -269,7 +269,7 @@ export async function getDevelopmentsByLifestyle(tag: string, lang = 'en') {
         location->{ name, slug },
         developer->{ name }
       }
-    `, { tag, lang }, { next: { revalidate: 300 } }),
+    `, { lifestyleTag: tag, lang }, { next: { revalidate: 300 } }),
     demoDevelopments.filter(d => d.lifestyleTags?.includes(tag)) as any[]
   )
 }
