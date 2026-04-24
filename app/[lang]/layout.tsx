@@ -14,10 +14,10 @@ const dmSans = localFont({
   display: 'swap',
 })
 
-const playfairDisplay = localFont({
+const georgiaPro = localFont({
   src: [
-    { path: '../fonts/PlayfairDisplay-VariableFont_wght.ttf', style: 'normal' },
-    { path: '../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf', style: 'italic' },
+    { path: '../fonts/GeorgiaPro-Light.ttf', weight: '300', style: 'normal' },
+    { path: '../fonts/GeorgiaPro-LightItalic.ttf', weight: '300', style: 'italic' },
   ],
   variable: '--font-serif',
   display: 'swap',
@@ -82,7 +82,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   }
 
   return (
-    <html lang={lang === 'pt' ? 'pt-PT' : lang} className={`${dmSans.variable} ${playfairDisplay.variable}`}>
+    <html lang={lang === 'pt' ? 'pt-PT' : lang} className={`${dmSans.variable} ${georgiaPro.variable}`}>
       <body>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
