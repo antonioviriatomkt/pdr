@@ -82,7 +82,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       {/* Location quick nav */}
       <section style={{ borderBottom: '1px solid var(--border)', padding: '20px 0', background: 'var(--surface)' }}>
         <div className="container-editorial">
-          <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0' }}>
+          <div className="location-quicknav" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0' }}>
             <span style={{ fontSize: '11px', fontFamily: 'sans-serif', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase', marginRight: '24px' }}>
               {dict.common.locations}
             </span>
@@ -101,7 +101,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                 {i < arr.length - 1 && <span style={{ color: 'var(--border)', margin: '0 14px', fontSize: '13px', userSelect: 'none' }}>—</span>}
               </span>
             ))}
-            <Link href={`/${lang}/developments`} style={{ marginLeft: 'auto', fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+            <Link href={`/${lang}/developments`} className="location-quicknav-all" style={{ marginLeft: 'auto', fontSize: '12px', fontFamily: 'sans-serif', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
               {dict.common.allDevelopments}
             </Link>
           </div>
@@ -181,7 +181,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       {/* Our Approach */}
       <section style={{ padding: '64px 0', borderBottom: '1px solid var(--border)' }}>
         <div className="container-editorial">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }}>
+          <div className="approach-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }}>
             <div>
               <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 16px' }}>
                 {t.approach.eyebrow}
@@ -199,7 +199,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                 {dict.common.readMethodology}
               </Link>
             </div>
-            <div style={{ borderLeft: '1px solid var(--border)', paddingLeft: '60px' }}>
+            <div className="approach-aside" style={{ borderLeft: '1px solid var(--border)', paddingLeft: '60px' }}>
               <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
                 {t.approach.criteriaHeading}
               </div>
@@ -257,6 +257,14 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
           </div>
         </div>
       </section>
+      <style>{`
+        @media (max-width: 768px) {
+          .location-quicknav { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+          .location-quicknav-all { margin-left: 0 !important; margin-top: 4px !important; }
+          .approach-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          .approach-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--border); padding-top: 28px !important; }
+        }
+      `}</style>
     </>
   )
 }

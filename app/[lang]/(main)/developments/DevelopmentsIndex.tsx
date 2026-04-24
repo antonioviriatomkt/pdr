@@ -67,16 +67,16 @@ export default function DevelopmentsIndex({ developments, locations, lang, dict,
 
       <section style={{ borderBottom: '1px solid var(--border)', padding: '16px 0', background: 'var(--surface)', position: 'sticky', top: '64px', zIndex: 10 }}>
         <div className="container-editorial">
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-            <select value={locationFilter} onChange={e => setLocationFilter(e.target.value)} style={selectStyle}>
+          <div className="filter-bar" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <select className="filter-select" value={locationFilter} onChange={e => setLocationFilter(e.target.value)} style={selectStyle}>
               <option value="">{f.allLocations}</option>
               {locations.map(loc => <option key={loc._id} value={loc.slug.current}>{loc.name}</option>)}
             </select>
-            <select value={typeFilter} onChange={e => setTypeFilter(e.target.value)} style={selectStyle}>
+            <select className="filter-select" value={typeFilter} onChange={e => setTypeFilter(e.target.value)} style={selectStyle}>
               <option value="">{f.allTypes}</option>
               {TYPES.map(t => <option key={t} value={t}>{(dict.typeLabels as Record<string, string>)[t] ?? t}</option>)}
             </select>
-            <select value={statusFilter} onChange={e => setStatusFilter(e.target.value)} style={selectStyle}>
+            <select className="filter-select" value={statusFilter} onChange={e => setStatusFilter(e.target.value)} style={selectStyle}>
               <option value="">{f.allStatus}</option>
               {STATUSES.map(s => <option key={s} value={s}>{(dict.statusLabels as Record<string, string>)[s] ?? s}</option>)}
             </select>
@@ -85,7 +85,7 @@ export default function DevelopmentsIndex({ developments, locations, lang, dict,
                 {f.clearFilters}
               </button>
             )}
-            <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div className="filter-sort" style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ fontSize: '12px', fontFamily: 'sans-serif', color: 'var(--muted)' }}>{f.sort}</span>
               {[{ value: 'featured', label: f.sortFeatured }, { value: 'newest', label: f.sortNewest }].map(s => (
                 <button
@@ -125,6 +125,13 @@ export default function DevelopmentsIndex({ developments, locations, lang, dict,
           )}
         </div>
       </section>
+      <style>{`
+        @media (max-width: 768px) {
+          .filter-bar { flex-direction: column !important; align-items: stretch !important; gap: 10px !important; }
+          .filter-select { width: 100% !important; min-width: unset !important; }
+          .filter-sort { margin-left: 0 !important; justify-content: flex-start !important; }
+        }
+      `}</style>
     </>
   )
 }

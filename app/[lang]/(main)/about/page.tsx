@@ -41,7 +41,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
       </section>
 
       <div className="container-editorial">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', padding: '56px 0', alignItems: 'start' }}>
+        <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', padding: '56px 0', alignItems: 'start' }}>
           <div>
             <h2 style={{ fontSize: '24px', fontWeight: 400, margin: '0 0 20px', letterSpacing: '-0.01em' }}>
               {a.platformHeading}
@@ -109,6 +109,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           </div>
         </div>
       </div>
+      <style>{`@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 40px 0 !important; } }`}</style>
     </>
   )
 }

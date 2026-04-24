@@ -41,12 +41,12 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       </section>
 
       <div className="container-editorial">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', padding: '56px 0', alignItems: 'start' }}>
+        <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', padding: '56px 0', alignItems: 'start' }}>
           <div>
             <ContactForm dict={dict.contactForm} />
           </div>
 
-          <div style={{ borderLeft: '1px solid var(--border)', paddingLeft: '80px' }}>
+          <div className="contact-aside" style={{ borderLeft: '1px solid var(--border)', paddingLeft: '80px' }}>
             <div style={{ marginBottom: '40px' }}>
               <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
                 {c.whatHappensNext}
@@ -81,6 +81,12 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
           </div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 40px 0 !important; }
+          .contact-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--border); padding-top: 32px !important; }
+        }
+      `}</style>
     </>
   )
 }

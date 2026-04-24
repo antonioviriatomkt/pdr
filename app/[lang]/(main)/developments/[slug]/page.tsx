@@ -179,7 +179,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
 
       {/* Main content */}
       <div className="container-editorial">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '60px', padding: '48px 0', alignItems: 'start' }}>
+        <div className="dev-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '60px', padding: '48px 0', alignItems: 'start' }}>
           <article>
             <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
               {dev.location.name} · {(labels.statusLabels as Record<string, string>)[dev.status] ?? dev.status}{dev.type ? ` · ${(labels.typeLabels as Record<string, string>)[dev.type] ?? dev.type}` : ''}
@@ -231,6 +231,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                   <iframe
                     src={dev.brochureUrl}
                     title={`${dev.name} ${d.brochureLabel}`}
+                    className="brochure-iframe"
                     style={{ width: '100%', height: '560px', display: 'block', border: 'none' }}
                   />
                   <div style={{ borderTop: '1px solid var(--border)', background: 'var(--surface)', padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '24px', flexWrap: 'wrap' }}>
@@ -325,7 +326,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
             )}
           </article>
 
-          <div id="inquiry" style={{ position: 'sticky', top: '80px' }}>
+          <div id="inquiry" className="dev-aside" style={{ position: 'sticky', top: '80px' }}>
             <InquiryPanel development={dev} dict={dict.inquiry} />
             {pillarArticles.length > 0 && (
               <div style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid var(--border)' }}>
@@ -382,6 +383,13 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
           </div>
         </section>
       )}
+      <style>{`
+        @media (max-width: 900px) {
+          .dev-grid { grid-template-columns: 1fr !important; gap: 32px !important; padding: 32px 0 !important; }
+          .dev-aside { position: static !important; top: auto !important; }
+          .brochure-iframe { height: 420px !important; }
+        }
+      `}</style>
     </>
   )
 }

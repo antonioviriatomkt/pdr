@@ -56,7 +56,7 @@ export default async function ForDevelopersPage({ params }: { params: Promise<{ 
         <div style={{ padding: '56px 0' }}>
 
           {/* What the platform is */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', marginBottom: '56px' }}>
+          <div className="fd-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', marginBottom: '56px' }}>
             <div>
               <h2 style={{ fontSize: '24px', fontWeight: 400, margin: '0 0 20px', letterSpacing: '-0.01em' }}>
                 {fd.whatItIsHeading}
@@ -88,7 +88,7 @@ export default async function ForDevelopersPage({ params }: { params: Promise<{ 
           <hr style={{ margin: '0 0 56px' }} />
 
           {/* Viriato clients */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', marginBottom: '56px' }}>
+          <div className="fd-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', marginBottom: '56px' }}>
             <div>
               <div style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
                 {fd.viriatoClientsEyebrow}
@@ -142,6 +142,7 @@ export default async function ForDevelopersPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </div>
+      <style>{`@media (max-width: 768px) { .fd-grid { grid-template-columns: 1fr !important; gap: 40px !important; } }`}</style>
     </>
   )
 }
