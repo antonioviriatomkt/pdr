@@ -84,7 +84,7 @@ export default async function JournalPage({ params }: { params: Promise<{ lang: 
             <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 24px' }}>
               {j.guidesHeading}
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '48px 40px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '48px 40px' }}>
               {pillarArticles.slice(0, 3).map((article: any) => (
                 <ArticleCard key={article._id} article={article} lang={lang} categories={categories} />
               ))}
@@ -144,7 +144,7 @@ export default async function JournalPage({ params }: { params: Promise<{ lang: 
       {/* Articles */}
       <section style={{ padding: '56px 0' }}>
         <div className="container-editorial">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '48px 40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '48px 40px' }}>
             {articles.map((article: any) => (
               <ArticleCard key={article._id} article={article} lang={lang} categories={categories} />
             ))}

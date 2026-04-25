@@ -75,7 +75,7 @@ export default async function LocationsPage({ params }: { params: Promise<{ lang
         <div className="container-editorial">
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '1px',
             border: '1px solid var(--border)',
             background: 'var(--border)',

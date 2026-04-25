@@ -138,7 +138,7 @@ export default async function LifestyleTagPage({ params }: { params: Promise<{ l
           <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 32px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
             {l.developmentsHeading}
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '48px 40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '48px 40px' }}>
             {(developments as any[]).map((dev: any) => (
               <DevelopmentCard key={dev._id} development={dev} lang={lang} ui={devCardUi} />
             ))}

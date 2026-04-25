@@ -130,7 +130,7 @@ export default async function JournalCategoryPage({ params }: { params: Promise<
               </Link>
             </div>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '48px 40px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '48px 40px' }}>
               {(articles as any[]).map((article: any) => (
                 <ArticleCard key={article._id} article={article} lang={lang} categories={categories} />
               ))}

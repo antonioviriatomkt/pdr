@@ -359,7 +359,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
             <h2 style={{ fontSize: '20px', fontWeight: 400, margin: '0 0 32px', letterSpacing: '-0.01em' }}>
               {d.relatedHeading.replace('{location}', dev.location.name)}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '40px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
               {related.map((r: any) => <DevelopmentCard key={r._id} development={r} lang={lang} ui={devCardUi} />)}
             </div>
           </div>
@@ -372,7 +372,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
             <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 24px' }}>
               {d.gallery}
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: '1px', background: 'var(--border)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '1px', background: 'var(--border)' }}>
               {dev.gallery.filter((img: any) => img?.asset).map((img: any, i: number) => (
                 <figure key={img._key || i} style={{ margin: 0, position: 'relative', background: 'var(--surface)' }}>
                   <div style={{ aspectRatio: '4/3', position: 'relative', overflow: 'hidden' }}>

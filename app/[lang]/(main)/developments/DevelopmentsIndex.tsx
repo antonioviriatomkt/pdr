@@ -124,7 +124,7 @@ export default function DevelopmentsIndex({ developments, locations, lang, dict,
               </button>
             </div>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '48px 40px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '48px 40px' }}>
               {filtered.map(dev => (
                 <DevelopmentCard key={dev._id} development={dev} lang={lang} ui={devCardUi} />
               ))}

@@ -148,7 +148,7 @@ export default async function DeveloperPage({ params }: { params: Promise<{ lang
 
             {/* Key facts */}
             {(dev.foundedYear || dev.headquartersCity || dev.website) && (
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)', marginBottom: '40px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)', marginBottom: '40px' }}>
                 {dev.foundedYear && (
                   <div style={{ background: 'var(--background)', padding: '16px' }}>
                     <dt style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '4px' }}>{d.foundedLabel}</dt>
@@ -228,7 +228,7 @@ export default async function DeveloperPage({ params }: { params: Promise<{ lang
           {(developments as any[]).length === 0 ? (
             <p style={{ fontSize: '15px', color: 'var(--muted)' }}>{d.noDevelopmentsByDeveloper}</p>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '40px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
               {(developments as any[]).map((dev: any) => (
                 <DevelopmentCard key={dev._id} development={dev} lang={lang} ui={devCardUi} />
               ))}

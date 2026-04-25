@@ -176,7 +176,7 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
             <h2 style={{ fontSize: '22px', fontWeight: 400, margin: '0 0 32px', letterSpacing: '-0.01em' }}>
               {l.neighbourhoodsHeading} — {loc.name}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
               {children.map((child: any) => (
                 <Link key={child._id} href={`/${lang}/locations/${child.slug.current}`} style={{ display: 'block', background: 'var(--background)', padding: '20px', textDecoration: 'none' }}>
                   <div style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
@@ -211,7 +211,7 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
               </Link>
             </div>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '40px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
               {developments.map((dev: any) => (
                 <DevelopmentCard key={dev._id} development={dev} lang={lang} ui={devCardUi} />
               ))}
@@ -227,7 +227,7 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
             <h2 style={{ fontSize: '22px', fontWeight: 400, margin: '0 0 32px', letterSpacing: '-0.01em' }}>
               {l.journalHeading} — {loc.name}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '40px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
               {articles.map((a: any) => (
                 <div key={a._id}>
                   {a.isComparison && (
@@ -250,7 +250,7 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
             <h2 style={{ fontSize: '22px', fontWeight: 400, margin: '0 0 24px', letterSpacing: '-0.01em' }}>
               {l.nearbyHeading}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
               {nearby.map((n: any) => (
                 <Link key={n._id} href={`/${lang}/locations/${n.slug.current}`} style={{ display: 'block', background: 'var(--background)', padding: '20px', textDecoration: 'none' }}>
                   <div style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '6px' }}>
