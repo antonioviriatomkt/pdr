@@ -45,7 +45,7 @@ export default function DevelopmentCard({ development, variant = 'default', lang
     return (
       <Link href={href} style={{ display: 'block', textDecoration: 'none' }}>
         <article style={{ borderTop: '1px solid var(--border)', paddingTop: '16px', paddingBottom: '16px' }}>
-          {development.heroImage && (
+          {development.heroImage ? (
             <div style={{ aspectRatio: '16/9', position: 'relative', overflow: 'hidden', marginBottom: '10px' }}>
               <Image
                 src={urlFor(development.heroImage).width(560).height(315).auto('format').url()}
@@ -55,7 +55,7 @@ export default function DevelopmentCard({ development, variant = 'default', lang
                 sizes="280px"
               />
             </div>
-          )}
+          ) : null}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', gap: '16px' }}>
             <div>
               <div style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '4px' }}>
