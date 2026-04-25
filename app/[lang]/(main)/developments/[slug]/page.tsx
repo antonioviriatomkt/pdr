@@ -217,11 +217,11 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                 <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
                   {d.keyFacts}
                 </h2>
-                <dl style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)', margin: 0 }}>
+                <dl style={{ margin: 0, borderTop: '1px solid var(--border)' }}>
                   {dev.keyFacts.map((fact: { label: string; value: string }, i: number) => (
-                    <div key={i} style={{ background: 'var(--background)', padding: '16px' }}>
-                      <dt style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '4px' }}>{fact.label}</dt>
-                      <dd style={{ fontSize: '16px', fontWeight: 400, margin: 0 }}>{fact.value}</dd>
+                    <div key={i} style={{ display: 'flex', gap: '24px', borderBottom: '1px solid var(--border)', padding: '12px 0' }}>
+                      <dt style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', flexShrink: 0, width: '130px', paddingTop: '3px' }}>{fact.label}</dt>
+                      <dd style={{ fontSize: '15px', fontWeight: 400, margin: 0, lineHeight: 1.5 }}>{fact.value}</dd>
                     </div>
                   ))}
                 </dl>
