@@ -79,32 +79,24 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         `}</style>
       </section>
 
-      {/* Location quick nav */}
-      <section style={{ borderBottom: '1px solid var(--border)', padding: '16px 0', background: 'var(--surface)' }}>
+      {/* Locations */}
+      <section style={{ borderBottom: '1px solid var(--border)', padding: '20px 0' }}>
         <div className="container-editorial">
-          <div className="location-quicknav" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-            <span style={{ flexBasis: '100%', fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+          <div className="locations-bar" style={{ display: 'flex', alignItems: 'baseline', gap: '36px', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', flexShrink: 0 }}>
               {dict.common.locations}
             </span>
-            {[
-              { href: `/${lang}/locations/lisbon`, label: 'Lisbon' },
-              { href: `/${lang}/locations/porto`, label: 'Porto' },
-              { href: `/${lang}/locations/cascais`, label: 'Cascais' },
-              { href: `/${lang}/locations/algarve`, label: 'Algarve' },
-              { href: `/${lang}/locations/comporta`, label: 'Comporta' },
-              { href: `/${lang}/locations/gaia`, label: 'Gaia' },
-            ].map(({ href, label }) => (
-              <Link key={href} href={href} style={{ fontSize: '12px', color: 'var(--muted)', textDecoration: 'none' }}>
-                {label}
+            {locations.map((loc: any) => (
+              <Link key={loc._id} href={`/${lang}/locations/${loc.slug.current}`} style={{ fontSize: '15px', color: 'var(--foreground)', textDecoration: 'none', flexShrink: 0 }}>
+                {loc.name}
               </Link>
             ))}
-            <div style={{ flexBasis: '100%' }}>
-              <Link href={`/${lang}/developments`} className="location-quicknav-all" style={{ fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
-                {dict.common.allDevelopments}
-              </Link>
-            </div>
+            <Link href={`/${lang}/locations`} className="locations-bar-all" style={{ marginLeft: 'auto', fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)', flexShrink: 0 }}>
+              {dict.common.viewAll}
+            </Link>
           </div>
         </div>
+        <style>{`@media (max-width: 768px) { .locations-bar { gap: 20px; } .locations-bar-all { margin-left: 0 !important; } }`}</style>
       </section>
 
       {/* Featured Developments */}
@@ -131,28 +123,6 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
         </div>
       </section>
 
-      {/* Browse by Location */}
-      <section style={{ padding: '64px 0', borderBottom: '1px solid var(--border)', background: 'var(--surface)' }}>
-        <div className="container-editorial">
-          <div style={{ marginBottom: '40px' }}>
-            <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 6px' }}>
-              {t.browseByLocation.eyebrow}
-            </p>
-            <h2 style={{ fontSize: '28px', fontWeight: 400, margin: 0, letterSpacing: '-0.01em' }}>
-              {t.browseByLocation.heading}
-            </h2>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1px', border: '1px solid var(--border)', background: 'var(--border)' }}>
-            {locations.map((loc: any) => (
-              <Link key={loc._id} href={`/${lang}/locations/${loc.slug.current}`} style={{ textDecoration: 'none', display: 'block', background: 'var(--background)', padding: '28px 24px' }}>
-                <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>{loc.region}</div>
-                <div style={{ fontSize: '20px', fontWeight: 400, letterSpacing: '-0.01em', marginBottom: '8px' }}>{loc.name}</div>
-                <div style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.5 }}>{loc.intro?.slice(0, 80)}...</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Shortlist / Newsletter */}
       <section style={{ padding: '64px 0', borderBottom: '1px solid var(--border)' }}>

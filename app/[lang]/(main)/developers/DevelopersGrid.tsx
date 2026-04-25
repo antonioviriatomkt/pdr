@@ -64,7 +64,7 @@ export default function DevelopersGrid({ developers, lang, labels }: DevelopersG
       {filtered.length === 0 ? (
         <p style={{ fontSize: '15px', color: 'var(--muted)' }}>{labels.noDevelopers}</p>
       ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1px', background: 'var(--border)' }}>
+        <div style={{ borderTop: '1px solid var(--border)' }}>
           {filtered.map(dev => (
             <DeveloperCard
               key={dev._id}

@@ -36,7 +36,7 @@ export default function Header({ lang, nav }: HeaderProps) {
               <span style={{ fontSize: '13px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)' }}>
                 Portugal Developments Review
               </span>
-              <span style={{ fontSize: '11px', color: 'var(--muted)', marginLeft: '6px', letterSpacing: '0.04em' }}>
+              <span className="logo-tagline" style={{ fontSize: '11px', color: 'var(--muted)', marginLeft: '6px', letterSpacing: '0.04em' }}>
                 by Viriato
               </span>
             </div>
@@ -125,6 +125,7 @@ export default function Header({ lang, nav }: HeaderProps) {
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-toggle { display: block !important; }
+          .logo-tagline { display: block !important; margin-left: 0 !important; margin-top: 2px; }
         }
       `}</style>
     </header>

@@ -10,7 +10,7 @@ export default function Footer({ lang, footer }: FooterProps) {
   const year = new Date().getFullYear()
 
   return (
-    <footer style={{ borderTop: '1px solid var(--border)', background: 'var(--background)', marginTop: '80px' }}>
+    <footer style={{ borderTop: '1px solid var(--border)', background: 'var(--background)' }}>
       <div className="container-editorial">
         <div style={{ padding: '40px 0 36px', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '16px' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>

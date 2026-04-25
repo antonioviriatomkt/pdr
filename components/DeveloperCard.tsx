@@ -49,30 +49,30 @@ export default function DeveloperCard({
   return (
     <Link
       href={href}
-      style={{ display: 'block', border: '1px solid var(--border)', padding: '24px', textDecoration: 'none', color: 'inherit' }}
+      style={{ display: 'block', borderBottom: '1px solid var(--border)', padding: '24px 0', textDecoration: 'none', color: 'inherit' }}
     >
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', gap: '12px', marginBottom: '12px' }}>
-        <div style={{ fontSize: '16px', fontWeight: 400, color: 'var(--foreground)', lineHeight: 1.3 }}>{developer.name}</div>
-        {developer.isViriatoClient && (
-          <span style={{ fontSize: '10px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', border: '1px solid var(--border)', padding: '3px 8px', flexShrink: 0 }}>
-            {viriatoLabel}
-          </span>
-        )}
-      </div>
-      {developer.headquartersCity && (
-        <div style={{ fontSize: '12px', color: 'var(--muted)', letterSpacing: '0.04em', marginBottom: '12px' }}>
-          {developer.headquartersCity}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '24px', marginBottom: developer.shortDescription ? '8px' : 0 }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '18px', fontWeight: 400, color: 'var(--foreground)', letterSpacing: '-0.01em' }}>{developer.name}</span>
+          {developer.isViriatoClient && (
+            <span style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)' }}>
+              {viriatoLabel}
+            </span>
+          )}
         </div>
-      )}
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: '32px', flexShrink: 0 }}>
+          {developer.headquartersCity && (
+            <span style={{ fontSize: '13px', color: 'var(--muted)' }}>{developer.headquartersCity}</span>
+          )}
+          {developmentsCountLabel && (
+            <span style={{ fontSize: '13px', color: 'var(--muted)', fontFamily: 'sans-serif', letterSpacing: '0.04em' }}>{developmentsCountLabel}</span>
+          )}
+        </div>
+      </div>
       {developer.shortDescription && (
-        <p style={{ fontSize: '14px', lineHeight: 1.6, color: 'var(--muted)', margin: '0 0 16px' }}>
+        <p style={{ fontSize: '14px', lineHeight: 1.6, color: 'var(--muted)', margin: 0, maxWidth: '600px' }}>
           {developer.shortDescription}
         </p>
-      )}
-      {typeof developer.developmentCount === 'number' && (
-        <div style={{ fontSize: '12px', color: 'var(--muted)', letterSpacing: '0.04em', borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
-          {developmentsCountLabel ?? `${developer.developmentCount} development${developer.developmentCount !== 1 ? 's' : ''}`}
-        </div>
       )}
     </Link>
   )

@@ -29,7 +29,7 @@
   },
 
   "footer": {
-    "tagline": "Desenvolvimentos selecionados em Portugal.",
+    "tagline": "Projetos selecionados em Portugal.",
     "copyright": "© {year} Portugal Developments Review by Viriato. Todos os direitos reservados.",
     "platformTagline": "Uma plataforma curada para novos desenvolvimentos em Portugal.",
     "sections": {
@@ -60,7 +60,7 @@
   "home": {
     "hero": {
       "eyebrow": "Portugal Developments Review",
-      "headline": "Desenvolvimentos selecionados em Portugal.",
+      "headline": "Projetos selecionados em Portugal.",
       "exploreBtn": "Explorar Projetos",
       "browseBtn": "Pesquisar por Localização",
       "aside": "Uma plataforma editorial para projetos residenciais excecionais — selecionados através de escolha independente, inteligência de localização e apresentação premium."
