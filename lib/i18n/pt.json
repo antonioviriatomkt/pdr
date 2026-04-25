@@ -213,7 +213,10 @@
     "marketNoteEyebrow": "Nota de Mercado",
     "article": {
       "relatedDevelopments": "Projetos Relacionados",
-      "relatedLocation": "Localização"
+      "relatedLocation": "Localização",
+      "share": "Partilhar este artigo",
+      "copyLink": "Copiar Link",
+      "copied": "Copiado"
     },
     "noArticlesInCategory": "Ainda não existem artigos nesta categoria."
   },

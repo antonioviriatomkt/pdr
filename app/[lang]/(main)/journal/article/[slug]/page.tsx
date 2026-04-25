@@ -9,6 +9,7 @@ import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import { JsonLd } from '@/components/JsonLd'
 import PortableTextRenderer from '@/components/PortableTextRenderer'
+import ShareBar from './ShareBar'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
@@ -195,6 +196,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
                 </Link>
               </div>
             )}
+
+            <ShareBar
+              url={articleUrl}
+              title={article.title}
+              dict={{ share: j.article.share, copyLink: j.article.copyLink, copied: j.article.copied }}
+            />
           </article>
 
           {/* Sidebar */}
@@ -216,7 +223,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
                   {label}
                 </div>
                 {relatedArticles.map((a: any) => (
-                  <Link key={a._id} href={`/${lang}/journal/${a.slug.current}`} style={{ display: 'block', textDecoration: 'none', borderTop: '1px solid var(--border)', paddingTop: '12px', paddingBottom: '12px' }}>
+                  <Link key={a._id} href={`/${lang}/journal/article/${a.slug.current}`} style={{ display: 'block', textDecoration: 'none', borderTop: '1px solid var(--border)', paddingTop: '12px', paddingBottom: '12px' }}>
+                    {a.heroImage && (
+                      <div style={{ aspectRatio: '16/9', position: 'relative', overflow: 'hidden', marginBottom: '8px' }}>
+                        <Image src={urlFor(a.heroImage).width(560).height(315).auto('format').url()} alt={a.title} fill style={{ objectFit: 'cover' }} sizes="280px" />
+                      </div>
+                    )}
                     <p style={{ fontSize: '14px', color: 'var(--foreground)', margin: '0 0 4px', lineHeight: 1.4 }}>{a.title}</p>
                     <p style={{ fontSize: '12px', color: 'var(--muted)', margin: 0 }}>{formatDate(a.publishedAt, lang)}</p>
                   </Link>

@@ -213,7 +213,10 @@
     "marketNoteEyebrow": "Market note",
     "article": {
       "relatedDevelopments": "Related Developments",
-      "relatedLocation": "Location"
+      "relatedLocation": "Location",
+      "share": "Share this article",
+      "copyLink": "Copy Link",
+      "copied": "Copied"
     },
     "noArticlesInCategory": "No articles in this category yet."
   },
