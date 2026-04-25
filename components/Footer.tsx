@@ -13,14 +13,9 @@ export default function Footer({ lang, footer }: FooterProps) {
     <footer style={{ borderTop: '1px solid var(--border)', background: 'var(--background)' }}>
       <div className="container-editorial">
         <div style={{ padding: '40px 0 36px', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '16px' }}>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px' }}>
-            <span style={{ fontSize: '13px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)' }}>
-              Portugal Developments Review
-            </span>
-            <span style={{ fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.04em' }}>
-              by Viriato
-            </span>
-          </div>
+          <span style={{ fontFamily: 'var(--font-serif)', fontWeight: 300, fontSize: '14px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--foreground)' }}>
+            Portugal Developments Review
+          </span>
           <p style={{ fontSize: '13px', color: 'var(--muted)', margin: 0 }}>
             {footer.tagline}
           </p>
