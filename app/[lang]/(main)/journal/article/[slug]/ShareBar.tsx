@@ -37,7 +37,7 @@ export default function ShareBar({ url, title, dict }: { url: string; title: str
   }
 
   return (
-    <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', marginTop: '32px' }}>
+    <div>
       <p style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 14px' }}>
         {dict.share}
       </p>

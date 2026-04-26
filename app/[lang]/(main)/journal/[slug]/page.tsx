@@ -212,8 +212,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
             )}
           </article>
 
-          <aside className="article-aside">
-            <div className="share-bar-sticky" style={{ position: 'sticky', top: '80px', marginBottom: '32px', borderBottom: '1px solid var(--border)', paddingBottom: '32px' }}>
+          <aside className="article-aside" style={{ position: 'sticky', top: '80px', alignSelf: 'start' }}>
+            <div style={{ borderTop: '1px solid var(--border)', paddingTop: '20px', marginBottom: '32px' }}>
               <ShareBar
                 url={articleUrl}
                 title={article.title}
@@ -221,8 +221,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
               />
             </div>
             {linkedDevsSlice.length > 0 && (
-              <div style={{ marginBottom: '32px' }}>
-                <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
+              <div style={{ borderTop: '1px solid var(--border)', paddingTop: '20px', marginBottom: '32px' }}>
+                <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
                   {j.article.relatedDevelopments}
                 </div>
                 {linkedDevsSlice.map((dev: any) => (
@@ -232,12 +232,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
             )}
 
             {relatedArticles.length > 0 && (
-              <div>
-                <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
+              <div style={{ borderTop: '1px solid var(--border)', paddingTop: '20px' }}>
+                <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px' }}>
                   {label}
                 </div>
-                {relatedArticles.map((a: any) => (
-                  <Link key={a._id} href={`/${lang}/journal/${a.slug.current}`} style={{ display: 'block', textDecoration: 'none', borderTop: '1px solid var(--border)', paddingTop: '12px', paddingBottom: '12px' }}>
+                {relatedArticles.map((a: any, i: number) => (
+                  <Link key={a._id} href={`/${lang}/journal/${a.slug.current}`} style={{ display: 'block', textDecoration: 'none', borderTop: i === 0 ? 'none' : '1px solid var(--border)', paddingTop: '12px', paddingBottom: '12px' }}>
                     <p style={{ fontSize: '14px', color: 'var(--foreground)', margin: '0 0 4px', lineHeight: 1.4 }}>{a.title}</p>
                     <p style={{ fontSize: '12px', color: 'var(--muted)', margin: 0 }}>{formatDate(a.publishedAt, lang)}</p>
                   </Link>
@@ -250,8 +250,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
       <style>{`
         @media (max-width: 900px) {
           .article-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 32px 0 !important; }
-          .article-aside { border-top: 1px solid var(--border); padding-top: 32px; }
-          .share-bar-sticky { position: static !important; margin-bottom: 32px; }
+          .article-aside { position: static !important; border-top: 1px solid var(--border); padding-top: 32px; }
         }
       `}</style>
     </>
