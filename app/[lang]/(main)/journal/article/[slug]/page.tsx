@@ -183,6 +183,17 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
               </div>
             )}
 
+            {article.sourcesAndNotes && (
+              <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', marginTop: '32px' }}>
+                <p style={{ fontSize: '11px', fontFamily: 'sans-serif', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 8px' }}>
+                  {j.article.sourcesAndNotes}
+                </p>
+                <p style={{ fontSize: '13px', color: 'var(--muted)', lineHeight: 1.6, margin: 0 }}>
+                  {article.sourcesAndNotes}
+                </p>
+              </div>
+            )}
+
             {article.linkedLocation && (
               <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', marginTop: '32px' }}>
                 <p style={{ fontSize: '13px', color: 'var(--muted)', margin: '0 0 8px' }}>

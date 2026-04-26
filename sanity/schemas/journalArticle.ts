@@ -52,6 +52,16 @@ export const journalArticle = defineType({
         defineField({ name: 'pt', title: 'Portuguese', type: 'array', of: [{ type: 'block' }, { type: 'image', options: { hotspot: true } }] }),
       ],
     }),
+    defineField({
+      name: 'sourcesAndNotes',
+      title: 'Sources & Notes',
+      type: 'object',
+      description: 'Optional source attribution shown at the bottom of the article. Keep concise — e.g. "Sources include global real estate and hospitality reports (Savills, JLL, Knight Frank)."',
+      fields: [
+        defineField({ name: 'en', title: 'English', type: 'text', rows: 3 }),
+        defineField({ name: 'pt', title: 'Portuguese', type: 'text', rows: 3 }),
+      ],
+    }),
     defineField({ name: 'linkedLocation', title: 'Linked Location', type: 'reference', to: [{ type: 'location' }] }),
     defineField({ name: 'linkedDevelopment', title: 'Linked Development', type: 'reference', to: [{ type: 'development' }] }),
     defineField({

@@ -212,6 +212,7 @@ export async function getArticleBySlug(slug: string, lang = 'en') {
         slug, category, heroImage, seoImage,
         "excerpt": coalesce(excerpt[$lang], excerpt.en),
         "body": coalesce(body[$lang], body.en),
+        "sourcesAndNotes": coalesce(sourcesAndNotes[$lang], sourcesAndNotes.en),
         publishedAt, _updatedAt, noindex, isPillar,
         linkedLocation->{ name, slug, "intro": coalesce(intro[$lang], intro.en) },
         linkedDevelopment->{ name, slug, heroImage, status, priceDisplay },

@@ -298,6 +298,7 @@ export const demoArticles = [
     excerpt: 'Three decades of deliberate restraint have preserved what could easily have become another overdeveloped Atlantic resort. We examine how Comporta\'s unusual ownership structure has shaped a destination unlike any other in Portugal.',
     publishedAt: '2024-03-05',
     linkedLocation: { name: 'Comporta', slug: { current: 'comporta' } },
+    sourcesAndNotes: 'Sources include global real estate and hospitality reports (Savills, JLL, Knight Frank), Portuguese National Statistics Institute (INE) data, and Comporta municipal planning records.',
   },
   {
     _id: 'a2',

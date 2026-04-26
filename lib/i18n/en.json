@@ -219,7 +219,8 @@
       "relatedLocation": "Location",
       "share": "Share this article",
       "copyLink": "Copy Link",
-      "copied": "Copied"
+      "copied": "Copied",
+      "sourcesAndNotes": "Sources & Notes"
     },
     "noArticlesInCategory": "No articles in this category yet."
   },
