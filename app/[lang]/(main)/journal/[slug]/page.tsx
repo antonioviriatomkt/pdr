@@ -210,14 +210,16 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
                 </Link>
               </div>
             )}
-            <ShareBar
-              url={articleUrl}
-              title={article.title}
-              dict={{ share: j.article.share, copyLink: j.article.copyLink, copied: j.article.copied }}
-            />
           </article>
 
           <aside className="article-aside">
+            <div className="share-bar-sticky" style={{ position: 'sticky', top: '80px', marginBottom: '32px', borderBottom: '1px solid var(--border)', paddingBottom: '32px' }}>
+              <ShareBar
+                url={articleUrl}
+                title={article.title}
+                dict={{ share: j.article.share, copyLink: j.article.copyLink, copied: j.article.copied }}
+              />
+            </div>
             {linkedDevsSlice.length > 0 && (
               <div style={{ marginBottom: '32px' }}>
                 <div style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '16px', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
@@ -249,6 +251,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
         @media (max-width: 900px) {
           .article-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 32px 0 !important; }
           .article-aside { border-top: 1px solid var(--border); padding-top: 32px; }
+          .share-bar-sticky { position: static !important; margin-bottom: 32px; }
         }
       `}</style>
     </>
