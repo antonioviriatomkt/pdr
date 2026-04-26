@@ -9,6 +9,7 @@ import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import { JsonLd } from '@/components/JsonLd'
 import PortableTextRenderer from '@/components/PortableTextRenderer'
+import ShareBar from '../article/[slug]/ShareBar'
 
 const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
@@ -209,6 +210,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
                 </Link>
               </div>
             )}
+            <ShareBar
+              url={articleUrl}
+              title={article.title}
+              dict={{ share: j.article.share, copyLink: j.article.copyLink, copied: j.article.copied }}
+            />
           </article>
 
           <aside className="article-aside">

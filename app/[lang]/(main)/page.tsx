@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
+import { urlFor } from '@/lib/sanity.image'
 import DevelopmentCard from '@/components/DevelopmentCard'
 import ArticleCard from '@/components/ArticleCard'
 import NewsletterSignup from '@/components/NewsletterSignup'
@@ -36,45 +38,66 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
   const devCardUi = { priceOnRequest: dict.common.priceOnRequest, featured: dict.common.featured, viewArrow: dict.common.viewArrow, statusLabels: dict.developments.statusLabels, typeLabels: dict.developments.typeLabels, priceLabels: dict.developments.priceLabels, lifestyleTagLabels: dict.developments.lifestyleTagLabels }
   const categories = dict.journal.categories
 
+  const heroDev = (featured[0] as any) ?? null
+  const heroImg = heroDev?.heroImage ?? null
+
   return (
     <>
       {/* Hero */}
-      <section style={{ borderBottom: '1px solid var(--border)', padding: '88px 0 80px' }}>
-        <div className="container-editorial">
+      <section style={{ position: 'relative', borderBottom: '1px solid var(--border)', padding: '88px 0 80px', overflow: 'hidden' }}>
+        {heroImg && (
+          <>
+            <Image
+              src={urlFor(heroImg).width(1600).height(900).auto('format').url()}
+              alt={heroDev?.name ?? ''}
+              fill
+              priority
+              style={{ objectFit: 'cover' }}
+              sizes="100vw"
+            />
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(26,26,26,0.55)' }} aria-hidden="true" />
+          </>
+        )}
+        <div className="container-editorial" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '80px', alignItems: 'end' }} className="hero-grid">
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '32px' }}>
-                <p style={{ fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', margin: 0, flexShrink: 0 }}>
+                <p style={{ fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: heroImg ? 'rgba(247,246,243,0.65)' : 'var(--muted)', margin: 0, flexShrink: 0 }}>
                   {t.hero.eyebrow}
                 </p>
-                <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
+                <div style={{ flex: 1, height: '1px', background: heroImg ? 'rgba(247,246,243,0.2)' : 'var(--border)' }} />
               </div>
-              <h1 style={{ fontSize: 'clamp(36px, 5.5vw, 58px)', fontWeight: 400, lineHeight: 1.1, margin: '0 0 40px', letterSpacing: '-0.02em' }}>
+              <h1 style={{ fontSize: 'clamp(36px, 5.5vw, 58px)', fontWeight: 400, lineHeight: 1.1, margin: '0 0 40px', letterSpacing: '-0.02em', color: heroImg ? '#F7F6F3' : 'var(--foreground)' }}>
                 {t.hero.headline}
               </h1>
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <Link href={`/${lang}/developments`} style={{ display: 'inline-block', background: 'var(--foreground)', color: 'var(--background)', padding: '14px 28px', fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
+                <Link href={`/${lang}/developments`} style={{ display: 'inline-block', background: heroImg ? '#F7F6F3' : 'var(--foreground)', color: heroImg ? '#1A1A1A' : 'var(--background)', padding: '14px 28px', fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
                   {t.hero.exploreBtn}
                 </Link>
-                <Link href={`/${lang}/developments`} style={{ display: 'inline-block', border: '1px solid var(--border)', color: 'var(--foreground)', padding: '14px 28px', fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
+                <Link href={`/${lang}/developments`} style={{ display: 'inline-block', border: `1px solid ${heroImg ? 'rgba(247,246,243,0.4)' : 'var(--border)'}`, color: heroImg ? '#F7F6F3' : 'var(--foreground)', padding: '14px 28px', fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none' }}>
                   {t.hero.browseBtn}
                 </Link>
               </div>
             </div>
-            <div style={{ borderLeft: '1px solid var(--border)', paddingLeft: '48px', paddingBottom: '4px' }} className="hero-aside">
-              <p style={{ fontSize: '16px', color: 'var(--muted)', lineHeight: 1.75, margin: '0 0 32px' }}>
+            <div style={{ borderLeft: `1px solid ${heroImg ? 'rgba(247,246,243,0.2)' : 'var(--border)'}`, paddingLeft: '48px', paddingBottom: '4px' }} className="hero-aside">
+              <p style={{ fontSize: '16px', color: heroImg ? 'rgba(247,246,243,0.75)' : 'var(--muted)', lineHeight: 1.75, margin: '0 0 32px' }}>
                 {t.hero.aside}
               </p>
-              <Link href={`/${lang}/methodology`} style={{ fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+              <Link href={`/${lang}/methodology`} style={{ fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: heroImg ? 'rgba(247,246,243,0.65)' : 'var(--muted)', textDecoration: 'none', borderBottom: `1px solid ${heroImg ? 'rgba(247,246,243,0.3)' : 'var(--border)'}` }}>
                 {dict.common.readMethodology}
               </Link>
             </div>
           </div>
         </div>
+        {heroImg && heroDev?.name && (
+          <p style={{ position: 'absolute', bottom: '16px', right: '2rem', fontSize: '11px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'rgba(247,246,243,0.45)', margin: 0, zIndex: 1 }}>
+            {heroDev.name}{heroDev.location?.name ? ` · ${heroDev.location.name}` : ''}
+          </p>
+        )}
         <style>{`
           @media (max-width: 768px) {
             .hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
-            .hero-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--border); padding-top: 28px !important; }
+            .hero-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid ${heroImg ? 'rgba(247,246,243,0.2)' : 'var(--border)'}; padding-top: 28px !important; }
           }
         `}</style>
       </section>
