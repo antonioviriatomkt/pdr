@@ -46,20 +46,18 @@ export default function InquiryPanel({ development, dict }: InquiryPanelProps) {
       )}
 
       <div style={{ marginBottom: '20px' }}>
-        <div style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '10px' }}>
+        <label style={{ display: 'block', fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '8px' }}>
           {dict.iWouldLikeTo}
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+        </label>
+        <select
+          value={activeCta}
+          onChange={e => setActiveCta(e.target.value)}
+          style={{ width: '100%', padding: '10px 12px', fontSize: '14px', border: '1px solid var(--border)', background: 'var(--background)', color: 'var(--foreground)', appearance: 'none', cursor: 'pointer' }}
+        >
           {dict.ctaOptions.map(cta => (
-            <button
-              key={cta}
-              onClick={() => setActiveCta(cta)}
-              style={{ textAlign: 'left', padding: '8px 12px', fontSize: '13px', background: activeCta === cta ? 'var(--foreground)' : 'transparent', color: activeCta === cta ? 'var(--background)' : 'var(--muted)', border: `1px solid ${activeCta === cta ? 'var(--foreground)' : 'var(--border)'}`, cursor: 'pointer' }}
-            >
-              {cta}
-            </button>
+            <option key={cta} value={cta}>{cta}</option>
           ))}
-        </div>
+        </select>
       </div>
 
       {formState === 'success' ? (
