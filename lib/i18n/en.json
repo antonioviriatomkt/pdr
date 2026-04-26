@@ -53,7 +53,10 @@
       "methodology": "Methodology",
       "about": "About",
       "forDevelopers": "For Developers",
-      "contact": "Contact"
+      "contact": "Contact",
+      "privacyPolicy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "cookies": "Cookies"
     }
   },
 
@@ -460,6 +463,18 @@
       "title": "Developer Profiles — Portugal Developments Review",
       "description": "Editorial profiles of the developers behind Portugal's most considered new residential projects — selected for track record, delivery integrity, and project coherence.",
       "profileTitle": "{name} — Developer Profile | Portugal Developments Review"
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy — Portugal Developments Review",
+      "description": "How Portugal Developments Review collects, uses, and protects your personal data."
+    },
+    "terms": {
+      "title": "Terms of Use — Portugal Developments Review",
+      "description": "Terms governing access to and use of the Portugal Developments Review website."
+    },
+    "cookies": {
+      "title": "Cookie Notice — Portugal Developments Review",
+      "description": "How Portugal Developments Review uses cookies and similar technologies."
     }
   },
 

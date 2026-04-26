@@ -98,12 +98,20 @@ export default function Footer({ lang, footer }: FooterProps) {
         </div>
 
         <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
-          <p style={{ fontSize: '12px', color: 'var(--muted)' }}>
+          <p style={{ fontSize: '12px', color: 'var(--muted)', margin: 0 }}>
             {footer.copyright.replace('{year}', String(year))}
           </p>
-          <p style={{ fontSize: '12px', color: 'var(--muted)' }}>
-            {footer.platformTagline}
-          </p>
+          <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+            {[
+              { href: `/${lang}/privacy-policy`, label: footer.links.privacyPolicy },
+              { href: `/${lang}/terms`, label: footer.links.terms },
+              { href: `/${lang}/cookies`, label: footer.links.cookies },
+            ].map(({ href, label }) => (
+              <Link key={href} href={href} style={{ fontSize: '12px', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)' }}>
+                {label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

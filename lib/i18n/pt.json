@@ -53,7 +53,10 @@
       "methodology": "Metodologia",
       "about": "Sobre",
       "forDevelopers": "Para Promotores",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "privacyPolicy": "Política de Privacidade",
+      "terms": "Termos de Utilização",
+      "cookies": "Cookies"
     }
   },
 
@@ -460,6 +463,18 @@
       "title": "Perfis de Promotores — Portugal Developments Review",
       "description": "Perfis editoriais dos promotores por detrás dos projetos residenciais mais considerados de Portugal — selecionados pelo historial, integridade de entrega e coerência do projeto.",
       "profileTitle": "{name} — Perfil do Promotor | Portugal Developments Review"
+    },
+    "privacyPolicy": {
+      "title": "Política de Privacidade — Portugal Developments Review",
+      "description": "Como o Portugal Developments Review recolhe, utiliza e protege os seus dados pessoais."
+    },
+    "terms": {
+      "title": "Termos de Utilização — Portugal Developments Review",
+      "description": "Termos que regem o acesso e utilização do website Portugal Developments Review."
+    },
+    "cookies": {
+      "title": "Aviso de Cookies — Portugal Developments Review",
+      "description": "Como o Portugal Developments Review utiliza cookies e tecnologias semelhantes."
     }
   },
 
