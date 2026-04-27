@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import ArticleCard from '@/components/ArticleCard'
-import { getArticlesByCategory, getJournalCategory, getCategoriesWithArticles } from '@/lib/queries'
+import { getArticlesByCategory, getJournalCategory, getCategoriesWithArticles, HIDDEN_CATEGORIES } from '@/lib/queries'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 import { JsonLd } from '@/components/JsonLd'
@@ -19,6 +19,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; category: string }> }): Promise<Metadata> {
   const { category, lang } = await params
+  if (HIDDEN_CATEGORIES.includes(category)) return {}
   const locale = hasLocale(lang) ? lang : 'en'
   const [dict, catDoc, articles] = await Promise.all([
     getDictionary(locale),
@@ -39,6 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function JournalCategoryPage({ params }: { params: Promise<{ lang: string; category: string }> }) {
   const { lang, category } = await params
   if (!hasLocale(lang)) notFound()
+  if (HIDDEN_CATEGORIES.includes(category)) notFound()
 
   const [articles, dict, catDoc] = await Promise.all([
     getArticlesByCategory(category, lang),
@@ -105,7 +107,7 @@ export default async function JournalCategoryPage({ params }: { params: Promise<
             <Link href={`/${lang}/journal`} style={{ fontSize: '12px', color: 'var(--muted)', textDecoration: 'none' }}>
               {j.filterAll}
             </Link>
-            {Object.entries(categories).map(([value, lbl]) => (
+            {Object.entries(categories).filter(([value]) => !HIDDEN_CATEGORIES.includes(value)).map(([value, lbl]) => (
               <Link
                 key={value}
                 href={`/${lang}/journal/category/${value}`}

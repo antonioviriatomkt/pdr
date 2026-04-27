@@ -1,4 +1,6 @@
 import { client } from './sanity.client'
+
+export const HIDDEN_CATEGORIES = ['branded-residences', 'second-home', 'investment', 'buyer-guides']
 import {
   demoLocations,
   demoDevelopers,
@@ -174,7 +176,7 @@ export async function getDevelopmentsByLocation(locationSlug: string, lang = 'en
 export async function getLatestArticles(limit = 6, lang = 'en') {
   return safeFetch(
     () => client.fetch(`
-      *[_type == "journalArticle"] | order(publishedAt desc) [0...$limit] {
+      *[_type == "journalArticle" && !(category in $hiddenCategories)] | order(publishedAt desc) [0...$limit] {
         _id,
         "title": coalesce(title[$lang], title.en),
         slug, category, heroImage,
@@ -183,8 +185,8 @@ export async function getLatestArticles(limit = 6, lang = 'en') {
         linkedLocation->{ name, slug },
         linkedDevelopment->{ name, slug }
       }
-    `, { limit, lang }, { next: { revalidate: 300 } }),
-    demoArticles.slice(0, limit) as any[]
+    `, { limit, lang, hiddenCategories: HIDDEN_CATEGORIES }, { next: { revalidate: 300 } }),
+    demoArticles.filter(a => !HIDDEN_CATEGORIES.includes(a.category)).slice(0, limit) as any[]
   )
 }
 
@@ -240,15 +242,15 @@ export async function getAllArticles(lang = 'en') {
 export async function getPillarArticles(lang = 'en') {
   return safeFetch(
     () => client.fetch(`
-      *[_type == "journalArticle" && isPillar == true && !(_id in path("drafts.**")) && noindex != true] | order(publishedAt desc) {
+      *[_type == "journalArticle" && isPillar == true && !(_id in path("drafts.**")) && noindex != true && !(category in $hiddenCategories)] | order(publishedAt desc) {
         _id,
         "title": coalesce(title[$lang], title.en),
         slug, category, heroImage,
         "excerpt": coalesce(excerpt[$lang], excerpt.en),
         publishedAt
       }
-    `, { lang }, { next: { revalidate: 3600 } }),
-    demoArticles.filter(a => (a as any).isPillar) as any[]
+    `, { lang, hiddenCategories: HIDDEN_CATEGORIES }, { next: { revalidate: 3600 } }),
+    demoArticles.filter(a => (a as any).isPillar && !HIDDEN_CATEGORIES.includes(a.category)) as any[]
   )
 }
 
@@ -293,9 +295,9 @@ export async function getLifestyle(slug: string, lang = 'en') {
 export async function getCategoriesWithArticles(): Promise<string[]> {
   return safeFetch(
     () => client.fetch(`
-      array::unique(*[_type == "journalArticle" && !(_id in path("drafts.**")) && noindex != true].category)
-    `, {}, { next: { revalidate: 3600 } }),
-    [...new Set(demoArticles.map(a => a.category))]
+      array::unique(*[_type == "journalArticle" && !(_id in path("drafts.**")) && noindex != true && !(category in $hiddenCategories)].category)
+    `, { hiddenCategories: HIDDEN_CATEGORIES }, { next: { revalidate: 3600 } }),
+    [...new Set(demoArticles.filter(a => !HIDDEN_CATEGORIES.includes(a.category)).map(a => a.category))]
   )
 }
 

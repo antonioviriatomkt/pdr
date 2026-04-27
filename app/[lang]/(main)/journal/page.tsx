@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import ArticleCard from '@/components/ArticleCard'
-import { getLatestArticles, getPillarArticles, getArticlesByCategory } from '@/lib/queries'
+import { getLatestArticles, getPillarArticles, getArticlesByCategory, HIDDEN_CATEGORIES } from '@/lib/queries'
 import { getDictionary, hasLocale } from '@/lib/i18n'
 import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 import { JsonLd } from '@/components/JsonLd'
@@ -100,7 +100,7 @@ export default async function JournalPage({ params }: { params: Promise<{ lang: 
             <Link href={`/${lang}/journal`} style={{ fontSize: '12px', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)', paddingBottom: '2px' }}>
               {j.filterAll}
             </Link>
-            {Object.entries(categories).map(([value, label]) => (
+            {Object.entries(categories).filter(([value]) => !HIDDEN_CATEGORIES.includes(value)).map(([value, label]) => (
               <Link
                 key={value}
                 href={`/${lang}/journal/category/${value}`}
