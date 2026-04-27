@@ -9,4 +9,4 @@ export const client = projectId
       apiVersion: '2024-01-01',
       useCdn: true,
     })
-  : ({ fetch: () => Promise.reject(new Error('Sanity not configured')) } as ReturnType<typeof createClient>)
+  : ({ fetch: () => Promise.reject(new Error('Sanity not configured')) } as unknown as ReturnType<typeof createClient>)
