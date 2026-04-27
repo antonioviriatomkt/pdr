@@ -86,7 +86,7 @@ export async function getDevelopmentBySlug(slug: string, lang = 'en') {
         keyFacts, primaryCta,
         pressReleases[]{ title, date, summary, sourceName, sourceUrl },
         publishedAt,
-        location->{ name, slug, "intro": coalesce(intro[$lang], intro.en), region },
+        location->{ name, slug, "intro": coalesce(intro[$lang], intro.en), region, heroImage },
         developer->{ name, slug, logo, description, website, isViriatoClient },
         relatedDevelopments[]->{ name, slug, heroImage, status, type, priceDisplay, location->{ name } },
         relatedArticles[]->{ "title": coalesce(title[$lang], title.en), slug, heroImage, category, "excerpt": coalesce(excerpt[$lang], excerpt.en), publishedAt },

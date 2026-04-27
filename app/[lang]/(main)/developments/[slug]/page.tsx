@@ -212,6 +212,27 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
               </div>
             )}
 
+            {dev.gallery && dev.gallery.length > 0 && (
+              <div style={{ marginBottom: '40px', aspectRatio: '3/2', position: 'relative', overflow: 'hidden' }}>
+                <Image
+                  src={urlFor(dev.gallery[0]).width(900).height(600).auto('format').url()}
+                  alt={dev.gallery[0].alt || dev.name}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 100vw, 700px"
+                />
+              </div>
+            )}
+
+            {dev.typologyNote && (
+              <div style={{ marginBottom: '40px' }}>
+                <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 12px' }}>
+                  {d.availability}
+                </h2>
+                <p style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{dev.typologyNote}</p>
+              </div>
+            )}
+
             {dev.keyFacts && dev.keyFacts.length > 0 && (
               <div style={{ marginBottom: '40px' }}>
                 <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
@@ -253,15 +274,6 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                     </a>
                   </div>
                 </div>
-              </div>
-            )}
-
-            {dev.typologyNote && (
-              <div style={{ marginBottom: '40px' }}>
-                <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 12px' }}>
-                  {d.availability}
-                </h2>
-                <p style={{ fontSize: '15px', color: 'var(--muted)', lineHeight: 1.7, margin: 0 }}>{dev.typologyNote}</p>
               </div>
             )}
 
@@ -309,6 +321,17 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
               {dev.areaGuide && dev.areaGuide.length > 0 && (
                 <div style={{ marginBottom: '12px' }}>
                   <PortableTextRenderer value={dev.areaGuide} />
+                </div>
+              )}
+              {dev.location.heroImage && (
+                <div style={{ aspectRatio: '16/9', position: 'relative', overflow: 'hidden', marginBottom: '16px' }}>
+                  <Image
+                    src={urlFor(dev.location.heroImage).width(900).height(506).auto('format').url()}
+                    alt={dev.location.name}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 768px) 100vw, 700px"
+                  />
                 </div>
               )}
               <Link href={`/${lang}/locations/${dev.location.slug.current}`} style={{ fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--foreground)', textDecoration: 'none', borderBottom: '1px solid var(--foreground)' }}>
