@@ -51,6 +51,7 @@ export default function DevelopmentCard({ development, variant = 'default', lang
                 src={urlFor(development.heroImage).width(560).height(315).auto('format').url()}
                 alt={development.name}
                 fill
+                quality={85}
                 style={{ objectFit: 'cover' }}
                 sizes="280px"
               />
@@ -85,9 +86,10 @@ export default function DevelopmentCard({ development, variant = 'default', lang
           )}
           {development.heroImage ? (
             <Image
-              src={urlFor(development.heroImage).width(600).height(450).auto('format').url()}
+              src={urlFor(development.heroImage).width(800).height(600).auto('format').url()}
               alt={development.name}
               fill
+              quality={85}
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 400px"
             />

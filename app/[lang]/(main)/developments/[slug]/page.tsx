@@ -172,7 +172,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
       <section style={{ borderBottom: '1px solid var(--border)' }}>
         <div style={{ aspectRatio: '16/7', background: 'var(--surface)', position: 'relative', overflow: 'hidden' }}>
           {dev.heroImage ? (
-            <Image src={urlFor(dev.heroImage).width(1600).height(700).auto('format').url()} alt={dev.name} fill priority style={{ objectFit: 'cover' }} sizes="100vw" />
+            <Image src={urlFor(dev.heroImage).width(1600).height(700).auto('format').url()} alt={dev.name} fill priority quality={90} style={{ objectFit: 'cover' }} sizes="100vw" />
           ) : (
             <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <span style={{ fontSize: '12px', color: 'var(--muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
@@ -215,9 +215,10 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
             {dev.gallery && dev.gallery.length > 0 && (
               <div style={{ marginBottom: '40px', aspectRatio: '3/2', position: 'relative', overflow: 'hidden' }}>
                 <Image
-                  src={urlFor(dev.gallery[0]).width(900).height(600).auto('format').url()}
+                  src={urlFor(dev.gallery[0]).width(1400).height(933).auto('format').url()}
                   alt={dev.gallery[0].alt || dev.name}
                   fill
+                  quality={90}
                   style={{ objectFit: 'cover' }}
                   sizes="(max-width: 768px) 100vw, 700px"
                 />
@@ -326,9 +327,10 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
               {dev.location.heroImage && (
                 <div style={{ aspectRatio: '16/9', position: 'relative', overflow: 'hidden', marginBottom: '16px' }}>
                   <Image
-                    src={urlFor(dev.location.heroImage).width(900).height(506).auto('format').url()}
+                    src={urlFor(dev.location.heroImage).width(1400).height(788).auto('format').url()}
                     alt={dev.location.name}
                     fill
+                    quality={90}
                     style={{ objectFit: 'cover' }}
                     sizes="(max-width: 768px) 100vw, 700px"
                   />
@@ -428,7 +430,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
               {dev.gallery.filter((img: any) => img?.asset).map((img: any, i: number) => (
                 <figure key={img._key || i} style={{ margin: 0, position: 'relative', background: 'var(--surface)' }}>
                   <div style={{ aspectRatio: '4/3', position: 'relative', overflow: 'hidden' }}>
-                    <Image src={urlFor(img).width(800).height(600).auto('format').url()} alt={img.alt || `${dev.name} — ${i + 1}`} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
+                    <Image src={urlFor(img).width(1200).height(900).auto('format').url()} alt={img.alt || `${dev.name} — ${i + 1}`} fill quality={90} style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
                   </div>
                   {img.alt && (
                     <figcaption style={{ fontSize: '11px', color: 'var(--muted)', padding: '8px 12px', lineHeight: 1.4 }}>

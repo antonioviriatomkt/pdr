@@ -170,6 +170,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
             alt={article.title}
             fill
             priority
+            quality={90}
             style={{ objectFit: 'cover' }}
             sizes="100vw"
           />

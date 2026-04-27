@@ -45,9 +45,10 @@ export default function ArticleCard({ article, variant = 'default', lang, catego
         <div style={{ aspectRatio: '16/10', background: 'var(--surface)', marginBottom: '16px', position: 'relative', overflow: 'hidden' }}>
           {article.heroImage ? (
             <Image
-              src={urlFor(article.heroImage).width(600).height(375).auto('format').url()}
+              src={urlFor(article.heroImage).width(800).height(500).auto('format').url()}
               alt={article.title}
               fill
+              quality={85}
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 400px"
             />

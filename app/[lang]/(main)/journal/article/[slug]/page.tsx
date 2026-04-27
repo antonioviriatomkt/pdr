@@ -154,6 +154,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
             alt={article.title}
             fill
             priority
+            quality={90}
             style={{ objectFit: 'cover' }}
             sizes="100vw"
           />
@@ -237,7 +238,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
                   <Link key={a._id} href={`/${lang}/journal/article/${a.slug.current}`} style={{ display: 'block', textDecoration: 'none', borderTop: '1px solid var(--border)', paddingTop: '12px', paddingBottom: '12px' }}>
                     {a.heroImage && (
                       <div style={{ aspectRatio: '16/9', position: 'relative', overflow: 'hidden', marginBottom: '8px' }}>
-                        <Image src={urlFor(a.heroImage).width(560).height(315).auto('format').url()} alt={a.title} fill style={{ objectFit: 'cover' }} sizes="280px" />
+                        <Image src={urlFor(a.heroImage).width(560).height(315).auto('format').url()} alt={a.title} fill quality={85} style={{ objectFit: 'cover' }} sizes="280px" />
                       </div>
                     )}
                     <p style={{ fontSize: '14px', color: 'var(--foreground)', margin: '0 0 4px', lineHeight: 1.4 }}>{a.title}</p>

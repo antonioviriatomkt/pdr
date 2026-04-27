@@ -60,7 +60,7 @@ const components: PortableTextComponents = {
   types: {
     image: ({ value }) => {
       if (!value?.asset) return null
-      const src = urlFor(value).width(900).auto('format').url()
+      const src = urlFor(value).width(1400).height(788).auto('format').url()
       return (
         <figure style={{ margin: '2em 0' }}>
           <div style={{ position: 'relative', aspectRatio: '16/9', overflow: 'hidden', background: 'var(--surface)' }}>
@@ -68,6 +68,7 @@ const components: PortableTextComponents = {
               src={src}
               alt={value.alt || ''}
               fill
+              quality={90}
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 768px) 100vw, 700px"
             />

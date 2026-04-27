@@ -52,6 +52,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
               alt={heroDev?.name ?? ''}
               fill
               priority
+              quality={90}
               style={{ objectFit: 'cover' }}
               sizes="100vw"
             />
