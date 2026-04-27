@@ -152,6 +152,29 @@ export const demoDevelopments = [
     gallery: [],
     relatedDevelopments: [],
     relatedArticles: [],
+    pressReleases: [
+      {
+        title: "Lisbon\u2019s Príncipe Real welcomes its most considered new address in a decade",
+        date: '2024-09-14',
+        summary: "The Financial Times profiles Encosta do Bairro as part of a wider survey of Lisbon\u2019s residential renaissance, noting the project\u2019s contextual restraint and the developer\u2019s European track record as distinguishing factors in an increasingly competitive upper segment.",
+        sourceName: 'Financial Times',
+        sourceUrl: null,
+      },
+      {
+        title: 'New boutique scheme brings 24 apartments to the upper slopes of Príncipe Real',
+        date: '2024-06-03',
+        summary: "Público Architecture reviews the planning approval for Encosta do Bairro, examining how the scheme navigates Lisbon\u2019s strict height restrictions while delivering full-floor penthouses with unobstructed hilltop views.",
+        sourceName: 'Público',
+        sourceUrl: null,
+      },
+      {
+        title: 'International buyers drive demand for urban boutique developments in Lisbon',
+        date: '2024-02-18',
+        summary: 'A Knight Frank residential intelligence report cites Encosta do Bairro among a small cohort of sub-30-unit Lisbon projects attracting concentrated interest from northern European buyers seeking primary or second-home urban residences.',
+        sourceName: 'Knight Frank',
+        sourceUrl: null,
+      },
+    ],
     publishedAt: '2024-03-01',
   },
   {
@@ -179,6 +202,22 @@ export const demoDevelopments = [
     gallery: [],
     relatedDevelopments: [],
     relatedArticles: [],
+    pressReleases: [
+      {
+        title: 'Aires Mateus designs twelve villas for Comporta nature reserve',
+        date: '2024-11-07',
+        summary: 'Wallpaper* previews Quinta da Comporta, describing the commission as one of the most ecologically disciplined residential briefs the practice has undertaken — twelve villas distributed across 40 hectares, each orientated to minimise site disturbance while maximising Atlantic light.',
+        sourceName: 'Wallpaper*',
+        sourceUrl: null,
+      },
+      {
+        title: "Comporta remains Europe\u2019s most closely watched emerging luxury destination",
+        date: '2024-07-22',
+        summary: "The Wall Street Journal\u2019s European property supplement examines the Comporta market, with Quinta da Comporta cited as the definitive benchmark for what the protected zone can accommodate — a project shaped as much by ecological constraint as by architectural ambition.",
+        sourceName: 'Wall Street Journal',
+        sourceUrl: null,
+      },
+    ],
     publishedAt: '2024-02-15',
   },
   {

@@ -266,9 +266,9 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
             )}
 
             <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', marginBottom: '40px' }}>
-              <div style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
+              <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
                 {d.developerLabel}
-              </div>
+              </h2>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px' }}>
                 <div>
                   {dev.developer.slug?.current ? (
@@ -315,6 +315,35 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
                 {d.exploreLocation.replace('{location}', dev.location.name)}
               </Link>
             </div>
+
+            {dev.pressReleases && dev.pressReleases.length > 0 && (
+              <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px', marginBottom: '40px' }}>
+                <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 20px' }}>
+                  {d.pressReleases}
+                </h2>
+                {dev.pressReleases.map((pr: { title: string; date: string; summary?: string; sourceName?: string; sourceUrl?: string }, i: number) => (
+                  <div key={i} style={{ marginBottom: i < dev.pressReleases.length - 1 ? '32px' : '0' }}>
+                    <p style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', margin: '0 0 8px' }}>
+                      {new Date(pr.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                      {pr.sourceName && ` · ${pr.sourceName}`}
+                    </p>
+                    <p style={{ fontSize: '15px', color: 'var(--foreground)', margin: '0 0 8px', lineHeight: 1.4 }}>
+                      {pr.title}
+                    </p>
+                    {pr.summary && (
+                      <p style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: 1.6, margin: '0 0 12px' }}>
+                        {pr.summary}
+                      </p>
+                    )}
+                    {pr.sourceUrl && (
+                      <a href={pr.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', borderBottom: '1px solid var(--border)', textDecoration: 'none' }}>
+                        {d.pressReleasesReadMore} ↗
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
 
             {dev.lifestyleTags && dev.lifestyleTags.length > 0 && (
               <div style={{ borderTop: '1px solid var(--border)', paddingTop: '24px' }}>

@@ -84,6 +84,7 @@ export async function getDevelopmentBySlug(slug: string, lang = 'en') {
         "whyStandsOut": coalesce(whyStandsOut[$lang], whyStandsOut.en),
         "areaGuide": coalesce(areaGuide[$lang], areaGuide.en),
         keyFacts, primaryCta,
+        pressReleases[]{ title, date, summary, sourceName, sourceUrl },
         publishedAt,
         location->{ name, slug, "intro": coalesce(intro[$lang], intro.en), region },
         developer->{ name, slug, logo, description, website, isViriatoClient },

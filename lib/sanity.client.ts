@@ -1,8 +1,12 @@
 import { createClient } from '@sanity/client'
 
-export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  apiVersion: '2024-01-01',
-  useCdn: true,
-})
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+
+export const client = projectId
+  ? createClient({
+      projectId,
+      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+      apiVersion: '2024-01-01',
+      useCdn: true,
+    })
+  : ({ fetch: () => Promise.reject(new Error('Sanity not configured')) } as ReturnType<typeof createClient>)

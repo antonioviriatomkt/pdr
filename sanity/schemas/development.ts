@@ -104,6 +104,23 @@ export const development = defineType({
     }),
     defineField({ name: 'relatedDevelopments', title: 'Related Developments', type: 'array', of: [{ type: 'reference', to: [{ type: 'development' }] }] }),
     defineField({ name: 'relatedArticles', title: 'Related Journal Stories', type: 'array', of: [{ type: 'reference', to: [{ type: 'journalArticle' }] }] }),
+    defineField({
+      name: 'pressReleases',
+      title: 'Press Releases',
+      type: 'array',
+      description: 'Media coverage and press releases for this development. Titles and summaries are reproduced as-is from external sources.',
+      of: [{
+        type: 'object',
+        fields: [
+          defineField({ name: 'title', title: 'Headline', type: 'string' }),
+          defineField({ name: 'date', title: 'Publication Date', type: 'date' }),
+          defineField({ name: 'summary', title: 'Summary', type: 'text', rows: 3 }),
+          defineField({ name: 'sourceName', title: 'Source / Publication', type: 'string' }),
+          defineField({ name: 'sourceUrl', title: 'Link (URL)', type: 'url' }),
+        ],
+        preview: { select: { title: 'title', subtitle: 'sourceName' } },
+      }],
+    }),
     defineField({ name: 'publishedAt', title: 'Published At', type: 'datetime' }),
     defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string' }),
     defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text', rows: 2 }),
