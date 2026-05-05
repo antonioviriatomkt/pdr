@@ -1,0 +1,217 @@
+{
+  "name": "Serralves Garden",
+  "slug": "serralves-garden",
+  "location": {
+    "name": "Boavista",
+    "slug": "boavista",
+    "isExisting": false
+  },
+  "developer": {
+    "name": "VA Properties",
+    "slug": "va-properties",
+    "isExisting": true,
+    "sanityId": "20715c0a-05f2-4fc3-ba2d-f3723aaa92a1"
+  },
+  "latitude": null,
+  "longitude": null,
+  "status": "Under Construction",
+  "type": "Apartments",
+  "priceDisplay": "From €750k",
+  "primaryCta": "Register Interest",
+  "isFeatured": false,
+  "lifestyleTags": ["City Centre"],
+  "heroImage": {
+    "sourceUrl": "https://va-properties.com/pt/portfolio/serralves-garden",
+    "sourceLabel": "VA Properties official project page",
+    "altSuggestion": "Travertine-clad facade of Serralves Garden with private terrace, Boavista, Porto"
+  },
+  "gallery": [
+    {
+      "sourceUrl": "https://va-properties.com/pt/portfolio/serralves-garden",
+      "sourceLabel": "VA Properties official project page — renders",
+      "altSuggestion": "Project render, exterior facade, Serralves Garden, Porto"
+    },
+    {
+      "sourceUrl": "https://www.sothebysrealtypt.com/empreendimentos/serralves-garden-porto-lordelo-do-ouro-e-massarelos_pt_904",
+      "sourceLabel": "Portugal Sotheby's International Realty listing",
+      "altSuggestion": "Marketing image, Serralves Garden, Porto"
+    }
+  ],
+  "seoImage": {
+    "sourceUrl": "https://va-properties.com/pt/portfolio/serralves-garden"
+  },
+  "editorialThesis": {
+    "en": "A 14-apartment building of four floors designed by PHOCUS (Pedro Moreira and Cristina Couto, Braga) on Rua Professor Augusto Nobre, directly opposite the Fundação Serralves and its park in Porto's Boavista corridor. VA Properties, whose documented Portuguese portfolio includes two prior completions — the Palacete conversion in Boavista and Villa Breeze in Quinta do Lago — has chosen a compact footprint and travertine facade that respond to the site rather than ignore it. The building's scale and price range position it for internationally mobile buyers and affluent Portuguese families who want a low-density, park-facing address within Porto.",
+    "pt": "Edifício de 14 apartamentos distribuídos por quatro pisos, da autoria do atelier PHOCUS (Pedro Moreira e Cristina Couto, Braga), implantado na Rua Professor Augusto Nobre, em frente à Fundação Serralves e ao seu parque, no corredor da Boavista, no Porto. A VA Properties, com dois projectos concluídos documentados — o Palacete na Boavista e a Villa Breeze na Quinta do Lago — optou por uma implantação contida e por uma fachada em travertino que dialoga com o sítio. Pela escala e pelo intervalo de preços, o edifício dirige-se a compradores internacionais e a famílias portuguesas abastadas que procuram um endereço de baixa densidade e voltado para o parque, dentro do Porto."
+  },
+  "whyStandsOut": {
+    "en": [
+      "PHOCUS's travertine-clad scheme of 14 units on Rua Professor Augusto Nobre sits directly opposite the Serralves Foundation park — an 18-hectare public green space in the middle of Porto's Boavista corridor.",
+      "At 14 apartments across four floors, the building operates at a scale that is materially smaller than comparable new-build projects in the same corridor, such as Fercopor's Prisma development (73 units, Avenida da Boavista).",
+      "Private outdoor areas range from 84 m² (T2) to 213 m² (T4 penthouse), making outdoor square footage a defining characteristic rather than an amenity addition.",
+      "Three international schools — Colégio do Rosário (Avenida da Boavista 2856), Lycée Français Internacional Porto, and Oporto British School — are within the immediate area, supporting the family buyer profile the project's typology implies.",
+      "Porto MetroBus hydrogen service, launched 20 April 2026 on Avenida da Boavista, includes a Serralves stop connecting directly to Casa da Música and Praça do Império."
+    ],
+    "pt": [
+      "O edifício de 14 unidades revestidas a travertino, na Rua Professor Augusto Nobre, fica em frente ao parque da Fundação Serralves — um espaço verde de 18 hectares no coração do corredor da Boavista.",
+      "Com 14 apartamentos em quatro pisos, o edifício opera a uma escala significativamente menor do que outros novos empreendimentos no mesmo corredor, como o Prisma da Fercopor (73 unidades, Avenida da Boavista).",
+      "As áreas exteriores privativas vão dos 84 m² (T2) aos 213 m² (T4 penthouse), tornando o espaço ao ar livre uma característica estruturante do produto e não um complemento.",
+      "Três estabelecimentos de ensino internacional — Colégio do Rosário (Avenida da Boavista 2856), Lycée Français Internacional Porto e Oporto British School — estão na área imediata, reforçando o perfil familiar que a tipologia do empreendimento pressupõe.",
+      "O MetroBus a hidrogénio do Porto, inaugurado a 20 de Abril de 2026 na Avenida da Boavista, inclui uma paragem junto a Serralves com ligação directa à Casa da Música e à Praça do Império."
+    ]
+  },
+  "areaGuide": {
+    "en": "Rua Professor Augusto Nobre is a short residential street that runs perpendicular to Avenida da Boavista, the long east-west boulevard that forms Porto's principal western axis. The street's immediate context is defined by the Fundação Serralves — an institution housing a contemporary art museum within a formal park designed by landscape architect João Gomes da Silva — whose boundary wall sits directly across from the building. Parque da Cidade, Portugal's largest urban park, is within walking distance to the northwest. The broader Boavista neighbourhood combines large-format commercial uses along the avenue with quieter residential streets set back from it; Rua Professor Augusto Nobre belongs firmly to the latter. Casa da Música, the concert hall designed by Rem Koolhaas and completed in 2005, is roughly ten minutes by foot or public transport. The area draws two distinct buyer types: Portuguese families with children in the international schools that cluster around Avenida da Boavista, and internationally mobile buyers who want a quiet Porto base with museum-quality green space on the doorstep. The trade-off is that this part of Boavista is car-dependent for day-to-day errands — the new MetroBus service improves connections but does not replicate the walkability of the city's historic centre.",
+    "pt": "A Rua Professor Augusto Nobre é uma curta rua residencial perpendicular à Avenida da Boavista, o eixo viário que estrutura o flanco ocidental do Porto. O contexto imediato é definido pela Fundação Serralves — instituição que alberga um museu de arte contemporânea no interior de um parque projectado pelo arquitecto paisagista João Gomes da Silva — cujo muro se encontra em frente ao edifício. O Parque da Cidade, o maior parque urbano de Portugal, fica a poucos minutos a pé para noroeste. A Boavista combina usos comerciais de grande escala ao longo da avenida com ruas residenciais mais sossegadas; a Rua Professor Augusto Nobre pertence claramente a estas últimas. A Casa da Música, da autoria de Rem Koolhaas e inaugurada em 2005, fica a cerca de dez minutos a pé ou em transporte público. A zona atrai dois perfis distintos de comprador: famílias portuguesas com filhos nas escolas internacionais que se concentram em torno da Avenida da Boavista, e compradores internacionais que procuram uma base tranquila no Porto com um parque de arte contemporânea à porta. O ponto a ponderar é que esta parte da Boavista é dependente de automóvel para as deslocações quotidianas — o novo MetroBus melhora as ligações, mas não replica a acessibilidade pedonal do centro histórico da cidade."
+  },
+  "typologyNote": {
+    "en": "The building offers 14 apartments across three typologies: T2 units of 115.95 m² interior (from 147 m² total area), T3 units of 144–161 m² interior (from 243 m² total), and a T4 penthouse of 179.50 m² interior with 212.80 m² of exterior space. Prices were reported at launch (January 2026) from €770,000, with a subsequent Sotheby's listing indicating a floor of €840,000 — the conflict has not been resolved from primary sources. First deed transfers are targeted for Q1 2028, with the building in the structural phase as of the launch press wave.",
+    "pt": "O edifício disponibiliza 14 apartamentos em três tipologias: T2 com 115,95 m² de área interior (a partir de 147 m² de área total), T3 com 144 a 161 m² de interior (a partir de 243 m² totais) e um T4 penthouse com 179,50 m² de interior e 212,80 m² de exterior. Os preços foram reportados no lançamento (Janeiro de 2026) a partir de €770.000, com uma listagem posterior da Sotheby's a indicar um valor de partida de €840.000 — a divergência não foi resolvida a partir de fontes primárias. A escrituração das primeiras fracções está prevista para o primeiro trimestre de 2028, encontrando-se o edifício em fase estrutural à data da campanha de lançamento."
+  },
+  "keyFacts": [
+    { "label": "Location", "value": "Rua Professor Augusto Nobre, Boavista, Porto" },
+    { "label": "Neighbourhood", "value": "Boavista / Lordelo do Ouro e Massarelos" },
+    { "label": "Region", "value": "Porto" },
+    { "label": "Type", "value": "Apartments" },
+    { "label": "Status", "value": "Under Construction" },
+    { "label": "Units", "value": "14 across 4 floors" },
+    { "label": "Typology Mix", "value": "T2 (115.95 m² interior, from 147 m² total), T3 (144–161 m² interior, from 243 m² total), T4 penthouse (179.50 m² interior, 392.30 m² total with 212.80 m² exterior)" },
+    { "label": "Price From", "value": "From €770,000 (press, Jan 2026; official page: upon request)" },
+    { "label": "Price per m²", "value": "Approximately €6,600–€10,600 per m² interior area (derived from press pricing and official typology data; not directly stated by developer)" },
+    { "label": "Delivery", "value": "Q1 2028 (first deeds; source: five press outlets, Jan 2026)" },
+    { "label": "Lead Architect", "value": "PHOCUS (Pedro Moreira and Cristina Couto), Braga" },
+    { "label": "Amenities", "value": "Private outdoor terraces per unit (84–213 m² depending on typology), parking (T2: 1 space, T3: 1–2 spaces, T4: 3 spaces), domotics / smart home systems, private landscaped garden, EV charging" },
+    { "label": "Sustainability", "value": "Solar panels, heat pump climate systems, radiant floor heating, thermal-cut glazing with solar protection, EV charging" },
+    { "label": "Parking", "value": "Included; T2: 1 space, T3: 1–2 spaces, T4: 3 spaces" }
+  ],
+  "developerProfile": {
+    "legalEntity": "Boavistazul - Mediação Imobiliária, Lda. (AMI 10447) identified as the licensed real estate mediator on the Portugal Sotheby's International Realty listing. The development entity (construction SPV) has not been confirmed from public sources.",
+    "previousProjects": "Two completions documented on the developer's own portfolio: Palacete (Boavista, Porto — a historic mansion-style property, sold; no delivery year, unit count, or architect credit publicly disclosed) and Villa Breeze (Quinta do Lago, Algarve — a single villa, sold). Currently active: Serralves Garden (Porto, under construction), Atlantic Pearl (Esposende, Braga, under construction), Andrade Corvo 4 (Lisbon, under construction), and multiple villa projects in Vale do Lobo and Quinta do Lago.",
+    "trackRecordSummary": "VA Properties presents as a small, high-specification developer focused on premium residential product. Two prior completions are documented — one mansion and one villa — both sold. No multi-unit apartment building delivery at a scale comparable to Serralves Garden has been independently verified. No banking or financial partner is publicly named. No delivery timeline is disclosed for prior completions.",
+    "awards": null,
+    "knownIssues": "No disputes, delivery failures, or buyer fraud allegations found across multiple targeted searches."
+  },
+  "marketPosition": {
+    "priceComparison": "At €770,000–€1.9 million across 14 units, the project occupies the upper tier of Porto's new-build premium market. Implied price per m² of interior area (approximately €6,600–€10,600) is consistent with the higher end of Boavista's premium new-build range of €6,000–€12,000/m². Average asking price in Boavista stood at approximately €5,350/m² in 2026. The comparable Prisma development (Fercopor, Ventura + Partners, 73 units, Avenida da Boavista) operates at a larger scale in the same corridor.",
+    "investmentNarrative": "Boavista recorded year-on-year price growth of +8.6% as of 2026. Foreign buyers in the Porto Metropolitan Area paid a 39.8% premium over domestic buyers and concentrated purchases in newly built properties. No rental yield data specific to this price bracket and street is available from sourced data.",
+    "buyerSegment": "Project positioning, scale (14 units), and price range suggest internationally mobile buyers and affluent Portuguese families seeking a low-density building adjacent to Serralves Park and Parque da Cidade. Proximity to Colégio do Rosário (1,580 students), Lycée Français Internacional Porto, and Oporto British School suggests a family buyer profile.",
+    "rentalYieldEvidence": null,
+    "demandDrivers": "Fundação Serralves (contemporary art museum and 18-hectare park) directly opposite the building. Parque da Cidade (Portugal's largest urban park) within walking distance. Casa da Música and Castelo do Queijo nearby. Colégio do Rosário (pre-school to secondary, 1,580 students) at Avenida da Boavista 2856. Porto MetroBus hydrogen service began 20 April 2026 on Avenida da Boavista with a Serralves stop, running to Casa da Música and Praça do Império. Multiple bus lines (203, 207, 202, 504, 2M, 201, 502) serve the area."
+  },
+  "designSignals": {
+    "architecturalStyle": "Contemporary building of four floors with travertine stone facade, solar-protected thermal-cut glazing, and generous private outdoor areas per unit. PHOCUS (Braga) has an established portfolio including hotel, residential, and boutique hospitality projects across northern Portugal and Lisbon, with a stated emphasis on natural materials and spatial continuity. The project does not appear in PHOCUS's published portfolio on phocus.pt as of the research date.",
+    "materials": "Facade: travertine stone. Interiors: wood and stone (developer's own description). Window frames: thermal-cut aluminium with solar protection. Mechanical and sustainability systems: solar panels, heat pumps, radiant floor heating.",
+    "landscaping": "Private landscaped garden included. No landscape architect is credited in any source consulted.",
+    "visualIdentity": "Compact building (14 units, 4 floors) situated on Rua Professor Augusto Nobre, directly opposite Serralves Foundation and its park. Renders show a travertine-clad mass with layered terraces and substantial private outdoor areas per unit. Project name directly references the adjacent Serralves Foundation.",
+    "designAssessment": {
+      "en": "Based on renders published by the developer, the travertine facade and layered private terraces read as site-responsive in intent — the massing is restrained for the plot, and the material choice connects to the park context across the street — but Serralves Garden does not appear in PHOCUS's own published portfolio on phocus.pt, which limits independent assessment of how this project fits within the studio's body of work.",
+      "pt": "Com base nos renders publicados pelo promotor, a fachada em travertino e os terraços privados sobrepostos revelam uma intenção de resposta ao sítio — a volumetria é contida face ao lote e a escolha dos materiais dialoga com o contexto do parque em frente — mas o Serralves Garden não consta do portfólio publicado do PHOCUS em phocus.pt, o que limita uma avaliação independente de como este projecto se insere no conjunto da obra do atelier."
+    }
+  },
+  "relatedDevelopments": [],
+  "relatedArticles": [],
+  "pressReleases": [
+    {
+      "title": "Serralves Garden: novos apartamentos T2 a T4 chegam ao Porto",
+      "date": "2026-01-28",
+      "summary": "Idealista/news reports the launch of Serralves Garden by VA Properties, a 14-apartment development on Rua Professor Augusto Nobre, Boavista, Porto. Prices start at €770,000, the project is in the structural phase, and first deed transfers are expected in Q1 2028. Exclusive commercialisation is by Portugal Sotheby's International Realty.",
+      "sourceName": "idealista/news",
+      "sourceUrl": "https://www.idealista.pt/news/imobiliario/construcao/2026/01/28/73638-casas-de-luxo-no-porto-14-novos-apartamentos-chegam-a-boavista"
+    },
+    {
+      "title": "\"Serralves Garden\": empreendimento residencial de luxo reforça oferta premium no Porto",
+      "date": "2026-01-28",
+      "summary": "Diário Imobiliário covers the launch of Serralves Garden. Confirms 14 apartments (T2–T4) with prices from €770,000 to €1.9 million, developer VA Properties, marketing agent Portugal Sotheby's International Realty, architect firm PHOCUS, and Q1 2028 delivery. Quotes Duarte Marques, director at Portugal Sotheby's, on the project's location, architecture, and scale.",
+      "sourceName": "Diário Imobiliário",
+      "sourceUrl": "https://diarioimobiliario.pt/Serralves-Garden-empreendimento-residencial-de-luxo-reforca-oferta-premium-no-Porto"
+    },
+    {
+      "title": "Porto vai ter um novo projeto residencial de luxo com preços a partir dos 770 mil euros",
+      "date": "2026-01-28",
+      "summary": "Jornal Económico reports Serralves Garden will offer 14 apartments from T2 to T4 with prices starting at €770,000, located near Avenida da Boavista and Serralves Park. Notes the project is in the structural phase with handovers expected Q1 2028.",
+      "sourceName": "Jornal Económico",
+      "sourceUrl": "https://jornaleconomico.sapo.pt/noticias/porto-vai-ter-um-novo-projeto-residencial-de-luxo-com-precos-a-partir-dos-770-mil-euros/"
+    },
+    {
+      "title": "\"Serralves Garden\" é o novo empreendimento de luxo no Porto",
+      "date": "2026-01-28",
+      "summary": "RE Portugal / Vida Imobiliária covers the project launch noting 14 apartments (T2–T4) starting from €770,000, developer VA Properties, exclusive marketing by Portugal Sotheby's International Realty, and Q1 2028 delivery target. Quotes Duarte Marques (Portugal Sotheby's) on comfort, discretion, and sophistication.",
+      "sourceName": "RE Portugal / Vida Imobiliária",
+      "sourceUrl": "https://reportugal.vidaimobiliaria.com/atualidade/construcao/serralves-garden-novo-empreendimento-luxo-porto/"
+    },
+    {
+      "title": "VA Properties lança \"Serralves Garden\"",
+      "date": "2026-01-28",
+      "summary": "Construir magazine reports VA Properties' launch of Serralves Garden. Full article text unavailable (HTTP 403); headline and date confirmed via search index.",
+      "sourceName": "Construir",
+      "sourceUrl": "https://www.construir.pt/2026/01/28/va-properties-lanca-serralves-garden"
+    },
+    {
+      "title": "\"Serralves Garden\", um novo empreendimento residencial de luxo que nasce no Porto",
+      "date": "2026-01-28",
+      "summary": "Grupo Vida Económica covers the launch with 14 apartments, T2–T4, prices from €770,000, developer VA Properties, Portugal Sotheby's exclusive commercialisation, Q1 2028 delivery. Notes emphasis on harmony between built space and surrounding nature, natural light, and interior-exterior connectivity.",
+      "sourceName": "Grupo Vida Económica",
+      "sourceUrl": "https://www.grupovidaeconomica.pt/pt-pt/-serralves-garden---um-novo-empreendimento-residencial-de-luxo-que-nasce-no-porto"
+    }
+  ],
+  "brochure": {
+    "exists": true,
+    "sourceUrl": "https://va-properties.com/pt/portfolio/serralves-garden",
+    "gated": true
+  },
+  "publishedAt": null,
+  "seoTitle": "Serralves Garden — Apartments in Boavista | Portugal Developments Review",
+  "seoDescription": "14 apartments by PHOCUS directly opposite the Serralves Foundation park in Porto's Boavista corridor. T2 to T4 penthouse, from €770,000. Delivery Q1 2028.",
+  "noindex": true,
+  "curationFlags": {
+    "locationQuality": "Strong — Rua Professor Augusto Nobre sits directly opposite the Fundação Serralves and its 18-hectare park in Porto's Boavista corridor, a proven submarket with +8.6% YoY price growth, structural demand drivers (Serralves Foundation, Parque da Cidade, three international schools), and newly inaugurated MetroBus service on Avenida da Boavista.",
+    "designQuality": "Adequate — PHOCUS (Braga) has an established multi-typology portfolio across hospitality and residential projects with multiple design awards, and the travertine massing and layered terraces read as site-responsive in intent; however, Serralves Garden does not appear in the studio's own published portfolio on phocus.pt, and no local executive, landscape, or interior architect is credited in any source.",
+    "developerReputation": "Weak — VA Properties' two documented completions (Palacete, a single mansion in Boavista, and Villa Breeze, a single villa in Quinta do Lago) are not comparable in type or scale to a 14-unit premium apartment building; no delivery year, unit count, financial partner, or architect credit is publicly available for either prior completion, leaving delivery capacity at this scale unverified.",
+    "specificationCredibility": "Adequate — Named sustainability systems (solar panels, heat pumps, radiant floor heating, thermal-cut glazing with solar protection, EV charging) and travertine stone facade are specific and consistent with the implied price per m² of approximately €6,600–€10,600; no sustainability certification target is named and no material schedule has been published.",
+    "propositionAuthenticity": "Adequate — The proposition (low-density, park-facing building with large private terraces in Boavista, priced at €770k–€1.9m) is internally consistent with the site, buyer profile, and Portugal Sotheby's International Realty exclusive mandate; the primary authenticity question — whether VA Properties can deliver a multi-unit apartment building at this scale — is captured under developerReputation.",
+    "overallRecommendation": "Recommend with reservations",
+    "openQuestions": [
+      "Hero image: to be retrieved by editorial lead under licence. Source identified: https://va-properties.com/pt/portfolio/serralves-garden.",
+      "Gallery images: to be retrieved by editorial lead under licence. 2 sources identified: VA Properties official page and Portugal Sotheby's International Realty listing.",
+      "Brochure: to be retrieved and licence-checked by editorial lead. Source: https://va-properties.com/pt/portfolio/serralves-garden (downloadable brochure linked from project page; not retrieved per research rules).",
+      "latitude / longitude: street address confirmed (Rua Professor Augusto Nobre, Lordelo do Ouro e Massarelos, Porto) but exact GPS coordinates not sourced from a primary data source.",
+      "keyFacts.Local Architect: no local executive architect credited in any source consulted. Queries tried: official page fetches, all press, targeted searches. No result.",
+      "keyFacts.Landscape Architect: no landscape architect credited in any source. Official page mentions private landscaped garden but names no designer. No result.",
+      "keyFacts.Interior Designer: no interior designer credited in any source. Official page mentions custom project design without attribution. No result.",
+      "developerProfile.awards: no awards or external recognitions found for VA Properties in Portuguese Real Estate Awards 2024 or 2025 coverage.",
+      "developerProfile.legalEntity: development SPV not confirmed. Boavistazul - Mediação Imobiliária, Lda. (AMI 10447) identified as the Sotheby's listing mediator — may be a sister entity or unrelated agency, not necessarily the developer SPV.",
+      "developerProfile.financialPartner: no bank or equity partner named in any public source.",
+      "developerProfile.previousProjects: Palacete delivery year, unit count, and architect credit not found from any public source.",
+      "marketPosition.rentalYieldEvidence: no rental yield data specific to this price bracket (€770k–€1.9m) on this street found from sourced data.",
+      "Conflict — starting price: €770,000 (five press sources, Jan 2026) vs €840,000 (Portugal Sotheby's listing). Official page states 'sob consulta'. Not resolved from primary sources.",
+      "Conflict — price ceiling: €1.9 million (Diário Imobiliário) vs €1,260,000 as T3 ceiling (Sotheby's). Likely the €1.9m refers to the T4 penthouse. Not resolved from primary sources.",
+      "Conflict — architect surname: 'Cristina Couto' (VA Properties PT page, Sotheby's) vs 'Cristina Costra' (VA Properties EN page). 'Couto' is likely correct but not independently verifiable from PHOCUS's own channels.",
+      "PHOCUS founding year: not disclosed on phocus.pt or any source consulted.",
+      "PHOCUS portfolio: Serralves Garden does not appear in the studio's published project list on phocus.pt as of the research date.",
+      "Developer due diligence (editorial lead): VA Properties has no documented multi-unit apartment delivery comparable in scale or type to Serralves Garden. Before publication, editorial lead should seek direct confirmation of financial standing, construction financing, and delivery capacity — either through direct developer engagement or through Portugal Sotheby's International Realty."
+    ]
+  },
+  "newEntities": {
+    "location": {
+      "name": "Boavista",
+      "slug": "boavista",
+      "region": "Porto",
+      "locationType": "neighbourhood",
+      "parentLocation": { "name": "Porto", "slug": "porto" },
+      "intro": {
+        "en": "Boavista is a broad residential and commercial district of Porto, structured around Avenida da Boavista — the long east-west boulevard that connects Rotunda da Boavista to the mouth of the Douro at Castelo do Queijo. Its western reaches, adjacent to the Fundação Serralves and Parque da Cidade, are among Porto's most sought-after residential addresses for buyers who want park-adjacent quiet within a ten-minute connection to the city's cultural core.",
+        "pt": "A Boavista é um vasto bairro residencial e comercial do Porto, estruturado em torno da Avenida da Boavista — o longo eixo viário que liga a Rotunda da Boavista à foz do Douro junto ao Castelo do Queijo. Os seus troços mais ocidentais, contíguos à Fundação Serralves e ao Parque da Cidade, contam-se entre as moradas residenciais mais procuradas da cidade por quem valoriza a tranquilidade junto ao parque sem abdicar da proximidade ao centro cultural do Porto."
+      },
+      "marketFraming": {
+        "en": "Boavista recorded average asking prices of approximately €5,350/m² in 2026, with premium new-build ranging from €6,000 to €12,000/m² depending on specification and exact position along the corridor. Year-on-year price growth of +8.6% was recorded as of early 2026. The submarket draws Portuguese families attracted by the concentration of international schools — Colégio do Rosário, Lycée Français Internacional Porto, and Oporto British School all within the neighbourhood — and internationally mobile buyers seeking low-density product adjacent to the Serralves Foundation and Parque da Cidade. Foreign buyers in the Porto Metropolitan Area paid a premium of approximately 39.8% over domestic buyers, with a concentration in newly built properties. Active new-build supply in the 2023–2026 period includes large-scale schemes on Avenida da Boavista and smaller boutique buildings on adjacent residential streets.",
+        "pt": "A Boavista registou preços médios de pedida de cerca de €5.350/m² em 2026, com novos empreendimentos de maior especificação a atingir entre €6.000 e €12.000/m² consoante a localização exacta no corredor. O crescimento anual dos preços situou-se em +8,6% no início de 2026. O submercado atrai famílias portuguesas pela concentração de escolas internacionais — Colégio do Rosário, Lycée Français Internacional Porto e Oporto British School, todas no bairro — e compradores internacionais em busca de produto de baixa densidade junto à Fundação Serralves e ao Parque da Cidade. Os compradores estrangeiros na Área Metropolitana do Porto pagaram um prémio de cerca de 39,8% face aos compradores nacionais, concentrando-se em imóveis de construção nova. A oferta activa de construção nova entre 2023 e 2026 inclui empreendimentos de grande escala na Avenida da Boavista e edifícios de menor dimensão nas ruas residenciais adjacentes."
+      },
+      "nearbyLocations": [
+        { "name": "Foz do Douro", "slug": "foz-do-douro" }
+      ],
+      "latitude": null,
+      "longitude": null,
+      "heroImage": null
+    }
+  }
+}
