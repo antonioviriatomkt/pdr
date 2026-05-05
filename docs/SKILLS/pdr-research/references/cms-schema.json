@@ -1,0 +1,302 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "pdr-research-output",
+  "title": "PDR Research Output",
+  "description": "JSON Schema for docs/pdr-research-output/<slug>.json produced by the pdr-research skill.",
+  "type": "object",
+  "required": [
+    "name", "slug", "location", "developer",
+    "status", "type", "priceDisplay", "primaryCta", "isFeatured",
+    "lifestyleTags",
+    "heroImage", "gallery", "seoImage",
+    "editorialThesis", "whyStandsOut", "areaGuide", "typologyNote",
+    "keyFacts", "developerProfile", "marketPosition", "designSignals",
+    "relatedDevelopments", "relatedArticles",
+    "pressReleases", "brochure",
+    "publishedAt", "seoTitle", "seoDescription", "noindex",
+    "curationFlags"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+
+    "location": {
+      "type": "object",
+      "required": ["name", "slug", "isExisting"],
+      "properties": {
+        "name":       { "type": "string" },
+        "slug":       { "type": "string" },
+        "isExisting": { "type": "boolean" }
+      }
+    },
+
+    "developer": {
+      "type": "object",
+      "required": ["name", "slug", "isExisting"],
+      "properties": {
+        "name":       { "type": "string" },
+        "slug":       { "type": "string" },
+        "isExisting": { "type": "boolean" }
+      }
+    },
+
+    "latitude":  { "type": ["number", "null"] },
+    "longitude": { "type": ["number", "null"] },
+
+    "status": {
+      "type": "string",
+      "enum": ["Off-plan", "Under Construction", "Completed", "Selling Now"]
+    },
+    "type": {
+      "type": "string",
+      "enum": ["Apartments", "Villas", "Townhouses", "Penthouse", "Mixed-use", "Branded Residences"]
+    },
+    "priceDisplay": {
+      "type": ["string", "null"],
+      "enum": ["Price on Request", "From €500k", "From €750k", "From €1M", "From €2M", "From €3M+", null]
+    },
+    "primaryCta": {
+      "type": ["string", "null"],
+      "enum": ["Request Brochure", "Register Interest", "Download Investment Pack", "Schedule Consultation", "Speak with an Advisor", null]
+    },
+    "isFeatured": { "type": "boolean", "enum": [false] },
+
+    "lifestyleTags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Golf", "Beachfront", "Marina", "City Centre", "Countryside", "Mountain", "Historic Quarter", "Spa & Wellness", "Investment-grade"]
+      }
+    },
+
+    "heroImage": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["sourceUrl", "sourceLabel", "altSuggestion"],
+          "properties": {
+            "sourceUrl":      { "type": "string" },
+            "sourceLabel":    { "type": "string" },
+            "altSuggestion":  { "type": "string" }
+          }
+        },
+        { "type": "null" }
+      ]
+    },
+
+    "gallery": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sourceUrl", "sourceLabel", "altSuggestion"],
+        "properties": {
+          "sourceUrl":     { "type": "string" },
+          "sourceLabel":   { "type": "string" },
+          "altSuggestion": { "type": "string" }
+        }
+      }
+    },
+
+    "seoImage": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["sourceUrl"],
+          "properties": { "sourceUrl": { "type": "string" } }
+        },
+        { "type": "null" }
+      ]
+    },
+
+    "editorialThesis": {
+      "type": "object",
+      "required": ["en", "pt"],
+      "properties": {
+        "en": { "type": ["string", "null"] },
+        "pt": { "type": ["string", "null"] }
+      }
+    },
+
+    "whyStandsOut": {
+      "type": "object",
+      "required": ["en", "pt"],
+      "properties": {
+        "en": { "type": ["array", "null"], "items": { "type": "string" } },
+        "pt": { "type": ["array", "null"], "items": { "type": "string" } }
+      }
+    },
+
+    "areaGuide": {
+      "type": "object",
+      "required": ["en", "pt"],
+      "properties": {
+        "en": { "type": ["string", "null"] },
+        "pt": { "type": ["string", "null"] }
+      }
+    },
+
+    "typologyNote": {
+      "type": "object",
+      "required": ["en", "pt"],
+      "properties": {
+        "en": { "type": ["string", "null"] },
+        "pt": { "type": ["string", "null"] }
+      }
+    },
+
+    "keyFacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "value"],
+        "properties": {
+          "label": { "type": "string" },
+          "value": { "type": "string" }
+        }
+      }
+    },
+
+    "developerProfile": {
+      "type": ["object", "null"],
+      "properties": {
+        "legalEntity":        { "type": ["string", "null"] },
+        "previousProjects":   { "type": ["string", "null"] },
+        "trackRecordSummary": { "type": ["string", "null"] },
+        "awards":             { "type": ["string", "null"] },
+        "knownIssues":        { "type": ["string", "null"] }
+      }
+    },
+
+    "marketPosition": {
+      "type": ["object", "null"],
+      "properties": {
+        "priceComparison":    { "type": ["string", "null"] },
+        "investmentNarrative":{ "type": ["string", "null"] },
+        "buyerSegment":       { "type": ["string", "null"] },
+        "rentalYieldEvidence":{ "type": ["string", "null"] },
+        "demandDrivers":      { "type": ["string", "null"] }
+      }
+    },
+
+    "designSignals": {
+      "type": ["object", "null"],
+      "properties": {
+        "architecturalStyle": { "type": ["string", "null"] },
+        "materials":          { "type": ["string", "null"] },
+        "landscaping":        { "type": ["string", "null"] },
+        "visualIdentity":     { "type": ["string", "null"] },
+        "designAssessment": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["en", "pt"],
+              "properties": {
+                "en": { "type": ["string", "null"] },
+                "pt": { "type": ["string", "null"] }
+              }
+            },
+            { "type": "null" }
+          ]
+        }
+      }
+    },
+
+    "relatedDevelopments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["slug", "reason"],
+        "properties": {
+          "slug":   { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
+    },
+
+    "relatedArticles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["slug", "reason"],
+        "properties": {
+          "slug":   { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
+    },
+
+    "pressReleases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "sourceName", "sourceUrl"],
+        "properties": {
+          "title":      { "type": "string" },
+          "date":       { "type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "summary":    { "type": ["string", "null"] },
+          "sourceName": { "type": "string" },
+          "sourceUrl":  { "type": "string" }
+        }
+      }
+    },
+
+    "brochure": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["exists"],
+          "properties": {
+            "exists":    { "type": "boolean" },
+            "sourceUrl": { "type": ["string", "null"] },
+            "gated":     { "type": ["boolean", "null"] }
+          }
+        },
+        { "type": "null" }
+      ]
+    },
+
+    "publishedAt": { "type": "null" },
+    "seoTitle":    { "type": ["string", "null"] },
+    "seoDescription": { "type": ["string", "null"] },
+    "noindex": { "type": "boolean", "enum": [true] },
+
+    "curationFlags": {
+      "type": "object",
+      "required": [
+        "locationQuality", "designQuality", "developerReputation",
+        "specificationCredibility", "propositionAuthenticity",
+        "overallRecommendation", "openQuestions"
+      ],
+      "properties": {
+        "locationQuality":          { "type": "string" },
+        "designQuality":            { "type": "string" },
+        "developerReputation":      { "type": "string" },
+        "specificationCredibility": { "type": "string" },
+        "propositionAuthenticity":  { "type": "string" },
+        "overallRecommendation": {
+          "type": "string",
+          "enum": [
+            "Recommend for inclusion",
+            "Recommend with reservations",
+            "Insufficient information — defer",
+            "Do not recommend"
+          ]
+        },
+        "openQuestions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 3
+        }
+      }
+    },
+
+    "newEntities": {
+      "type": "object",
+      "properties": {
+        "developer": { "type": "object" },
+        "location":  { "type": "object" }
+      }
+    }
+  }
+}

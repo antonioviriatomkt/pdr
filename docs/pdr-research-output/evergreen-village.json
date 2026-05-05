@@ -1,0 +1,196 @@
+{
+  "name": "Evergreen Village",
+  "slug": "evergreen-village",
+  "location": { "name": "Fermentelos", "slug": "fermentelos", "isExisting": false },
+  "developer": { "name": "UP Investments", "slug": "up-investments", "isExisting": false },
+  "latitude": null,
+  "longitude": null,
+
+  "status": "Off-plan",
+  "type": "Mixed-use",
+  "priceDisplay": "Price on Request",
+  "primaryCta": "Register Interest",
+  "isFeatured": false,
+
+  "lifestyleTags": ["Countryside"],
+
+  "heroImage": {
+    "sourceUrl": "https://upinvestments.pt/en/developments/aveiro/evergreen-village",
+    "sourceLabel": "UP Investments official project page (photography: Manuel Ferreira)",
+    "altSuggestion": "Evergreen Village exterior, Fermentelos, Aveiro"
+  },
+  "gallery": [],
+  "seoImage": null,
+
+  "editorialThesis": {
+    "en": "A 51-unit mixed-use scheme — three ground-floor commercial units and 48 apartments across four floors — in the rural parish of Fermentelos, roughly 15 minutes by road from Aveiro city centre. No architect has been credited for the project on any published source; the developer, UP Investments (trading name of Loureiro Firm Lda., registered in Fermentelos), brings a single confirmed prior delivery: Casa Lígia, a five-unit restoration on Avenida Lourenço Peixinho in Aveiro, completed around 2021. The price range and typology mix suggest the development is aimed at domestic buyers — primary-residence or second-home — within the Aveiro orbit.",
+    "pt": "Empreendimento de uso misto com 51 frações — três lojas ao nível do rés-do-chão e 48 apartamentos distribuídos por quatro pisos — na freguesia rural de Fermentelos, a cerca de 15 minutos de carro do centro de Aveiro. Nenhum gabinete de arquitetura foi identificado em qualquer fonte pública relativa ao projeto. A promotora, UP Investments — designação comercial da Loureiro Firm Lda., com sede em Fermentelos — tem como única entrega confirmada a Casa Lígia, um imóvel de cinco frações na Avenida Lourenço Peixinho em Aveiro, concluído por volta de 2021. A gama de preços e a tipologia dominante apontam para um público de compradores nacionais, em aquisição de habitação própria ou segunda habitação, na órbita de Aveiro."
+  },
+
+  "whyStandsOut": {
+    "en": [
+      "Fermentelos sits on the edge of the Pateira de Fermentelos, described as the largest natural lagoon in the Iberian Peninsula and an established birdwatching and naturalist destination.",
+      "The Portuguese government has classified the Pateira's rehabilitation as a national priority; the active Riaviva programme includes €471,000 of pedestrian and cycling infrastructure and a €140,000, 36-month monitoring contract, as reported by Diário de Aveiro in December 2025.",
+      "T2 units at €150,000–€260,000 imply approximately €1,882–€3,261/m² — near or modestly above the Águeda municipal benchmark of roughly €2,035/m², and substantially below Aveiro city's published range of €2,500–€4,000/m²."
+    ],
+    "pt": [
+      "Fermentelos localiza-se na margem da Pateira de Fermentelos, considerada a maior lagoa natural da Península Ibérica e destino reconhecido de naturalismo e observação de aves.",
+      "O governo português classificou a reabilitação da Pateira como prioridade nacional; o programa Riaviva, em execução, inclui 800 metros de infraestrutura pedonal e ciclável (€471.000) e um contrato de monitorização de 36 meses (€140.000), conforme reportado pelo Diário de Aveiro em dezembro de 2025.",
+      "Os T2, entre €150.000 e €260.000, implicam cerca de €1.882–€3.261/m² — próximo ou ligeiramente acima do índice do município de Águeda (cerca de €2.035/m²) e substancialmente abaixo dos valores praticados na cidade de Aveiro (€2.500–€4.000/m²)."
+    ]
+  },
+
+  "areaGuide": {
+    "en": "Fermentelos is a rural parish within the municipality of Águeda, in the Aveiro District, situated on the eastern margin of the Pateira de Fermentelos — the largest natural lagoon in the Iberian Peninsula and a Natura 2000 birdwatching site. The nearest town of scale is Aveiro city, approximately 15 minutes by road; there is no direct rail link from Fermentelos, and the parish is effectively car-dependent for most daily needs. The Pateira has been subject to progressive sedimentation, and the Portuguese government has classified its rehabilitation as a national priority: the Riaviva programme is actively underway, with dredging, dam reconstruction on the Águeda River, and some 800 metres of pedestrian and cycling routes being delivered and monitored under public contracts. The area draws naturalists, weekend visitors from Aveiro and the greater Porto catchment, and a small community of full-time rural residents. Resale market depth is thin — fewer than a dozen residential listings were found across the main national portals at time of research, with no per-m² comparable published for the immediate locality. Buyers drawn here typically prioritise waterside setting and distance from urban density over access to urban services; those who require schools, hospitals, or public transport within walking distance will find the trade-off unfavourable.",
+    "pt": "Fermentelos é uma freguesia rural do município de Águeda, no Distrito de Aveiro, situada na margem oriental da Pateira de Fermentelos — a maior lagoa natural da Península Ibérica e um sítio Natura 2000 relevante para a observação de aves. O principal centro urbano próximo é a cidade de Aveiro, a cerca de 15 minutos de automóvel; a freguesia não dispõe de ligação ferroviária direta e é praticamente dependente de transporte próprio para as necessidades quotidianas. A Pateira tem sofrido progressivo assoreamento, e o governo português classificou a sua reabilitação como prioridade nacional: o programa Riaviva está em execução, com intervenções de desassoreamento, reconstrução de açudes no rio Águeda e cerca de 800 metros de percursos pedonais e cicláveis, objeto de contratos públicos de monitorização. A área atrai naturalistas, visitantes de fim de semana provenientes de Aveiro e da área metropolitana do Porto, e uma comunidade reduzida de residentes permanentes. A profundidade do mercado de revenda é escassa — menos de uma dúzia de anúncios residenciais foram encontrados nos principais portais nacionais à data da investigação, sem nenhum comparável de preço por metro quadrado publicado para a localidade. Compradores atraídos por este território valorizam tipicamente a envolvente aquática e o afastamento da densidade urbana em detrimento da proximidade de serviços urbanos; quem necessite de escolas, hospitais ou transportes públicos a pé encontrará aqui uma cedência considerável."
+  },
+
+  "typologyNote": {
+    "en": "The scheme comprises 51 units: three ground-floor commercial spaces, eight T1 apartments, and forty T2 apartments, all within a four-storey building. Residential prices run from €150,000 to €260,000; commercial units are priced from €99,450 to €250,000. No delivery date has been published on any source reviewed.",
+    "pt": "O empreendimento integra 51 frações: três espaços comerciais no rés-do-chão, oito apartamentos T1 e quarenta T2, distribuídos por quatro pisos. Os preços residenciais oscilam entre €150.000 e €260.000; as frações comerciais têm valores indicados entre €99.450 e €250.000. Nenhuma data de entrega foi publicada em qualquer fonte consultada."
+  },
+
+  "keyFacts": [
+    { "label": "Location", "value": "Fermentelos, Águeda, Aveiro District" },
+    { "label": "Region", "value": "Silver Coast / Aveiro" },
+    { "label": "Type", "value": "Mixed-use (residential + commercial)" },
+    { "label": "Status", "value": "Off-plan" },
+    { "label": "Units", "value": "51 (3 shops, 8 T1, 40 T2) across 4 floors" },
+    { "label": "Typology Mix", "value": "T1: 8 units (€150,000–€180,000); T2: 40 units (€150,000–€260,000); Shops: 3 units (€99,450–€250,000)" },
+    { "label": "Price From", "value": "From €150,000 (residential); from €99,450 (commercial)" },
+    { "label": "Amenities", "value": "Parking, local café, pharmacy, green zone" }
+  ],
+
+  "developerProfile": {
+    "legalEntity": "UP Investments is the trading name of Loureiro Firm Lda. (NIF 507479602), a sociedade por quotas founded 6 April 2006 and registered at Rua Pateira Nr. 23, 3750-439 Fermentelos, Águeda. The AMI licence 26125 is held under this entity. A related company, UP LOINVEST Lda., is part of the wider Loureiro Group alongside UP.living and UP.moving. The managing partner is Gilberto António De Vasconcelos Duarte.",
+    "previousProjects": "Three projects in the known portfolio: (1) Casa Lígia — 5 units (T1 and T3, €285,000–€800,000), listed as sold out; restoration of a 1920s building on Avenida Lourenço Peixinho, Aveiro, architect Paulo Martins, reported under construction December 2021. (2) Evergreen Pure — 16 units (T1–T3 Duplex, €247,450–€579,789), 100% available, no delivery date or construction evidence found. (3) Evergreen Village — current subject.",
+    "trackRecordSummary": "The only confirmed completed and sold delivery is Casa Lígia (5 units, ~2021). Evergreen Pure (16 units) and Evergreen Village (51 units) are both fully available with no published delivery dates and no construction-stage evidence. The developer claims an 81-year heritage through predecessor entities (Construtora Loureiro CA in Venezuela, Vasconcelos & Loureiro Lda. in Aveiro). Grupo Casais and Viriato & Viriato are listed as strategic collaborators.",
+    "awards": null,
+    "knownIssues": "No disputes, delivery failures, or buyer complaints found. The corporate structure — relationship between Loureiro Firm Lda., UP LOINVEST Lda., and the UP Investments trading name — could not be independently confirmed from public registry sources. The loureirogroup.com domain has an invalid TLS certificate."
+  },
+
+  "marketPosition": {
+    "priceComparison": "Evergreen Village T2 units at €150,000–€260,000 imply approximately €1,882–€3,261/m² (based on the reference unit area of 79.7 m²). This is near or modestly above the Águeda municipality benchmark of approximately €2,035/m² and substantially below Aveiro city prices of €2,500–€4,000/m². The development is positioned in the affordable-to-mid segment for the Aveiro District.",
+    "investmentNarrative": "No investment narrative or rental yield data has been published by the developer. The official page does not reference rental income, capital growth, or demand evidence.",
+    "buyerSegment": "Not stated by the developer. The T2-dominant mix at sub-€300,000 price points, proximity to Aveiro city, and the Pateira lakeside setting suggest the development is aimed at local or domestic primary-residence or secondary-home buyers rather than international investors.",
+    "rentalYieldEvidence": null,
+    "demandDrivers": "Fermentelos is a rural parish of approximately 3,258 residents (2011) on the edge of the Pateira de Fermentelos. A government-funded Riaviva ecological rehabilitation is underway (dredging, €471,000 for 800 m of pedestrian and cycling infrastructure, plus a €140,000 monitoring contract). Fermentelos is approximately 15 minutes by road from Aveiro city. Fermentelos itself has thin market depth — only 11 listings found on main portals with no per-m² comparable published."
+  },
+
+  "designSignals": {
+    "architecturalStyle": "Described by the developer as 'contemporary design' with 'harmonious blend of architecture and nature'. No architect has been credited for Evergreen Village on any published source.",
+    "materials": null,
+    "landscaping": "A 'green zone' is listed as an amenity. No landscape architect is credited and no further specification is available.",
+    "visualIdentity": "The developer uses the tagline 'A home for the future'. Photography on the official page is credited to Manuel Ferreira.",
+    "designAssessment": {
+      "en": "No architect has been credited for Evergreen Village on the developer's official page, its portfolio, or any press source reviewed; no architectural renders have been published beyond marketing photography attributed to Manuel Ferreira, and an independent assessment of design quality is not possible on the available material.",
+      "pt": "Nenhum gabinete de arquitetura foi creditado para o Evergreen Village na página oficial da promotora, no seu portfólio ou em qualquer fonte de imprensa consultada; não foram publicadas peças desenhadas além de fotografia de marketing da autoria de Manuel Ferreira, pelo que não é possível formular uma avaliação independente da qualidade arquitetónica com base no material disponível."
+    }
+  },
+
+  "relatedDevelopments": [],
+  "relatedArticles": [],
+
+  "pressReleases": [
+    {
+      "title": "Aveiro: Histórica 'Casa Lígia' restaurada para empreendimento de luxo",
+      "date": "2021-12-01",
+      "summary": "Reports the restoration of Casa Lígia, the oldest residence on Avenida Lourenço Peixinho, for conversion into a multifamily residential development attributed to architect Paulo Martins. The article references the developer via the Facebook page UP.loinvest and notes preservation of the 1920s facade with a new rear block.",
+      "sourceName": "Notícias de Aveiro",
+      "sourceUrl": "https://www.noticiasdeaveiro.pt/aveiro-historica-vivenda-ligia-restaurada-para-empreendimento-de-luxo/"
+    },
+    {
+      "title": "Desassoreamento da Pateira de Fermentelos é 'prioritário para o governo'",
+      "date": "2024-08-01",
+      "summary": "Reports that the Portuguese government has designated the dredging of Pateira de Fermentelos as a priority ecological intervention, citing progressive sedimentation.",
+      "sourceName": "JB (Jornal de Belas-Artes)",
+      "sourceUrl": "https://www.jb.pt/2024/08/desassoreamento-da-pateira-de-fermentelos-e-prioritario-para-o-governo/"
+    },
+    {
+      "title": "Intervenção na Pateira de Fermentelos vai ser monitorizada",
+      "date": "2025-12-02",
+      "summary": "Reports a €140,000 public contract over 36 months for monitoring the Riaviva rehabilitation at the Pateira, covering dredging, dam reconstruction on the Águeda River, and 800 m of pedestrian and cycling routes valued at €471,000.",
+      "sourceName": "Diário de Aveiro",
+      "sourceUrl": "https://www.diarioaveiro.pt/2025/12/02/intervencao-na-pateira-de-fermentelos-vai-ser-monitorizada/"
+    }
+  ],
+
+  "brochure": null,
+
+  "publishedAt": null,
+  "seoTitle": "Evergreen Village — Mixed-use in Fermentelos | Portugal Developments Review",
+  "seoDescription": "51-unit mixed-use scheme in Fermentelos, Aveiro orbit. T2 apartments from €150,000. No architect credited; no delivery date published.",
+  "noindex": true,
+
+  "curationFlags": {
+    "locationQuality": "Weak — rural parish, car-dependent, fewer than a dozen resale listings, no per-m² comparable; Pateira de Fermentelos and Riaviva rehabilitation are genuine assets but demand evidence at this price point in this sub-locality is thin.",
+    "designQuality": "Unknown — no architect credited on any source; no renders published beyond marketing photography; design quality cannot be assessed (deferral trigger).",
+    "developerReputation": "Weak — single confirmed delivery of 5 units (Casa Lígia, ~2021); two concurrent projects (67 units combined) 100% unsold with no construction evidence, no banking partners, and no delivery dates.",
+    "specificationCredibility": "Weak — no architect, no materials spec, no sustainability claim, no delivery date, no construction evidence; amenity offer is standard; pricing is proportionate but unverifiable without construction progress.",
+    "propositionAuthenticity": "Adequate — proposition is internally coherent and honest; pricing proportionate to Águeda benchmarks; no aspirational claims disconnected from the product.",
+    "overallRecommendation": "Insufficient information — defer",
+    "openQuestions": [
+      "designSignals.architectLead: No architect credited for Evergreen Village on any source. Source attempts: official page, Loureiro Firm portfolio, 'Evergreen Village Fermentelos arquitecto arquiteto 2024'. Deferral trigger. Required before any editorial publication.",
+      "designSignals.architectLocal: No local executive architect credited. Same queries, no results.",
+      "designSignals.architectLandscape: No landscape architect credited. No results.",
+      "designSignals.architectInteriors: No interiors designer credited. No results.",
+      "keyFacts.delivery: Delivery date not found on any source. Source attempts: official page, Loureiro Firm portfolio, all press and search results. Deferral trigger.",
+      "developerProfile.constructionStageEvidence: No construction photos, permit references, or site progress found for Evergreen Village or Evergreen Pure. Source attempts: official page, press searches, developer social media.",
+      "developerProfile.corporateStructure: Relationship between Loureiro Firm Lda. (NIF 507479602), UP LOINVEST Lda., and the UP Investments trading name not confirmable from public registry. loureirogroup.com inaccessible (TLS error).",
+      "marketPosition.rentalYieldEvidence: No rental yield data published. Source attempts: official page, developer website, all press.",
+      "marketPosition.priceBenchmark — Fermentelos specific: Only 11 listings found in Fermentelos sub-locality, no per-m² figure disclosed. Águeda municipal benchmark (~€2,035/m²) used as proxy.",
+      "designSignals.materials: No materials specification published. Source attempts: official page, all press.",
+      "priceDisplay: Residential pricing (€150,000–€260,000) falls below all defined PDR priceDisplay tiers (lowest is 'From €500k'). Editorial lead should confirm schema handling.",
+      "latitude: Coordinates not published on any source.",
+      "longitude: Coordinates not published on any source.",
+      "PDR fit note: Evergreen Village is priced at €150,000–€260,000 for domestic mid-market buyers in a rural Aveiro-orbit parish. PDR's stated audience is HNWI, international investors, diaspora buyers, and affluent second-home seekers. Editorial lead should confirm whether this candidate falls within PDR's scope before further research is commissioned.",
+      "heroImage: to be retrieved by editorial lead under licence. Source identified: https://upinvestments.pt/en/developments/aveiro/evergreen-village (photography: Manuel Ferreira).",
+      "gallery: to be retrieved by editorial lead under licence. 1 source page identified; number of licensable images unknown.",
+      "brochure: to be retrieved and licence-checked by editorial lead. No brochure or PDF download identified in any source."
+    ]
+  },
+
+  "newEntities": {
+    "developer": {
+      "name": "UP Investments",
+      "slug": "up-investments",
+      "logo": null,
+      "description": "UP Investments is the trading name of Loureiro Firm Lda. (NIF 507479602), a Fermentelos-based construction and development company founded in 2006 and holding AMI licence 26125. Its known residential portfolio comprises three projects in the Aveiro District: the sold-out Casa Lígia restoration in Aveiro city (5 units, ~2021), Evergreen Pure (16 units, Fermentelos, available), and Evergreen Village (51 units, Fermentelos, available). The company is part of the wider Loureiro Group, which also includes UP LOINVEST Lda. and UP.living.",
+      "shortDescription": {
+        "en": "Aveiro-based developer and constructor, trading as UP Investments, with one confirmed residential delivery in the Aveiro District.",
+        "pt": "Promotora e construtora sediada em Aveiro, a operar sob a marca UP Investments, com uma entrega residencial confirmada no Distrito de Aveiro."
+      },
+      "bio": {
+        "en": "UP Investments is the residential development brand of Loureiro Firm Lda., a construction company founded in April 2006 and registered in Fermentelos, a rural parish in the municipality of Águeda, Aveiro District. The company holds AMI real-estate licence 26125 and operates from offices on Avenida Dr. Lourenço Peixinho in Aveiro city. It is part of a wider group — the Loureiro Group — that includes UP LOINVEST Lda. and related entities UP.living and UP.moving, all sharing management under Gilberto António de Vasconcelos Duarte and Gabriel Duarte.\n\nThe company traces its lineage to two predecessor entities: Construtora Loureiro CA, which operated in Venezuela for approximately 35 years before closing in 2004, and Vasconcelos & Loureiro Lda., which was active in the Aveiro region. The combination of these histories underpins the group's claim to eight decades of accumulated construction experience, though independent corroboration of the predecessor entities' records is limited to the developer's own communications.\n\nThe confirmed residential delivery to date is Casa Lígia — a five-unit scheme involving the restoration of the oldest surviving residence on Avenida Lourenço Peixinho in Aveiro city, reported under construction in December 2021 with architect Paulo Martins credited. The project was listed as sold out at the time of research. Two further projects are currently in the market under the Evergreen name: Evergreen Pure (16 units, Fermentelos) and Evergreen Village (51 units, Fermentelos), both fully available with no published delivery dates and no construction-stage evidence identified at time of research.\n\nStrategic collaborators listed by the company include Grupo Casais, a Porto-based construction group, and Viriato & Viriato. No banking or financial partners, industry awards, or documented disputes were found across the developer's known portfolio.",
+        "pt": "UP Investments é a marca de promoção imobiliária da Loureiro Firm Lda., empresa de construção fundada em abril de 2006 e registada em Fermentelos, freguesia rural do município de Águeda, Distrito de Aveiro. A empresa detém a licença AMI 26125 e opera a partir de escritórios na Avenida Dr. Lourenço Peixinho, em Aveiro. Integra um grupo mais amplo — o Loureiro Group — que inclui a UP LOINVEST Lda. e as entidades relacionadas UP.living e UP.moving, partilhando a gestão sob Gilberto António de Vasconcelos Duarte e Gabriel Duarte.\n\nA empresa faz remontar a sua origem a duas entidades predecessoras: a Construtora Loureiro CA, que operou na Venezuela durante cerca de 35 anos antes de encerrar em 2004, e a Vasconcelos & Loureiro Lda., ativa na região de Aveiro. A conjugação destas histórias sustenta a afirmação de oito décadas de experiência acumulada em construção, embora a corroboração independente dos registos das entidades predecessoras se limite às comunicações da própria promotora.\n\nA entrega residencial confirmada até à data é a Casa Lígia — empreendimento de cinco frações resultante da restauração do imóvel mais antigo da Avenida Lourenço Peixinho, em Aveiro, referenciado em fase de obras em dezembro de 2021 com o arquiteto Paulo Martins creditado. O projeto encontrava-se vendido na totalidade à data da investigação. Dois outros projetos estão atualmente em comercialização sob a designação Evergreen: o Evergreen Pure (16 frações, Fermentelos) e o Evergreen Village (51 frações, Fermentelos), ambos com disponibilidade total, sem datas de entrega publicadas e sem evidências de fase de construção identificadas à data da investigação.\n\nA empresa lista como colaboradores estratégicos o Grupo Casais, grupo de construção sediado no Porto, e a Viriato & Viriato. Não foram encontrados parceiros bancários ou financeiros, prémios setoriais ou litígios documentados no portfólio conhecido da promotora."
+      },
+      "foundedYear": 2006,
+      "headquartersCity": "Aveiro",
+      "website": "https://upinvestments.pt",
+      "isViriatoClient": null
+    },
+    "location": {
+      "name": "Fermentelos",
+      "slug": "fermentelos",
+      "region": "Other",
+      "locationType": "neighbourhood",
+      "parentLocation": { "name": "Aveiro", "slug": "aveiro" },
+      "intro": {
+        "en": "Fermentelos is a rural parish in the municipality of Águeda, Aveiro District, situated on the eastern margin of the Pateira de Fermentelos — the largest natural lagoon in the Iberian Peninsula and a Natura 2000 designated birdwatching site, approximately 15 minutes by road from Aveiro city.",
+        "pt": "Fermentelos é uma freguesia rural do município de Águeda, Distrito de Aveiro, situada na margem oriental da Pateira de Fermentelos — a maior lagoa natural da Península Ibérica e um sítio Natura 2000, a cerca de 15 minutos de automóvel da cidade de Aveiro."
+      },
+      "marketFraming": {
+        "en": "Fermentelos sits at the margin between Aveiro city's orbit and the rural Águeda interior — close enough to Aveiro's university, services, and rail connections to be viable as a commuter base, yet far enough to be effectively car-dependent for daily needs. The parish has fewer than a dozen residential listings on national portals at any given time, making it one of the thinner residential markets in the Aveiro District. The Pateira de Fermentelos is the area's defining natural asset: a large shallow lagoon ringed by wetland habitats, historically used for freshwater fishing and increasingly positioned as a nature tourism destination. The government-funded Riaviva ecological rehabilitation programme — including dredging, dam reconstruction on the Águeda River, and new pedestrian and cycling infrastructure — is the most significant recent investment in the area's public realm, and it signals a long-term commitment to improving the Pateira's ecological and recreational quality. Residential demand here is primarily domestic, drawn by affordability relative to Aveiro city and the waterside setting. There is no evidence of an international buyer market in this sub-locality.",
+        "pt": "Fermentelos situa-se na fronteira entre a órbita da cidade de Aveiro e o interior rural de Águeda — suficientemente próxima de Aveiro para ser viável como base de pendularismo, mas distante o suficiente para ser praticamente dependente de transporte próprio no quotidiano. A freguesia conta com menos de uma dúzia de anúncios residenciais nos portais nacionais em qualquer momento, tornando-a um dos mercados residenciais mais pouco profundos do Distrito de Aveiro. A Pateira de Fermentelos é o principal ativo natural da área: uma lagoa rasa de grandes dimensões, ladeada por habitats húmidos, historicamente usada para pesca de água doce e progressivamente posicionada como destino de turismo de natureza. O programa Riaviva de reabilitação ecológica, com financiamento público — incluindo desassoreamento, reconstrução de açudes no rio Águeda e nova infraestrutura pedonal e ciclável — é o investimento mais significativo recente no espaço público da área, sinalizando um compromisso de longo prazo com a melhoria da qualidade ecológica e recreativa da Pateira. A procura residencial é aqui essencialmente doméstica, motivada pela acessibilidade de preço face à cidade de Aveiro e pela envolvente aquática. Não existe evidência de mercado comprador internacional nesta sub-localidade."
+      },
+      "nearbyLocations": [
+        { "name": "Aveiro", "slug": "aveiro" },
+        { "name": "Águeda", "slug": "agueda" },
+        { "name": "Oliveira do Bairro", "slug": "oliveira-do-bairro" }
+      ],
+      "latitude": null,
+      "longitude": null,
+      "heroImage": null
+    }
+  }
+}

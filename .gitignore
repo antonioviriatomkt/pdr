@@ -13,6 +13,9 @@ out/
 # Claude Code worktrees (internal tooling, not project code)
 .claude/worktrees/
 
+# pdr-research skill — phase working state (regenerated per run)
+docs/pdr-research-output/.working/
+
 # OS
 .DS_Store
 Thumbs.db
