@@ -1,0 +1,181 @@
+{
+  "name": "La Réserve",
+  "slug": "la-reserve",
+  "location": {
+    "name": "Belas Clube de Campo",
+    "slug": "belas-clube-de-campo",
+    "isExisting": true,
+    "sanityId": "12536b35-d909-4568-9918-0293e6152271"
+  },
+  "developer": {
+    "name": "Kronos Homes",
+    "slug": "kronos-homes",
+    "isExisting": true,
+    "sanityId": "3244c7e9-77cb-4b6f-b9f8-596b60c013e1"
+  },
+  "latitude": 38.782,
+  "longitude": -9.267,
+  "status": "Off-plan",
+  "type": "Apartments",
+  "priceDisplay": "From €500k",
+  "primaryCta": "Register Interest",
+  "isFeatured": false,
+  "lifestyleTags": ["Golf", "Countryside"],
+  "heroImage": {
+    "sourceUrl": "https://lareservekronos.com/",
+    "sourceLabel": "Official project site — hero render",
+    "altSuggestion": "La Réserve apartment building by UNStudio and Capinha Lopes at Belas Clube de Campo"
+  },
+  "gallery": [
+    {
+      "sourceUrl": "https://lareservekronos.com/",
+      "sourceLabel": "Official project site",
+      "altSuggestion": "La Réserve exterior render, Belas Clube de Campo"
+    },
+    {
+      "sourceUrl": "https://www.idealista.pt/en/news/luxury-real-estate-in-portugal/2026/02/23/74065-kronos-homes-unveils-la-reserve-luxury-apartments-at-belas-clube-de-campo",
+      "sourceLabel": "Idealista launch coverage, Feb 2026",
+      "altSuggestion": "La Réserve apartments aerial context, Belas Clube de Campo"
+    },
+    {
+      "sourceUrl": "https://imobiliario.publico.pt/noticias/la-reserve-novo-refugio-premium-belas-clube-campo-onde-arquitetura-encontra-natureza/",
+      "sourceLabel": "Público Imobiliário, Apr 2026",
+      "altSuggestion": "La Réserve ground floor garden unit"
+    }
+  ],
+  "seoImage": {
+    "sourceUrl": "https://lareservekronos.com/"
+  },
+  "editorialThesis": {
+    "en": "A 101-apartment off-plan scheme by Amsterdam-based UNStudio (Ben van Berkel, Caroline Bos) and Lisbon executive practice Capinha Lopes Consulting, set within Belas Clube de Campo — a 200-hectare gated estate in the Serra da Carregueira Forest Park, municipality of Sintra, 15–20 minutes from central Lisbon via the A5. Kronos Homes, whose Portuguese portfolio spans the Palmares Ocean Living & Golf resort in Lagos (sold 2023 for approximately €400 million), The One in Lisbon by Eduardo Souto de Moura, and Distrikt in Parque das Nações, has positioned La Réserve as the higher-specification tier within an estate that already hosts several competing residential schemes. The proposition targets internationally mobile buyers and Lisbon-area families seeking low-density living with on-estate schooling and green space within reach of the capital.",
+    "pt": "Empreendimento de 101 apartamentos em fase de comercialização, da autoria do gabinete holandês UNStudio (Ben van Berkel e Caroline Bos) e da Capinha Lopes Consulting, com sede em Lisboa, integrado no Belas Clube de Campo — uma urbanização privada de 200 hectares inserida no Parque Florestal da Serra da Carregueira, no município de Sintra, a 15–20 minutos do centro de Lisboa pela A5. A Kronos Homes, cujo portefólio português inclui o Palmares Ocean Living & Golf no Algarve (vendido em 2023 por cerca de 400 milhões de euros), The One em Lisboa com projeto de Eduardo Souto de Moura, e o Distrikt no Parque das Nações, posiciona La Réserve como o segmento de maior especificação dentro de uma urbanização que já acolhe outros empreendimentos residenciais em comercialização. O projeto destina-se a compradores com mobilidade internacional e a famílias da região de Lisboa que procuram um modo de vida de baixa densidade, com escola e espaço verde integrados e acesso direto à capital."
+  },
+  "whyStandsOut": {
+    "en": [
+      "UNStudio — founded in Amsterdam in 1988 by Ben van Berkel and Caroline Bos — leads architecture, paired with Eduardo Capinha Lopes's Lisbon practice (established 1999) for local delivery and permitting.",
+      "Kronos Homes has completed and delivered two architecturally credited Lisbon-area projects — The One (Eduardo Souto de Moura, Pritzker Prize laureate) and Distrikt in Parque das Nações (Morph Estudio, more than €125 million investment, more than €180 million in sales) — before breaking ground here.",
+      "BREEAM certification is targeted, with EV infrastructure and energy monitoring specified; the estate's championship golf course holds ISO 14001 accreditation and is the first GEO Certified course in Portugal.",
+      "On-estate amenities include a UNESCO-network school serving nursery through Year 9 — a rare facility in any new residential community in Portugal — alongside a supermarket, medical parapharmacy, and cycle paths within the 200-hectare site.",
+      "Entry pricing of approximately €470,000 (circa €6,800–€7,800 per m²) sits roughly double the estate's average asking price per square metre across all schemes, a premium implied by the architect and the BREEAM specification rather than by address alone."
+    ],
+    "pt": [
+      "O UNStudio — gabinete de design paramétrico e tecnológico fundado em Amesterdão em 1988 por Ben van Berkel e Caroline Bos — assume a arquitetura de autor, em parceria com o atelier lisboeta de Eduardo Capinha Lopes (fundado em 1999) para a execução local e o processo de licenciamento.",
+      "A Kronos Homes já entregou dois empreendimentos com arquitetos creditados na região de Lisboa — The One, com projeto de Eduardo Souto de Moura (Prémio Pritzker), e o Distrikt no Parque das Nações (Morph Estudio, com investimento superior a 125 milhões de euros e vendas acima dos 180 milhões) — antes do início de obra neste projeto.",
+      "Está prevista a certificação BREEAM, com infraestrutura de carregamento elétrico e monitorização energética incluídas no programa; o campo de golfe da urbanização detém a certificação ISO 14001 e foi o primeiro em Portugal a obter a certificação GEO.",
+      "As amenidades integradas incluem uma escola da rede UNESCO para crianças do berçário até ao 9.º ano de escolaridade — uma infraestrutura pouco comum em novos empreendimentos residenciais em Portugal — além de supermercado, parafarmácia e ciclovias dentro do perímetro de 200 hectares.",
+      "O preço de entrada de cerca de 470.000 euros (aproximadamente 6.800–7.800 euros por m²) corresponde ao dobro do preço médio pedido por metro quadrado no conjunto dos empreendimentos da urbanização — um diferencial associado à assinatura arquitetónica e à especificação BREEAM, não apenas à localização."
+    ]
+  },
+  "areaGuide": {
+    "en": "Belas Clube de Campo is a 200-hectare privately managed gated estate within the Serra da Carregueira Forest Park, in the municipality of Sintra, roughly 15–20 minutes west of central Lisbon via the A5, A9, and IC19. The estate operates its own shuttle service (BCC Expresso) to Lisbon and is also served by bus lines 1224, 1718, and 2605, but daily life here is predominantly car-dependent — the surrounding road network is suburban and the estate itself is designed around low-density spread rather than walkable density. Within the perimeter, residents have access to the championship golf course (ISO 14001, GEO Certified), a UNESCO-network school, a supermarket, a parapharmacy, a café, tennis and paddle courts, a gym, and cycle paths. Other residential schemes already in commercialisation on the estate include ORION (from €360,000), Bloomia (123 units), One Thousand Native, and Native.Townhouses (from €1,355,000), which means buyers can benchmark La Réserve directly against comparable alternatives within the same address. The estate draws Lisbon-commuting families who prioritise green space, a self-contained community infrastructure, and low-density living over urban walkability, as well as international buyers for whom the Sintra designation — UNESCO World Heritage proximity — and the forested setting carry independent value.",
+    "pt": "O Belas Clube de Campo é uma urbanização privada de gestão condominial com 200 hectares integrada no Parque Florestal da Serra da Carregueira, no município de Sintra, a cerca de 15–20 minutos a oeste do centro de Lisboa pela A5, A9 e IC19. A urbanização dispõe de serviço de transporte próprio para Lisboa (BCC Expresso) e é servida pelas carreiras 1224, 1718 e 2605, mas o dia a dia aqui é essencialmente dependente de automóvel — a rede viária envolvente é suburbana e a urbanização foi concebida para uma baixa densidade dispersa, não para deslocações pedonais. Dentro do perímetro, os residentes têm acesso ao campo de golfe de competição (ISO 14001, certificação GEO), a uma escola da rede UNESCO do berçário ao 9.º ano, a um supermercado, parafarmácia, café, campos de ténis e padel, ginásio e ciclovias. Outros empreendimentos em comercialização na mesma urbanização incluem o ORION (a partir de 360.000 euros), o Bloomia (123 unidades), o One Thousand Native e o Native.Townhouses (a partir de 1.355.000 euros), o que permite ao comprador comparar diretamente La Réserve com alternativas dentro do mesmo endereço. A urbanização atrai famílias que trabalham em Lisboa e priorizam o espaço verde, uma infraestrutura comunitária autossuficiente e a baixa densidade em detrimento da vida urbana, bem como compradores internacionais para quem a proximidade à Sintra — classificada pela UNESCO — e o enquadramento florestal têm valor próprio."
+  },
+  "typologyNote": {
+    "en": "La Réserve offers 101 apartments across T1 to T4 configurations, ranging from 60 to 190 square metres and priced between €470,000 and €1,300,000. Ground-floor units come with private gardens; upper-floor units are oriented toward panoramic views of the surrounding landscape. Construction is scheduled to begin in the second quarter of 2026, with delivery targeted for the fourth quarter of 2028.",
+    "pt": "La Réserve disponibiliza 101 apartamentos em tipologias T1 a T4, com áreas entre 60 e 190 metros quadrados e preços entre 470.000 e 1.300.000 euros. As unidades do piso térreo incluem jardim privado; as frações dos pisos superiores são orientadas para vistas panorâmicas sobre a paisagem envolvente. O início de obra está previsto para o segundo trimestre de 2026, com entrega projetada para o quarto trimestre de 2028."
+  },
+  "keyFacts": [
+    { "label": "Location", "value": "Belas Clube de Campo, Sintra, Lisbon region" },
+    { "label": "Neighbourhood", "value": "Belas Clube de Campo gated estate, Belas, Sintra" },
+    { "label": "Region", "value": "Greater Lisbon (15–20 min by car via A5/A9/IC19)" },
+    { "label": "Type", "value": "Apartments" },
+    { "label": "Status", "value": "Off-plan" },
+    { "label": "Units", "value": "101 apartments" },
+    { "label": "Typology Mix", "value": "T1–T4, ranging from 60 m² to 190 m²" },
+    { "label": "Price From", "value": "€470,000 (T1); up to €1,300,000 (T4)" },
+    { "label": "Delivery", "value": "Q4 2028 (construction start Q2 / June 2026)" },
+    { "label": "Lead Architect", "value": "UNStudio (Amsterdam; founded 1988, Ben van Berkel and Caroline Bos)" },
+    { "label": "Local Architect", "value": "Capinha Lopes Consulting / CL Consulting (Lisbon; established 1999)" },
+    { "label": "Amenities", "value": "Outdoor pool and communal gardens (on-site); estate golf course, tennis, paddle, gym, cycle paths, UNESCO-network school, supermarket, café, parapharmacy" },
+    { "label": "Sustainability", "value": "BREEAM certification targeted; energy monitoring systems; EV infrastructure; thermal performance optimisation; estate golf course ISO 14001 and GEO Certified™ (first in Portugal)" },
+    { "label": "Parking", "value": "Covered parking and storage included for all units" }
+  ],
+  "developerProfile": {
+    "legalEntity": "Kronos Investment Management Spain, S.L., registered at Calle de Serrano 3, 28001 Madrid. Group brands: Kronos Homes (build-to-sell), STAY (build-to-rent), WAY (commercial and leisure). Portugal chairman: Rui Meneses Ferreira.",
+    "previousProjects": "Palmares Ocean Living & Golf (Lagos, Algarve — RCR Arquitectes, Pritzker Prize 2017, jointly held with King Street Capital Management 2017–2023, sold to Arrow Global for combined ~€400M value); The One (Lisbon — Eduardo Souto de Moura, Pritzker Prize, construction completed end-2023); Distrikt by Kronos (Parque das Nações, Lisbon — Morph Estudio, 214 units, >€125M investment, >€180M in sales, average unit ~€800K); MIMA Living (Parque das Nações, Lisbon — 180 residential apartments, part of €150M mixed-use scheme, in commercialisation); Amendoeira Resort and Belmar Resort (Algarve).",
+    "trackRecordSummary": "Group founded 2014 by Saïd Hejal, having previously led a Fortress investment fund. Team has executed over €16 billion in real estate transactions across Iberia. Portuguese portfolio spans Algarve resort, Lisbon mid-market, and Lisbon premium segments. Two Pritzker Prize-winning architects (RCR at Palmares; Souto de Moura at The One) in recent delivered projects. No disputes or delivery failures found in research.",
+    "awards": "National Real Estate Award, Tourism category (2021), Palmares Clubhouse. European Property Awards: best high-rise residential (2020, Ikon); best residential project (2019, The Edge). Outstanding Property Awards London: best architectural design (Nature); Honourable Mention (The Edge, 2020). Porcelanosa Architecture and Interior Design Award (11th edition).",
+    "knownIssues": "None identified. No disputes, litigation, or regulatory proceedings found across all search queries."
+  },
+  "marketPosition": {
+    "priceComparison": "La Réserve's implied price/m² of €6,800–€7,800 is approximately double the current Belas Clube de Campo area average asking price of €3,846/m². Comparable on-estate schemes include ORION (from €360,000), One Thousand Native, Bloomia (123 units), and Native.Townhouses (from €1,355,000). La Réserve's entry pricing sits above ORION and below Native.Townhouses. The premium is attributable to the UNStudio/Capinha Lopes design partnership and a higher specification tier.",
+    "investmentNarrative": "Kronos positions La Réserve within the premium end of the Lisbon commuter belt market, targeting buyers who want lower-density living within reach of the city. Millennium bcp is named as 'a fundamental strategic partner' (Público Imobiliário, April 2026) though the nature of the partnership is not publicly established.",
+    "buyerSegment": "International second-home buyers and Portuguese HNWI families seeking lower-density suburban living with Lisbon access. The on-site UNESCO-network school and multilingual curriculum indicate the estate targets internationally mobile families. Rui Meneses Ferreira stated the project delivers 'integrated residential solutions within established destinations'.",
+    "rentalYieldEvidence": null,
+    "demandDrivers": "Belas Clube de Campo estate infrastructure: 200-hectare gated community with championship golf (ISO 14001, first GEO Certified in Portugal), UNESCO-network school (nursery to Year 9), full amenity provision, and 24-hour security. Road access via A5/A9/IC19 to Lisbon in 15–20 minutes. Estate shuttle (BCC Expresso) and bus lines to Lisbon. Portugal's premium housing segment benefits from strong international demand (The European, Feb 2026)."
+  },
+  "designSignals": {
+    "architecturalStyle": "UNStudio is known for parametric, technologically driven design with a focus on spatial experience and material coherence. Low-rise apartments embedded in the landscape. Ground-floor units with private gardens; upper-floor units with panoramic views built into the design programme.",
+    "materials": null,
+    "landscaping": "Communal gardens and outdoor pool confirmed. No landscape architect credit found in any source.",
+    "visualIdentity": "French name 'La Réserve' presented in an italic serif typeface. French naming convention consistent with Belas Clube de Campo's broader aspirational positioning.",
+    "designAssessment": {
+      "en": "UNStudio's parametric vocabulary and focus on spatial sequencing suggest a design concept that prioritises the ground-floor/upper-floor duality — private garden versus open view — as a genuine programmatic organising principle rather than a marketing distinction, but with no published material specifications or detailed renders available at this stage, the degree to which the architecture is site-specific to Serra da Carregueira rather than transferable to any landscaped estate remains an open question; Capinha Lopes Consulting's involvement provides the delivery credibility that an international studio requires in Portugal.",
+      "pt": "O vocabulário paramétrico do UNStudio e a atenção à experiência espacial sugerem um conceito que trata a dualidade piso térreo/pisos superiores — jardim privado versus vista aberta — como um princípio organizador genuíno e não como uma distinção de marketing; contudo, sem especificações de materiais publicadas nem imagens detalhadas disponíveis nesta fase, fica por demonstrar até que ponto a arquitetura responde à especificidade da Serra da Carregueira ou seria igualmente aplicável a qualquer urbanização paisagística; a participação da Capinha Lopes Consulting confere a credibilidade de execução que um atelier internacional necessita em Portugal."
+    }
+  },
+  "relatedDevelopments": [],
+  "relatedArticles": [],
+  "pressReleases": [
+    {
+      "title": "Kronos Homes unveils La Réserve: luxury apartments at Belas Clube de Campo, Lisbon",
+      "date": "2026-02-23",
+      "summary": "Kronos Homes announced La Réserve, a €60 million residential development of 101 apartments (T1–T4, 60–190 m², €470,000–€1.3 million) at Belas Clube de Campo, designed by UNStudio and Capinha Lopes Consulting. Construction to begin Q2 2026 with first completions Q4 2028, targeting BREEAM certification.",
+      "sourceName": "idealista/news",
+      "sourceUrl": "https://www.idealista.pt/en/news/luxury-real-estate-in-portugal/2026/02/23/74065-kronos-homes-unveils-la-reserve-luxury-apartments-at-belas-clube-de-campo"
+    },
+    {
+      "title": "La Réserve: o novo refúgio premium no Belas Clube de Campo onde a arquitetura encontra a natureza",
+      "date": "2026-04-22",
+      "summary": "Público Imobiliário provided detailed sustainability facts including BREEAM certification target, energy monitoring systems, high-efficiency exterior lighting, EV infrastructure integration, and thermal performance optimisation. Named Millennium bcp as 'a fundamental strategic partner' for the project.",
+      "sourceName": "Público Imobiliário",
+      "sourceUrl": "https://imobiliario.publico.pt/noticias/la-reserve-novo-refugio-premium-belas-clube-campo-onde-arquitetura-encontra-natureza/"
+    },
+    {
+      "title": "Lisbon Golf Resort Apartments: €60m La Réserve Scheme Tests Premium Housing Demand",
+      "date": "2026-02-24",
+      "summary": "The European placed La Réserve in the context of Portugal's premium housing market, noting it targets buyers seeking lower-density units within commuting range of Lisbon amid strong international demand and tighter financing. Confirmed €60 million investment, 101 units, UNStudio/Capinha Lopes design team.",
+      "sourceName": "The European",
+      "sourceUrl": "https://the-european.eu/story-57437/e60m-lisbon-golf-resort-scheme-tests-depth-of-portugals-upper-tier-housing-demand.html"
+    },
+    {
+      "title": "King Street and Kronos Homes complete the sale of Palmares Ocean Living and Golf",
+      "date": "2023-11-28",
+      "summary": "Confirmed sale of Palmares Ocean Living & Golf to Arrow Global funds. Joint venture between King Street Capital Management and Kronos Homes since 2017; combined investment and future development value approximately €400 million. First and second phases largely sold.",
+      "sourceName": "PR Newswire",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/king-street-and-kronos-homes-complete-the-sale-of-palmares-ocean-living-and-golf-301999424.html"
+    }
+  ],
+  "brochure": {
+    "exists": false,
+    "sourceUrl": null,
+    "gated": false
+  },
+  "publishedAt": null,
+  "seoTitle": "La Réserve — Apartments in Belas Clube de Campo | Portugal Developments Review",
+  "seoDescription": "101 off-plan apartments by UNStudio and Capinha Lopes at Belas Clube de Campo, a 200-hectare gated estate in Sintra, 15 min from Lisbon. From €470,000.",
+  "noindex": true,
+  "curationFlags": {
+    "locationQuality": "Adequate — proven submarket with demonstrated transactional depth across multiple price tiers, strong on-estate amenity infrastructure (GEO/ISO golf, UNESCO school, full services), and direct Lisbon access in 15–20 minutes; car-dependent suburban setting means the address alone does not sustain the premium — it must be carried by the product.",
+    "designQuality": "Adequate — UNStudio is an internationally credible studio and the ground-floor/upper-floor programme shows a legible spatial concept; however, no published material schedule or detailed renders exist at this stage, so site-specificity to Serra da Carregueira cannot be confirmed.",
+    "developerReputation": "Strong — Kronos Homes has delivered The One (Souto de Moura, completed 2023) and Distrikt in Parque das Nações (>€180M in sales), and exited Palmares for approximately €400 million; no disputes or delivery failures found; Millennium bcp named as strategic partner.",
+    "specificationCredibility": "Adequate — BREEAM targeted with specifically named systems (energy monitoring, EV infrastructure, thermal optimisation), covered parking confirmed for all units, implied price/m² proportionate to specification tier; no published material schedule.",
+    "propositionAuthenticity": "Strong — pricing, typology, architect, sustainability specification, and buyer profile internally consistent; Kronos's pattern of commissioning internationally credible architects is evidenced by prior delivered projects rather than claimed.",
+    "overallRecommendation": "Recommend with reservations",
+    "openQuestions": [
+      "Hero image: to be retrieved by editorial lead under licence. Source identified: https://lareservekronos.com/ and https://imobiliario.publico.pt/noticias/la-reserve-novo-refugio-premium-belas-clube-campo-onde-arquitetura-encontra-natureza/",
+      "Gallery images: to be retrieved by editorial lead under licence. 3 sources identified (official site, idealista launch article, Público Imobiliário).",
+      "Brochure: to be retrieved and licence-checked by editorial lead. Source: none identified — no public PDF linked on official site or in any press coverage.",
+      "keyFacts.Price per m²: implied from range (€470K–€1.3M across 60–190 m²) and area benchmark; no developer-confirmed figure. Source attempts: official site, all press sources.",
+      "designSignals.materials: no published material schedule found. Source attempts: official site, all press sources, UNStudio portfolio page.",
+      "architectSearch.landscape: landscape architect not named in any source. Source attempts: official site, all press sources.",
+      "architectSearch.interiors: interior designer not named in any source. Source attempts: official site, all press sources.",
+      "architectSearch.lead — UNStudio own-page confirmation: La Réserve not yet listed on unstudio.com/projects as of research date; confirmed in 7+ independent press sources. Editorial lead may wish to verify directly with studio.",
+      "developerProfile.financialPartners — Millennium bcp role: named as 'a fundamental strategic partner' in Público Imobiliário (Apr 2026) but nature of partnership not established. Source attempts: Público Imobiliário, Kronos corporate site.",
+      "keyFacts — typology unit-mix split (T1/T2/T3/T4 count): not disclosed in any source.",
+      "keyFacts — planning permit / licença de construção status: not found in any source.",
+      "marketPosition.rentalYieldEvidence: no rental yield data found for La Réserve or comparable premium units at Belas Clube de Campo."
+    ]
+  },
+  "newEntities": {}
+}

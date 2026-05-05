@@ -237,11 +237,6 @@ export default async function DeveloperPage({ params }: { params: Promise<{ lang
         </div>
       </section>
 
-      <style>{`
-        @media (max-width: 768px) {
-          .developer-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </>
   )
 }

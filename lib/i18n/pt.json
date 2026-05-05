@@ -174,6 +174,7 @@
       "gallery": "Galeria",
       "relatedHeading": "Outros Projetos em {location}",
       "brochureLabel": "Brochura",
+      "brochureViewBtn": "Ver brochura",
       "brochureCtaTitle": "Solicite a brochura completa do projeto",
       "brochureCtaSubtitle": "Receba todos os detalhes do projeto diretamente na sua caixa de entrada",
       "brochureCtaBtn": "Solicitar Brochura",
@@ -196,7 +197,8 @@
     "nearbyHeading": "Localizações Próximas",
     "exploreArrow": "Explorar →",
     "neighbourhoodsHeading": "Bairros",
-    "backTo": "Voltar a {name}"
+    "backTo": "Voltar a {name}",
+    "moreStories": "Mais histórias sobre {name} →"
   },
 
   "journal": {

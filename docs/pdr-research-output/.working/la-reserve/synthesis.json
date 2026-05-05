@@ -1,0 +1,111 @@
+{
+  "name": "La Réserve",
+  "location": { "name": "Belas Clube de Campo", "slug": "belas-clube-de-campo" },
+  "developer": { "name": "Kronos Homes", "slug": "kronos-homes" },
+  "latitude": 38.782,
+  "longitude": -9.267,
+  "status": "Off-plan",
+  "type": "Apartments",
+  "priceDisplay": "From €500k",
+  "primaryCta": "Register Interest",
+  "lifestyleTags": ["Golf", "Countryside"],
+  "heroImage": {
+    "sourceUrl": "https://lareservekronos.com/",
+    "sourceLabel": "Official project site — hero render",
+    "altSuggestion": "La Réserve apartment building by UNStudio and Capinha Lopes at Belas Clube de Campo"
+  },
+  "gallery": [
+    { "sourceUrl": "https://lareservekronos.com/", "sourceLabel": "Official project site", "altSuggestion": "La Réserve exterior render, Belas Clube de Campo" },
+    { "sourceUrl": "https://www.idealista.pt/en/news/luxury-real-estate-in-portugal/2026/02/23/74065-kronos-homes-unveils-la-reserve-luxury-apartments-at-belas-clube-de-campo", "sourceLabel": "Idealista launch coverage, Feb 2026", "altSuggestion": "La Réserve apartments aerial context, Belas Clube de Campo" },
+    { "sourceUrl": "https://imobiliario.publico.pt/noticias/la-reserve-novo-refugio-premium-belas-clube-campo-onde-arquitetura-encontra-natureza/", "sourceLabel": "Público Imobiliário, Apr 2026", "altSuggestion": "La Réserve ground floor garden unit" }
+  ],
+  "seoImage": {
+    "sourceUrl": "https://lareservekronos.com/"
+  },
+  "keyFacts": [
+    { "label": "Location", "value": "Belas Clube de Campo, Sintra, Lisbon region" },
+    { "label": "Neighbourhood", "value": "Belas Clube de Campo gated estate, Belas, Sintra" },
+    { "label": "Region", "value": "Greater Lisbon (15–20 min by car via A5/A9/IC19)" },
+    { "label": "Type", "value": "Apartments" },
+    { "label": "Status", "value": "Off-plan" },
+    { "label": "Units", "value": "101 apartments" },
+    { "label": "Typology Mix", "value": "T1–T4, ranging from 60 m² to 190 m²" },
+    { "label": "Price From", "value": "€470,000 (T1); up to €1,300,000 (T4)" },
+    { "label": "Price per m²", "value": "Approximately €6,800–€7,800/m² implied; area average ~€3,846/m²" },
+    { "label": "Delivery", "value": "Q4 2028 (construction start Q2 / June 2026)" },
+    { "label": "Lead Architect", "value": "UNStudio (Amsterdam; founded 1988 by Ben van Berkel and Caroline Bos)" },
+    { "label": "Local Architect", "value": "Capinha Lopes Consulting / CL Consulting (Lisbon; established 1999)" },
+    { "label": "Amenities", "value": "Outdoor pool and communal gardens (on-site); access to estate golf course, tennis, paddle courts, gym, cycle paths, school, supermarket, café, parapharmacy" },
+    { "label": "Sustainability", "value": "BREEAM certification targeted; energy monitoring systems; EV infrastructure; high-efficiency exterior lighting; thermal performance optimisation; golf course ISO 14001 and GEO Certified™" },
+    { "label": "Parking", "value": "Covered parking and storage included for all units" }
+  ],
+  "developerProfile": {
+    "legalEntity": "Kronos Investment Management Spain, S.L., registered at Calle de Serrano 3, 28001 Madrid. Group brands: Kronos Homes (build-to-sell), STAY (build-to-rent), WAY (commercial and leisure). Portugal chairman: Rui Meneses Ferreira.",
+    "previousProjects": "Palmares Ocean Living & Golf (Lagos, Algarve — RCR Arquitectes, jointly held with King Street Capital Management 2017–2023, sold to Arrow Global for combined ~€400M value); The One (Lisbon — Eduardo Souto de Moura, construction completed end-2023); Distrikt by Kronos (Parque das Nações, Lisbon — Morph Estudio, 214 units, >€125M investment, >€180M in sales, average unit ~€800K, penthouse >€3M); MIMA Living (Parque das Nações, Lisbon — 180 residential apartments in two 14-storey buildings, part of €150M mixed-use scheme, in commercialisation); Amendoeira Resort and Belmar Resort (Algarve). In Spain: portfolio includes Ikon (European Property Award, high-rise residential 2020), The Edge (European Property Award, residential 2019).",
+    "trackRecordSummary": "Group founded 2014 (some sources: 2015) by Saïd Hejal. Team has executed over €16 billion in real estate transactions across Iberia. Portuguese portfolio spans Algarve resort, Lisbon mid-market, and Lisbon premium segments. Two Pritzker Prize-winning architects (RCR at Palmares; Souto de Moura at The One) in recent delivered projects. No disputes or delivery failures found in research.",
+    "awards": "National Real Estate Award, Tourism category (2021) for Palmares Clubhouse. European Property Awards: best high-rise residential (2020, Ikon); best residential project (2019, The Edge). Outstanding Property Awards London: best architectural design (Nature); Honourable Mention (The Edge, 2020). Porcelanosa Architecture and Interior Design Award (11th edition). STAY BTR arm: finalist, Green Asset Initiative of the Year, Iberian Property Investment Awards (BREEAM Very Good, Tarragona).",
+    "knownIssues": "None found. No disputes, litigation, or regulatory proceedings identified across all search queries."
+  },
+  "marketPosition": {
+    "priceComparison": "La Réserve's implied price/m² of €6,800–€7,800 is approximately double the current Belas Clube de Campo area average asking price of €3,846/m². Comparable on-estate schemes include ORION (from €360,000), One Thousand Native, Bloomia, and Native Soul (all T1–T4 apartments). Native.Townhouses are priced from €1,355,000. La Réserve's entry pricing (€470,000) sits above ORION (€360,000) and below Native.Townhouses. The pricing premium is attributable to the UNStudio/CL Consulting design partnership and a higher specification tier.",
+    "investmentNarrative": "Kronos positions La Réserve within the premium end of the Lisbon commuter belt market, targeting buyers who want lower-density living within reach of the city. The Belas Clube de Campo estate provides a self-contained amenity package (golf, school, sports, retail) that reduces dependency on external infrastructure. Millennium bcp is named as 'a fundamental strategic partner' (Público Imobiliário, April 2026) though the specific nature of the partnership (construction finance, buyer mortgage, or investment) is not disclosed. No rental yield evidence found in any source.",
+    "buyerSegment": "International second-home buyers and Portuguese HNWI families seeking lower-density suburban living with Lisbon access. The on-site UNESCO-network school and multilingual curriculum suggest the estate targets internationally mobile families. Rui Meneses Ferreira (Kronos Portugal chairman) stated the project delivers 'integrated residential solutions within established destinations' (Propnewstime, March 2026).",
+    "rentalYieldEvidence": null,
+    "demandDrivers": "Belas Clube de Campo estate infrastructure: 200-hectare gated community with championship golf (ISO 14001, first GEO Certified™ in Portugal), UNESCO-network school (nursery to Year 9), full amenity provision (supermarket, parapharmacy, café, restaurant, sports, pool), and 24-hour security. Road access via A5/A9/IC19 to Lisbon in 15–20 minutes. Bus (lines 1224, 1718, 2605) and club shuttle (BCC Expresso) to Lisbon. Portugal's premium housing segment faces 'strong international demand, tighter financing conditions and ongoing political debate over affordability' (The European, Feb 2026)."
+  },
+  "designSignals": {
+    "architecturalStyle": "UNStudio is known for parametric, technologically driven design with a focus on spatial experience and material coherence. The project tagline ('signature architecture at the most exclusive address in Belas Clube de Campo') and the golf/nature setting suggest a nature-integrated low-rise scheme. Renders show a contemporary low-rise apartment building embedded in the landscape. Ground-floor units have private gardens; upper units have panoramic views described as part of the design programme.",
+    "materials": "Not specified in any source. No published material schedule found.",
+    "landscaping": "Communal gardens and outdoor pool confirmed. No landscape architect credit found.",
+    "visualIdentity": "Project name 'La Réserve' (French) with the wordmark presented in an italic serif typeface on the official site. French naming convention is consistent with Belas Clube de Campo's broader aspirational positioning within the Portuguese market."
+  },
+  "pressReleases": [
+    {
+      "title": "Kronos Homes unveils La Réserve: luxury apartments at Belas Clube de Campo, Lisbon",
+      "date": "2026-02-23",
+      "summary": "Kronos Homes announced La Réserve, a €60 million residential development of 101 apartments (T1–T4, 60–190 m², €470,000–€1.3 million) at Belas Clube de Campo, designed by UNStudio and Capinha Lopes Consulting. Construction to begin Q2 2026 with first completions Q4 2028, targeting BREEAM certification.",
+      "sourceName": "idealista/news",
+      "sourceUrl": "https://www.idealista.pt/en/news/luxury-real-estate-in-portugal/2026/02/23/74065-kronos-homes-unveils-la-reserve-luxury-apartments-at-belas-clube-de-campo"
+    },
+    {
+      "title": "La Réserve: o novo refúgio premium no Belas Clube de Campo onde a arquitetura encontra a natureza",
+      "date": "2026-04-22",
+      "summary": "Público Imobiliário provided detailed sustainability facts including BREEAM certification target, energy monitoring systems, high-efficiency exterior lighting, EV infrastructure integration, and thermal performance optimisation. Named Millennium bcp as 'a fundamental strategic partner' for the project.",
+      "sourceName": "Público Imobiliário",
+      "sourceUrl": "https://imobiliario.publico.pt/noticias/la-reserve-novo-refugio-premium-belas-clube-campo-onde-arquitetura-encontra-natureza/"
+    },
+    {
+      "title": "Lisbon Golf Resort Apartments: €60m La Réserve Scheme Tests Premium Housing Demand",
+      "date": "2026-02-24",
+      "summary": "The European placed La Réserve in the context of Portugal's premium housing market, noting it targets buyers seeking lower-density units within commuting range of Lisbon amid strong international demand and tighter financing. Confirmed €60 million investment, 101 units, UNStudio/Capinha Lopes design team.",
+      "sourceName": "The European",
+      "sourceUrl": "https://the-european.eu/story-57437/e60m-lisbon-golf-resort-scheme-tests-depth-of-portugals-upper-tier-housing-demand.html"
+    },
+    {
+      "title": "King Street and Kronos Homes complete the sale of Palmares Ocean Living and Golf",
+      "date": "2023-11-28",
+      "summary": "Confirmed sale of Palmares Ocean Living & Golf to Arrow Global funds. Joint venture between King Street Capital Management and Kronos since 2017; combined investment and future development value approximately €400 million. First and second phases largely sold.",
+      "sourceName": "PR Newswire",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/king-street-and-kronos-homes-complete-the-sale-of-palmares-ocean-living-and-golf-301999424.html"
+    }
+  ],
+  "brochure": {
+    "exists": false,
+    "sourceUrl": null,
+    "gated": false
+  },
+  "openQuestions": [
+    "Hero image: to be retrieved by editorial lead under licence. Source identified: https://lareservekronos.com/ (official site renders) and https://imobiliario.publico.pt/noticias/la-reserve-novo-refugio-premium-belas-clube-campo-onde-arquitetura-encontra-natureza/ (Público Imobiliário).",
+    "Gallery images: to be retrieved by editorial lead under licence. 3 sources identified (official site, idealista launch article, Público Imobiliário).",
+    "Brochure: to be retrieved and licence-checked by editorial lead. Source: none identified — no public PDF linked on official site or in any press coverage.",
+    "keyFacts.Price per m²: implied from range (€470k–€1.3M across 60–190 m²) and area benchmark; no developer-confirmed figure. Source attempts: official site, all press sources.",
+    "designSignals.materials: no published material schedule found. Source attempts: official site, all press sources, UNStudio portfolio page.",
+    "architectSearch.landscape: landscape architect not named in any source. Source attempts: official site, lareservekronos.com, all press sources, UNStudio project page.",
+    "architectSearch.interiors: interior designer not named in any source. Source attempts: official site, all press sources.",
+    "architectSearch.lead — UNStudio own-page confirmation: La Réserve not yet listed on UNStudio's own project directory at unstudio.com/projects. Credit confirmed in 7+ independent press sources (Feb–Apr 2026); considered confirmed for purposes of this brief, but editorial lead may wish to verify directly with studio.",
+    "developerProfile.financialPartners — Millennium bcp role: named as 'a fundamental strategic partner' in Público Imobiliário (Apr 2026) but nature of partnership (construction loan, buyer mortgage agreement, or equity investment) not established. Source attempts: Público Imobiliário, Kronos corporate site, direct search.",
+    "marketPosition.rentalYieldEvidence: no rental yield data found for La Réserve or comparable premium units at Belas Clube de Campo. Area average rental: €21.28/m²/month (propriedadespt.com) but applicability to La Réserve's price tier is uncertain.",
+    "keyFacts — typology unit-mix split (number of T1/T2/T3/T4 units): not disclosed in any source.",
+    "keyFacts — planning permit / licença de construção status: not found in any source."
+  ]
+}

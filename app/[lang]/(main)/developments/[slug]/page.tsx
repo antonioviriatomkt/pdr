@@ -252,29 +252,33 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
 
             {dev.brochureUrl && (
               <div style={{ marginBottom: '40px' }}>
-                <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
-                  {dev.name} {d.brochureLabel}
-                </h2>
-                <div style={{ border: '1px solid var(--border)' }}>
-                  <iframe
-                    src={dev.brochureUrl}
-                    title={`${dev.name} ${d.brochureLabel}`}
-                    className="brochure-iframe"
-                    style={{ width: '100%', height: '560px', display: 'block', border: 'none' }}
-                  />
-                  <div style={{ borderTop: '1px solid var(--border)', background: 'var(--surface)', padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '24px', flexWrap: 'wrap' }}>
-                    <div>
-                      <p style={{ fontSize: '15px', fontWeight: 400, margin: '0 0 4px' }}>{d.brochureCtaTitle}</p>
-                      <p style={{ fontSize: '13px', color: 'var(--muted)', margin: 0 }}>{d.brochureCtaSubtitle}</p>
+                <details>
+                  <summary style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', cursor: 'pointer', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 0 16px', borderBottom: '1px solid var(--border)' }}>
+                    <span>{dev.name} {d.brochureLabel}</span>
+                    <span style={{ fontSize: '12px', color: 'var(--muted)', fontWeight: 400, letterSpacing: 0, textTransform: 'none' }}>{d.brochureViewBtn}</span>
+                  </summary>
+                  <div style={{ border: '1px solid var(--border)', borderTop: 'none', marginTop: 0 }}>
+                    <iframe
+                      src={`/api/brochure/${dev.slug.current}`}
+                      title={`${dev.name} ${d.brochureLabel}`}
+                      className="brochure-iframe"
+                      loading="lazy"
+                      style={{ width: '100%', height: '560px', display: 'block', border: 'none' }}
+                    />
+                    <div style={{ borderTop: '1px solid var(--border)', background: 'var(--surface)', padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '24px', flexWrap: 'wrap' }}>
+                      <div>
+                        <p style={{ fontSize: '15px', fontWeight: 400, margin: '0 0 4px' }}>{d.brochureCtaTitle}</p>
+                        <p style={{ fontSize: '13px', color: 'var(--muted)', margin: 0 }}>{d.brochureCtaSubtitle}</p>
+                      </div>
+                      <a
+                        href="#inquiry"
+                        style={{ background: 'var(--foreground)', color: 'var(--background)', padding: '12px 24px', fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none', whiteSpace: 'nowrap' }}
+                      >
+                        {d.brochureCtaBtn}
+                      </a>
                     </div>
-                    <a
-                      href="#inquiry"
-                      style={{ background: 'var(--foreground)', color: 'var(--background)', padding: '12px 24px', fontSize: '13px', letterSpacing: '0.06em', textTransform: 'uppercase', textDecoration: 'none', whiteSpace: 'nowrap' }}
-                    >
-                      {d.brochureCtaBtn}
-                    </a>
                   </div>
-                </div>
+                </details>
               </div>
             )}
 
@@ -443,13 +447,6 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
           </div>
         </section>
       )}
-      <style>{`
-        @media (max-width: 900px) {
-          .dev-grid { grid-template-columns: 1fr !important; gap: 32px !important; padding: 32px 0 !important; }
-          .dev-aside { position: static !important; top: auto !important; }
-          .brochure-iframe { height: 420px !important; }
-        }
-      `}</style>
     </>
   )
 }

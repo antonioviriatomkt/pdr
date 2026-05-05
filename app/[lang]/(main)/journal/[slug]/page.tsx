@@ -259,12 +259,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
           </aside>
         </div>
       </div>
-      <style>{`
-        @media (max-width: 900px) {
-          .article-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 32px 0 !important; }
-          .article-aside { position: static !important; border-top: 1px solid var(--border); padding-top: 32px; }
-        }
-      `}</style>
     </>
   )
 }

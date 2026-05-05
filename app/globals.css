@@ -97,6 +97,33 @@ hr {
   border-top: 1px solid var(--border);
 }
 
+/* Component responsive overrides */
+@media (max-width: 900px) {
+  .article-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 32px 0 !important; }
+  .article-aside { position: static !important; border-top: 1px solid var(--border); padding-top: 32px; }
+  .dev-grid { grid-template-columns: 1fr !important; gap: 32px !important; padding: 32px 0 !important; }
+  .dev-aside { position: static !important; top: auto !important; }
+  .brochure-iframe { height: 420px !important; }
+}
+
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .hero-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--hero-aside-mobile-border, var(--border)); padding-top: 28px !important; }
+  .locations-bar { gap: 20px; }
+  .locations-bar-all { margin-left: 0 !important; }
+  .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 40px 0 !important; }
+  .contact-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--border); padding-top: 32px !important; }
+  .filter-bar { flex-direction: column !important; align-items: stretch !important; gap: 10px !important; }
+  .filter-select { width: 100% !important; min-width: unset !important; }
+  .filter-sort { margin-left: 0 !important; justify-content: flex-start !important; }
+  .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 40px 0 !important; }
+  .developer-grid { grid-template-columns: 1fr !important; }
+  .fd-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .newsletter-form-col { border-left: none !important; padding-left: 0 !important; }
+  .approach-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .approach-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--border); padding-top: 28px !important; }
+}
+
 /* Form inputs */
 input, textarea, select {
   border-radius: 0 !important;

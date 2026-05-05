@@ -1,0 +1,442 @@
+{
+  "input": {
+    "name": "La Réserve",
+    "url": "https://lareservekronos.com/"
+  },
+  "officialPage": {
+    "url": "https://lareservekronos.com/",
+    "fetchedAt": "2026-05-03T00:00:00Z",
+    "factsExtracted": [
+      {
+        "claim": "Developer is Kronos Homes",
+        "verbatim": "Kronos Homes",
+        "category": "developer",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Project location is Belas Clube de Campo, Belas, Portugal",
+        "verbatim": "Belas Clube de Campo, Belas (Portugal)",
+        "category": "typology",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Typologies available: T1, T2, T3, T4 apartments",
+        "verbatim": "T1, T2, T3, T4 apartment units available",
+        "category": "typology",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Project tagline describes signature architecture at the most exclusive address in Belas Clube de Campo",
+        "verbatim": "Arquitetura de assinatura no endereço mais exclusivo do Belas Clube de Campo",
+        "category": "typology",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Project positioning: reserved in nature but close to the city",
+        "verbatim": "Reservado na natureza mas perto da cidade",
+        "category": "amenities",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Nearby amenities include gym, pharmacy, café, mini-market, and sports facilities within walking distance",
+        "verbatim": "Gym, pharmacy, café, mini-market, and sports facilities within walking distance",
+        "category": "amenities",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Ground floor units have private gardens; upper units have panoramic views",
+        "verbatim": "Ground floor gardens with privacy; panoramic views; adaptable to family needs",
+        "category": "typology",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Project status at time of official site fetch: registration of interest phase",
+        "verbatim": "Registration of interest phase - described as 'um novo projeto' (a new project)",
+        "category": "status",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Pricing not disclosed on official site",
+        "verbatim": "Not disclosed",
+        "category": "pricing",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Contact phone number +34 637 480 079 (Spanish country code)",
+        "verbatim": "+34 637 480 079",
+        "category": "developer",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Contact email hello@kronoshomes.com",
+        "verbatim": "hello@kronoshomes.com",
+        "category": "developer",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Official site built by digital agency Gigantic",
+        "verbatim": "Gigantic",
+        "category": "developer",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Site available in Portuguese and English",
+        "verbatim": "Languages: Portuguese and English versions available",
+        "category": "typology",
+        "source": "https://lareservekronos.com/"
+      },
+      {
+        "claim": "Legal entity and data controller: KRONOS INVESTMENT MANAGEMENT SPAIN, S.L.",
+        "verbatim": "KRONOS INVESTMENT MANAGEMENT SPAIN, S.L. é responsável pela gestão centralizada do tratamento de dados",
+        "category": "developer",
+        "source": "https://lareservekronos.com/politica-privacidade/"
+      },
+      {
+        "claim": "Registered address: C/Serrano 3, 28001 Madrid, Spain",
+        "verbatim": "C/Serrano 3, 28001 Madrid, Spain",
+        "category": "developer",
+        "source": "https://lareservekronos.com/politica-privacidade/"
+      },
+      {
+        "claim": "Data protection contact: protecciondedatos@kronosig.com",
+        "verbatim": "protecciondedatos@kronosig.com",
+        "category": "developer",
+        "source": "https://lareservekronos.com/politica-privacidade/"
+      }
+    ]
+  },
+  "developerSearch": {
+    "queries": [
+      "Kronos Homes previous projects Portugal",
+      "Kronos Homes developer Portugal delivery",
+      "Kronos Homes dispute legal financial partner Iberia",
+      "Kronos Homes financial partner investor AXA Goldman fund",
+      "Kronos Homes Nuveen BTR partner investment Spain Portugal",
+      "Kronos Real Estate Group founded Said Hejal corporate structure Spain",
+      "Kronos Homes King Street Palmares sale financial background",
+      "Kronos Homes MIMA Living The One Lisbon completed delivered",
+      "Kronos Homes Distrikt completed delivered Parque das Nacoes Lisbon",
+      "Kronos Homes awards recognition Spain Portugal real estate"
+    ],
+    "findings": [
+      {
+        "fact": "Kronos Real Estate Group was founded in 2014 by Saïd Hejal (CEO & founding partner), who had previously led a Fortress investment fund focused on the Spanish market. Offices in London, Luxembourg, Madrid, Barcelona, Málaga and Lisbon.",
+        "source": "https://www.griinstitute.org/realestate/member-profile/europe/said-hejal_835",
+        "category": "legalEntity"
+      },
+      {
+        "fact": "Legal entity name: Kronos Investment Management Spain, S.L., headquartered at Calle de Serrano 3, Madrid. Group brands: Kronos Homes (build-to-sell residential), STAY (build-to-rent residential), WAY (commercial and leisure).",
+        "source": "https://www.kronosre.com/en/",
+        "category": "legalEntity"
+      },
+      {
+        "fact": "Kronos Real Estate Group team has executed over €16 billion in real estate transactions.",
+        "source": "https://www.kronosre.com/en/about-us/",
+        "category": "legalEntity"
+      },
+      {
+        "fact": "Portugal partner and Chairman of Kronos Homes: Rui Meneses Ferreira.",
+        "source": "https://www.iberian.property/news/archive/kronos-homes-arrives-in-portugal-with-eur200-million/",
+        "category": "legalEntity"
+      },
+      {
+        "fact": "Kronos Homes entered Portugal in late 2017 with a declared investment of €200 million. Initial projects: Palmares (Lagos, 400 units, €200K–€2.5M price range, acquired November 2017), Belmar Resort (Porto Mós, 180 units), Amendoeira Resort (Silves, 240+ units).",
+        "source": "https://www.iberian.property/news/archive/kronos-homes-arrives-in-portugal-with-eur200-million/",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "Palmares Ocean Living & Golf (Lagos, Algarve): designed by RCR Arquitectes (2017 Pritzker Prize winners). Jointly held with King Street Capital Management since 2017. Sold to Arrow Global funds in November 2023 for a combined investment and future development value of approximately €400 million.",
+        "source": "https://www.prnewswire.com/news-releases/king-street-and-kronos-homes-complete-the-sale-of-palmares-ocean-living-and-golf-301999424.html",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "The One (Lisbon): designed by Eduardo Souto de Moura (Pritzker Prize winner). Construction completed by end of 2023.",
+        "source": "https://realassets.ipe.com/propertyeu/kronos-homes-the-one-project-in-lisbon-50-pre-sold/10088425.article",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "Distrikt by Kronos (Parque das Nações, Lisbon): 214 apartments, T1–T4, designed by Spanish firm Morph Estudio. Total investment over €125 million; total sales exceeding €180 million. Described as completed by Kronos. Average price approximately €800,000; penthouse sold for over €3 million.",
+        "source": "https://www.idealista.pt/en/news/property-for-sale-in-portugal/2025/10/15/71980-distrikt-by-kronos-the-new-major-development-in-lisbon-s-parque-das-nacoes",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "MIMA Living (Parque das Nações, Lisbon): mixed-use project, 180 residential apartments in two 14-storey buildings, part of a €150 million development. Residential component MIMA Residences in commercialisation phase with 51 units (T1–T4).",
+        "source": "https://www.portugalnews.com/kronos-homes-announces-first-lisbon-mixed-use-tourism-project-mima-living/",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "Amendoeira Resort (Silves, Algarve): Mozarabic-inspired buildings, two award-winning 18-hole golf courses, 9-hole par 3 course, restaurants, sports facilities, children's club.",
+        "source": "https://www.kronoshomes.com/en/projects/algarve/",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "Monte Santo Resort (Carvoeiro, Algarve) and Salema Beach Village (Vila do Bispo, Algarve) and Vale do Lobo Resort listed as Kronos Homes Portugal projects.",
+        "source": "https://www.kronoshomes.com/en/projects/",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "Kronos Homes – Nuveen Real Estate joint venture for €1 billion build-to-rent development in Spain, operating under STAY brand. Initial portfolio seeded with €250 million; further €325 million expected. Target: 5,000 BTR units across Spain. Partnership focused on Spain, not Portugal.",
+        "source": "https://realassets.ipe.com/news/nuveen-and-kronos-partner-to-develop-1bn-btr-homes-in-spain/10047897.article",
+        "category": "financialPartners"
+      },
+      {
+        "fact": "King Street Capital Management was a financial co-investor in Palmares Ocean Living & Golf from 2017 to November 2023.",
+        "source": "https://www.prnewswire.com/news-releases/king-street-and-kronos-homes-complete-the-sale-of-palmares-ocean-living-and-golf-301999424.html",
+        "category": "financialPartners"
+      },
+      {
+        "fact": "Helix Equities (London-based regulated fund manager) identified as an investor in Kronos Homes. Specific shareholding percentage not publicly available.",
+        "source": "https://pitchbook.com/profiles/company/454479-58",
+        "category": "financialPartners"
+      },
+      {
+        "fact": "Kronos Homes received National Real Estate Award (Tourism category, 2021) for Palmares Clubhouse designed by RCR Arquitectes.",
+        "source": "https://en.viviendasnuevas.com/developers/promotora-kronos-homes",
+        "category": "awards"
+      },
+      {
+        "fact": "Kronos Homes received European Property Award for best high-rise residential project (2020) for Ikon, and best residential project (2019) for The Edge.",
+        "source": "https://en.viviendasnuevas.com/developers/promotora-kronos-homes",
+        "category": "awards"
+      },
+      {
+        "fact": "Kronos Homes received Outstanding Property Awards London for best architectural design for project 'Nature', and Honourable Mention for The Edge (2020).",
+        "source": "https://en.viviendasnuevas.com/developers/promotora-kronos-homes",
+        "category": "awards"
+      },
+      {
+        "fact": "Kronos Homes received the 11th Porcelanosa Architecture and Interior Design Award.",
+        "source": "https://en.viviendasnuevas.com/developers/promotora-kronos-homes",
+        "category": "awards"
+      },
+      {
+        "fact": "STAY by Kronos was a finalist in the 'Green Asset Initiative of the Year' category at the Iberian Property Investment Awards for its BREEAM Very Good-certified development in Tarragona.",
+        "source": "https://www.iberian.property/news/conferences/sustainable-innovation-reflected-on-iberian-property-investment-awards/",
+        "category": "awards"
+      },
+      {
+        "fact": "No disputes, litigation, or regulatory proceedings involving Kronos Homes found in search results.",
+        "source": null,
+        "category": "disputes"
+      },
+      {
+        "fact": "Millennium bcp described as 'a fundamental strategic partner' in relation to La Réserve (source: Público Imobiliário, April 2026). No further details on the nature or terms of this partnership found.",
+        "source": "https://imobiliario.publico.pt/noticias/la-reserve-novo-refugio-premium-belas-clube-campo-onde-arquitetura-encontra-natureza/",
+        "category": "financialPartners"
+      }
+    ]
+  },
+  "architectSearch": {
+    "lead": {
+      "studio": "UNStudio (trading as UNS)",
+      "portfolioUrl": "https://www.unstudio.com/projects/",
+      "confirmed": true,
+      "notes": "Dutch international architecture studio founded 1988 by Ben van Berkel and Caroline Bos. Amsterdam-headquartered with offices globally. La Réserve confirmed in multiple independent press sources from February–April 2026. La Réserve not yet listed on UNStudio's own projects page at time of research."
+    },
+    "local": {
+      "studio": "Capinha Lopes Consulting (CL Consulting – Architects and Masterplanners)",
+      "portfolioUrl": "http://www.capinha-lopes.pt/",
+      "confirmed": true,
+      "notes": "Lisbon-based practice established 1999 by Eduardo Capinha Lopes. Offices in Lisbon, Porto, New Delhi, and Port Louis. Known for high-end residential and luxury hotel projects including Martinhal Residences, United Lisbon International School (WAF Lisbon Prize winner), and Turifenos in Parque das Nações. Confirmed as local executive architect for La Réserve in multiple sources."
+    },
+    "landscape": null,
+    "interiors": null
+  },
+  "locationSearch": [
+    {
+      "fact": "Belas Clube de Campo is located in Belas, municipality of Sintra, approximately 15–20 minutes by car from central Lisbon. Address: Alameda do Aqueduto, Belas, 2605-193 Sintra, Portugal.",
+      "source": "https://moovitapp.com/index/en/public_transit-Belas_Clube_de_Campo-Lisboa-site_25909387-2460",
+      "category": "transport"
+    },
+    {
+      "fact": "Road access via A5 and A9 motorways from Lisbon, or IC19 from Sintra/Cascais. Position equidistant from Lisbon, Cascais, and Sintra.",
+      "source": "https://www.where2golf.com/portugal/belas-clube-de-campo/",
+      "category": "transport"
+    },
+    {
+      "fact": "Nearest train station: Amadora. Bus lines 1224, 1718, and 2605 serve the area. Nearest bus stop (Alam Aqueduto) is a 1-minute walk. A club shuttle (BCC Expresso) operates to Lisbon.",
+      "source": "https://moovitapp.com/index/en/public_transit-Belas_Clube_de_Campo-Lisboa-site_25909387-2460",
+      "category": "transport"
+    },
+    {
+      "fact": "Belas Clube de Campo covers 200 hectares of Serra da Carregueira Forest Park. Facilities: championship par-72 golf course, 4 tennis courts, 4 indoor paddle courts, outdoor pool, gym, skateboard park, climbing wall, cycle paths, hiking trails, café, restaurant, parapharmacy, supermarket, hairdresser, laundry, post office, 24-hour surveillance.",
+      "source": "https://www.belasclubedecampo.pt/o-clube/?lang=en",
+      "category": "demandDriver"
+    },
+    {
+      "fact": "On-site school: Jardim-Escola João de Deus de Belas (nursery to Year 6, extendable to Year 9). UNESCO schools network member. Multilingual and multicultural curriculum.",
+      "source": "https://www.belasclubedecampo.pt/o-clube/?lang=en",
+      "category": "demandDriver"
+    },
+    {
+      "fact": "Belas golf course was the first golf facility in Portugal to achieve GEO Certified™ award (Golf Environment Organization). Also holds ISO 14001 environmental management certification, one of the first in Europe to do so.",
+      "source": "https://www.iagto.com/pressrelease/details/df618ac8-bb81-4064-9c22-f9d4f08c0634",
+      "category": "demandDriver"
+    },
+    {
+      "fact": "Average asking price per m² at Belas Clube de Campo: €3,846.15. Asking price range: €555,000–€2,250,000 across 81 units on market. Average rental: €21.28/m²/month.",
+      "source": "https://propriedadespt.com/distrito/lisboa/localidade/belas-clube-campo-queluz-e-belas-sintra",
+      "category": "priceBenchmark"
+    },
+    {
+      "fact": "Comparable developments within Belas Clube de Campo: Native Soul (T1–T4 apartments), Bloomia (123 apartments, T1–T4), One Thousand Native (2–4 bedroom apartments with amenities including wine bar and coworking), ORION (34 apartments T1–T5, from €360,000), Native.Townhouses (T4, from €1,355,000).",
+      "source": "https://www.idealista.pt/en/geo/comprar-casas/belas-clube-de-campo/",
+      "category": "comparable"
+    },
+    {
+      "fact": "Other comparable luxury gated communities near Sintra/Cascais: Splendid Beloura II (Quinta da Beloura), Quinta da Beloura (between Cascais and Sintra, near international schools).",
+      "source": "https://www.idealista.pt/en/comprar-empreendimentos/sintra/",
+      "category": "comparable"
+    },
+    {
+      "fact": "La Réserve at announced pricing of €470,000–€1,300,000 for 60–190 m² implies a price-per-m² range of approximately €6,800–€7,800/m² at entry and mid-range levels, above the current Belas Clube de Campo average asking price of €3,846/m².",
+      "source": "https://propriedadespt.com/distrito/lisboa/localidade/belas-clube-campo-queluz-e-belas-sintra",
+      "category": "priceBenchmark"
+    },
+    {
+      "fact": "Kronos Homes' Distrikt (Parque das Nações, Lisbon) sold at an average price of approximately €800,000 per unit, with penthouse exceeding €3 million.",
+      "source": "https://www.idealista.pt/en/news/property-for-sale-in-portugal/2025/10/15/71980-distrikt-by-kronos-the-new-major-development-in-lisbon-s-parque-das-nacoes",
+      "category": "priceBenchmark"
+    },
+    {
+      "fact": "The European article (Feb 2026) contextualises La Réserve within 'strong international demand, tighter financing conditions and ongoing political debate over affordability' in Portugal's premium housing segment.",
+      "source": "https://the-european.eu/story-57437/e60m-lisbon-golf-resort-scheme-tests-depth-of-portugals-upper-tier-housing-demand.html",
+      "category": "demandDriver"
+    }
+  ],
+  "press": [
+    {
+      "title": "Kronos Homes unveils La Réserve: luxury apartments at Belas Clube de Campo, Lisbon",
+      "date": "2026-02-23",
+      "summary": "Kronos Homes announced La Réserve, a €60 million residential development of 101 apartments (T1–T4, 60–190 m², €470,000–€1.3 million) at Belas Clube de Campo, designed by UNStudio and Capinha Lopes Consulting. Construction to begin Q2 2026 with first completions Q4 2028. Project targets BREEAM certification.",
+      "sourceName": "idealista/news (English)",
+      "sourceUrl": "https://www.idealista.pt/en/news/luxury-real-estate-in-portugal/2026/02/23/74065-kronos-homes-unveils-la-reserve-luxury-apartments-at-belas-clube-de-campo"
+    },
+    {
+      "title": "La Réserve: novo projeto em Belas contempla 101 habitações",
+      "date": "2026-02-24",
+      "summary": "Portuguese-language report on La Réserve covering the 101-apartment project at Belas Clube de Campo, with details on unit sizes (60–190 m²), pricing (€470,000–€1.3 million), architects UNStudio and Capinha Lopes Consulting (founded 1999), and the Q2 2026 construction start and Q4 2028 completion target.",
+      "sourceName": "idealista/news (Portuguese)",
+      "sourceUrl": "https://www.idealista.pt/news/imobiliario/construcao/2026/02/24/74076-novo-projeto-do-belas-clube-de-campo-prepara-se-para-sair-do-papel"
+    },
+    {
+      "title": "Kronos Homes launches La Réserve – Portugal Resident",
+      "date": "2026-02-23",
+      "summary": "Portugal Resident reported the launch of La Réserve, noting UNStudio and Capinha Lopes Consulting as architects, 101 apartments, €60 million investment, BREEAM certification target, and Belas Clube de Campo's ISO 14001 and GEO golf certifications as sustainability context.",
+      "sourceName": "Portugal Resident",
+      "sourceUrl": "https://www.portugalresident.com/kronos-homes-launches-la-reserve"
+    },
+    {
+      "title": "Kronos Homes unveils EUR 60m La Réserve residential development at Lisbon's Belas Clube de Campo",
+      "date": "2026-03-01",
+      "summary": "Propnewstime covered the launch citing Rui Meneses Ferreira's statement on 'delivering integrated residential solutions within established destinations', confirming 101 units (T1–T4, 60–190 m²), €470,000 starting price, UNStudio and Capinha Lopes design, Q2 2026 construction start and Q4 2028 delivery.",
+      "sourceName": "Propnewstime",
+      "sourceUrl": "https://propnewstime.com/getdetailsStories/MjY4ODQ=/kronos-homes-unveils-eur-60m-la-r-serve-residential-development-at-lisbon-s-belas-clube-de-campo"
+    },
+    {
+      "title": "Lisbon Golf Resort Apartments: €60m La Réserve Scheme Tests Premium Housing Demand",
+      "date": "2026-02-24",
+      "summary": "The European placed La Réserve in the context of Portugal's premium housing market, noting it targets buyers seeking larger lower-density units within commuting range of Lisbon amid strong international demand and tighter financing. Confirmed €60 million total investment, 101 units, UNStudio/Capinha Lopes design team.",
+      "sourceName": "The European",
+      "sourceUrl": "https://the-european.eu/story-57437/e60m-lisbon-golf-resort-scheme-tests-depth-of-portugals-upper-tier-housing-demand.html"
+    },
+    {
+      "title": "La Réserve by Kronos Homes é o novo projeto residencial no Belas Clube de Campo",
+      "date": "2026-02-23",
+      "summary": "Portuguese press journal confirmed UNStudio (Dutch, 35+ years experience) and Capinha Lopes Consulting as architect partners, 101 units T1–T4 (60–190 m²), €470,000–€1.3 million pricing, Q2 2026 construction start, Q4 2028 completion, outdoor pool and communal gardens as shared amenities.",
+      "sourceName": "iPress Journal",
+      "sourceUrl": "https://ipressjournal.pt/la-reserve-by-kronos-homes-e-o-novo-projeto-residencial-no-belas-clube-de-campo/"
+    },
+    {
+      "title": "La Réserve: o novo refúgio premium no Belas Clube de Campo onde a arquitetura encontra a natureza",
+      "date": "2026-04-22",
+      "summary": "Público Imobiliário provided detailed sustainability facts including BREEAM certification target, energy monitoring systems, high-efficiency exterior lighting, EV infrastructure integration, and thermal performance optimisation. Also named Millennium bcp as 'a fundamental strategic partner' for the project.",
+      "sourceName": "Público Imobiliário",
+      "sourceUrl": "https://imobiliario.publico.pt/noticias/la-reserve-novo-refugio-premium-belas-clube-campo-onde-arquitetura-encontra-natureza/"
+    },
+    {
+      "title": "Kronos Homes apresenta empreedimento La Réserve",
+      "date": "2026-02-23",
+      "summary": "RE Portugal covered the project confirming UNStudio (Dutch) and Capinha Lopes Consulting as architects, T1–T4 typologies (60–190 m²), €470,000–€1.3 million pricing, Q2 2026 construction start, Q4 2028 completion, covered parking and storage for all units.",
+      "sourceName": "RE Portugal / Vida Imobiliária",
+      "sourceUrl": "https://reportugal.vidaimobiliaria.com/atualidade/construcao/kronos-homes-apresenta-empreedimento-la-reserve/"
+    },
+    {
+      "title": "Kronos Homes arrives in Portugal with €200 million",
+      "date": "2018-07-06",
+      "summary": "Background piece on Kronos Homes' 2017–2018 Portugal market entry, announcing €200 million investment across Algarve resort projects (Palmares, Belmar, Amendoeira) and planned Lisbon/Porto expansion. Also noted BREEAM certification for Spanish projects and sustainability practices including native plants and water recovery systems.",
+      "sourceName": "Iberian Property",
+      "sourceUrl": "https://www.iberian.property/news/archive/kronos-homes-arrives-in-portugal-with-eur200-million/"
+    },
+    {
+      "title": "King Street and Kronos Homes complete the sale of Palmares Ocean Living and Golf",
+      "date": "2023-11-28",
+      "summary": "Confirmed sale of Palmares Ocean Living & Golf (Lagos) to Arrow Global funds. Joint venture between King Street Capital Management and Kronos Homes since 2017; combined investment and future development total approximately €400 million. Over 80 flats developed; first and second phases largely sold.",
+      "sourceName": "PR Newswire",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/king-street-and-kronos-homes-complete-the-sale-of-palmares-ocean-living-and-golf-301999424.html"
+    }
+  ],
+  "conflicts": [
+    {
+      "issue": "Delivery date stated as Q4 2028 in most English and Portuguese press sources, but Público Imobiliário (April 2026) states 'End of 2028' and RE Portugal states 'Q4 2028' — these are consistent. However, idealista (Portuguese, Feb 2026) says construction start 'Q2 2026' while Público Imobiliário says 'June 2026'. These are not contradictory (June is within Q2) but represent different granularities.",
+      "valueA": "Construction start Q2 2026",
+      "sourceA": "https://www.idealista.pt/news/imobiliario/construcao/2026/02/24/74076-novo-projeto-do-belas-clube-de-campo-prepara-se-para-sair-do-papel",
+      "valueB": "Construction start June 2026",
+      "sourceB": "https://imobiliario.publico.pt/noticias/la-reserve-novo-refugio-premium-belas-clube-campo-onde-arquitetura-encontra-natureza/"
+    },
+    {
+      "issue": "Kronos Real Estate Group founding year stated as 2014 in one source and 2015 in another.",
+      "valueA": "Founded 2014",
+      "sourceA": "https://www.griinstitute.org/realestate/member-profile/europe/said-hejal_835",
+      "valueB": "Founded 2015",
+      "sourceB": "https://www.crunchbase.com/organization/kronos-homes"
+    }
+  ],
+  "gaps": [
+    {
+      "query": "Landscape architect for La Réserve",
+      "result": null,
+      "note": "No landscape architect named in any source — official site, press releases, or press coverage."
+    },
+    {
+      "query": "Interior designer for La Réserve",
+      "result": null,
+      "note": "No interior designer named in any source — official site, press releases, or press coverage."
+    },
+    {
+      "query": "La Réserve on UNStudio's own portfolio page",
+      "result": null,
+      "note": "La Réserve does not appear in UNStudio's projects directory at https://www.unstudio.com/projects/ as of research date. Confirmation of involvement based solely on press sources."
+    },
+    {
+      "query": "Exact terms and nature of Millennium bcp's role as 'strategic partner'",
+      "result": null,
+      "note": "Mentioned once in Público Imobiliário (April 2026) as 'a fundamental strategic partner' but no further detail on whether this is a construction loan, buyer mortgage agreement, or investment partnership."
+    },
+    {
+      "query": "Kronos Homes dispute or legal proceedings search",
+      "result": null,
+      "note": "No disputes, litigation, or regulatory proceedings found in any search results."
+    },
+    {
+      "query": "Specific Kronos Homes investor shareholding structure (Helix Equities stake, other investors)",
+      "result": null,
+      "note": "Helix Equities identified as investor in PitchBook but shareholding details are behind paywall and not publicly available."
+    },
+    {
+      "query": "La Réserve pricing breakdown per typology (T1, T2, T3, T4 individual prices)",
+      "result": null,
+      "note": "Only overall range (€470,000–€1,300,000) disclosed; no per-typology pricing found."
+    },
+    {
+      "query": "Number of units per typology (T1/T2/T3/T4 split) for La Réserve",
+      "result": null,
+      "note": "Total unit count (101) confirmed but no unit-mix breakdown found in any source."
+    },
+    {
+      "query": "La Réserve planning permit or licence status (licença de construção)",
+      "result": null,
+      "note": "No planning or building permit information found in any source."
+    }
+  ]
+}

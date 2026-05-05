@@ -100,12 +100,6 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
           </div>
         </div>
       </div>
-      <style>{`
-        @media (max-width: 768px) {
-          .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 40px 0 !important; }
-          .contact-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--border); padding-top: 32px !important; }
-        }
-      `}</style>
     </>
   )
 }

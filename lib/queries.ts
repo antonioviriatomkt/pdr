@@ -173,10 +173,11 @@ export async function getDevelopmentsByLocation(locationSlug: string, lang = 'en
 }
 
 // Journal
-export async function getLatestArticles(limit = 6, lang = 'en') {
+export async function getLatestArticles(limit = 6, lang = 'en', offset = 0) {
+  const end = offset + limit
   return safeFetch(
     () => client.fetch(`
-      *[_type == "journalArticle" && !(category in $hiddenCategories)] | order(publishedAt desc) [0...$limit] {
+      *[_type == "journalArticle" && !(category in $hiddenCategories)] | order(publishedAt desc) [$offset...$end] {
         _id,
         "title": coalesce(title[$lang], title.en),
         slug, category, heroImage,
@@ -185,8 +186,19 @@ export async function getLatestArticles(limit = 6, lang = 'en') {
         linkedLocation->{ name, slug },
         linkedDevelopment->{ name, slug }
       }
-    `, { limit, lang, hiddenCategories: HIDDEN_CATEGORIES }, { next: { revalidate: 300 } }),
-    demoArticles.filter(a => !HIDDEN_CATEGORIES.includes(a.category)).slice(0, limit) as any[]
+    `, { offset, end, lang, hiddenCategories: HIDDEN_CATEGORIES }, { next: { revalidate: 300 } }),
+    demoArticles.filter(a => !HIDDEN_CATEGORIES.includes(a.category)).slice(offset, end) as any[]
+  )
+}
+
+export async function countArticles() {
+  return safeFetch(
+    () => client.fetch(
+      `count(*[_type == "journalArticle" && !(category in $hiddenCategories)])`,
+      { hiddenCategories: HIDDEN_CATEGORIES },
+      { next: { revalidate: 300 } }
+    ),
+    demoArticles.filter(a => !HIDDEN_CATEGORIES.includes(a.category)).length
   )
 }
 
@@ -280,6 +292,12 @@ export async function getDevelopmentsByLifestyle(tag: string, lang = 'en') {
 }
 
 export async function getLifestyle(slug: string, lang = 'en') {
+  const demo = demoLifestyles.find(l => l.slug.current === slug)
+  const locale = (lang === 'pt' ? 'pt' : 'en') as 'en' | 'pt'
+  const fallback = demo ? {
+    ...demo,
+    intro: demo.intro[locale] ?? demo.intro.en,
+  } : null
   return safeFetch(
     () => client.fetch(`
       *[_type == "lifestyle" && slug.current == $slug && noindex != true][0] {
@@ -288,7 +306,7 @@ export async function getLifestyle(slug: string, lang = 'en') {
         heroImage, seoTitle, seoDescription, noindex
       }
     `, { slug, lang }, { next: { revalidate: 3600 } }),
-    (demoLifestyles.find(l => l.slug.current === slug) ?? null) as any
+    fallback as any
   )
 }
 
@@ -302,6 +320,15 @@ export async function getCategoriesWithArticles(): Promise<string[]> {
 }
 
 export async function getJournalCategory(slug: string, lang = 'en') {
+  const demo = demoJournalCategories.find(c => c.slug === slug)
+  const locale = (lang === 'pt' ? 'pt' : 'en') as 'en' | 'pt'
+  const fallback = demo ? {
+    slug: demo.slug,
+    title: demo.title[locale] ?? demo.title.en,
+    intro: demo.intro[locale] ?? demo.intro.en,
+    seoTitle: demo.seoTitle,
+    seoDescription: demo.seoDescription,
+  } : null
   return safeFetch(
     () => client.fetch(`
       *[_type == "journalCategory" && slug == $slug][0] {
@@ -311,7 +338,7 @@ export async function getJournalCategory(slug: string, lang = 'en') {
         seoTitle, seoDescription
       }
     `, { slug, lang }, { next: { revalidate: 3600 } }),
-    (demoJournalCategories.find(c => c.slug === slug) ?? null) as any
+    fallback as any
   )
 }
 

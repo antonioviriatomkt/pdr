@@ -1,0 +1,128 @@
+{
+  "name": "The V Apartments",
+  "location": { "name": "Almancil", "slug": "almancil" },
+  "developer": { "name": "Wheeler & Brand", "slug": "wheeler-brand" },
+  "latitude": null,
+  "longitude": null,
+  "status": "Under Construction",
+  "type": "Apartments",
+  "priceDisplay": "From €1M",
+  "primaryCta": "Register Interest",
+  "lifestyleTags": ["Golf", "Investment-grade"],
+  "heroImage": {
+    "sourceUrl": "https://thev.pt/",
+    "sourceLabel": "The V official website",
+    "altSuggestion": "Exterior view of The V Apartments building with pine parkland landscaping, Almancil"
+  },
+  "gallery": [
+    {
+      "sourceUrl": "https://thev.pt/",
+      "sourceLabel": "The V official website — renderings gallery",
+      "altSuggestion": "The V Apartments interior and exterior views"
+    },
+    {
+      "sourceUrl": "https://goldentriangleproperties.pt/algarve-properties-exclusive-selection-of-luxury-properties-for-sale/thev/",
+      "sourceLabel": "Golden Triangle Properties listing page",
+      "altSuggestion": "The V Apartments unit views and amenities"
+    }
+  ],
+  "seoImage": {
+    "sourceUrl": "https://thev.pt/"
+  },
+  "keyFacts": [
+    { "label": "Location", "value": "Urbanização Ferrarias, Almancil, Loulé municipality, Faro District" },
+    { "label": "Neighbourhood", "value": "Ferrarias — between Quinta do Lago and Vale do Lobo" },
+    { "label": "Region", "value": "Algarve" },
+    { "label": "Type", "value": "Apartments — 2, 3 and 4-bedroom, including penthouses with rooftop pools" },
+    { "label": "Status", "value": "Under Construction" },
+    { "label": "Units", "value": "20" },
+    { "label": "Typology Mix", "value": "Pool Apartments, Park View Apartments, Penthouse Apartments; 2, 3 and 4-bedroom configurations" },
+    { "label": "Price From", "value": "€995,000 (2-bedroom, 92 sqm); up to €2,995,000 (3-bedroom penthouse duplex). Prices disclosed via sales agents only — not published on developer's official site." },
+    { "label": "Price per m²", "value": "Approximately €10,815/sqm implied from 2-bed unit (92 sqm at €995,000). Sizes for other typologies not publicly available." },
+    { "label": "Delivery", "value": "Early 2027 (developer's own site) / May 2027 (sales listing portals) — conflict; no official date on thev.pt" },
+    { "label": "Lead Architect", "value": "David Sinclair Arquitectos Associados (listed on official site; role unspecified; project unconfirmed in firm's own portfolio)" },
+    { "label": "Landscape Architect", "value": "Jardim Vista (Almancil, Algarve; founded 1990 by Richard Westcott; listed on official site, unconfirmed in firm's own accessible portfolio for this project)" },
+    { "label": "Interior Designer", "value": "Pure Allure Interior (interior packages partnership; Flexform and Casamilano dealer for Portugal; project listed as 'upcoming' on their site). Bespoke kitchens and cabinetry by Edwin Loxley." },
+    { "label": "Amenities", "value": "THE Park communal pine parkland (walking track, yoga platform, Mediterranean planting, herb garden, fruit trees, sports zone); dedicated concierge; private underground parking; secure storage; 24-hour monitored security; private rooftop pools on penthouse units; pool access for Pool Apartment category; furniture packages available on request" },
+    { "label": "Sustainability", "value": "Water conservation and native planting stated; Energy Class A (per third-party listing); no named sustainability certification found" },
+    { "label": "Parking", "value": "Private underground parking" }
+  ],
+  "developerProfile": {
+    "legalEntity": "Two related legal entities identified. Wheeler & Brand Lda (NIF 514103825, AMI 12874) is the real estate intermediation business, registered at Rua Sacadura Cabral, 262 R/C Dto. B, 8135-144 Almancil, operating for approximately 9 years. Brand & Wheeler-Brand Lda (NIF 517615576) is a separate entity incorporated on 12 June 2023 at the same address, with CAE 68120 (building development) and declared capital of 1–5,000 EUR; this entity appears to be the vehicle for development projects including The V. A UK office also operates from 6 Stone Street Court, Hadleigh, Suffolk, IP7 6DN.",
+    "previousProjects": "No. 22 Beach House (Fonte Santa) — single house, described as complete and available for sale. No. 25 Vale do Lobo (five-bedroom villa at the Village development, under construction as of last available data, targeted early 2025 completion). Pipeline: Villa B Almancil (single villa, construction planned 2025), VDG Houses (two villas, construction planned early 2025), Luxurious Townhomes (four townhouses near Vale do Lobo, rooftop pools), Fonte Residences (eleven villa residences), Fonte Townhouses (twenty-five townhouse residences). The V Apartments is the developer's first multi-unit apartment project. Robert Brand also founded Golden Triangle Properties (rentals) in 2002, described as one of the largest rental companies in the Algarve.",
+    "trackRecordSummary": "Wheeler & Brand's confirmed delivered portfolio consists of single-house residential projects in the Golden Triangle. The V represents their first attempt at a multi-unit apartment development. No financial delivery track record for an apartment scheme of this scale has been established. No disputes, buyer complaints, or financial distress found in searches. No financial partners or lenders disclosed publicly.",
+    "awards": null,
+    "knownIssues": "No disputes or delivery failures found. The development entity (Brand & Wheeler-Brand Lda) was incorporated in June 2023 with minimal declared capital; it has no prior project delivery history as a legal entity. The architect credit (David Sinclair Arquitectos Associados) is unconfirmed in the firm's own accessible portfolio."
+  },
+  "marketPosition": {
+    "priceComparison": "The implied price per m² of approximately €10,815/sqm for the entry 2-bedroom unit (92 sqm at €995,000) sits materially above the Vale do Lobo flat average of €7,250/sqm recorded in February 2025, and is broadly aligned with Quinta do Lago's average of €11,170/sqm as of February 2026. The pricing positions The V at the upper end of the Almancil-Ferrarias submarket, closer to Quinta do Lago benchmarks despite the site being in Ferrarias rather than within either resort boundary.",
+    "investmentNarrative": "The development is positioned as a premium Golden Triangle residential product with resort-adjacent amenity (3 km from Vale do Lobo and Quinta do Lago golf courses and beaches). The developer's existing rental management business (Golden Triangle Properties, est. 2002) creates a natural lettings pathway for buyers. No rental yield projections, comparables, or transaction-based evidence has been publicly disclosed.",
+    "buyerSegment": "International second-home and investment buyers drawn to the Algarve Golden Triangle; likely British and northern European given the developer's UK presence and the area's established international buyer base. Buyers with budgets between €1M and €3M seeking resort-proximity living with managed services.",
+    "rentalYieldEvidence": null,
+    "demandDrivers": "Golden Triangle location between Quinta do Lago and Vale do Lobo — the Algarve's highest-priced residential submarket. Faro International Airport 20 minutes by car (~21 km). Vale do Lobo resort (established early 1960s, 400 hectares) offers two par-72 golf courses (Royal and Ocean, designed by Sir Henry Cotton), Royal Spa, and 14-court tennis academy. Area records over 300 days of sunshine annually. Access via A22 motorway and EN125 national road; Loulé train station approximately 4 km north."
+  },
+  "designSignals": {
+    "architecturalStyle": "Developer describes 'timeless architecture' as the design language. David Sinclair Arquitectos Associados (listed as the architect) has a background in hospitality and resort residential in the Algarve, including collaboration on Vilamoura projects (Victoria Residences, As Cascatas Hilton Hotel). The firm's accessible portfolio does not include The V. The precise architectural character of the building (contemporary, classical, modernist) cannot be established from publicly available materials.",
+    "materials": "Stone and wood named as primary natural materials on the official site. Bespoke kitchens and handcrafted cabinetry by Edwin Loxley (operating as Loxley Kitchens Algarve). Interior packages offered via Pure Allure Interior, an official Flexform and Casamilano dealer for Portugal.",
+    "landscaping": "THE Park communal landscape: pine parkland with Mediterranean planting, native species, water conservation focus. Features include a walking track, yoga platform, herb garden, fruit trees, and a sports zone. Jardim Vista (Almancil, founded 1990 by Richard Westcott, BSc Horticulture & Landscape Design, Reading University; self-described as largest landscaping firm in the Iberian Peninsula, 250+ team members, operations across Portugal and internationally) is listed as landscape partner on thev.pt.",
+    "visualIdentity": "Brand identity and digital presence designed by KOBU Agência Criativa Digital (Faro, 2024), including custom typeface design. The project name and visual language position it as a discreet premium residential product rather than a resort-branded scheme."
+  },
+  "pressReleases": [
+    {
+      "title": "THE V branding: luxury real estate in the Algarve",
+      "date": "2025-07-21",
+      "summary": "KOBU Agency published a case study on their branding work for The V Apartments. The piece details brand strategy, custom typeface design, and digital content production undertaken by the Faro-based creative agency for the 20-unit Golden Triangle development.",
+      "sourceName": "KOBU Agency",
+      "sourceUrl": "https://kobu.agency/case-studies/the-v-branding-luxury-real-estate-in-the-algarve/"
+    },
+    {
+      "title": "THE V Apartments - Exceptional Living",
+      "date": "2025-02-25",
+      "summary": "Golden Triangle Properties' dedicated listing page for The V details pricing for all unit types (€995,000 to €2,995,000), the 20-apartment configuration, penthouses with rooftop pools, THE Park amenity, concierge, underground parking and 24-hour security.",
+      "sourceName": "Golden Triangle Properties",
+      "sourceUrl": "https://goldentriangleproperties.pt/algarve-properties-exclusive-selection-of-luxury-properties-for-sale/thev/"
+    },
+    {
+      "title": "Two bed luxury apartment at THE V near Quinta do Lago",
+      "date": null,
+      "summary": "Mapro Real Estate lists a 2-bedroom, 3-bathroom apartment at The V (92 sqm gross build area, €995,000) with a May 2027 completion date and Energy Class A rating. The listing details bespoke kitchen, private terrace, pool access, underground parking and concierge.",
+      "sourceName": "Mapro Real Estate",
+      "sourceUrl": "https://www.maprorealestate.com/properties/exclusive-brand-new-apartment-682532/"
+    },
+    {
+      "title": "The V Apartments In Vale Do Lobo, Almancil, Portugal For Sale",
+      "date": null,
+      "summary": "JamesEdition listing for The V describes 20 premium apartments between Quinta do Lago and Vale do Lobo with completion scheduled for May 2027, priced from €995,000. The listing includes detail on apartment types, amenities and THE Park communal landscaping.",
+      "sourceName": "JamesEdition",
+      "sourceUrl": "https://www.jamesedition.com/real_estate/loule-portugal/the-v-apartments-14538045"
+    },
+    {
+      "title": "2 bedroom apartment for sale in Algarve, Almancil, Portugal",
+      "date": null,
+      "summary": "Rightmove listing for a 2-bedroom apartment at The V (92 sqm, €995,000) located between Quinta do Lago and Vale do Lobo with May 2027 completion.",
+      "sourceName": "Rightmove",
+      "sourceUrl": "https://www.rightmove.co.uk/properties/172985678"
+    }
+  ],
+  "brochure": {
+    "exists": false,
+    "sourceUrl": null,
+    "gated": false
+  },
+  "openQuestions": [
+    "heroImage: to be retrieved by editorial lead under licence. Source identified: https://thev.pt/",
+    "gallery: to be retrieved by editorial lead under licence. Multiple sources identified on https://thev.pt/ and https://goldentriangleproperties.pt/algarve-properties-exclusive-selection-of-luxury-properties-for-sale/thev/",
+    "brochure: to be retrieved and licence-checked by editorial lead. Source: none identified publicly.",
+    "latitude: precise coordinates for Urbanização Ferrarias not established. Source attempts: mapcarta.com (general area only). Suggest lookup via Google Maps for 'Urbanização Ferrarias Estrada Vale Lobo Almancil 8135-175'.",
+    "longitude: same as latitude — coordinates not established.",
+    "keyFacts[Price per m²]: Only 2-bed unit size (92 sqm at €995,000 = ~€10,815/sqm) found. Sizes for 3-bed, 4-bed and penthouse typologies not publicly available. Source attempts: thev.pt, maprorealestate.com, jamesedition.com, rightmove.co.uk.",
+    "keyFacts[Delivery]: Conflict between 'early 2027' (wbpropertyinvestments.com) and 'May 2027' (maprorealestate.com, rightmove.co.uk). No official completion date on thev.pt. Operator to resolve before publication.",
+    "keyFacts[Lead Architect] — role and portfolio confirmation: David Sinclair Arquitectos Associados is named on thev.pt but role is unspecified (lead/concept vs. local executive vs. project manager). The V does not appear in accessible dsaa.pt portfolio pages. Source attempts: dsaa.pt, web search for 'David Sinclair architect The V apartments Almancil'.",
+    "developerProfile.legalEntity — building permit entity: Two legal entities identified (Wheeler & Brand Lda NIF 514103825 = real estate intermediation; Brand & Wheeler-Brand Lda NIF 517615576 = building development). Cannot confirm which holds the building permit for The V without official Câmara Municipal de Loulé records.",
+    "marketPosition.rentalYieldEvidence: No rental yield data found for The V or comparable new-build apartments in Ferrarias. Source attempts: tagusproperty.com, golden triangle property searches.",
+    "architectSearch.localArchitect: MAE Marques Antunes Engenharia is confirmed as construction partner (confirmed on mae.com.pt). MAE is an engineering and construction firm, not an architecture studio. No separate local architecture firm for permitting has been identified. Source attempts: thev.pt, mae.com.pt, web search.",
+    "Projectline: Named as a partner on thev.pt. No public identity, website, or company registry entry found. Role unspecified. Source attempts: web search for 'Projectline Portugal construction engineering Algarve'.",
+    "priceDisplay field: Starting price of €995,000 falls just below the €1M display bracket. Operator to confirm whether 'From €1M' accurately represents the offering or whether 'From €750k' is more appropriate given the actual entry price.",
+    "No independent editorial press coverage found: Only listing portals (Mapro, JamesEdition, Rightmove), the developer's own sales agent (Golden Triangle Properties), and the branding agency (KOBU) case study are available. No coverage in Portugal Resident, Portugal News, Idealista editorial, Público Imobiliário, or Expresso found. Source attempts: targeted queries across major Portuguese and international real estate press."
+  ]
+}

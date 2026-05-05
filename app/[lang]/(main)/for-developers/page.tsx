@@ -142,7 +142,6 @@ export default async function ForDevelopersPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </div>
-      <style>{`@media (max-width: 768px) { .fd-grid { grid-template-columns: 1fr !important; gap: 40px !important; } }`}</style>
     </>
   )
 }

@@ -127,7 +127,6 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           </div>
         </div>
       </div>
-      <style>{`@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 40px 0 !important; } }`}</style>
     </>
   )
 }

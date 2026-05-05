@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import { getAllDevelopments, getAllLocations, getAllArticles, getCategoriesWithArticles, getActiveLifestyleTags, getAllDevelopers } from '@/lib/queries'
 import { LIFESTYLE_TAG_SLUGS } from '@/lib/lifestyle-tags'
 
+export const revalidate = 3600
+
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portugaldevelopmentsreview.com').replace(/\/$/, '')
 
 const LOCALES = ['en', 'pt'] as const

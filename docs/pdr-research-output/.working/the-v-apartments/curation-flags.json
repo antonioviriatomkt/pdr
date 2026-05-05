@@ -1,0 +1,39 @@
+{
+  "locationQuality": "Strong — Located within the Algarve Golden Triangle between Quinta do Lago and Vale do Lobo, the country's highest-priced residential submarket; Faro Airport 20 minutes away; resort golf (Royal and Ocean, designed by Sir Henry Cotton), spa, and tennis within 3 km; A22 and EN125 access; established international buyer base with decades of transaction and price depth.",
+  "designQuality": "Unknown — The credited architect (David Sinclair Arquitectos Associados) does not list The V in their accessible portfolio and the nature of their role (lead design, executive architect, or project management) has not been publicly specified; no published renders have been described in available sources; the architectural character and spatial coherence of the building cannot be independently assessed.",
+  "developerReputation": "Weak — The development vehicle (Brand & Wheeler-Brand Lda, incorporated June 2023, declared capital €1–5,000) has no prior delivery history as a legal entity; the wider Wheeler & Brand group's confirmed completed portfolio consists of a single house; The V is the group's first multi-unit apartment scheme and no financial partner or lender has been disclosed.",
+  "specificationCredibility": "Adequate — Named construction contractor (MAE Marques Antunes Engenharia, independently confirmed), named kitchen supplier (Edwin Loxley), and named interior partner (Pure Allure Interior, Flexform and Casamilano dealer for Portugal) provide specification specificity; however, pricing and delivery dates are absent from the developer's own website, sustainability language ('water conservation and native planting') carries no named certification, and no published material schedule exists.",
+  "propositionAuthenticity": "Weak — A developer with no multi-unit apartment delivery history is pricing the entry unit at ~€10,815/sqm — close to Quinta do Lago benchmarks — with an unspecified architect role, marketing language ('Exceptional Living: a lifestyle beyond exclusivity, rooted in nature') that outpaces the independently verifiable substance, and no independent editorial press coverage.",
+  "overallRecommendation": "Insufficient information — defer",
+  "recommendationLogic": "No auto-disqualifier fired (no legal dispute, no documented delivery failure, construction has started per confirmed engineering contractor MAE, project is not generic high-volume). Three deferral triggers apply: (1) no previous deliveries evidenced for a developer making premium claims — Brand & Wheeler-Brand Lda was incorporated June 2023 with minimal capital and has no confirmed delivery history; (2) delivery date not establishable from primary sources — thev.pt publishes no completion date; (3) architect credit present but role unspecified and portfolio confirmation absent — designQuality is Unknown, which per criteria is treated as a deferral trigger. Recommendation: Insufficient information — defer pending architect role confirmation, construction progress evidence, and ideally disclosure of a financial partner.",
+  "openQuestions": [
+    "heroImage: to be retrieved by editorial lead under licence. Source identified: https://thev.pt/",
+    "gallery: to be retrieved by editorial lead under licence. Multiple sources identified on https://thev.pt/ and https://goldentriangleproperties.pt/algarve-properties-exclusive-selection-of-luxury-properties-for-sale/thev/",
+    "brochure: to be retrieved and licence-checked by editorial lead. Source: none identified publicly.",
+    "latitude: precise coordinates for Urbanização Ferrarias not established. Source attempts: mapcarta.com (general area only). Suggest lookup via Google Maps for 'Urbanização Ferrarias Estrada Vale Lobo Almancil 8135-175'.",
+    "longitude: same as latitude — coordinates not established.",
+    "keyFacts[Price per m²]: Only 2-bed unit size (92 sqm at €995,000 = ~€10,815/sqm) found. Sizes for 3-bed, 4-bed and penthouse typologies not publicly available.",
+    "keyFacts[Delivery]: Conflict between 'early 2027' (wbpropertyinvestments.com) and 'May 2027' (maprorealestate.com, rightmove.co.uk). No official completion date on thev.pt. Operator to resolve before publication.",
+    "designQuality — architect role and portfolio confirmation: Confirm David Sinclair Arquitectos Associados role (lead design, executive architect, or project management) on The V, and obtain project listing in firm's accessible portfolio. Deferral trigger until resolved.",
+    "developerReputation — construction progress evidence: Request building permit number (licença de construção) from Câmara Municipal de Loulé, construction phase photos, and lender or equity partner appointment. Required to reassess Weak flag before publication.",
+    "developerProfile.legalEntity — building permit entity: Cannot confirm whether Wheeler & Brand Lda (NIF 514103825) or Brand & Wheeler-Brand Lda (NIF 517615576) holds the building licence for The V without official municipal records.",
+    "marketPosition.rentalYieldEvidence: No rental yield data found for The V or comparable new apartments in Ferrarias. Source attempts: tagusproperty.com, golden triangle property searches.",
+    "Projectline: Named as a partner on thev.pt. No public identity, website, or company registry entry found. Role unspecified.",
+    "priceDisplay field: Entry price of €995,000 falls just below the €1M display bracket. Operator to confirm 'From €1M' vs 'From €750k' for the CMS display value.",
+    "No independent editorial press coverage found: Only listing portals, the developer's own sales agent, and a branding agency case study are available. Operator to seek media coverage before publication."
+  ],
+  "existenceCheck": {
+    "developer": {
+      "isExisting": false,
+      "matchedIn": null,
+      "source": "Sanity CMS (project tyf7w7sh, dataset production)",
+      "note": "Wheeler & Brand — NEW to PDR. newEntities.developer will be included."
+    },
+    "location": {
+      "isExisting": false,
+      "matchedIn": null,
+      "source": "Sanity CMS (project tyf7w7sh, dataset production)",
+      "note": "Almancil — NEW to PDR. newEntities.location will be included."
+    }
+  }
+}

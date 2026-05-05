@@ -224,9 +224,14 @@ export default async function LocationPage({ params }: { params: Promise<{ lang:
       {articles.length > 0 && (
         <section style={{ padding: '56px 0', borderBottom: '1px solid var(--border)', background: 'var(--surface)' }}>
           <div className="container-editorial">
-            <h2 style={{ fontSize: '22px', fontWeight: 400, margin: '0 0 32px', letterSpacing: '-0.01em' }}>
-              {l.journalHeading} — {loc.name}
-            </h2>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '32px', flexWrap: 'wrap', gap: '12px' }}>
+              <h2 style={{ fontSize: '22px', fontWeight: 400, margin: 0, letterSpacing: '-0.01em' }}>
+                {l.journalHeading} — {loc.name}
+              </h2>
+              <Link href={`/${lang}/journal/category/area-guides`} style={{ fontSize: '12px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', borderBottom: '1px solid var(--border)', whiteSpace: 'nowrap' }}>
+                {l.moreStories.replace('{name}', loc.name)}
+              </Link>
+            </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
               {articles.map((a: any) => (
                 <div key={a._id}>

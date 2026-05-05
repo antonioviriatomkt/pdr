@@ -1,0 +1,38 @@
+{
+  "locationQuality": "Adequate — Belas Clube de Campo is a proven submarket with demonstrated transactional depth across multiple price tiers (ORION from €360K to Native.Townhouses from €1.355M), strong on-estate amenity infrastructure (GEO/ISO golf, UNESCO school, full services), and direct Lisbon access via A5/A9/IC19 in 15–20 minutes; the car-dependent suburban setting and the estate's lower average asking price (€3,846/m²) mean the address alone does not sustain the premium — it must be carried by the product.",
+  "designQuality": "Adequate — UNStudio (founded 1988, Ben van Berkel and Caroline Bos) is an internationally credible studio with a body of delivered work, and the ground-floor garden / upper-floor panoramic programme shows a legible spatial concept; however, no published material schedule or detailed renders exist at this stage, so the degree of site-specificity to Serra da Carregueira cannot be confirmed, and Capinha Lopes Consulting's involvement is the delivery credibility anchor.",
+  "developerReputation": "Strong — Kronos Homes has delivered multiple architecturally credited Portuguese projects including The One (Eduardo Souto de Moura, completed 2023) and Distrikt in Parque das Nações (>€180M in sales), and exited Palmares Ocean Living & Golf for approximately €400 million; no disputes or delivery failures found across all search queries; Millennium bcp named as strategic partner.",
+  "specificationCredibility": "Adequate — BREEAM certification is targeted with specifically named systems (energy monitoring, EV infrastructure, thermal optimisation), covered parking is confirmed for all units, and the implied price/m² of €6,800–€7,800 is proportionate to the specification tier; the absence of a published material schedule is a gap but not unusual at off-plan launch stage.",
+  "propositionAuthenticity": "Strong — pricing, typology range, architect commission, sustainability specification, and stated buyer profile (internationally mobile families, Lisbon-area commuters) are internally consistent; Kronos's pattern of commissioning internationally credible architects is evidenced by prior delivered projects (Souto de Moura, RCR Arquitectes, now UNStudio) rather than merely claimed.",
+  "overallRecommendation": "Recommend with reservations",
+  "recommendationLogic": "No auto-disqualifier applies. No deferral trigger fires (lead and local architects confirmed, developer track record evidenced, pricing and delivery establishable from press). No criterion flagged Weak. All Strong/Adequate — default branch reached. openQuestions contains items that should be resolved before publication (hero image and gallery under licence, UNStudio own-page confirmation, Millennium bcp partnership nature, landscape architect credit, planning permit status) — therefore 'Recommend with reservations' rather than 'Recommend for inclusion'.",
+  "openQuestions": [
+    "Hero image: to be retrieved by editorial lead under licence. Source identified: https://lareservekronos.com/ and https://imobiliario.publico.pt/noticias/la-reserve-novo-refugio-premium-belas-clube-campo-onde-arquitetura-encontra-natureza/",
+    "Gallery images: to be retrieved by editorial lead under licence. 3 sources identified (official site, idealista launch article, Público Imobiliário).",
+    "Brochure: to be retrieved and licence-checked by editorial lead. Source: none identified — no public PDF linked on official site or in any press coverage.",
+    "keyFacts.Price per m²: implied from range (€470K–€1.3M across 60–190 m²) and area benchmark; no developer-confirmed figure. Source attempts: official site, all press sources.",
+    "designSignals.materials: no published material schedule found. Source attempts: official site, all press sources, UNStudio portfolio page.",
+    "architectSearch.landscape: landscape architect not named in any source. Source attempts: official site, all press sources.",
+    "architectSearch.interiors: interior designer not named in any source. Source attempts: official site, all press sources.",
+    "architectSearch.lead — UNStudio own-page confirmation: La Réserve not yet listed on unstudio.com/projects as of research date; confirmed in 7+ independent press sources. Editorial lead may wish to verify directly with studio.",
+    "developerProfile.financialPartners — Millennium bcp role: named as 'a fundamental strategic partner' in Público Imobiliário (Apr 2026) but nature of partnership not established (construction loan, buyer mortgage agreement, or equity). Source attempts: Público Imobiliário, Kronos corporate site.",
+    "keyFacts — typology unit-mix split (T1/T2/T3/T4 count): not disclosed in any source.",
+    "keyFacts — planning permit / licença de construção status: not found in any source.",
+    "marketPosition.rentalYieldEvidence: no rental yield data found for La Réserve or comparable premium units at Belas Clube de Campo."
+  ],
+  "existenceCheck": {
+    "source": "Sanity CMS (project tyf7w7sh, dataset production)",
+    "developer": {
+      "isExisting": true,
+      "name": "Kronos Homes",
+      "sanityId": "3244c7e9-77cb-4b6f-b9f8-596b60c013e1",
+      "matchedIn": "Sanity CMS"
+    },
+    "location": {
+      "isExisting": true,
+      "name": "Belas Clube de Campo",
+      "sanityId": "12536b35-d909-4568-9918-0293e6152271",
+      "matchedIn": "Sanity CMS"
+    }
+  }
+}

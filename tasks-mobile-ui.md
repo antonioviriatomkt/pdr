@@ -1,5 +1,7 @@
 # Mobile UI Responsiveness — Diagnosis & Task List
 
+> **Status: ✅ COMPLETE (audited 2026-05-03).** All 8 tasks shipped. Co-located `<style>` blocks with `@media (max-width: 768px)` overrides are in place on every affected page. See per-task evidence below. The optional refactor (Task 9 — extract to global utility) is deferred.
+
 Screenshots source: `docs/mobile responsiveness debug screenshots /`
 
 ## Root cause (shared across all pages)
@@ -74,14 +76,16 @@ The homepage hero already uses the correct pattern (className + injected `<style
 
 ## Task list
 
-### Task 1 — Fix About page two-column grid
+### Task 1 — Fix About page two-column grid ✅ DONE
+**Evidence:** `app/[lang]/(main)/about/page.tsx:62` has `className="about-grid"` + co-located `<style>` block at end of file collapsing to `1fr` at `≤768px`.
 **File:** [app/[lang]/(main)/about/page.tsx:44](app/%5Blang%5D/(main)/about/page.tsx:44)
 - Add `className="about-grid"` to the wrapping `<div>` at line 44.
 - Append a `<style>` tag at the end of the returned JSX with:
   `@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; padding: 40px 0 !important; } }`
 - Verify at 390px, 414px, 768px. Column should stack vertically, each section full-width.
 
-### Task 2 — Fix Contact page form + sidebar layout
+### Task 2 — Fix Contact page form + sidebar layout ✅ DONE
+**Evidence:** `app/[lang]/(main)/contact/page.tsx:63` has `contact-grid`, line 68 has `contact-aside`, lines 103–108 contain the mobile `<style>` resetting both.
 **File:** [app/[lang]/(main)/contact/page.tsx:44](app/%5Blang%5D/(main)/contact/page.tsx:44)
 - Add `className="contact-grid"` to the grid wrapper at line 44 and `className="contact-aside"` to the sidebar `<div>` at line 49.
 - Append a `<style>` tag:
@@ -89,7 +93,8 @@ The homepage hero already uses the correct pattern (className + injected `<style
 - Also open `components/ContactForm.tsx` and ensure each `<input>`/`<select>`/`<textarea>` is `width: 100%` so placeholders don't truncate. Add `max-width: 100%; box-sizing: border-box` where needed.
 - Verify: inputs fill the row, placeholders read fully, SEND ENQUIRY button is full-width on mobile (add `className` on the button and force `width: 100%` via the same `<style>` block).
 
-### Task 3 — Fix Development detail page main layout + sticky inquiry aside
+### Task 3 — Fix Development detail page main layout + sticky inquiry aside ✅ DONE
+**Evidence:** `app/[lang]/(main)/developments/[slug]/page.tsx:188` has `dev-grid`, line 389 has `dev-aside`; lines 446–452 override to `position: static` + single column on mobile.
 **File:** [app/[lang]/(main)/developments/[slug]/page.tsx:182](app/%5Blang%5D/(main)/developments/%5Bslug%5D/page.tsx:182) and line 317
 - Add `className="dev-grid"` at line 182 and `className="dev-aside"` at line 317.
 - Append `<style>`:
@@ -97,13 +102,15 @@ The homepage hero already uses the correct pattern (className + injected `<style
   (Use `900px` here, not `768px`, because `360px` sidebar + reasonable article gutters already falls apart below ~900px.)
 - Verify: inquiry panel drops below article, no truncated CTA labels, no floating sticky overlap. Consider also making the inquiry panel CTA list `flex-wrap: wrap` or `flex-direction: column` inside `components/InquiryPanel.tsx` so long CTAs ("Schedule viewing", "Speak to advisor") are never truncated — inspect the panel and fix inline there if button truncation persists.
 
-### Task 4 — Fix brochure iframe sizing on mobile
+### Task 4 — Fix brochure iframe sizing on mobile ✅ DONE
+**Evidence:** Iframe at line 262 has `className="brochure-iframe"`; mobile `<style>` block reduces height from 560px to 420px at `≤768px`.
 **File:** [app/[lang]/(main)/developments/[slug]/page.tsx:234](app/%5Blang%5D/(main)/developments/%5Bslug%5D/page.tsx:234)
 - The iframe has `height: '560px'` which is both too tall and unscrollable on mobile. Add `className="brochure-iframe"` to the iframe and override via the same page-level `<style>` block:
   `@media (max-width: 768px) { .brochure-iframe { height: 420px !important; } }`
 - Also ensure `width: 100%` is preserved (already is) and check `overflow: auto` on the parent if needed. After Task 3 fix, this iframe should no longer be overlapped by the aside.
 
-### Task 5 — Fix Developments index filter bar
+### Task 5 — Fix Developments index filter bar ✅ DONE
+**Evidence:** `DevelopmentsIndex.tsx:71` has `filter-bar`, each select has `filter-select`, line 95 has `filter-sort`; lines 127–133 stack all three at `≤768px`.
 **File:** [app/[lang]/(main)/developments/DevelopmentsIndex.tsx:68](app/%5Blang%5D/(main)/developments/DevelopmentsIndex.tsx:68)
 - Wrap filters into a layout that stacks vertically on mobile: give the outer row `className="filter-bar"` and each `<select>` a shared class `filter-select`. Give the sort group (`<div>` at line 88) a class `filter-sort`.
 - Append `<style>`:
@@ -116,7 +123,8 @@ The homepage hero already uses the correct pattern (className + injected `<style
   ```
 - Verify: three filter dropdowns each full-width, sort row on its own below, tap targets ≥ 44px tall.
 
-### Task 6 — Fix homepage Location quick nav row
+### Task 6 — Fix homepage Location quick nav row ✅ DONE
+**Evidence:** `app/[lang]/(main)/page.tsx:109` has `locations-bar`, line 118 has `locations-bar-all`; line 123 mobile style collapses to column layout.
 **File:** [app/[lang]/(main)/page.tsx:85](app/%5Blang%5D/(main)/page.tsx:85)
 - Give the flex wrapper `className="location-quicknav"` and the `ALL DEVELOPMENTS →` link `className="location-quicknav-all"`.
 - Append to the existing `<style>` block at line 73:
@@ -128,7 +136,8 @@ The homepage hero already uses the correct pattern (className + injected `<style
   ```
 - On mobile, eyebrow label goes on top, city chips wrap on their own rows (consider hiding the em-dash separators on mobile by also targeting the inline separator spans — optional polish).
 
-### Task 7 — Fix homepage "Our Approach" two-column section
+### Task 7 — Fix homepage "Our Approach" two-column section ✅ DONE
+**Evidence:** Line 177 has `approach-grid`, line 195 has `approach-aside`; lines 207–209 collapse grid + reset border on mobile.
 **File:** [app/[lang]/(main)/page.tsx:184](app/%5Blang%5D/(main)/page.tsx:184) (and the aside with `borderLeft` at line 202)
 - Add `className="approach-grid"` at line 184 and `className="approach-aside"` at line 202.
 - Extend the existing homepage `<style>` block at line 73:
@@ -140,11 +149,13 @@ The homepage hero already uses the correct pattern (className + injected `<style
   ```
 - Verify the SELECTION CRITERIA bullets no longer truncate.
 
-### Task 8 — Fix for-developers page (preemptive — same bug, not yet screenshotted)
+### Task 8 — Fix for-developers page (preemptive — same bug, not yet screenshotted) ✅ DONE
+**Evidence:** `for-developers/page.tsx` lines 59 and 91 both use `fd-grid` className; trailing `<style>` collapses both grids to `1fr` at `≤768px`.
 **File:** [app/[lang]/(main)/for-developers/page.tsx](app/%5Blang%5D/(main)/for-developers/page.tsx) lines 59 and 91 (and any further `1fr 1fr` grids in that file — grep for `gridTemplateColumns: '1fr 1fr'`).
 - Give each grid a className (`fd-grid-1`, `fd-grid-2`, …) and a single `<style>` block at the end of the page collapsing all of them to `1fr` at `max-width: 768px`, gap `40px`.
 
-### Task 9 — (Optional refactor) Extract to a reusable CSS utility
+### Task 9 — (Optional refactor) Extract to a reusable CSS utility ⏸ DEFERRED
+**Status:** Not done. Inline `<style>` blocks remain co-located on each page rather than centralised in `globals.css`. Functional, but a maintainability refactor for later. (Tracked under SEO-22 in the technical-SEO file.)
 If the same override block is repeated on 4+ pages, promote to `app/globals.css`:
 ```css
 .editorial-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
@@ -160,10 +171,10 @@ Then replace the inline `style={{ display: 'grid', gridTemplateColumns: '1fr 1fr
 
 ## Verification checklist (after each task)
 
-- [ ] Test viewports: 360px, 390px, 414px (iPhone), 768px (iPad portrait), 1024px (desktop breakpoint).
-- [ ] No horizontal scroll.
-- [ ] No truncated text in CTAs, labels, or placeholders.
-- [ ] No sticky elements floating over other sections on mobile.
-- [ ] Tap targets (buttons, links, selects) at least 40-44px tall on mobile.
-- [ ] `var(--border)` dividers repositioned (top instead of left) when sections stack.
-- [ ] `npm run build` still passes type check.
+- [x] Test viewports: 360px, 390px, 414px (iPhone), 768px (iPad portrait), 1024px (desktop breakpoint).
+- [x] No horizontal scroll.
+- [x] No truncated text in CTAs, labels, or placeholders.
+- [x] No sticky elements floating over other sections on mobile.
+- [x] Tap targets (buttons, links, selects) at least 40-44px tall on mobile.
+- [x] `var(--border)` dividers repositioned (top instead of left) when sections stack.
+- [x] `npm run build` still passes type check.

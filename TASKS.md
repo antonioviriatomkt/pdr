@@ -106,3 +106,22 @@
 - Build: `npm run build`
 - Forms: without RESEND_API_KEY, submissions are logged to console. Add key to .env.local to enable email.
 - CMS: Add NEXT_PUBLIC_SANITY_PROJECT_ID to .env.local after creating a Sanity project. Currently runs entirely on demo data.
+
+---
+
+## Status snapshot (audited 2026-05-03)
+
+Cross-references the granular task lists:
+
+- **Mobile UI** — `tasks-mobile-ui.md` — ✅ all 8 layout fixes shipped.
+- **Content SEO (gaps 1–7)** — `TASKS_Content.md` — ✅ all checked.
+- **Technical SEO** — `TASKS_technical_seo.md` — 20 of 25 done. Remaining work:
+  - ❌ SEO-24 — PDF brochure proxy with `X-Robots-Tag: noindex`
+  - ❌ SEO-25 — journal pagination
+  - ⚠️ SEO-17 — "More stories" link from location pages to journal category
+  - ⚠️ SEO-19 — `loading="lazy"` + toggle gate on brochure iframe
+  - ⚠️ SEO-22 — extract co-located `<style>` blocks to `globals.css`
+  - ⚠️ SEO-23 — make sitemap categories live (currently build-time)
+- **Editorial content** — SEO-C1 to C4 — content writing, not code.
+
+Genuine remaining engineering work is narrow: 3 not-done items + 4 partials. Everything else is shipped.

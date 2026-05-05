@@ -80,7 +80,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
                 </Link>
               </div>
             </div>
-            <div style={{ borderLeft: `1px solid ${heroImg ? 'rgba(247,246,243,0.2)' : 'var(--border)'}`, paddingLeft: '48px', paddingBottom: '4px' }} className="hero-aside">
+            <div style={{ borderLeft: `1px solid ${heroImg ? 'rgba(247,246,243,0.2)' : 'var(--border)'}`, paddingLeft: '48px', paddingBottom: '4px', '--hero-aside-mobile-border': heroImg ? 'rgba(247,246,243,0.2)' : 'var(--border)' } as React.CSSProperties} className="hero-aside">
               <p style={{ fontSize: '16px', color: heroImg ? 'rgba(247,246,243,0.75)' : 'var(--muted)', lineHeight: 1.75, margin: '0 0 32px' }}>
                 {t.hero.aside}
               </p>
@@ -95,12 +95,6 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
             {heroDev.name}{heroDev.location?.name ? ` · ${heroDev.location.name}` : ''}
           </p>
         )}
-        <style>{`
-          @media (max-width: 768px) {
-            .hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
-            .hero-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid ${heroImg ? 'rgba(247,246,243,0.2)' : 'var(--border)'}; padding-top: 28px !important; }
-          }
-        `}</style>
       </section>
 
       {/* Locations */}
@@ -120,7 +114,6 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
             </Link>
           </div>
         </div>
-        <style>{`@media (max-width: 768px) { .locations-bar { gap: 20px; } .locations-bar-all { margin-left: 0 !important; } }`}</style>
       </section>
 
       {/* Featured Developments */}
@@ -168,7 +161,6 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
             </div>
           </div>
         </div>
-        <style>{`@media (max-width: 768px) { .newsletter-form-col { border-left: none !important; padding-left: 0 !important; } }`}</style>
       </section>
 
       {/* Our Approach */}
@@ -257,12 +249,6 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
           </div>
         </div>
       </section>
-      <style>{`
-        @media (max-width: 768px) {
-          .approach-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
-          .approach-aside { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--border); padding-top: 28px !important; }
-        }
-      `}</style>
     </>
   )
 }

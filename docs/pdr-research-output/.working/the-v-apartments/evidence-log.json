@@ -1,0 +1,423 @@
+{
+  "input": {
+    "name": "the v apartments",
+    "url": "https://thev.pt/"
+  },
+  "officialPage": {
+    "url": "https://thev.pt/",
+    "fetchedAt": "2026-05-05T00:00:00Z",
+    "factsExtracted": [
+      {
+        "claim": "20 premium apartments in an exclusive collection",
+        "verbatim": "THE V presents an exclusive collection of 20 premium apartments",
+        "category": "typology"
+      },
+      {
+        "claim": "Typologies: two, three and four-bedroom units including penthouses with rooftop pools",
+        "verbatim": "offering two, three and four-bedroom units, including stunning penthouses with rooftop pools",
+        "category": "typology"
+      },
+      {
+        "claim": "Three apartment categories offered: Pool Apartments, Park View Apartments, Penthouse Apartments",
+        "verbatim": "THE Pool Apartments; THE Park View Apartments; THE Penthouse Apartments",
+        "category": "typology"
+      },
+      {
+        "claim": "Apartments delivered unfurnished; furniture packages available on request",
+        "verbatim": "All apartments are delivered unfurnished. Furniture packages are available upon request.",
+        "category": "amenities"
+      },
+      {
+        "claim": "Bespoke kitchens and handcrafted cabinetry by Edwin Loxley",
+        "verbatim": "bespoke kitchens and handcrafted cabinetry by Edwin Loxley",
+        "category": "amenities"
+      },
+      {
+        "claim": "Tailored interior packages via exclusive partnership with Pure Allure Interior",
+        "verbatim": "tailored interior packages available through our exclusive partnership with Pure Allure Interior",
+        "category": "amenities"
+      },
+      {
+        "claim": "THE Park: pine parkland with walking track, yoga platform, Mediterranean planting, herb garden, fruit trees, sports zone",
+        "verbatim": "THE Park, a tranquil pine parkland reflecting the serene Mediterranean climate. With a focus on water conservation and native planting. communal kitchen herbs garden, fruit trees, a walking track, sports zone and yoga platform",
+        "category": "amenities"
+      },
+      {
+        "claim": "Building services: dedicated concierge, private underground parking, secure storage, 24-hour monitored security",
+        "verbatim": "dedicated concierge services, private underground parking, secure storage and 24-hour monitored security",
+        "category": "amenities"
+      },
+      {
+        "claim": "Sustainability: water conservation and native planting",
+        "verbatim": "With a focus on water conservation and native planting",
+        "category": "sustainability"
+      },
+      {
+        "claim": "Design philosophy: timeless architecture and sustainability",
+        "verbatim": "Where timeless architecture and sustainability blend with exceptional living",
+        "category": "sustainability"
+      },
+      {
+        "claim": "Natural materials: stone and wood",
+        "verbatim": "celebrating the natural beauty and rich textures of stone and wood",
+        "category": "amenities"
+      },
+      {
+        "claim": "Architect credit on website: David Sinclair Arquitectos Associados",
+        "verbatim": "David Sinclair Arquitectos Associados",
+        "category": "architect"
+      },
+      {
+        "claim": "Partner listed: MAE (Marques Antunes Engenharia)",
+        "verbatim": "Marques Antunes (MAE)",
+        "category": "architect"
+      },
+      {
+        "claim": "Partner listed: Projectline",
+        "verbatim": "Projectline",
+        "category": "architect"
+      },
+      {
+        "claim": "Landscape partner: Jardim Vista",
+        "verbatim": "Jardim Vista",
+        "category": "architect"
+      },
+      {
+        "claim": "Interior design partner: Pure Allure Interior",
+        "verbatim": "Pure Allure Interior",
+        "category": "architect"
+      },
+      {
+        "claim": "Branding agency: KOBU Agency",
+        "verbatim": "KOBU Agency",
+        "category": "developer"
+      },
+      {
+        "claim": "Sales agent listed on official site: Golden Triangle Properties",
+        "verbatim": "Golden Triangle Properties",
+        "category": "developer"
+      },
+      {
+        "claim": "Developer/builder: Wheeler&Brand",
+        "verbatim": "Wheeler&Brand",
+        "category": "developer"
+      },
+      {
+        "claim": "Location: between Quinta do Lago and Vale do Lobo, Algarve Golden Triangle",
+        "verbatim": "Nestled in the heart of the Algarve's Golden Triangle, between Quinta do Lago and Vale do Lobo",
+        "category": "typology"
+      },
+      {
+        "claim": "Brand promise tagline: Exceptional Living",
+        "verbatim": "Exceptional Living: a lifestyle beyond exclusivity, rooted in nature",
+        "category": "developer"
+      },
+      {
+        "claim": "Contact address: Urbanização Ferrarias Estrada Vale Lobo 8135-175 Almancil",
+        "verbatim": "Urbanização Ferrarias Estrada Vale Lobo 8135-175 Almancil",
+        "category": "typology"
+      },
+      {
+        "claim": "Contact email: sales@thev.pt",
+        "verbatim": "sales@thev.pt",
+        "category": "developer"
+      },
+      {
+        "claim": "Contact phone: +351 911 018 157",
+        "verbatim": "M. +351 911 018 157",
+        "category": "developer"
+      },
+      {
+        "claim": "Energy class A rating stated in third-party listing",
+        "verbatim": "Energy Class: A",
+        "category": "sustainability"
+      }
+    ]
+  },
+  "developerSearch": {
+    "queries": [
+      "Wheeler Brand developer Portugal Algarve previous projects",
+      "\"Wheeler&Brand\" OR \"Wheeler and Brand\" developer Algarve Portugal development",
+      "Robert Brand Wheeler developer Algarve Portugal background",
+      "Wheeler Brand Lda Portugal \"Marques Antunes\" MAE construction \"The V\" Almancil 2027",
+      "Golden Triangle Properties Robert Brand \"Wheeler\" development AMI 12874",
+      "\"Wheeler Brand\" \"Brand Wheeler\" Portugal awards recognition 2023 2024 2025",
+      "\"Wheeler Brand\" dispute complaint delivery failure Portugal",
+      "Wheeler Brand \"No. 25\" OR \"No 25\" \"Vale do Lobo\" development completed"
+    ],
+    "findings": [
+      {
+        "fact": "Wheeler & Brand Lda holds Portuguese real estate agency AMI registration number 12874",
+        "source": "https://goldentriangleproperties.pt/contact/",
+        "category": "legalEntity"
+      },
+      {
+        "fact": "Wheeler & Brand Lda NIF: 514103825; registered address: Rua Sacadura Cabral, 262 R/C Dto. B, 8135-144 Almancil, Portugal; business activity CAE 68310 (real estate intermediation services); approx. 9 years of operations as of 2026",
+        "source": "https://www.einforma.pt/servlet/app/portal/ENTP/prod/ETIQUETA_EMPRESA_CONTRIBUINTE/nif/514103825/contribuinte/514103825/",
+        "category": "legalEntity"
+      },
+      {
+        "fact": "A second distinct legal entity, Brand & Wheeler-Brand Lda, NIF 517615576, was incorporated on 2023-06-12 in Almancil (same street address: Rua Sacadura Cabral Nr. 262 Loja B-R/C, 8135-144 Almancil); CAE 68120 (development of building projects); capital 1-5,000 EUR; status: Active as of May 2026",
+        "source": "https://www.iberinform.pt/empresa/25056816/brand-and-wheeler-brand-lda",
+        "category": "legalEntity"
+      },
+      {
+        "fact": "Wheeler & Brand also has a UK office at 6 Stone Street Court, Hadleigh, Suffolk, IP7 6DN",
+        "source": "https://goldentriangleproperties.pt/contact/",
+        "category": "legalEntity"
+      },
+      {
+        "fact": "Robert Brand founded Golden Triangle Properties (Rentals) in 2002; described as one of the largest rental companies in the Algarve",
+        "source": "https://goldentriangleproperties.pt/meet-our-team/",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "Golden Triangle Properties operates in association with Wheeler and Brand LDA for development projects in the Golden Triangle",
+        "source": "https://goldentriangleproperties.pt/meet-our-team/",
+        "category": "legalEntity"
+      },
+      {
+        "fact": "Wheeler & Brand also operates as Brand Real Estate Services since 2016 (per third-party summary)",
+        "source": "https://www.wbpropertyinvestments.com/",
+        "category": "legalEntity"
+      },
+      {
+        "fact": "Wheeler & Brand UK/Portugal office: Rua Sacadura Cabral, Nº262, Lj B, 8135-144 Almancil, Algarve; contact robert@wbpropertyinvestments.com",
+        "source": "https://www.wbpropertyinvestments.com/",
+        "category": "legalEntity"
+      },
+      {
+        "fact": "Developer portfolio — THE V Apartments: 20 premium apartments between Quinta do Lago and Vale do Lobo; construction started; completion stated as early 2027",
+        "source": "https://www.wbpropertyinvestments.com/projects-developments",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "Developer portfolio — No. 25 Vale do Lobo: five-bedroom suite villa at the Village development; listed as 'currently under construction and ready for completion in early 2025' (status at time of listing)",
+        "source": "https://www.wbpropertyinvestments.com/projects-developments",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "Developer portfolio — No. 22 Beach House, Fonte Santa: within 600m of beach, overlooks pine forest; listed as 'now complete and available for sale'",
+        "source": "https://www.wbpropertyinvestments.com/projects-developments",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "Developer portfolio — Villa B, Almancil: five-bedroom villa on 5,500m² landscaped gardens; listed as 'to be constructed in 2025'",
+        "source": "https://www.wbpropertyinvestments.com/projects-developments",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "Developer portfolio — VDG Houses: two modern villas, 2,000m² plots each, 225m² build size; listed as 'construction due to start in early 2025'",
+        "source": "https://www.wbpropertyinvestments.com/projects-developments",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "Developer future pipeline includes: Luxurious Townhomes (four high-end townhouses with rooftop pools near Vale do Lobo), Fonte Residences (eleven villa residences, walking distance to beach), Fonte Townhouses (twenty-five townhouse residences, walking distance to beach)",
+        "source": "https://www.wbpropertyinvestments.com/projects-developments",
+        "category": "previousProjects"
+      },
+      {
+        "fact": "No disputes, delivery failures, or financial distress involving Wheeler & Brand found in search results",
+        "source": "Query: '\"Wheeler Brand\" dispute complaint delivery failure Portugal' — no results returned",
+        "category": "disputes"
+      },
+      {
+        "fact": "No awards or industry recognition for Wheeler & Brand found in search results",
+        "source": "Query: '\"Wheeler Brand\" \"Brand Wheeler\" Portugal awards recognition 2023 2024 2025' — no results returned",
+        "category": "awards"
+      },
+      {
+        "fact": "No financial partners identified for Wheeler & Brand in search results",
+        "source": "Queries across wbpropertyinvestments.com and third-party sources — no financial partners disclosed",
+        "category": "financialPartners"
+      }
+    ]
+  },
+  "architectSearch": {
+    "lead": {
+      "studio": "David Sinclair Arquitectos Associados",
+      "portfolioUrl": "https://www.dsaa.pt/",
+      "confirmed": false,
+      "notes": "Firm is listed as a partner on thev.pt. David Sinclair trained at RIBA London; co-founded St George e Sinclair with Alan St George; practice passed to his own name in 1991 as David Sinclair Arquitectos. Notable past projects include Victoria Residences and As Cascatas Hilton Hotel (both Vilamoura, with WATG and John Seifert), Pestana Group projects, Pousadas in Porto/Lisbon/Madeira. The V is not listed or confirmed on the dsaa.pt portfolio pages accessible; rehabilitation projects listed on site are all outside Algarve residential context. Copyright on dsaa.pt footer: 2014. Role categorisation (lead/concept vs. local executive) is not specified on the official The V site."
+    },
+    "local": {
+      "studio": "MAE — Marques Antunes Engenharia, Lda",
+      "portfolioUrl": "https://www.mae.com.pt/en/projects/",
+      "confirmed": true,
+      "notes": "MAE lists 'The V' under its Construction category among 33 projects. Firm full name: Marques Antunes Engenharia, Lda. Based in Lagos, Portugal. Founded: August 13, 2015 (per third-party registry). CAE: civil construction, public works, real estate promotion, civil engineering, specialised construction. Role on The V website listed as a partner alongside architect and other firms — role described on thev.pt as partner, not specifically 'local architect'; firm is an engineering/construction entity not an architecture studio. Past projects include Casa das Freiras, Palmares Signature Villa, Villa Palmares, Casa Lioz, Villa Pernoi, Casa Sofia, Casa da Ria (with Mário Martins Atelier). The role listed as partner by the developer likely covers construction management/engineering."
+    },
+    "landscape": {
+      "studio": "Jardim Vista",
+      "portfolioUrl": "https://jardimvista.com/",
+      "confirmed": false,
+      "notes": "Jardim Vista is listed as a partner on thev.pt. Firm founded 1990 in the Algarve by Richard Westcott (BSc Horticulture & Landscape Design, Reading University, UK); described as largest landscaping company in the Iberian Peninsula; HQ in Almancil; operations across Portugal, Europe, Middle East, Africa; 250+ team members; eco-friendly/dry garden specialist. The V is not confirmed on the Jardim Vista website in accessible content. Algarve-based proximity confirmed."
+    },
+    "interiors": {
+      "studio": "Pure Allure Interior",
+      "portfolioUrl": "https://pure-allure-interior.com/",
+      "confirmed": false,
+      "notes": "Pure Allure Interior is listed as a partner on thev.pt for 'tailored interior packages.' Founded by Esther and Patrick; tagline '25 Years of Timeless Interiors'; based in Algarve (Quinta do Lago, Vale do Lobo, Almancil area); official Flexform dealer for Algarve Portugal; exclusive Casamilano dealer in Portugal. The V is referenced on their website under 'Upcoming Projects' navigation item. Role is described as partnership for interior packages — not as sole interior designers of the development. Edwin Loxley supplies bespoke kitchen cabinetry separately (Edwin Loxley also operates as Loxley Kitchens Algarve based in Terras Ruivas, Portugal)."
+    },
+    "additionalPartner": {
+      "studio": "Projectline",
+      "portfolioUrl": null,
+      "confirmed": false,
+      "notes": "Projectline is listed as a partner on thev.pt. No public web presence or company registry entry found in search results. Role not specified on the official site. Queries tried: '\"Projectline\" Portugal construction engineering firm Algarve', '\"Projectline\" OR \"Projectline Lda\" construction Portugal engineering services' — no identifying results."
+    },
+    "brandingAgency": {
+      "studio": "KOBU Agency",
+      "portfolioUrl": "https://kobu.agency/case-studies/the-v-branding-luxury-real-estate-in-the-algarve/",
+      "confirmed": true,
+      "notes": "KOBU Agência Criativa Digital handled branding for The V. Registered address: Rua do Pé da Cruz, nº 24, 3º Esq e Dto, 2º Esq, 8000-404 Faro, Portugal; NIF PT 513 240 772. Project team: Executive Creative Direction: Nuno Tenazinha; Creative Direction: Sandra Lopes; Brand Strategist: Isabel Evaristo; Type Design: Brígida Guerreiro; UX/UI Design: Daniel Gomes; Motion Design: Pedro Santos; Web Development: Cátia Dionísio. Custom typefaces created for The V in 2024."
+    }
+  },
+  "locationSearch": [
+    {
+      "fact": "Project address: Urbanização Ferrarias, Estrada Vale Lobo, 8135-175 Almancil, Loulé municipality, Faro District",
+      "source": "https://thev.pt/contact",
+      "category": "comparable"
+    },
+    {
+      "fact": "Ferrarias is a neighbourhood of Almancil in Loulé municipality; property prices in the area between Quinta do Lago and Vale do Lobo are among the highest in Portugal",
+      "source": "https://mapcarta.com/16882208",
+      "category": "demandDriver"
+    },
+    {
+      "fact": "The development is 3 kilometres from the beaches and golf courses of Quinta do Lago and Vale do Lobo",
+      "source": "https://www.maprorealestate.com/properties/exclusive-brand-new-apartment-682532/",
+      "category": "transport"
+    },
+    {
+      "fact": "Faro International Airport is 20 minutes by car (approximately 21 km) from Vale do Lobo; taxi fare approximately €35 for up to 3 passengers",
+      "source": "https://www.rome2rio.com/s/Faro-Airport-FAO/Vale-Do-Lobo-Resort",
+      "category": "transport"
+    },
+    {
+      "fact": "Access roads: A22 motorway and EN125 national road pass through Almancil parish; rail: Loulé train station 4 km north of Ferrarias",
+      "source": "https://mapcarta.com/16882208",
+      "category": "transport"
+    },
+    {
+      "fact": "Vilamoura is 5 km west of Ferrarias; Quarteira is also nearby",
+      "source": "https://mapcarta.com/16882208",
+      "category": "transport"
+    },
+    {
+      "fact": "Vale do Lobo resort coordinates: 37° 3'17.72\"N / 8° 3'51.07\"W; address: Vale do Lobo, Resort Turístico de Luxo, S.A., 8135-864 Vale do Lobo, Algarve",
+      "source": "https://www.valedolobo.com/en/location/",
+      "category": "transport"
+    },
+    {
+      "fact": "Vale do Lobo average property price (February 2025): €8,770/sqm overall; flats €7,250/sqm; houses/villas €9,640/sqm",
+      "source": "https://www.tagusproperty.com/real-estate-prices-vale-do-lobo-algarve-portugal/",
+      "category": "priceBenchmark"
+    },
+    {
+      "fact": "Quinta do Lago average property price as of February 2026: €11,170/sqm (year-on-year increase of +34.6%); Vale do Lobo average €7,712/sqm as of same date",
+      "source": "Search result summary citing Regency Luxury Property / market data",
+      "category": "priceBenchmark"
+    },
+    {
+      "fact": "The V 2-bed apartment (92 sqm) listed at €995,000 implies approximately €10,815/sqm — above the Vale do Lobo flat average of €7,250/sqm for 2025",
+      "source": "https://www.maprorealestate.com/properties/exclusive-brand-new-apartment-682532/",
+      "category": "priceBenchmark"
+    },
+    {
+      "fact": "Vale do Lobo resort established early 1960s; 400 hectares; two professional golf courses (Royal and Ocean, both par 72) designed by Sir Henry Cotton; Royal Spa; Vale do Lobo Tennis Academy with 14 courts; over 300 days of sunshine annually",
+      "source": "https://www.tagusproperty.com/real-estate-prices-vale-do-lobo-algarve-portugal/",
+      "category": "demandDriver"
+    },
+    {
+      "fact": "Comparable nearby development: Fonte Santa Resort — new €45 million resort between Trafal and Vale do Lobo; four-star hotel with 160 bedrooms; construction expected complete by December 2026",
+      "source": "https://www.theportugalnews.com/news/2025-08-09/new-resort-in-algarves-golden-triangle/229103",
+      "category": "comparable"
+    },
+    {
+      "fact": "Comparable nearby development: W Residences Algarve — 83 residences comprising 1 to 3-bedroom apartments, duplexes and one 4-bedroom penthouse",
+      "source": "Search result summary from Regency Luxury Property",
+      "category": "comparable"
+    },
+    {
+      "fact": "Vale do Lobo launched its first new residential development in two decades (Kronos Homes; €200 million investment; BREEAM sustainability standards)",
+      "source": "Search result summary from Golden Triangle 2025-2026 searches",
+      "category": "comparable"
+    },
+    {
+      "fact": "Quinta do Lago North Grove: resort's final undeveloped plots; plot sizes 1,495–1,688 sqm; overlooks North Golf Course",
+      "source": "Search result summary from Golden Triangle 2025-2026 searches",
+      "category": "comparable"
+    }
+  ],
+  "press": [
+    {
+      "title": "THE V branding: luxury real estate in the Algarve",
+      "date": "2025-07-21",
+      "summary": "KOBU Agency published a case study on the branding work produced for THE V Apartments, an exclusive 20-residence luxury development in the Algarve's Golden Triangle. The case study details the agency's brand strategy, custom typeface design, and digital content production for the project.",
+      "sourceName": "KOBU Agency",
+      "sourceUrl": "https://kobu.agency/case-studies/the-v-branding-luxury-real-estate-in-the-algarve/"
+    },
+    {
+      "title": "The V Apartments In Vale Do Lobo, Almancil, Portugal For Sale (14538045)",
+      "date": null,
+      "summary": "JamesEdition listing for The V development in Almancil describes 20 premium apartments between Quinta do Lago and Vale do Lobo, with completion scheduled for May 2027, priced from €995,000 for a 2-bedroom unit. The listing includes detail on apartment types, amenities and THE Park communal landscaping.",
+      "sourceName": "JamesEdition",
+      "sourceUrl": "https://www.jamesedition.com/real_estate/loule-portugal/the-v-apartments-14538045"
+    },
+    {
+      "title": "THE V Apartments - Exceptional Living",
+      "date": "2025-02-25",
+      "summary": "Golden Triangle Properties' dedicated page for The V lists pricing for all unit types, from €995,000 (2-bed) to €2,995,000 (3-bed penthouse duplex), and describes the development's 20 apartments, penthouses with rooftop pools, THE Park amenity, concierge, underground parking and 24-hour security. Page last updated February 25, 2025.",
+      "sourceName": "Golden Triangle Properties",
+      "sourceUrl": "https://goldentriangleproperties.pt/algarve-properties-exclusive-selection-of-luxury-properties-for-sale/thev/"
+    },
+    {
+      "title": "Two bed luxury apartment at THE V near Quinta do Lago",
+      "date": null,
+      "summary": "Mapro Real Estate lists a 2-bedroom, 3-bathroom apartment at The V (92 sqm gross build area) for €995,000 with a May 2027 completion date and Energy Class A rating. The listing details bespoke kitchen, ensuite bedrooms, private terrace, pool, underground parking, and concierge.",
+      "sourceName": "Mapro Real Estate",
+      "sourceUrl": "https://www.maprorealestate.com/properties/exclusive-brand-new-apartment-682532/"
+    },
+    {
+      "title": "2 bedroom apartment for sale in Algarve, Almancil, Portugal",
+      "date": null,
+      "summary": "Rightmove listing for a 2-bedroom apartment at The V (92 sqm total area) priced at €995,000, located between Quinta do Lago and Vale do Lobo in the Golden Triangle, with May 2027 completion. Development reference number 4189.",
+      "sourceName": "Rightmove",
+      "sourceUrl": "https://www.rightmove.co.uk/properties/172985678"
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "Expected completion date",
+      "valueA": "Completion May 2027",
+      "sourceA": "https://www.maprorealestate.com/properties/exclusive-brand-new-apartment-682532/ and https://www.rightmove.co.uk/properties/172985678",
+      "valueB": "Construction has started with a completion in early 2027",
+      "sourceB": "https://www.wbpropertyinvestments.com/projects-developments"
+    },
+    {
+      "field": "Developer legal entity name used",
+      "valueA": "Wheeler & Brand Lda (NIF 514103825) — CAE 68310, real estate intermediation services; approx. 9 years old as of 2026",
+      "sourceA": "https://www.einforma.pt/servlet/app/portal/ENTP/prod/ETIQUETA_EMPRESA_CONTRIBUINTE/nif/514103825/contribuinte/514103825/",
+      "valueB": "Brand & Wheeler-Brand Lda (NIF 517615576) — CAE 68120, development of building projects; incorporated 2023-06-12",
+      "sourceB": "https://www.iberinform.pt/empresa/25056816/brand-and-wheeler-brand-lda"
+    },
+    {
+      "field": "David Sinclair Arquitectos Associados role",
+      "valueA": "Listed as a named partner on thev.pt official website — role not specified (lead architect implied by listing position)",
+      "sourceA": "https://thev.pt/",
+      "valueB": "No project credit for The V found on dsaa.pt portfolio pages; firm's accessible portfolio lists no Algarve residential new-build comparable in retrievable content",
+      "sourceB": "https://www.dsaa.pt/"
+    }
+  ],
+  "gaps": [
+    "Pricing: No prices were disclosed on the official thev.pt website. Prices found only via third-party sales agents (Golden Triangle Properties, Mapro Real Estate, Rightmove, JamesEdition). No official price list URL exists.",
+    "Delivery date: Not stated on the official thev.pt website. Stated as 'May 2027' on Mapro Real Estate/Rightmove; stated as 'early 2027' on wbpropertyinvestments.com. No official confirmation page on thev.pt.",
+    "Projectline firm identity: Listed as a partner on thev.pt. Queries tried: '\"Projectline\" Portugal construction engineering firm Algarve', '\"Projectline\" OR \"Projectline Lda\" construction Portugal engineering services'. No company registry entry, website, or other identifying information found.",
+    "David Sinclair Arquitectos Associados — The V portfolio credit: Query tried: '\"David Sinclair\" architect Algarve \"The V\" OR \"Wheeler\" Portugal'. The V not found in accessible dsaa.pt portfolio pages. Anteprojectos.com.pt article on the firm returned 403. Portfolio confirmation remains unverified.",
+    "Jardim Vista — The V portfolio credit: Jardim Vista official website searched; The V not listed in accessible content. No confirmation of specific project credit beyond appearance as a named partner on thev.pt.",
+    "Unit sizes in sqm for 3-bed, 4-bed and penthouse typologies: Only 2-bed unit size (92 sqm gross) found via third-party listing. No floor plans or full size schedule publicly available.",
+    "Financial partners or investors for The V: No information found across all searches. No lender or equity partner disclosed on official or third-party sources.",
+    "Previous completed developments by Wheeler & Brand: Only No. 22 Beach House (Fonte Santa) described as 'now complete and available for sale'. All other projects are either under construction or future pipeline. No delivery track record confirmed for a multi-unit apartment development.",
+    "Press coverage in major real estate or news outlets (Portugal Resident, Portugal News, Idealista editorial): Queries tried: '\"the v apartments\" Algarve \"Portugal Resident\" OR \"Portugal News\" OR \"Idealista\" article', '\"the v\" thev.pt OR \"the v apartments\" Portugal press article 2025 2026'. No editorial press articles found — only listing pages and agency-produced content.",
+    "Social posts and image files (excluded per protocol): Developer and partners maintain Instagram and Facebook presences — URLs noted but not fetched: https://www.facebook.com/marquesantunesengenharia/, https://www.facebook.com/jardimvista/."
+  ]
+}
