@@ -1,0 +1,232 @@
+{
+  "name": "Comporta House",
+  "slug": "comporta-house",
+  "location": {
+    "name": "Comporta",
+    "slug": "comporta",
+    "isExisting": false
+  },
+  "developer": {
+    "name": "TAN Investments",
+    "slug": "tan-investments",
+    "isExisting": false
+  },
+  "latitude": null,
+  "longitude": null,
+  "status": "Under Construction",
+  "type": "Villas",
+  "priceDisplay": "From €1M",
+  "primaryCta": "Register Interest",
+  "isFeatured": false,
+  "lifestyleTags": ["Countryside", "Investment-grade"],
+  "heroImage": {
+    "sourceUrl": "https://andoliving.com/project/project-comporta-house/",
+    "sourceLabel": "Ando Living official project page (renders and photography)",
+    "altSuggestion": "Exterior view of Comporta House villa with private pool and cork landscape, Carvalhal, Comporta"
+  },
+  "gallery": [],
+  "seoImage": {
+    "sourceUrl": "https://andoliving.com/project/project-comporta-house/"
+  },
+  "editorialThesis": {
+    "en": "A collection of 16 villas by Lisbon studio CHP Arquitectos on an 86,000-square-metre site in Carvalhal, 120 kilometres south of Lisbon, developed by TAN Investments and operated under the Ando Living brand. TAN and Ando Living previously partnered on Madalena House in Lisbon, which is now operational. At 16 units across a site of this scale, the density is low even by Comporta's standards. The product is structured as full-deed ownership with a touristic licence and a developer-managed rental programme, targeting international second-home buyers and investor-buyers who want optional personal use alongside managed rental income.",
+    "pt": "Um conjunto de 16 moradias da autoria do gabinete lisboeta CHP Arquitectos, integrado num terreno de mais de 86 000 metros quadrados em Carvalhal, a 120 quilómetros de Lisboa, promovido pela TAN Investments e operado sob a marca Ando Living. A TAN e a Ando Living colaboraram anteriormente na Madalena House, em Lisboa, atualmente em funcionamento. Com 16 unidades neste volume de terreno, a densidade é reduzida até para os padrões da Comporta. O produto é estruturado em propriedade plena com licença turística e um programa de arrendamento gerido pelo promotor, dirigido a compradores internacionais de segunda habitação e a investidores que pretendem conciliar uso pessoal com rendimento de arrendamento gerido."
+  },
+  "whyStandsOut": {
+    "en": [
+      "The TAN Investments and Ando Living partnership has a completed joint delivery in Lisbon — Madalena House — and Ando Living's group operates nine Portuguese properties totalling 112 apartments, providing an operational base from which to assess the management proposition.",
+      "Sixteen villas across more than 86,000 square metres yields an average plot of roughly 5,375 square metres — well below the density of most permitted schemes in the Comporta/Carvalhal corridor, where REN ecological reserve and coastal zoning severely constrain new supply.",
+      "FCC Construcción, a large Spanish construction group, was identified as construction manager in July 2024 press, at which point underground structures were complete and more than 80% of above-ground structures were in execution — providing independent evidence of construction progress.",
+      "The touristic licence structure allows short-term rental from day one of ownership; Ando Living offers a fixed 4% or variable 6%+ return programme, as stated by the developer — projections that buyers should assess alongside independently sourced rental comparables for the Carvalhal market.",
+      "Half the project — eight of sixteen villas — was absorbed before the formal Ando Living brand launch in September 2025, suggesting market appetite at these price levels without a full marketing campaign behind the product."
+    ],
+    "pt": [
+      "A parceria entre TAN Investments e Ando Living tem um projeto conjunto entregue em Lisboa — a Madalena House, atualmente em funcionamento — e o grupo Ando Living opera nove propriedades em Portugal com um total de 112 apartamentos, o que permite avaliar a proposta de gestão com base em experiência operacional comprovada.",
+      "Dezasseis moradias distribuídas por mais de 86 000 metros quadrados resultam numa média de cerca de 5 375 metros quadrados por lote — uma densidade muito abaixo da maioria dos empreendimentos licenciados no corredor Comporta/Carvalhal, onde a Reserva Ecológica Nacional e o ordenamento costeiro restringem fortemente a oferta nova.",
+      "A FCC Construcción, grande grupo espanhol de construção, foi identificada como gestora de obra na imprensa de julho de 2024, data em que as estruturas enterradas estavam concluídas e mais de 80% das estruturas emergentes estavam em execução — evidência independente do avanço da construção.",
+      "A estrutura com licença turística permite arrendamento de curta duração desde a entrega; a Ando Living disponibiliza um programa de retorno fixo de 4% ou variável acima de 6%, conforme declarado pelo promotor — projeções que os compradores deverão confrontar com dados de mercado independentes para o arrendamento em Carvalhal.",
+      "Metade do projeto — oito das dezasseis moradias — foi absorvida antes do lançamento formal sob a marca Ando Living em setembro de 2025, o que indicia procura a estes preços sem uma campanha de comercialização plena."
+    ]
+  },
+  "areaGuide": {
+    "en": "Carvalhal sits within the municipality of Grândola on the Alentejo coast, about ten minutes by car from Praia do Carvalhal — a beach with 'Praia Zero Poluição' environmental status. The village of Comporta and the town of Grândola are reachable in roughly 17 minutes; Tróia's golf course and marina, via the Atlantic Ferries crossing from Setúbal, are about 30 minutes from the site. Lisbon's airport is approximately one hour and fifteen minutes by road. There is no rail connection to Comporta: the nearest station is Grândola on the Lisbon–Alentejo line, and getting there without a car is logistically awkward. The ferry via Setúbal–Tróia followed by a local bus covers the distance in under an hour but requires planning. The broader Comporta area — 150 kilometres of protected coastline, rice paddies, cork oak stands, and wild dunes — is subject to tight environmental planning through REN and coastal zoning that has effectively capped new development supply in the corridor. Comparable projects in the area include Sublime Comporta (established resort hotel with private residences), CostaTerra Golf & Ocean Club in Melides to the south, and The Atlantic Club Comporta. The place draws buyers who put landscape, quiet, and distance from urban density above convenience — a trade-off that the car-dependency makes concrete from the moment of arrival.",
+    "pt": "Carvalhal integra o município de Grândola, na costa alentejana, a cerca de dez minutos de carro da Praia do Carvalhal — praia com estatuto 'Praia Zero Poluição'. A aldeia da Comporta e a cidade de Grândola ficam a cerca de 17 minutos; o campo de golfe e a marina de Tróia, pela ligação de ferry da Atlantic Ferries a partir de Setúbal, estão a aproximadamente 30 minutos do empreendimento. O aeroporto de Lisboa fica a cerca de uma hora e um quarto por estrada. Não existe ligação ferroviária à Comporta: a estação mais próxima é a de Grândola, na linha do Alentejo, e a deslocação sem automóvel é logisticamente exigente. A alternativa ferry Setúbal–Tróia com autocarro local cobre a distância em menos de uma hora, mas requer planeamento. A zona mais alargada da Comporta — 150 quilómetros de costa protegida, arrozais, montados de sobro e dunas — está sujeita a ordenamento ambiental rigoroso através da Reserva Ecológica Nacional e das restrições costeiras, o que tem limitado efectivamente a oferta de novos projectos no corredor. Empreendimentos comparáveis na área incluem o Sublime Comporta, o CostaTerra Golf & Ocean Club em Melides e o The Atlantic Club Comporta. O lugar atrai compradores que colocam a paisagem, o silêncio e o afastamento da densidade urbana acima da conveniência — uma troca que a dependência do automóvel torna evidente desde a chegada."
+  },
+  "typologyNote": {
+    "en": "Of the 16 villas, eight remained for sale as of September 2025 — exclusively T2 and T3 units, the T4 and T5 configurations having been absorbed. The T2 covers 169 square metres above ground plus a 108-square-metre basement, on plots from 2,120 square metres, priced from €1,800,000; the T3 runs to 240 square metres above ground plus 133 square metres of basement, from €3,250,000 to €3,500,000. Delivery dates have shifted across press sources — from end-2025 to summer 2026 — with the official project page currently stating 2026 without further precision; buyers should confirm current status directly with the developer.",
+    "pt": "Das 16 moradias, oito estavam disponíveis para venda em setembro de 2025 — exclusivamente tipologias T2 e T3, tendo as configurações T4 e T5 sido absorvidas. O T2 tem 169 metros quadrados acima do solo e 108 metros quadrados de cave, em lotes a partir de 2 120 metros quadrados, com preço a partir de 1 800 000 euros; o T3 totaliza 240 metros quadrados acima do solo e 133 metros quadrados de cave, entre 3 250 000 e 3 500 000 euros. As datas de entrega variaram entre as fontes — de finais de 2025 ao verão de 2026 — e a página oficial do projeto indica genericamente 2026; os compradores deverão confirmar o estado atual diretamente com o promotor."
+  },
+  "keyFacts": [
+    { "label": "Location", "value": "Carvalhal, Comporta region, Alentejo coast" },
+    { "label": "Neighbourhood", "value": "Carvalhal (municipality of Grândola)" },
+    { "label": "Region", "value": "Comporta / Alentejo coast, 120 km south of Lisbon" },
+    { "label": "Type", "value": "Villas" },
+    { "label": "Status", "value": "Under Construction" },
+    { "label": "Units", "value": "16 villas total; 8 remaining as of September 2025" },
+    { "label": "Typology Mix", "value": "T2 to T5 (2–5 bedrooms); T2: 169 m² above ground + 108 m² basement, plots from 2,120 m²; T3: 240 m² above ground + 133 m² basement, plots to 7,047 m²" },
+    { "label": "Price From", "value": "From €1,800,000 (T2); T3 from €3,250,000–€3,500,000" },
+    { "label": "Price per m²", "value": "Approx. €10,650/m² above-ground (T2 at 169 m²); consistent with upper range of Comporta prime market (€6,800–€10,700/m²)" },
+    { "label": "Delivery", "value": "2026 (official page, generic); press sources cite end-2025, mid-2026, and summer 2026 — unresolved; confirm with developer" },
+    { "label": "Lead Architect", "value": "CHP Arquitectos (est. 2004, Lisbon); credited by Idealista, Vida Imobiliária, and Jornal de Negócios/Must; not published on studio's own portfolio platforms" },
+    { "label": "Landscape Architect", "value": "Álvaro Manso (credited in Idealista July 2024 only; not confirmed from architect's own portfolio)" },
+    { "label": "Amenities", "value": "Private pool per villa, courtyard/patio, bar, lounge, concept store, flexible work lounge, market, basement; services include chef on demand, housekeeping, 24/7 reception" }
+  ],
+  "developerProfile": {
+    "legalEntity": "TAN Investments (promoter/developer). Founded 2010 in Milan; entered Portuguese market 2014. Claims over €100 million in high-end Portuguese residential assets managed across 10 completed projects, average IRR 32.6%, equity multiple 3.46x. Portuguese legal entity name not publicly confirmed. Ando Living (hospitality operator/brand) is part of the Ando Living Group, comprising Optylon Krea (investment management), Ando Living (hospitality brand), and Lovely Stay (property management). Optylon Krea was formed 2016 by Charles Wanecq, William Tonnard, and Hakan Kodal; backed by Prima Europe Fund (Stag Asset Managers), €67 million.",
+    "previousProjects": "TAN Investments: Pátio Tijolo (Alfama, Lisbon, architect Frederico Valsassina); SAMA Comporta (this project, previously marketed as SAMA); claims €80M+ AUM in completed and in-development Portuguese projects. Ando Living Group's nine operational Portuguese properties: Ando Living Douradores (Lisbon, 2022), Ando Living São Nicolau (Lisbon, 2020), Ando Living Santa Justa 77 (Lisbon, 2019), plus six further operational serviced-apartment houses in Lisbon and Porto — 112 apartments total. TAN and Ando Living previously collaborated on Madalena House (Lisbon, operational). Comporta House is Ando Living's first villa development and first project outside Lisbon and Porto.",
+    "trackRecordSummary": "TAN Investments has a documented Portuguese residential track record spanning seven years, primarily urban apartment conversions. Ando Living/Optylon Krea has operational data across nine Portuguese properties. The TAN–Ando Living partnership has one operational joint delivery (Madalena House, Lisbon). No disputes or delivery failures identified across multiple targeted searches. Comporta House is the first resort villa product for both entities — a meaningful typological shift from their established urban serviced-apartment model. Group-level financial backing from Prima Europe Fund (€67M) is established; project-specific financing for Comporta House not publicly confirmed.",
+    "awards": "No formal awards identified for TAN Investments or Ando Living relevant to this project. Ando Living is listed as a sponsor at the Lisbon Insiders Awards 2024 but received no named award.",
+    "knownIssues": "Multiple delivery date shifts recorded across sources over approximately two years (earliest stated: summer 2025; current official statement: 2026 generic). As of September 2025, eight units remain for sale. No disputes or buyer complaints identified. Portuguese legal entity names for both TAN Investments and Ando Living's operating entity are not publicly confirmed."
+  },
+  "marketPosition": {
+    "priceComparison": "At €1.8M for a T2 villa of 169 m² above ground, the implied price per m² is approximately €10,650/m² — at the upper end of Comporta's prime new-build range of €6,800–€10,700/m², and below the beachfront ceiling of €15,000+/m². T3 units at €3.25M–€3.5M (240 m² above ground) imply €13,500–€14,600/m² — approaching beachfront pricing from a site 10 minutes inland. Comparable: CostaTerra Golf & Ocean Club (Melides), where a recent tranche of 71 villas transacted at approximately €4M average; The Atlantic Club Comporta (21 villas by Jacques Grange, €3.5M–€6.5M).",
+    "investmentNarrative": "Structured with a touristic licence enabling short-term rental from day one. Ando Living offers a fixed 4% or variable 6%+ net yield programme as stated by the developer. Target rental yield cited as 5–6%. These projections are developer-stated; no independent rental yield data for comparable Carvalhal villa developments is available from primary sources. Strict REN and coastal zoning constrain new supply in the corridor, supporting medium-term price appreciation. Alentejo residential prices grew 13.8% year-on-year in 2024; broader Portuguese residential prices jumped 15.8% in early 2025.",
+    "buyerSegment": "International second-home buyers and investor-buyers seeking a managed rental asset in an established coastal leisure destination. Full-deed ownership with touristic licence and hospitality service stack (chef on demand, 24/7 reception, housekeeping) targets buyers wanting optional personal use alongside rental income — not primary residence buyers.",
+    "rentalYieldEvidence": "Developer-stated: 5–6% target rental yield; fixed 4% or variable 6%+ return programme through Ando Living management. No independent rental comparables for the Carvalhal/Comporta villa market sourced from primary data. Project director David Moura-George cited 4–6% return potential in September 2023 press (Jornal de Negócios/Must). The Atlantic Club Comporta and CostaTerra are closest comparables; yield data for those projects is not publicly available.",
+    "demandDrivers": "Comporta's 150+ km of protected coastline, rice paddies, cork oak woodland, and wild dunes. Environmental planning restrictions (REN, coastal zoning) severely constrain new development supply. Praia do Carvalhal holds 'Praia Zero Poluição' status. Structural demand: established second-home market with documented transaction depth (CostaTerra 71-villa tranche at ~€4M avg). Portuguese residential market momentum: 15.8% price growth in early 2025 vs. prior year. Car-dependency and limited year-round amenity are structural constraints that buyers must factor into any seasonal rental projection."
+  },
+  "designSignals": {
+    "architecturalStyle": "Contemporary with references to regional Arab-influenced vernacular, as described across press sources ('Arab matrix references' — Echo Boomer; 'inspired by Arab style' — Vida Imobiliária). Renders show flat-roofed, single-storey villas with white-rendered walls and recessed terraces — a visual language consistent with Alentejo coastal vernacular.",
+    "materials": "White render exterior walls visible in render imagery. Internal specification materials not detailed in any available source. Fully furnished per developer statement. No material schedule published.",
+    "landscaping": "Álvaro Manso credited as landscape architect in Idealista July 2024 only; credit not independently confirmed from the architect's own published portfolio. The 86,000+ m² site (average ~5,375 m² per villa plot) implies substantial landscape area. No landscape concept or planting specification available from primary sources.",
+    "visualIdentity": "Consistent visual language across official page and press renders: low-slung white villas with private pools and terrace living areas. Site marketed around proximity to cork forest, rice fields, and coastal landscape. The 'SAMA' brand used in earlier marketing has been retired in favour of 'Comporta House' under the Ando Living brand.",
+    "designAssessment": {
+      "en": "The renders published by Ando Living and echoed across press show a consistent visual language — low-slung, flat-roofed villas in white render with recessed terraces — that reads as coherent with the Alentejo coastal setting, but the studio has not published this project on its own portfolio platforms and no material schedule has been released, making a substantive assessment of architectural quality impossible from available sources alone.",
+      "pt": "As imagens divulgadas pela Ando Living e reproduzidas na imprensa revelam uma linguagem visual coerente — moradias de volume baixo, cobertura plana e paredes de reboco branco com terraços recuados — que se articula com o contexto da costa alentejana, mas o gabinete não publicou este projecto nas suas plataformas de portefólio e nenhum caderno de materiais foi divulgado, o que torna impossível uma avaliação substantiva da qualidade arquitectónica com base nas fontes disponíveis."
+    }
+  },
+  "relatedDevelopments": [],
+  "relatedArticles": [],
+  "pressReleases": [
+    {
+      "title": "Brand new boutique resort in Comporta: 16 villas from 1.8 million euros",
+      "date": "2024-07-29",
+      "summary": "Introduces the SAMA project (later rebranded Comporta House) as a 16-villa boutique resort between Comporta and Melides, developed by TAN Investments, designed by CHP Arquitectos with landscape by Álvaro Manso, and operated by Ando Living. Priced from €1.8M to €5.5M; delivery expected summer 2025. At time of publication, underground structures were complete and over 80% of above-ground structures were in execution.",
+      "sourceName": "Idealista Portugal",
+      "sourceUrl": "https://www.idealista.pt/en/news/luxury-real-estate-in-portugal/2024/07/29/64700-brand-new-boutique-resort-in-comporta-16-villas-from-1-8-million-euros"
+    },
+    {
+      "title": "Ando Living launches first Comporta development: 16 luxury villas in one of Portugal's most coveted destinations",
+      "date": "2025-09-10",
+      "summary": "Covers Ando Living's formal launch of Comporta House (formerly SAMA) in Alcácer do Sal municipality. Eight villas remain for sale (T2/T3) at €1.8M–€3.5M; completion stated as end of 2025. CHP Arquitectos credited. Notes this is Ando Living's first development outside Lisbon and Porto.",
+      "sourceName": "Idealista Portugal",
+      "sourceUrl": "https://www.idealista.pt/en/news/luxury-real-estate-in-portugal/2025/09/10/71011-ando-living-launches-first-comporta-development-16-luxury-villas-in-one-of"
+    },
+    {
+      "title": "Comporta's quiet rise as the next coastal investment",
+      "date": "2025-07-28",
+      "summary": "The Portugal News covers Comporta House as part of a broader investment piece on the Comporta area. Project described as 16 villas over 86,000+ m² with completion by end of 2025. Ando Living CCO Safak Nervo quoted.",
+      "sourceName": "The Portugal News",
+      "sourceUrl": "https://www.theportugalnews.com/news/2025-07-28/comportas-quiet-rise-as-the-next-coastal-investment/99734"
+    },
+    {
+      "title": "Ando Living chega à Comporta no final de 2025 com novo alojamento",
+      "date": "2025-07-31",
+      "summary": "Portuguese-language article identifying TAN Investments as developer and Ando Living as operator; second TAN–Ando Living collaboration following Madalena House Lisbon. Eight units at €1.8M–€3.5M; delivery end of 2025.",
+      "sourceName": "T News",
+      "sourceUrl": "https://tnews.pt/ando-living-chega-a-comporta-no-final-de-2025-com-novo-alojamento/"
+    },
+    {
+      "title": "Novo complexo de luxo com 16 villas na Comporta",
+      "date": "2023-09-14",
+      "summary": "Early-stage coverage of the SAMA project (pre-rebrand). Project director David Moura-George cites 4–6% rental return potential. Nine units from €1.8M; delivery stated Q1 2026. Provides regional price data: €2,671/m² in 2020 rising to €7,063/m² in 2022.",
+      "sourceName": "Must / Jornal de Negócios",
+      "sourceUrl": "https://www.must.jornaldenegocios.pt/prazeres/lugares/detalhe/novo-complexo-de-16-villas-de-luxo-na-comporta"
+    },
+    {
+      "title": "Ando Living: Redefining Europe's Serviced Apartments Market",
+      "date": null,
+      "summary": "Sponsored feature on IMI Daily covering the Ando Living Group's corporate structure, financial backing (Prima Europe Fund / Stag Asset Managers, €67M), and European expansion pipeline. Lists Comporta House as operational mid-2026 with 16 villas.",
+      "sourceName": "IMI Daily (sponsored)",
+      "sourceUrl": "https://www.imidaily.com/sponsored-feature/ando-living-redefining-europes-serviced-apartments-market/"
+    },
+    {
+      "title": "Comporta House deve abrir no verão",
+      "date": null,
+      "summary": "States opening scheduled for summer 2026; references 16 villas over 86,000+ m², 10 minutes from Carvalhal Beach, with architecture described as having Arab matrix references.",
+      "sourceName": "Echo Boomer",
+      "sourceUrl": "https://echoboomer.pt/comporta-house-deve-abrir-no-verao/"
+    },
+    {
+      "title": "Ando Living aposta na Comporta com novo projeto turístico de 16 villas",
+      "date": null,
+      "summary": "Vida Imobiliária article confirming CHP Arquitectos as architect and TAN Investments as developer. Eight units available (T2/T3) at €1.8M–€3.5M; architectural style described as 'inspired by Arab style.' Delivery end of 2025.",
+      "sourceName": "Vida Imobiliária",
+      "sourceUrl": "https://vidaimobiliaria.com/noticias/habitacao/ando-living-aposta-na-comporta-com-novo-projeto-tur%C3%ADstico-de-16-villas/"
+    }
+  ],
+  "brochure": {
+    "exists": true,
+    "sourceUrl": "https://andoliving.com/wp-content/uploads/2025/07/ANDO_Newspaper_compressed.pdf",
+    "gated": false
+  },
+  "publishedAt": null,
+  "seoTitle": "Comporta House — Villas in Comporta | Portugal Developments Review",
+  "seoDescription": "Sixteen low-density villas by CHP Arquitectos in Carvalhal, Comporta. Full-deed ownership with touristic licence, managed by Ando Living. From €1.8M.",
+  "noindex": true,
+  "curationFlags": {
+    "locationQuality": "Adequate — proven Comporta/Carvalhal submarket with evidenced comparable transactions (CostaTerra, Atlantic Club Comporta, Sublime Comporta); REN and coastal zoning severely constrain new supply; 10 minutes from Praia do Carvalhal; car-dependency and non-beachfront position are structural trade-offs but consistent with how the broader Comporta market operates.",
+    "designQuality": "Weak — CHP Arquitectos is press-corroborated by multiple independent sources but is a commercially small studio (est. 2004, 2 ArchDaily projects) that has not published this project on any architecture portfolio platform; no material schedule has been released; interior designer is uncredited; assessment cannot extend beyond render-level visual coherence, which the selection criteria explicitly disqualifies as insufficient.",
+    "developerReputation": "Adequate — TAN Investments claims 10 completed Portuguese residential projects and over €100M in assets managed, with a 7-year track record; Ando Living Group operates 9 Portuguese hospitality properties (112 apartments); the joint TAN–Ando Living partnership has one operational shared delivery (Madalena House, Lisbon); no disputes or delivery failures found; reservation: this is TAN's first resort villa product and the Portuguese legal entity name is not publicly confirmed.",
+    "specificationCredibility": "Weak — at a price point of approximately €10,650/m² (T2 above-ground), no material schedule has been published, no sustainability certification is named, no interior designer is credited, and the developer-stated rental yield projections (4–6%+) are unsubstantiated by independent rental comparable data for the Carvalhal market.",
+    "propositionAuthenticity": "Adequate — the core proposition (low-density managed villas with touristic licence and operational hospitality operator in a supply-constrained corridor) is internally coherent and evidenced; absorption of eight of sixteen villas before the formal September 2025 marketing launch provides genuine market demand evidence; reservations: five distinct delivery dates across sources over two years, and rental yield projections are developer-stated only.",
+    "overallRecommendation": "Recommend with reservations",
+    "openQuestions": [
+      "Hero image: to be retrieved by editorial lead under licence. Source identified: https://andoliving.com/project/project-comporta-house/ (renders and photography on official page).",
+      "Gallery images: to be retrieved by editorial lead under licence. Multiple sources identified: official Ando Living page, Idealista July 2024 and September 2025 articles, Vida Imobiliária article.",
+      "Brochure: to be retrieved and licence-checked by editorial lead. Source: https://andoliving.com/wp-content/uploads/2025/07/ANDO_Newspaper_compressed.pdf (PDF, publicly linked, ungated).",
+      "keyFacts.Delivery: five conflicting dates across sources — summer 2025 (Idealista Jul 2024), end of 2025 (Idealista Sep 2025, T News Jul 2025, Vida Imobiliária), Q1 2026 (Jornal de Negócios Sep 2023), mid-2026 (IMI Daily sponsored), summer 2026 (Echo Boomer). Official page currently states '2026' (generic). Editorial lead should confirm current construction status and anticipated handover date with developer before publication.",
+      "keyFacts.Typology Mix / floor areas: official page cites three conflicting ranges (200–1,100 sqm; 376–682 sqm; 200–500 sqm per press). Sotheby's listing (most granular) gives T2 at 169 m² above ground + 108 m² basement; T3 at 240 m² above ground + 133 m² basement; plots 2,120–7,047 m². Editorial lead should confirm accurate floor areas directly with developer.",
+      "designQuality: CHP Arquitectos has not published Comporta House on its own portfolio platforms (ArchDaily, ArchiLovers, Archello, Divisare). Editorial lead should request project confirmation, imagery, and material schedule directly from the studio. Resolution of this gap would allow re-assessment of designQuality from Weak.",
+      "specificationCredibility: no material schedule, no sustainability certification, and no interior designer credit. Editorial lead should request full specification sheet from developer before publication. Resolution would allow re-assessment of specificationCredibility from Weak.",
+      "specificationCredibility: developer-stated yield projections (fixed 4% or variable 6%+) are unsubstantiated by independent rental comparable data. Independent rental yield evidence for the Carvalhal/Comporta villa market should be sourced before the investment narrative is published.",
+      "developerProfile.legalEntity: Portuguese legal entity name (NIF/NIPC) for TAN Investments not confirmed. Ando Living operating entity name not publicly identified.",
+      "developerProfile.legalEntity: specific financing arrangement for Comporta House not established — Prima Europe Fund is group-level backer but its specific involvement in this project is not confirmed.",
+      "architectSearch.local: no local executive architect credited in any source. FCC Construcción identified as construction manager (contractor) only. Editorial lead should request local executive architect name from developer.",
+      "architectSearch.interiors: no interior designer credited in any source. Request from developer.",
+      "architectSearch.landscape: Álvaro Manso credited only in Idealista Jul 2024; not confirmed from the architect's own published portfolio. Confirmation required.",
+      "latitude: precise geo-coordinates not established. Google Maps Plus Code '775H+7H Comporta' noted. Source: TAN Investments portfolio page.",
+      "longitude: same as latitude.",
+      "sustainability: no sustainability certifications or targets found in any source. Request from developer."
+    ]
+  },
+  "newEntities": {
+    "developer": {
+      "name": "TAN Investments",
+      "slug": "tan-investments",
+      "logo": null,
+      "description": "Milan-founded real estate investment firm (est. 2010) that entered the Portuguese market in 2014, building a portfolio of urban residential projects before extending to resort development. Partners with Ando Living on hospitality-led branded residences with touristic licences.",
+      "shortDescription": {
+        "en": "Milan-based real estate investment firm active in Portuguese residential since 2014, specialising in high-end urban and resort developments.",
+        "pt": "Promotora imobiliária sediada em Milão, presente no mercado residencial português desde 2014, especializada em projetos residenciais de qualidade elevada."
+      },
+      "bio": {
+        "en": "TAN Investments was founded in Milan in 2010 and entered the Portuguese market in 2014, building a portfolio focused on the urban residential segment before extending into the resort sector. The firm claims over €100 million in Portuguese residential assets across ten completed projects over seven years, with an average IRR of 32.6% and an equity multiple of 3.46x. Its most cited Portuguese projects include Pátio Tijolo in Alfama — designed by Frederico Valsassina — and a portfolio of residential conversions in central Lisbon.\n\nIn 2019, TAN Investments initiated a partnership with Ando Living, the hospitality brand of the Optylon Krea group, beginning with Madalena House in Lisbon, which is now operational. The pairing reflects a deliberate move toward branded hospitality-led residential products — full-deed ownership with touristic licences and operational management included. Comporta House, a 16-villa development in Carvalhal, is TAN Investments' first resort villa project outside the urban context and its first development at this price point in Portugal's coastal leisure market.\n\nThe firm's background is in equity structuring and real estate investment rather than in construction delivery. All known completed projects have been urban apartment conversions in Lisbon with experienced local architects and contractors. The extension to resort development and to a higher-value, lower-density typology represents a meaningful shift in product type. No disputes or delivery failures have been identified in available sources. The Portuguese legal entity trading as TAN Investments is not publicly confirmed by name.",
+        "pt": "A TAN Investments foi fundada em Milão em 2010 e entrou no mercado português em 2014, construindo um portefólio centrado no segmento residencial urbano antes de se estender ao sector de resort. A empresa afirma ter mais de 100 milhões de euros em ativos residenciais portugueses, distribuídos por dez projetos concluídos ao longo de sete anos, com uma taxa interna de rentabilidade média de 32,6% e um múltiplo de capital de 3,46x. Entre os projetos portugueses mais documentados contam-se o Pátio Tijolo na Alfama — da autoria de Frederico Valsassina — e um conjunto de reconversões residenciais no centro de Lisboa.\n\nEm 2019, a TAN Investments iniciou uma parceria com a Ando Living, marca de hospitalidade do grupo Optylon Krea, começando pela Madalena House em Lisboa, atualmente em funcionamento. A associação reflete uma orientação deliberada para produtos residenciais de hospitalidade de marca — propriedade plena com licença turística e gestão operacional incluída. A Comporta House, um conjunto de 16 moradias em Carvalhal, é o primeiro projeto de resort da TAN Investments fora do contexto urbano e o seu primeiro desenvolvimento a este nível de preço no mercado de lazer costeiro português.\n\nO historial da empresa centra-se na estruturação de capital próprio e no investimento imobiliário, não na produção direta de obra. Todos os projetos concluídos identificados são reconversões de apartamentos urbanos em Lisboa, com arquitetos e empreiteiros locais experientes. A extensão ao desenvolvimento de resort e a uma tipologia de maior valor e menor densidade representa uma mudança significativa no tipo de produto. Não foram identificadas disputas ou falhas de entrega nas fontes disponíveis. A entidade jurídica portuguesa que opera sob o nome TAN Investments não está publicamente confirmada."
+      },
+      "foundedYear": 2010,
+      "headquartersCity": "Milan",
+      "website": "https://taninvestments.com",
+      "isViriatoClient": null
+    },
+    "location": {
+      "name": "Comporta",
+      "slug": "comporta",
+      "region": "Comporta",
+      "locationType": "macro",
+      "parentLocation": null,
+      "intro": {
+        "en": "Comporta is a low-density coastal destination on the Alentejo coast, roughly 120 kilometres south of Lisbon, spanning protected rice paddies, cork oak woodland, and 150 kilometres of coastline subject to strict REN ecological reserve restrictions. The municipality straddles Alcácer do Sal and Grândola, with the village of Comporta to the north and the Carvalhal area to the south; the combined area is car-dependent and deliberately limited in built density by planning constraint.",
+        "pt": "A Comporta é um destino costeiro de baixa densidade na costa alentejana, a cerca de 120 quilómetros de Lisboa, que abrange arrozais protegidos, montado de sobro e 150 quilómetros de costa sujeitos a restrições rigorosas da Reserva Ecológica Nacional. O território divide-se pelos municípios de Alcácer do Sal e Grândola, com a aldeia da Comporta a norte e a zona de Carvalhal a sul; o conjunto é dependente de automóvel e deliberadamente contido em densidade edificada pelo quadro de ordenamento."
+      },
+      "marketFraming": {
+        "en": "Comporta has established itself as Portugal's leading coastal second-home market for internationally mobile buyers, drawing demand from across Northern Europe and the Portuguese diaspora alongside a domestic high-net-worth segment. The area's profile rests on a specific combination: protected landscape of national significance (dunes, pinhal, rice fields), low development density enforced by REN ecological zoning, and a concentration of high-specification projects by known architects and resort operators. Prime new-build pricing runs from €6,800 to €10,700 per square metre, with beachfront new builds above €15,000 per square metre; average Grândola municipality asking prices in 2024 were approximately €5,845/m², with prime Comporta areas significantly exceeding this. The Comporta/Melides corridor has attracted comparable large-scale resort projects — CostaTerra Golf & Ocean Club (Discovery Land Company, Melides, 292 residences), The Atlantic Club Comporta (21 villas by Jacques Grange), and Sublime Comporta. The area is car-dependent; there is no rail connection, and the ferry route via Setúbal–Tróia is the only alternative to road travel from Lisbon. Year-round amenity is limited compared with the Algarve, and the market is weighted toward seasonal second-home use.",
+        "pt": "A Comporta afirmou-se como o principal mercado costeiro de segunda habitação para compradores internacionais em Portugal, atraindo procura de toda a Europa do Norte, da diáspora portuguesa e de um segmento nacional de compradores de alto poder de compra. O perfil da área assenta numa combinação específica: paisagem protegida de relevância nacional (dunas, pinhal, arrozais), baixa densidade de construção imposta pela Reserva Ecológica Nacional e uma concentração de projetos de qualidade elevada da autoria de arquitetos e operadores de resort reconhecidos. Os preços de novos empreendimentos de primeiro nível situam-se entre €6.800 e €10.700 por metro quadrado, com novos empreendimentos na linha de costa acima de €15.000 por metro quadrado; os preços médios de pedido no município de Grândola em 2024 rondavam €5.845/m², sendo as zonas prime da Comporta significativamente superiores. O corredor Comporta/Melides atraiu projetos de resort de dimensão — o CostaTerra Golf & Ocean Club (Discovery Land Company, Melides, 292 residências), o The Atlantic Club Comporta (21 moradias de Jacques Grange) e o Sublime Comporta. A área é dependente de automóvel; não existe ligação ferroviária, e a rota de ferry via Setúbal–Tróia é a única alternativa à deslocação rodoviária a partir de Lisboa. A oferta de serviços ao longo do ano é limitada em comparação com o Algarve, e o mercado está orientado principalmente para uso sazonal de segunda habitação."
+      },
+      "nearbyLocations": [],
+      "latitude": null,
+      "longitude": null,
+      "heroImage": null
+    }
+  }
+}

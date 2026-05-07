@@ -91,7 +91,12 @@
       "WebFetch(domain:www.iberinform.pt)",
       "WebFetch(domain:lisbonproperty.com)",
       "WebFetch(domain:www.einforma.pt)",
-      "WebFetch(domain:www.jamesedition.com)"
+      "WebFetch(domain:www.jamesedition.com)",
+      "WebFetch(domain:taninvestments.com)",
+      "WebFetch(domain:www.alvaromanso.work)",
+      "WebFetch(domain:tnews.pt)",
+      "WebFetch(domain:www.must.jornaldenegocios.pt)",
+      "Bash(cat ~/.claude/plugins/cache/local/pdr-plugin/1.0.0/skills/pdr-research/utils/validate-output.py)"
     ]
   }
 }
