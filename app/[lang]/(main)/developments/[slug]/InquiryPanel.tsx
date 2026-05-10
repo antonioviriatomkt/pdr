@@ -17,7 +17,7 @@ interface InquiryPanelProps {
 export default function InquiryPanel({ development, dict }: InquiryPanelProps) {
   const [activeCta, setActiveCta] = useState(dict.ctaOptions[1]) // "Register Interest" / "Registar Interesse"
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' })
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', budget: '', purchaseDeadline: '', message: '' })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -35,6 +35,7 @@ export default function InquiryPanel({ development, dict }: InquiryPanelProps) {
   }
 
   const inputStyle = { width: '100%', padding: '10px 12px', fontSize: '14px', border: '1px solid var(--border)', background: 'var(--background)', color: 'var(--foreground)', display: 'block', marginBottom: '12px' }
+  const selectStyle = { ...inputStyle, appearance: 'none' as const, cursor: 'pointer' }
 
   return (
     <div style={{ border: '1px solid var(--border)', padding: '28px' }}>
@@ -70,6 +71,14 @@ export default function InquiryPanel({ development, dict }: InquiryPanelProps) {
           <input style={inputStyle} type="text" placeholder={dict.fullNamePlaceholder} required value={formData.name} onChange={e => setFormData(p => ({ ...p, name: e.target.value }))} />
           <input style={inputStyle} type="email" placeholder={dict.emailPlaceholder} required value={formData.email} onChange={e => setFormData(p => ({ ...p, email: e.target.value }))} />
           <input style={inputStyle} type="tel" placeholder={dict.phonePlaceholder} value={formData.phone} onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))} />
+          <select style={selectStyle} value={formData.budget} onChange={e => setFormData(p => ({ ...p, budget: e.target.value }))}>
+            <option value="">{dict.budgetRangePlaceholder}</option>
+            {dict.budgetRangeOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+          </select>
+          <select style={selectStyle} value={formData.purchaseDeadline} onChange={e => setFormData(p => ({ ...p, purchaseDeadline: e.target.value }))}>
+            <option value="">{dict.purchaseDeadlinePlaceholder}</option>
+            {dict.purchaseDeadlineOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+          </select>
           <textarea style={{ ...inputStyle, height: '80px', resize: 'vertical' as const }} placeholder={dict.messagePlaceholder} value={formData.message} onChange={e => setFormData(p => ({ ...p, message: e.target.value }))} />
           {formState === 'error' && (
             <p style={{ fontSize: '13px', color: '#B91C1C', margin: '0 0 12px' }}>{dict.errorMessage}</p>

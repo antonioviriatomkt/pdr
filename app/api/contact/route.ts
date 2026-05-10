@@ -25,6 +25,8 @@ export async function POST(req: NextRequest) {
       data.enquiryType ? `Enquiry type: ${data.enquiryType}` : null,
       data.development ? `Development: ${data.development}` : null,
       data.location ? `Location: ${data.location}` : null,
+      data.budget ? `Budget range: ${data.budget}` : null,
+      data.purchaseDeadline ? `Purchase timeline: ${data.purchaseDeadline}` : null,
       data.message ? `\nMessage:\n${data.message}` : null,
       ``,
       `Submitted: ${new Date().toISOString()}`,

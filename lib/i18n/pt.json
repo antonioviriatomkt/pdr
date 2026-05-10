@@ -276,6 +276,24 @@
     "emailPlaceholder": "Endereço de email",
     "phonePlaceholder": "Telefone (opcional)",
     "messagePlaceholder": "Mensagem (opcional)",
+    "budgetRangeLabel": "Intervalo de orçamento",
+    "budgetRangePlaceholder": "Selecione um intervalo (opcional)",
+    "budgetRangeOptions": [
+      "Abaixo de €200.000",
+      "€200.000 – €500.000",
+      "€500.000 – €1.000.000",
+      "€1.000.000 – €2.000.000",
+      "Acima de €2.000.000"
+    ],
+    "purchaseDeadlineLabel": "Prazo de compra",
+    "purchaseDeadlinePlaceholder": "Selecione um prazo (opcional)",
+    "purchaseDeadlineOptions": [
+      "1 – 3 meses",
+      "3 – 6 meses",
+      "6 – 12 meses",
+      "12 – 24 meses",
+      "Sem prazo definido"
+    ],
     "errorMessage": "Algo correu mal. Por favor tente novamente.",
     "successHeading": "Obrigado pelo seu contacto.",
     "successBody": "Entraremos em contacto num dia útil.",
