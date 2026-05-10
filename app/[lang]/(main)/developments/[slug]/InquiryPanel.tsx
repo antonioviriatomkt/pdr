@@ -71,11 +71,11 @@ export default function InquiryPanel({ development, dict }: InquiryPanelProps) {
           <input style={inputStyle} type="text" placeholder={dict.fullNamePlaceholder} required value={formData.name} onChange={e => setFormData(p => ({ ...p, name: e.target.value }))} />
           <input style={inputStyle} type="email" placeholder={dict.emailPlaceholder} required value={formData.email} onChange={e => setFormData(p => ({ ...p, email: e.target.value }))} />
           <input style={inputStyle} type="tel" placeholder={dict.phonePlaceholder} value={formData.phone} onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))} />
-          <select style={selectStyle} value={formData.budget} onChange={e => setFormData(p => ({ ...p, budget: e.target.value }))}>
+          <select style={{ ...selectStyle, color: formData.budget ? 'var(--foreground)' : 'var(--muted)' }} value={formData.budget} onChange={e => setFormData(p => ({ ...p, budget: e.target.value }))}>
             <option value="">{dict.budgetRangePlaceholder}</option>
             {dict.budgetRangeOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
           </select>
-          <select style={selectStyle} value={formData.purchaseDeadline} onChange={e => setFormData(p => ({ ...p, purchaseDeadline: e.target.value }))}>
+          <select style={{ ...selectStyle, color: formData.purchaseDeadline ? 'var(--foreground)' : 'var(--muted)' }} value={formData.purchaseDeadline} onChange={e => setFormData(p => ({ ...p, purchaseDeadline: e.target.value }))}>
             <option value="">{dict.purchaseDeadlinePlaceholder}</option>
             {dict.purchaseDeadlineOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
           </select>

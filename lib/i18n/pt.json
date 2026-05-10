@@ -277,7 +277,7 @@
     "phonePlaceholder": "Telefone (opcional)",
     "messagePlaceholder": "Mensagem (opcional)",
     "budgetRangeLabel": "Intervalo de orçamento",
-    "budgetRangePlaceholder": "Selecione um intervalo (opcional)",
+    "budgetRangePlaceholder": "Intervalo de orçamento",
     "budgetRangeOptions": [
       "Abaixo de €200.000",
       "€200.000 – €500.000",
@@ -286,7 +286,7 @@
       "Acima de €2.000.000"
     ],
     "purchaseDeadlineLabel": "Prazo de compra",
-    "purchaseDeadlinePlaceholder": "Selecione um prazo (opcional)",
+    "purchaseDeadlinePlaceholder": "Prazo de compra",
     "purchaseDeadlineOptions": [
       "1 – 3 meses",
       "3 – 6 meses",

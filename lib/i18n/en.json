@@ -277,7 +277,7 @@
     "phonePlaceholder": "Phone (optional)",
     "messagePlaceholder": "Message (optional)",
     "budgetRangeLabel": "Budget range",
-    "budgetRangePlaceholder": "Select a range (optional)",
+    "budgetRangePlaceholder": "Budget range",
     "budgetRangeOptions": [
       "Under €200,000",
       "€200,000 – €500,000",
@@ -286,7 +286,7 @@
       "Over €2,000,000"
     ],
     "purchaseDeadlineLabel": "Purchase timeline",
-    "purchaseDeadlinePlaceholder": "Select a timeline (optional)",
+    "purchaseDeadlinePlaceholder": "Purchase timeline",
     "purchaseDeadlineOptions": [
       "1 – 3 months",
       "3 – 6 months",
