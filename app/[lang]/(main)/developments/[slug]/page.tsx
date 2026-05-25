@@ -234,7 +234,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ la
               </div>
             )}
 
-            {dev.keyFacts && dev.keyFacts.length > 0 && (
+            {false && dev.keyFacts && dev.keyFacts.length > 0 && (
               <div style={{ marginBottom: '40px' }}>
                 <h2 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px' }}>
                   {d.keyFacts}
