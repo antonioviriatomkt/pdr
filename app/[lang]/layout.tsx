@@ -5,6 +5,7 @@ import '../globals.css'
 import { getAlternates, getOgLocale } from '@/lib/i18n/metadata'
 import { JsonLd } from '@/components/JsonLd'
 import { RouteFade } from '@/components/RouteFade'
+import { PostHogProvider } from '@/components/PostHogProvider'
 
 const dmSans = localFont({
   src: [
@@ -108,7 +109,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
-        <RouteFade>{children}</RouteFade>
+        <PostHogProvider>
+          <RouteFade>{children}</RouteFade>
+        </PostHogProvider>
       </body>
     </html>
   )
